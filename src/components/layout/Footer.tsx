@@ -88,10 +88,10 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {footerSections.map(section => (
               <div key={section.heading}>
-                <h3 className="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wider">
+                <h3 className="font-semibold text-gray-900 mb-6 text-sm uppercase tracking-wider">
                   {section.heading}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mt-2">
                   {section.links.map(link => (
                     <li key={link.to}>
                       <Link
@@ -118,25 +118,25 @@ export default function Footer() {
               <span className="text-sm font-medium text-gray-900">
                 Follow us:
               </span>
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="text-gray-400 hover:text-[#1877F2] transition-colors"
+                  className="w-10 h-10 bg-[#1877F2] text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a
                   href="#"
                   aria-label="Instagram"
-                  className="text-gray-400 hover:text-[#E4405F] transition-colors"
+                  className="w-10 h-10 bg-gradient-to-r from-[#833AB4] via-[#E4405F] to-[#FCAF45] text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
                   href="#"
                   aria-label="LinkedIn"
-                  className="text-gray-400 hover:text-[#0A66C2] transition-colors"
+                  className="w-10 h-10 bg-[#0A66C2] text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>

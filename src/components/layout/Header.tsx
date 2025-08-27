@@ -4,8 +4,10 @@ import { Globe } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Header() {
+  const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -315,10 +317,9 @@ export default function Header() {
                   {/* Desktop Navigation */}
                   <ul className="hidden lg:flex items-center ml-12 gap-10">
                     {megaNav.map(item => {
-                      const isActive =
-                        typeof window !== "undefined" && item.path
-                          ? window.location.pathname === item.path
-                          : false
+                      const isActive = item.path
+                        ? pathname === item.path
+                        : false
                       if (item.type === "dropdown") {
                         const opened = openDropdown === item.id
                         return (
@@ -431,7 +432,7 @@ export default function Header() {
                   </Link>
 
                   <Link
-                    href="/get-started"
+                    href="/login"
                     className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-7 py-[0.65rem] font-semibold text-base text-white leading-none tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px"
                   >
                     Get Started
@@ -566,7 +567,7 @@ export default function Header() {
                       Log In
                     </Link>
                     <Link
-                      href="/get-started"
+                      href="/login"
                       className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
                       onClick={() => setIsMenuOpen(false)}
                     >
