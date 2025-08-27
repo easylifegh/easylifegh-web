@@ -11,9 +11,8 @@ export default function Footer() {
     {
       heading: "Study in Ghana",
       links: [
+        { label: "Why Choose Ghana", to: "/why-ghana" },
         { label: "Universities & Schools", to: "/universities" },
-        { label: "English Language Schools", to: "/english-schools" },
-        { label: "Programs Available", to: "/programs" },
         { label: "Student Life", to: "/student-life" },
         { label: "Cost of Living", to: "/cost-living" },
       ],
