@@ -6,6 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
+import ClientOnly from "@/components/ClientOnly"
 
 export default function Header() {
   const pathname = usePathname()
@@ -277,19 +278,37 @@ export default function Header() {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="flex items-center justify-end h-8 text-sm">
               <div className="flex items-center gap-6">
-                <Link
-                  href="/news"
-                  className="hover:text-gray-300 transition-colors"
+                <ClientOnly
+                  fallback={
+                    <span className="hover:text-gray-300 transition-colors">
+                      News and articles
+                    </span>
+                  }
                 >
-                  {t("header.newsAndArticles")}
-                </Link>
-                <Link
-                  href="/events"
-                  className="hover:text-gray-300 transition-colors"
+                  <Link
+                    href="/news"
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    {t("header.newsAndArticles")}
+                  </Link>
+                </ClientOnly>
+                <ClientOnly
+                  fallback={
+                    <span className="hover:text-gray-300 transition-colors">
+                      Events
+                    </span>
+                  }
                 >
-                  {t("header.events")}
-                </Link>
-                <LanguageSwitcher />
+                  <Link
+                    href="/events"
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    {t("header.events")}
+                  </Link>
+                </ClientOnly>
+                <ClientOnly>
+                  <LanguageSwitcher />
+                </ClientOnly>
               </div>
             </div>
           </div>
@@ -313,9 +332,17 @@ export default function Header() {
                       height={42}
                       className="rounded-[8px] object-cover"
                     />
-                    <span className="text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
-                      {t("header.brand")}
-                    </span>
+                    <ClientOnly
+                      fallback={
+                        <span className="text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                          EasyLife Ghana
+                        </span>
+                      }
+                    >
+                      <span className="text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                        {t("header.brand")}
+                      </span>
+                    </ClientOnly>
                   </Link>
 
                   {/* Desktop Navigation */}
@@ -349,7 +376,23 @@ export default function Header() {
                                 )
                               }
                             >
-                              {item.label}
+                              <ClientOnly
+                                fallback={
+                                  item.id === "study-ghana"
+                                    ? "Study in Ghana"
+                                    : item.id === "services"
+                                      ? "Our Services"
+                                      : item.id === "resources"
+                                        ? "Resources"
+                                        : item.id === "contact"
+                                          ? "Contact"
+                                          : item.id === "apply"
+                                            ? "Apply Now"
+                                            : item.label
+                                }
+                              >
+                                {item.label}
+                              </ClientOnly>
                               <span
                                 className={`ml-1 text-[0.65rem] leading-none transition-transform duration-250 ease-[cubic-bezier(0.4,0,0.2,1)] ${opened ? "rotate-180" : ""}`}
                               >
@@ -368,9 +411,17 @@ export default function Header() {
                                         <div className="absolute left-[-1.15rem] top-1 bottom-1 w-px bg-gradient-to-b from-transparent via-black/8 to-transparent" />
                                       )}
                                       {g.heading && (
-                                        <div className="text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.75px] mb-2">
-                                          {g.heading}
-                                        </div>
+                                        <ClientOnly
+                                          fallback={
+                                            <div className="text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.75px] mb-2">
+                                              {g.heading}
+                                            </div>
+                                          }
+                                        >
+                                          <div className="text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.75px] mb-2">
+                                            {g.heading}
+                                          </div>
+                                        </ClientOnly>
                                       )}
                                       <ul className="space-y-0 list-none m-0 p-0">
                                         {g.items.map(link => (
@@ -385,14 +436,29 @@ export default function Header() {
                                                 setOpenDropdown(null)
                                               }
                                             >
-                                              <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
-                                                {link.title}
-                                              </span>
-                                              {link.description && (
-                                                <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
-                                                  {link.description}
+                                              <ClientOnly
+                                                fallback={
+                                                  <>
+                                                    <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
+                                                      {link.title}
+                                                    </span>
+                                                    {link.description && (
+                                                      <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
+                                                        {link.description}
+                                                      </span>
+                                                    )}
+                                                  </>
+                                                }
+                                              >
+                                                <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
+                                                  {link.title}
                                                 </span>
-                                              )}
+                                                {link.description && (
+                                                  <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
+                                                    {link.description}
+                                                  </span>
+                                                )}
+                                              </ClientOnly>
                                             </Link>
                                           </li>
                                         ))}
@@ -418,7 +484,23 @@ export default function Header() {
                                 : "text-gray-900"
                             }`}
                           >
-                            {item.label}
+                            <ClientOnly
+                              fallback={
+                                item.id === "study-ghana"
+                                  ? "Study in Ghana"
+                                  : item.id === "services"
+                                    ? "Our Services"
+                                    : item.id === "resources"
+                                      ? "Resources"
+                                      : item.id === "contact"
+                                        ? "Contact"
+                                        : item.id === "apply"
+                                          ? "Apply Now"
+                                          : item.label
+                              }
+                            >
+                              {item.label}
+                            </ClientOnly>
                           </Link>
                         </li>
                       )
@@ -429,14 +511,14 @@ export default function Header() {
                 {/* Right Actions */}
                 <div className="flex items-center gap-3">
                   <Link
-                    href="/login"
+                    href="/login?intent=return"
                     className="hidden lg:inline-flex items-center bg-white border-[1.5px] border-black rounded-full px-6 py-[0.65rem] font-medium text-[0.95rem] text-black leading-none transition-all duration-250 hover:bg-gray-100 active:bg-gray-200"
                   >
                     {t("common.login")}
                   </Link>
 
                   <Link
-                    href="/login"
+                    href="/login?intent=get-started"
                     className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-7 py-[0.65rem] font-semibold text-base text-white leading-none tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px"
                   >
                     {t("common.getStarted")}
@@ -502,7 +584,25 @@ export default function Header() {
                                 )
                               }
                             >
-                              <span>{item.label}</span>
+                              <ClientOnly
+                                fallback={
+                                  <span>
+                                    {item.id === "study-ghana"
+                                      ? "Study in Ghana"
+                                      : item.id === "services"
+                                        ? "Our Services"
+                                        : item.id === "resources"
+                                          ? "Resources"
+                                          : item.id === "contact"
+                                            ? "Contact"
+                                            : item.id === "apply"
+                                              ? "Apply Now"
+                                              : item.label}
+                                  </span>
+                                }
+                              >
+                                <span>{item.label}</span>
+                              </ClientOnly>
                               <span
                                 className={`text-[0.75rem] transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "rotate-180" : ""}`}
                               >
@@ -517,9 +617,17 @@ export default function Header() {
                                     className={gi > 0 ? "mt-3" : ""}
                                   >
                                     {g.heading && (
-                                      <div className="mb-1 text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.5px]">
-                                        {g.heading}
-                                      </div>
+                                      <ClientOnly
+                                        fallback={
+                                          <div className="mb-1 text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.5px]">
+                                            {g.heading}
+                                          </div>
+                                        }
+                                      >
+                                        <div className="mb-1 text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.5px]">
+                                          {g.heading}
+                                        </div>
+                                      </ClientOnly>
                                     )}
                                     {g.items.map(link => (
                                       <Link
@@ -528,14 +636,29 @@ export default function Header() {
                                         className="block py-2.5 text-gray-900 no-underline text-[0.93rem] hover:text-[#17a253] transition-colors duration-250"
                                         onClick={() => setIsMenuOpen(false)}
                                       >
-                                        <span className="block font-medium">
-                                          {link.title}
-                                        </span>
-                                        {link.description && (
-                                          <span className="block text-gray-500 text-sm mt-0.5">
-                                            {link.description}
+                                        <ClientOnly
+                                          fallback={
+                                            <>
+                                              <span className="block font-medium">
+                                                {link.title}
+                                              </span>
+                                              {link.description && (
+                                                <span className="block text-gray-500 text-sm mt-0.5">
+                                                  {link.description}
+                                                </span>
+                                              )}
+                                            </>
+                                          }
+                                        >
+                                          <span className="block font-medium">
+                                            {link.title}
                                           </span>
-                                        )}
+                                          {link.description && (
+                                            <span className="block text-gray-500 text-sm mt-0.5">
+                                              {link.description}
+                                            </span>
+                                          )}
+                                        </ClientOnly>
                                       </Link>
                                     ))}
                                   </div>
@@ -552,7 +675,23 @@ export default function Header() {
                             className="block px-4 py-[1.05rem] text-[1.05rem] text-gray-900 no-underline"
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            {item.label}
+                            <ClientOnly
+                              fallback={
+                                item.id === "study-ghana"
+                                  ? "Study in Ghana"
+                                  : item.id === "services"
+                                    ? "Our Services"
+                                    : item.id === "resources"
+                                      ? "Resources"
+                                      : item.id === "contact"
+                                        ? "Contact"
+                                        : item.id === "apply"
+                                          ? "Apply Now"
+                                          : item.label
+                              }
+                            >
+                              {item.label}
+                            </ClientOnly>
                           </Link>
                         </div>
                       )
@@ -563,20 +702,44 @@ export default function Header() {
                 {/* Mobile Actions */}
                 <div className="sticky bottom-0 border-t border-gray-200 p-3 bg-gradient-to-b from-white to-gray-50 pb-[calc(env(safe-area-inset-bottom)+1rem)]">
                   <div className="flex flex-col gap-3">
-                    <Link
-                      href="/login"
-                      className="w-full h-[52px] flex items-center justify-center bg-white border-[1.5px] border-black rounded-full font-medium text-black transition-all duration-250 active:bg-gray-100"
-                      onClick={() => setIsMenuOpen(false)}
+                    <ClientOnly
+                      fallback={
+                        <Link
+                          href="/login?intent=return"
+                          className="w-full h-[52px] flex items-center justify-center bg-white border-[1.5px] border-black rounded-full font-medium text-black transition-all duration-250 active:bg-gray-100"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          Log In
+                        </Link>
+                      }
                     >
-                      {t("common.login")}
-                    </Link>
-                    <Link
-                      href="/login"
-                      className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
-                      onClick={() => setIsMenuOpen(false)}
+                      <Link
+                        href="/login?intent=return"
+                        className="w-full h-[52px] flex items-center justify-center bg-white border-[1.5px] border-black rounded-full font-medium text-black transition-all duration-250 active:bg-gray-100"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {t("common.login")}
+                      </Link>
+                    </ClientOnly>
+                    <ClientOnly
+                      fallback={
+                        <Link
+                          href="/login?intent=get-started"
+                          className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          Get Started
+                        </Link>
+                      }
                     >
-                      {t("common.getStarted")}
-                    </Link>
+                      <Link
+                        href="/login?intent=get-started"
+                        className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {t("common.getStarted")}
+                      </Link>
+                    </ClientOnly>
                   </div>
                 </div>
               </div>

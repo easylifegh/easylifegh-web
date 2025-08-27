@@ -69,12 +69,27 @@ export default function NotFound() {
           </div>
 
           {/* Buttons */}
-          <div className="fade-in-up flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="fade-in-up flex justify-center items-center">
             <Link
               href="/"
-              className="group inline-flex items-center gap-3 bg-[#17a253] hover:bg-[#148947] active:bg-[#0f6f38] text-white font-semibold text-lg px-12 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl active:scale-95 min-w-[200px]"
+              className="group inline-flex items-center justify-center rounded-full border-2 border-[#17a253] text-[#17a253] hover:bg-[#17a253] hover:text-white transition-all duration-300 px-8 h-12 md:h-14 text-[15px] md:text-[16px] font-medium bg-white shadow-sm hover:shadow-md active:scale-95"
             >
-              {t("notFound.goHome")}
+              <span className="flex items-center">
+                <svg
+                  className="mr-2 w-4 h-4 transition-transform group-hover:-translate-x-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                  />
+                </svg>
+                <span>{t("notFound.goHome")}</span>
+              </span>
             </Link>
           </div>
         </div>

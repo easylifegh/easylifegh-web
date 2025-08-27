@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-import Header from "@/components/layout/Header"
-import Footer from "@/components/layout/Footer"
+import ClientLayoutWrapper from "@/components/layout/ClientLayoutWrapper"
 import I18nProvider from "@/components/I18nProvider"
 
 const geistSans = Geist({
@@ -35,9 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <I18nProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
         </I18nProvider>
       </body>
     </html>

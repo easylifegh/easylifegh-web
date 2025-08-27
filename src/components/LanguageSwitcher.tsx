@@ -15,11 +15,25 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false)
 
   const currentLanguage =
-    languages.find(lang => i18n.language.startsWith(lang.code)) || languages[0]
+    languages.find(lang => i18n.language === lang.code) || languages[0]
 
-  const changeLanguage = (code: string) => {
-    i18n.changeLanguage(code)
+  const changeLanguage = async (code: string) => {
     setIsOpen(false)
+
+    // Don't change if it's the same language
+    if (code === i18n.language) {
+      return
+    }
+
+    // Change the i18n language
+    await i18n.changeLanguage(code)
+
+    // Store preference in localStorage
+    localStorage.setItem("i18nextLng", code)
+
+    // For now, just refresh the page to ensure proper language loading
+    // Later we can implement proper URL-based routing
+    window.location.reload()
   }
 
   return (

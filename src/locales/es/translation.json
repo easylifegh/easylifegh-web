@@ -6,7 +6,8 @@
     "getStarted": "Empezar",
     "login": "Iniciar sesión",
     "apply": "Aplicar ahora",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "or": "o"
   },
   "header": {
     "brand": "EasyLife Ghana",
@@ -150,7 +151,32 @@
     },
     "login": {
       "title": "Iniciar sesión",
-      "subtitle": "Inicie sesión en su cuenta EasyLife Ghana para acceder a su panel de aplicación."
+      "subtitle": "Inicie sesión en su cuenta EasyLife Ghana para acceder a su panel de aplicación.",
+      "welcomeBack": "¡Bienvenido de nuevo! Inicie sesión para continuar",
+      "getStartedWelcome": "¡Bienvenido! Comencemos",
+      "emailLabel": "Email",
+      "sendMagicLink": "Enviar enlace mágico",
+      "continueWithGoogle": "Continuar con Google",
+      "continueWithFacebook": "Continuar con Facebook",
+      "continueWithApple": "Continuar con Apple",
+      "checkEmail": {
+        "title": "Revise su email",
+        "sentTo": "Enviamos un enlace mágico a",
+        "instructions": "Haga clic en el enlace del email para iniciar sesión en su cuenta. El enlace expirará en 1 hora.",
+        "backToLogin": "Volver al inicio de sesión",
+        "troubleTitle": "¿Tiene problemas?",
+        "troubleSpam": "Revise su carpeta de spam o correo no deseado",
+        "troubleEmail": "Asegúrese de haber ingresado correctamente su email",
+        "troubleExpiry": "El enlace mágico expira después de 1 hora"
+      },
+      "legal": {
+        "termsOfUse": "Términos de uso",
+        "privacyPolicy": "Política de privacidad",
+        "recaptchaNotice": "Este sitio está protegido por reCAPTCHA Enterprise.",
+        "googlePrivacyPolicy": "Política de privacidad de Google",
+        "googleTermsOfService": "Términos de servicio",
+        "recaptchaApply": "aplican."
+      }
     },
     "about": {
       "title": "Acerca de nosotros",

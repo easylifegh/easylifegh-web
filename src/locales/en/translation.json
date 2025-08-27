@@ -6,7 +6,8 @@
     "getStarted": "Get Started",
     "login": "Log In",
     "apply": "Apply Now",
-    "contact": "Contact"
+    "contact": "Contact",
+    "or": "or"
   },
   "header": {
     "brand": "EasyLife Ghana",
@@ -150,7 +151,32 @@
     },
     "login": {
       "title": "Log In",
-      "subtitle": "Sign in to your EasyLife Ghana account to access your application dashboard."
+      "subtitle": "Sign in to your EasyLife Ghana account to access your application dashboard.",
+      "welcomeBack": "Welcome back! Sign in to continue",
+      "getStartedWelcome": "Welcome! Let's get you started",
+      "emailLabel": "Email",
+      "sendMagicLink": "Send Magic Link",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithFacebook": "Continue with Facebook",
+      "continueWithApple": "Continue with Apple",
+      "checkEmail": {
+        "title": "Check your email",
+        "sentTo": "We sent a magic link to",
+        "instructions": "Click the link in the email to sign in to your account. The link will expire in 1 hour.",
+        "backToLogin": "Back to Login",
+        "troubleTitle": "Having trouble?",
+        "troubleSpam": "Check your spam or junk folder",
+        "troubleEmail": "Make sure you entered your email correctly",
+        "troubleExpiry": "The magic link expires after 1 hour"
+      },
+      "legal": {
+        "termsOfUse": "Terms of Use",
+        "privacyPolicy": "Privacy Policy",
+        "recaptchaNotice": "This site is protected by reCAPTCHA Enterprise.",
+        "googlePrivacyPolicy": "Google's Privacy Policy",
+        "googleTermsOfService": "Terms of Service",
+        "recaptchaApply": "apply."
+      }
     },
     "about": {
       "title": "About Us",

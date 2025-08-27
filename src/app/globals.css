@@ -27,6 +27,11 @@
   --section-y: clamp(3rem, 7vw, 6rem);
 }
 
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: 230 10% 8%;
