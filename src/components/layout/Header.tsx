@@ -238,12 +238,17 @@ export default function Header() {
       ],
     },
     {
+      id: "about",
+      label: t("common.about"),
+      type: "link",
+      path: "/about",
+    },
+    {
       id: "contact",
       label: t("common.contact"),
       type: "link",
       path: "/contact",
     },
-    { id: "apply", label: t("common.apply"), type: "link", path: "/apply" },
   ]
 
   return (
@@ -384,10 +389,10 @@ export default function Header() {
                                       ? "Our Services"
                                       : item.id === "resources"
                                         ? "Resources"
-                                        : item.id === "contact"
-                                          ? "Contact"
-                                          : item.id === "apply"
-                                            ? "Apply Now"
+                                        : item.id === "about"
+                                          ? "About"
+                                          : item.id === "contact"
+                                            ? "Contact"
                                             : item.label
                                 }
                               >
@@ -492,10 +497,10 @@ export default function Header() {
                                     ? "Our Services"
                                     : item.id === "resources"
                                       ? "Resources"
-                                      : item.id === "contact"
-                                        ? "Contact"
-                                        : item.id === "apply"
-                                          ? "Apply Now"
+                                      : item.id === "about"
+                                        ? "About"
+                                        : item.id === "contact"
+                                          ? "Contact"
                                           : item.label
                               }
                             >
@@ -593,10 +598,10 @@ export default function Header() {
                                         ? "Our Services"
                                         : item.id === "resources"
                                           ? "Resources"
-                                          : item.id === "contact"
-                                            ? "Contact"
-                                            : item.id === "apply"
-                                              ? "Apply Now"
+                                          : item.id === "about"
+                                            ? "About"
+                                            : item.id === "contact"
+                                              ? "Contact"
                                               : item.label}
                                   </span>
                                 }
@@ -683,10 +688,10 @@ export default function Header() {
                                     ? "Our Services"
                                     : item.id === "resources"
                                       ? "Resources"
-                                      : item.id === "contact"
-                                        ? "Contact"
-                                        : item.id === "apply"
-                                          ? "Apply Now"
+                                      : item.id === "about"
+                                        ? "About"
+                                        : item.id === "contact"
+                                          ? "Contact"
                                           : item.label
                               }
                             >
