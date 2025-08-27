@@ -1,0 +1,213 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "login": "Log In",
+    "apply": "Apply Now",
+    "contact": "Contact"
+  },
+  "header": {
+    "brand": "EasyLife Ghana",
+    "newsAndArticles": "News and articles",
+    "events": "Events",
+    "language": "English",
+    "studyGhana": "Study in Ghana",
+    "ourServices": "Our Services",
+    "resources": "Resources"
+  },
+  "navigation": {
+    "whyGhana": {
+      "title": "Why Choose Ghana",
+      "description": "Discover the benefits of studying in Ghana."
+    },
+    "universities": {
+      "title": "Universities & Schools",
+      "description": "Top institutions and academic programs."
+    },
+    "studentLife": {
+      "title": "Student Life",
+      "description": "Campus culture and student experiences."
+    },
+    "costLiving": {
+      "title": "Cost of Living",
+      "description": "Affordable living costs and budgeting."
+    },
+    "languageSchool": {
+      "title": "Language School Registration",
+      "description": "Register for language courses."
+    },
+    "placement": {
+      "title": "University Placement",
+      "description": "Get placed in your ideal university."
+    },
+    "visa": {
+      "title": "Visa Assistance",
+      "description": "Complete visa application support."
+    },
+    "accommodation": {
+      "title": "Accommodation Help",
+      "description": "Find the perfect place to stay."
+    },
+    "pickup": {
+      "title": "Airport Pickup",
+      "description": "Safe arrival and transportation."
+    },
+    "orientation": {
+      "title": "Orientation Support",
+      "description": "Get settled into your new life."
+    },
+    "guide": {
+      "title": "Application Guide",
+      "description": "Step-by-step application process."
+    },
+    "stories": {
+      "title": "Student Stories",
+      "description": "Real experiences from our students."
+    },
+    "blog": {
+      "title": "Blog & News",
+      "description": "Latest updates and insights."
+    },
+    "faq": {
+      "title": "FAQs",
+      "description": "Common questions answered."
+    },
+    "brochure": {
+      "title": "Download Brochure",
+      "description": "Get our comprehensive guide."
+    }
+  },
+  "pages": {
+    "whyGhana": {
+      "title": "Why Choose Ghana",
+      "subtitle": "Discover why Ghana is the perfect destination for your international education journey."
+    },
+    "universities": {
+      "title": "Universities & Schools",
+      "subtitle": "Explore top institutions and academic programs available in Ghana."
+    },
+    "studentLife": {
+      "title": "Student Life",
+      "subtitle": "Learn about campus culture and student experiences in Ghana."
+    },
+    "costLiving": {
+      "title": "Cost of Living",
+      "subtitle": "Discover affordable living costs and budgeting tips for studying in Ghana."
+    },
+    "languageSchool": {
+      "title": "Language School Registration",
+      "subtitle": "Register for language courses to prepare for your studies."
+    },
+    "placement": {
+      "title": "University Placement",
+      "subtitle": "Get placed in your ideal university with our expert guidance."
+    },
+    "visa": {
+      "title": "Visa Assistance",
+      "subtitle": "Complete visa application support for studying in Ghana."
+    },
+    "accommodation": {
+      "title": "Accommodation Help",
+      "subtitle": "Find the perfect place to stay during your studies in Ghana."
+    },
+    "pickup": {
+      "title": "Airport Pickup",
+      "subtitle": "Safe arrival and transportation services for international students."
+    },
+    "orientation": {
+      "title": "Orientation Support",
+      "subtitle": "Get settled into your new life and academic environment."
+    },
+    "guide": {
+      "title": "Application Guide",
+      "subtitle": "Step-by-step guide to the university application process."
+    },
+    "stories": {
+      "title": "Student Stories",
+      "subtitle": "Real experiences and success stories from our students."
+    },
+    "blog": {
+      "title": "Blog & News",
+      "subtitle": "Latest updates, insights, and news about studying in Ghana."
+    },
+    "faq": {
+      "title": "FAQs",
+      "subtitle": "Frequently asked questions and answers about studying in Ghana."
+    },
+    "brochure": {
+      "title": "Download Brochure",
+      "subtitle": "Get our comprehensive guide with all the information you need."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Get in touch with our team for any questions or assistance."
+    },
+    "apply": {
+      "title": "Apply Now",
+      "subtitle": "Start your application process to study in Ghana today."
+    },
+    "login": {
+      "title": "Log In",
+      "subtitle": "Sign in to your EasyLife Ghana account to access your application dashboard."
+    },
+    "about": {
+      "title": "About Us",
+      "subtitle": "Learn about EasyLife Ghana and our mission to help international students."
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the dedicated team behind EasyLife Ghana."
+    },
+    "careers": {
+      "title": "Careers",
+      "subtitle": "Join our team and help make a difference in international education."
+    },
+    "partners": {
+      "title": "Partner with Us",
+      "subtitle": "Explore partnership opportunities with EasyLife Ghana."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "Learn how we protect and handle your personal information."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "subtitle": "Read our terms and conditions for using EasyLife Ghana services."
+    },
+    "news": {
+      "title": "News and Articles",
+      "subtitle": "Stay updated with the latest news and articles about studying in Ghana."
+    },
+    "events": {
+      "title": "Events",
+      "subtitle": "Discover upcoming events and activities for international students."
+    },
+    "englishSchools": {
+      "title": "English Language Schools",
+      "subtitle": "Explore English language schools and programs in Ghana."
+    },
+    "programs": {
+      "title": "Programs Available",
+      "subtitle": "Discover all the academic programs available in Ghana."
+    }
+  },
+  "notFound": {
+    "title": "You seem lost",
+    "subtitle": "This page went on its own study abroad adventure. Let's get you back on track.",
+    "goHome": "Go Home",
+    "getHelp": "Get Help"
+  },
+  "footer": {
+    "description": "Your trusted partner for studying in Ghana. We provide comprehensive support from university applications to settling into your new academic journey in West Africa's most welcoming destination.",
+    "followUs": "Follow us:",
+    "sections": {
+      "studyGhana": "Study in Ghana",
+      "ourServices": "Our Services",
+      "resources": "Resources",
+      "company": "Company"
+    },
+    "copyright": "© {{year}} EasyLife Ghana. All rights reserved."
+  }
+}

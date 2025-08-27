@@ -1,8 +1,11 @@
 "use client"
 
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function NotFound() {
+  const { t } = useTranslation()
+
   return (
     <>
       <style jsx global>{`
@@ -45,7 +48,7 @@ export default function NotFound() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-gradient-to-br from-white to-gray-50 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-white to-white flex items-center justify-center px-4">
         <div className="text-center max-w-2xl w-full">
           {/* 404 Number with Animation */}
           <div className="mb-12">
@@ -58,11 +61,10 @@ export default function NotFound() {
           {/* Content */}
           <div className="fade-in-up mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              You seem lost
+              {t("notFound.title")}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-md mx-auto">
-              This page went on its own study abroad adventure. Let&apos;s get
-              you back on track.
+              {t("notFound.subtitle")}
             </p>
           </div>
 
@@ -70,9 +72,9 @@ export default function NotFound() {
           <div className="fade-in-up flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               href="/"
-              className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-7 py-[0.65rem] font-semibold text-base text-white leading-none tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px"
+              className="group inline-flex items-center gap-3 bg-[#17a253] hover:bg-[#148947] active:bg-[#0f6f38] text-white font-semibold text-lg px-12 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl active:scale-95 min-w-[200px]"
             >
-              Go Home
+              {t("notFound.goHome")}
             </Link>
           </div>
         </div>

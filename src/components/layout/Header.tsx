@@ -1,13 +1,15 @@
 "use client"
 
-import { Globe } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useTranslation } from "react-i18next"
+import LanguageSwitcher from "@/components/LanguageSwitcher"
 
 export default function Header() {
   const pathname = usePathname()
+  const { t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -110,20 +112,20 @@ export default function Header() {
   const megaNav: MegaItem[] = [
     {
       id: "study-ghana",
-      label: "Study in Ghana",
+      label: t("header.studyGhana"),
       type: "dropdown",
       groups: [
         {
           heading: "Why Ghana",
           items: [
             {
-              title: "Why Choose Ghana",
-              description: "Discover the benefits of studying in Ghana.",
+              title: t("navigation.whyGhana.title"),
+              description: t("navigation.whyGhana.description"),
               path: "/why-ghana",
             },
             {
-              title: "Universities & Schools",
-              description: "Top institutions and academic programs.",
+              title: t("navigation.universities.title"),
+              description: t("navigation.universities.description"),
               path: "/universities",
             },
           ],
@@ -132,13 +134,13 @@ export default function Header() {
           heading: "Student Life",
           items: [
             {
-              title: "Student Life",
-              description: "Campus culture and student experiences.",
+              title: t("navigation.studentLife.title"),
+              description: t("navigation.studentLife.description"),
               path: "/student-life",
             },
             {
-              title: "Cost of Living",
-              description: "Affordable living costs and budgeting.",
+              title: t("navigation.costLiving.title"),
+              description: t("navigation.costLiving.description"),
               path: "/cost-living",
             },
           ],
@@ -147,25 +149,25 @@ export default function Header() {
     },
     {
       id: "services",
-      label: "Our Services",
+      label: t("header.ourServices"),
       type: "dropdown",
       groups: [
         {
           heading: "Application Support",
           items: [
             {
-              title: "English School Registration",
-              description: "Register for English language courses.",
-              path: "/services/english-school",
+              title: t("navigation.languageSchool.title"),
+              description: t("navigation.languageSchool.description"),
+              path: "/services/language-school",
             },
             {
-              title: "University Placement",
-              description: "Get placed in your ideal university.",
+              title: t("navigation.placement.title"),
+              description: t("navigation.placement.description"),
               path: "/services/placement",
             },
             {
-              title: "Visa Assistance",
-              description: "Complete visa application support.",
+              title: t("navigation.visa.title"),
+              description: t("navigation.visa.description"),
               path: "/services/visa",
             },
           ],
@@ -174,18 +176,18 @@ export default function Header() {
           heading: "Student Support",
           items: [
             {
-              title: "Accommodation Help",
-              description: "Find the perfect place to stay.",
+              title: t("navigation.accommodation.title"),
+              description: t("navigation.accommodation.description"),
               path: "/services/accommodation",
             },
             {
-              title: "Airport Pickup",
-              description: "Safe arrival and transportation.",
+              title: t("navigation.pickup.title"),
+              description: t("navigation.pickup.description"),
               path: "/services/pickup",
             },
             {
-              title: "Orientation Support",
-              description: "Get settled into your new life.",
+              title: t("navigation.orientation.title"),
+              description: t("navigation.orientation.description"),
               path: "/services/orientation",
             },
           ],
@@ -194,25 +196,25 @@ export default function Header() {
     },
     {
       id: "resources",
-      label: "Resources",
+      label: t("header.resources"),
       type: "dropdown",
       groups: [
         {
           heading: "Helpful Guides",
           items: [
             {
-              title: "Application Guide",
-              description: "Step-by-step application process.",
+              title: t("navigation.guide.title"),
+              description: t("navigation.guide.description"),
               path: "/guide",
             },
             {
-              title: "Student Stories",
-              description: "Real experiences from our students.",
+              title: t("navigation.stories.title"),
+              description: t("navigation.stories.description"),
               path: "/stories",
             },
             {
-              title: "Blog & News",
-              description: "Latest updates and insights.",
+              title: t("navigation.blog.title"),
+              description: t("navigation.blog.description"),
               path: "/blog",
             },
           ],
@@ -221,21 +223,26 @@ export default function Header() {
           heading: "Support",
           items: [
             {
-              title: "FAQs",
-              description: "Common questions answered.",
+              title: t("navigation.faq.title"),
+              description: t("navigation.faq.description"),
               path: "/faq",
             },
             {
-              title: "Download Brochure",
-              description: "Get our comprehensive guide.",
+              title: t("navigation.brochure.title"),
+              description: t("navigation.brochure.description"),
               path: "/brochure",
             },
           ],
         },
       ],
     },
-    { id: "contact", label: "Contact", type: "link", path: "/contact" },
-    { id: "apply", label: "Apply Now", type: "link", path: "/apply" },
+    {
+      id: "contact",
+      label: t("common.contact"),
+      type: "link",
+      path: "/contact",
+    },
+    { id: "apply", label: t("common.apply"), type: "link", path: "/apply" },
   ]
 
   return (
@@ -274,18 +281,15 @@ export default function Header() {
                   href="/news"
                   className="hover:text-gray-300 transition-colors"
                 >
-                  News and articles
+                  {t("header.newsAndArticles")}
                 </Link>
                 <Link
                   href="/events"
                   className="hover:text-gray-300 transition-colors"
                 >
-                  Events
+                  {t("header.events")}
                 </Link>
-                <div className="flex items-center gap-1 text-gray-300">
-                  <Globe className="h-4 w-4" />
-                  <span>English</span>
-                </div>
+                <LanguageSwitcher />
               </div>
             </div>
           </div>
@@ -310,7 +314,7 @@ export default function Header() {
                       className="rounded-[8px] object-cover"
                     />
                     <span className="text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
-                      EasyLife Ghana
+                      {t("header.brand")}
                     </span>
                   </Link>
 
@@ -428,14 +432,14 @@ export default function Header() {
                     href="/login"
                     className="hidden lg:inline-flex items-center bg-white border-[1.5px] border-black rounded-full px-6 py-[0.65rem] font-medium text-[0.95rem] text-black leading-none transition-all duration-250 hover:bg-gray-100 active:bg-gray-200"
                   >
-                    Log In
+                    {t("common.login")}
                   </Link>
 
                   <Link
                     href="/login"
                     className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-7 py-[0.65rem] font-semibold text-base text-white leading-none tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px"
                   >
-                    Get Started
+                    {t("common.getStarted")}
                   </Link>
 
                   {/* Mobile Toggle */}
@@ -564,14 +568,14 @@ export default function Header() {
                       className="w-full h-[52px] flex items-center justify-center bg-white border-[1.5px] border-black rounded-full font-medium text-black transition-all duration-250 active:bg-gray-100"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Log In
+                      {t("common.login")}
                     </Link>
                     <Link
                       href="/login"
                       className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Get Started
+                      {t("common.getStarted")}
                     </Link>
                   </div>
                 </div>
