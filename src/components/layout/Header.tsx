@@ -312,7 +312,9 @@ export default function Header() {
                   </Link>
                 </ClientOnly>
                 <ClientOnly>
-                  <LanguageSwitcher />
+                  <LanguageSwitcher
+                    onLanguageMenuOpen={() => setIsMenuOpen(false)}
+                  />
                 </ClientOnly>
               </div>
             </div>

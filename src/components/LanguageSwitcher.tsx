@@ -10,7 +10,13 @@ const languages = [
   { code: "es", label: "Español", flag: "🇪🇸" },
 ]
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  onLanguageMenuOpen?: () => void
+}
+
+export default function LanguageSwitcher({
+  onLanguageMenuOpen,
+}: LanguageSwitcherProps = {}) {
   const { i18n, t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -39,7 +45,12 @@ export default function LanguageSwitcher() {
   return (
     <div className="relative">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          if (!isOpen && onLanguageMenuOpen) {
+            onLanguageMenuOpen()
+          }
+          setIsOpen(!isOpen)
+        }}
         className="flex items-center gap-1 text-gray-300 hover:text-white transition-colors"
         aria-label="Change language"
       >
@@ -51,10 +62,10 @@ export default function LanguageSwitcher() {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 z-40"
+            className="fixed inset-0 z-[950]"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 min-w-[160px]">
+          <div className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-[1000] min-w-[160px]">
             {languages.map(lang => (
               <button
                 key={lang.code}
