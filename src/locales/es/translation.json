@@ -222,16 +222,16 @@
   "hero": {
     "slides": {
       "university": {
-        "title": "Estudia en las mejores universidades de Ghana",
-        "subtitle": "Únete a miles de estudiantes internacionales que cursan títulos de clase mundial en medicina, ingeniería, negocios y más"
+        "title": "Estudia en Ghana",
+        "subtitle": "Únete a estudiantes internacionales en programas de medicina, ingeniería y negocios"
       },
       "english": {
-        "title": "Domina el inglés en Ghana",
-        "subtitle": "Perfecciona tus habilidades en inglés en un entorno inmersivo mientras experimentas la cultura y hospitalidad africanas"
+        "title": "Aprende inglés en Ghana",
+        "subtitle": "Perfecciona tu inglés mientras experimentas la cultura africana"
       },
       "discover": {
-        "title": "Descubre la hermosa Ghana",
-        "subtitle": "Explora la nación puerta de entrada de África Occidental con rica historia, paisajes impresionantes y patrimonio cultural vibrante"
+        "title": "Descubre Ghana",
+        "subtitle": "Explora África Occidental con rica historia y cultura vibrante"
       }
     },
     "buttons": {
@@ -347,6 +347,11 @@
         "answer": "Sí, Ghana es uno de los países más seguros en África Occidental. Es conocido por su estabilidad política, gente amable y actitud acogedora hacia estudiantes internacionales."
       }
     }
+  },
+  "callToAction": {
+    "title": "¿Listo para estudiar en Ghana?",
+    "description": "Crea tu cuenta para acceder a solicitudes de escuelas y universidades, asistencia con visa y orientación experta.",
+    "button": "Empezar"
   },
   "footer": {
     "description": "Tu socio de confianza para estudiar en Ghana. Proporcionamos apoyo integral desde las aplicaciones universitarias hasta establecerte en tu nuevo viaje académico en el destino más acogedor de África Occidental.",

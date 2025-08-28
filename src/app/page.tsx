@@ -2,6 +2,7 @@ import HeroSection from "@/components/homepage/HeroSection"
 import WhyChooseGhana from "@/components/homepage/WhyChooseGhana"
 import ApplicationProcess from "@/components/homepage/ApplicationProcess"
 import FAQ from "@/components/homepage/FAQ"
+import CallToAction from "@/components/homepage/CallToAction"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <WhyChooseGhana />
       <ApplicationProcess />
       <FAQ />
+      <CallToAction />
     </div>
   )
 }

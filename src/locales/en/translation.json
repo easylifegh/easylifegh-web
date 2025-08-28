@@ -323,6 +323,11 @@
       }
     }
   },
+  "callToAction": {
+    "title": "Ready to study in Ghana?",
+    "description": "Create your account to access school and university applications, visa assistance, and expert guidance.",
+    "button": "Get Started"
+  },
   "footer": {
     "description": "Your trusted partner for studying in Ghana. We provide comprehensive support from university applications to settling into your new academic journey in West Africa's most welcoming destination.",
     "followUs": "Follow us:",
