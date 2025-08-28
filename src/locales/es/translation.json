@@ -272,6 +272,35 @@
     },
     "learnMore": "Aprende más"
   },
+  "applicationProcess": {
+    "title": "Cómo aplicar",
+    "steps": {
+      "consultation": {
+        "title": "Consulta gratuita",
+        "description": "Discute tus objetivos, preferencias y antecedentes académicos con nuestros consejeros expertos"
+      },
+      "selection": {
+        "title": "Elegir programa y universidad",
+        "description": "Selecciona la mejor universidad y programa que coincida con tus aspiraciones profesionales"
+      },
+      "application": {
+        "title": "Enviar aplicación",
+        "description": "Completa tu aplicación universitaria con nuestra guía y soporte documental"
+      },
+      "visa": {
+        "title": "Procesamiento de visa",
+        "description": "Obtén asistencia con tu aplicación de visa de estudiante y documentación"
+      },
+      "preparation": {
+        "title": "Preparación pre-partida",
+        "description": "Organiza alojamiento, recogida en aeropuerto y programas de orientación"
+      },
+      "arrival": {
+        "title": "Llegar y establecerse",
+        "description": "Aterriza en Ghana y comienza tu jornada académica con soporte continuo"
+      }
+    }
+  },
   "footer": {
     "description": "Tu socio de confianza para estudiar en Ghana. Proporcionamos apoyo integral desde las aplicaciones universitarias hasta establecerte en tu nuevo viaje académico en el destino más acogedor de África Occidental.",
     "followUs": "Síguenos:",
