@@ -13,98 +13,80 @@ export default function Footer() {
   // English fallback sections
   const fallbackSections = [
     {
-      heading: "Study in Ghana",
+      heading: "Why Ghana",
       links: [
-        { label: "Why Choose Ghana", to: "/why-ghana" },
-        { label: "Universities & Schools", to: "/universities" },
-        { label: "Student Life", to: "/student-life" },
-        { label: "Cost of Living", to: "/cost-living" },
+        { label: "English Everywhere", to: "/why-ghana#language" },
+        { label: "Safe", to: "/why-ghana#safety" },
+        { label: "Affordable", to: "/why-ghana#affordable" },
       ],
     },
     {
-      heading: "Our Services",
+      heading: "Study",
       links: [
-        {
-          label: "Language School Registration",
-          to: "/services/language-school",
-        },
-        { label: "University Placement", to: "/services/placement" },
-        { label: "Visa Assistance", to: "/services/visa" },
-        { label: "Accommodation Help", to: "/services/accommodation" },
+        { label: "Academic Services", to: "/services/academic" },
+        { label: "Student Accommodation", to: "/services/accommodation" },
+        { label: "Student Visa Support", to: "/services/visa" },
         { label: "Airport Pickup", to: "/services/pickup" },
-        { label: "Orientation Support", to: "/services/orientation" },
+        { label: "Documentation Support", to: "/services/documentation" },
+        { label: "Orientation Program", to: "/services/orientation" },
+      ],
+    },
+    {
+      heading: "Visit",
+      links: [
+        { label: "Tourism & Cultural Tours", to: "/services/tourism" },
+        { label: "Business Travel Support", to: "/services/business" },
+        { label: "Medical Travel Assistance", to: "/services/medical" },
       ],
     },
     {
       heading: "Resources",
       links: [
-        { label: "Application Guide", to: "/guide" },
-        { label: "Student Stories", to: "/stories" },
-        { label: "Blog & News", to: "/blog" },
+        { label: "Download Guide", to: "/guide" },
         { label: "FAQs", to: "/faq" },
-        { label: "Download Brochure", to: "/brochure" },
-      ],
-    },
-    {
-      heading: "Company",
-      links: [
+        { label: "Blog & Updates", to: "/blog" },
         { label: "About Us", to: "/about" },
-        { label: "Our Team", to: "/team" },
-        { label: "Careers", to: "/careers" },
         { label: "Contact", to: "/contact" },
-        { label: "Partner with Us", to: "/partners" },
       ],
     },
   ]
 
   const footerSections = [
     {
-      heading: "studyGhana",
+      heading: "whyGhana",
       links: [
-        { label: t("navigation.whyGhana.title"), to: "/why-ghana" },
-        { label: t("navigation.universities.title"), to: "/universities" },
-        { label: t("navigation.studentLife.title"), to: "/student-life" },
-        { label: t("navigation.costLiving.title"), to: "/cost-living" },
+        { label: "English Everywhere", to: "/why-ghana#language" },
+        { label: "Safe", to: "/why-ghana#safety" },
+        { label: "Affordable", to: "/why-ghana#affordable" },
       ],
     },
     {
-      heading: "ourServices",
+      heading: "study",
       links: [
-        {
-          label: t("navigation.languageSchool.title"),
-          to: "/services/language-school",
-        },
-        { label: t("navigation.placement.title"), to: "/services/placement" },
-        { label: t("navigation.visa.title"), to: "/services/visa" },
-        {
-          label: t("navigation.accommodation.title"),
-          to: "/services/accommodation",
-        },
-        { label: t("navigation.pickup.title"), to: "/services/pickup" },
-        {
-          label: t("navigation.orientation.title"),
-          to: "/services/orientation",
-        },
+        { label: "Academic Services", to: "/services/academic" },
+        { label: "Student Accommodation", to: "/services/accommodation" },
+        { label: "Student Visa Support", to: "/services/visa" },
+        { label: "Airport Pickup", to: "/services/pickup" },
+        { label: "Documentation Support", to: "/services/documentation" },
+        { label: "Orientation Program", to: "/services/orientation" },
+      ],
+    },
+    {
+      heading: "visit",
+      links: [
+        { label: "Tourism & Cultural Tours", to: "/services/tourism" },
+        { label: "Business Travel Support", to: "/services/business" },
+        { label: "Medical Travel Assistance", to: "/services/medical" },
       ],
     },
     {
       heading: "resources",
       links: [
-        { label: t("navigation.guide.title"), to: "/guide" },
-        { label: t("navigation.stories.title"), to: "/stories" },
-        { label: t("navigation.blog.title"), to: "/blog" },
-        { label: t("navigation.faq.title"), to: "/faq" },
-        { label: t("navigation.brochure.title"), to: "/brochure" },
-      ],
-    },
-    {
-      heading: "company",
-      links: [
-        { label: t("pages.about.title"), to: "/about" },
-        { label: t("pages.team.title"), to: "/team" },
-        { label: t("pages.careers.title"), to: "/careers" },
-        { label: t("pages.contact.title"), to: "/contact" },
-        { label: t("pages.partners.title"), to: "/partners" },
+        { label: "Download Guide", to: "/guide" },
+        { label: "FAQs", to: "/faq" },
+        { label: "Blog & Updates", to: "/blog" },
+        { label: "About Us", to: "/about" },
+        { label: "Contact", to: "/contact" },
       ],
     },
   ]

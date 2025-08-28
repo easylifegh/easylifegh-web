@@ -8,7 +8,7 @@ export default function CallToAction() {
   const { t } = useTranslation()
 
   return (
-    <section className="py-10 bg-gradient-to-b from-gray-100 via-gray-50 to-white relative overflow-hidden">
+    <section className="py-10 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Ghana Flag Background */}
         <div className="absolute top-1/2 right-8 transform -translate-y-1/2 opacity-10 hidden lg:block">

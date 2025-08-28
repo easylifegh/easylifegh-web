@@ -14,14 +14,23 @@
     "newsAndArticles": "Noticias y artículos",
     "events": "Eventos",
     "language": "Español",
-    "studyGhana": "Estudiar en Ghana",
-    "ourServices": "Nuestros Servicios",
-    "resources": "Recursos"
+    "whyGhana": "Por qué Ghana",
+    "study": "Estudiar",
+    "visit": "Visitar",
+    "resources": "Recursos",
+    "educationalExcellence": "Excelencia educativa",
+    "livingInGhana": "Vivir en Ghana",
+    "gettingStarted": "Comenzando",
+    "settlingIn": "Establecerse",
+    "professionalServices": "Servicios profesionales",
+    "travelSupport": "Apoyo de viaje",
+    "planningTools": "Herramientas de planificación",
+    "support": "Apoyo"
   },
   "navigation": {
     "whyGhana": {
       "title": "Por qué elegir Ghana",
-      "description": "Descubre los beneficios de estudiar en Ghana."
+      "description": "Descubre qué hace de Ghana el destino perfecto para todos los visitantes."
     },
     "universities": {
       "title": "Universidades y escuelas",
@@ -35,13 +44,9 @@
       "title": "Costo de vida",
       "description": "Costos de vida asequibles y consejos presupuestarios."
     },
-    "languageSchool": {
-      "title": "Registro en escuela de idiomas",
-      "description": "Regístrese para cursos de idiomas."
-    },
-    "placement": {
-      "title": "Colocación universitaria",
-      "description": "Sea ubicado en su universidad ideal."
+    "academicServices": {
+      "title": "Servicios académicos",
+      "description": "Escuelas de idiomas y apoyo de colocación universitaria."
     },
     "visa": {
       "title": "Asistencia con visa",
@@ -59,14 +64,6 @@
       "title": "Apoyo de orientación",
       "description": "Instálese en su nueva vida."
     },
-    "guide": {
-      "title": "Guía de aplicación",
-      "description": "Proceso de aplicación paso a paso."
-    },
-    "stories": {
-      "title": "Historias de estudiantes",
-      "description": "Experiencias reales de nuestros estudiantes."
-    },
     "blog": {
       "title": "Blog y noticias",
       "description": "Últimas actualizaciones y perspectivas."
@@ -75,9 +72,25 @@
       "title": "Preguntas frecuentes",
       "description": "Preguntas comunes y respuestas."
     },
-    "brochure": {
-      "title": "Descargar folleto",
+    "guide": {
+      "title": "Descargar guía",
       "description": "Obtenga nuestra guía completa."
+    },
+    "businessTravel": {
+      "title": "Apoyo viaje de negocios",
+      "description": "Apoyo completo para viajeros de negocios e inversores."
+    },
+    "medicalTravel": {
+      "title": "Asistencia viaje médico",
+      "description": "Coordinación de viaje de salud y apoyo."
+    },
+    "tourism": {
+      "title": "Turismo y tours culturales",
+      "description": "Tours guiados y experiencias culturales."
+    },
+    "documentation": {
+      "title": "Apoyo documentación",
+      "description": "Asistencia esencial con trámites."
     }
   },
   "pages": {
@@ -97,13 +110,9 @@
       "title": "Costo de vida",
       "subtitle": "Descubre los costos de vida asequibles y consejos presupuestarios para estudiar en Ghana."
     },
-    "languageSchool": {
-      "title": "Registro en escuela de idiomas",
-      "subtitle": "Regístrese para cursos de idiomas para prepararse para sus estudios."
-    },
-    "placement": {
-      "title": "Colocación universitaria",
-      "subtitle": "Sea ubicado en su universidad ideal con nuestra orientación experta."
+    "academic": {
+      "title": "Servicios académicos",
+      "subtitle": "Registro completo en escuelas de idiomas y apoyo de colocación universitaria."
     },
     "visa": {
       "title": "Asistencia con visa",
@@ -121,14 +130,6 @@
       "title": "Apoyo de orientación",
       "subtitle": "Instálese en su nueva vida y entorno académico."
     },
-    "guide": {
-      "title": "Guía de aplicación",
-      "subtitle": "Guía paso a paso del proceso de aplicación universitaria."
-    },
-    "stories": {
-      "title": "Historias de estudiantes",
-      "subtitle": "Experiencias reales e historias de éxito de nuestros estudiantes."
-    },
     "blog": {
       "title": "Blog y noticias",
       "subtitle": "Últimas actualizaciones, perspectivas y noticias sobre estudiar en Ghana."
@@ -137,8 +138,8 @@
       "title": "Preguntas frecuentes",
       "subtitle": "Preguntas frecuentes y respuestas sobre estudiar en Ghana."
     },
-    "brochure": {
-      "title": "Descargar folleto",
+    "guide": {
+      "title": "Descargar guía",
       "subtitle": "Obtenga nuestra guía completa con toda la información que necesita."
     },
     "contact": {
@@ -217,6 +218,22 @@
     "programs": {
       "title": "Programas disponibles",
       "subtitle": "Descubra todos los programas académicos disponibles en Ghana."
+    },
+    "business": {
+      "title": "Apoyo viaje de negocios",
+      "subtitle": "Apoyo completo y servicios para viajeros de negocios e inversores visitando Ghana."
+    },
+    "medical": {
+      "title": "Asistencia viaje médico",
+      "subtitle": "Coordinación de viaje de salud y apoyo para visitantes médicos a Ghana."
+    },
+    "tourism": {
+      "title": "Turismo y tours culturales",
+      "subtitle": "Tours guiados y experiencias culturales auténticas a través de Ghana."
+    },
+    "documentation": {
+      "title": "Apoyo documentación",
+      "subtitle": "Asistencia esencial con trámites y establecimiento en Ghana."
     }
   },
   "hero": {
@@ -248,52 +265,21 @@
   "whyChooseGhana": {
     "title": "¿Por qué elegir Ghana?",
     "features": {
-      "quality": {
-        "title": "Educación de clase mundial",
-        "description": "Estudia en universidades reconocidas internacionalmente con programas de calidad acreditados por organismos globales"
+      "language": {
+        "title": "Inglés en todas partes",
+        "description": "El inglés es el idioma oficial."
+      },
+      "safety": {
+        "title": "Seguro",
+        "description": "Uno de los países más pacíficos y estables de África."
       },
       "affordable": {
-        "title": "Vida asequible",
-        "description": "Experimenta educación y estilo de vida de calidad a una fracción del costo comparado con otros destinos"
-      },
-      "culture": {
-        "title": "Cultura rica",
-        "description": "Sumérgete en la cultura vibrante de Ghana, su historia y la calidez de la hospitalidad africana"
-      },
-      "language": {
-        "title": "Idioma inglés",
-        "description": "Estudia en inglés sin barreras idiomáticas - el idioma oficial de Ghana es el inglés"
+        "title": "Asequible",
+        "description": "Educación, negocios y viajes de calidad a menor costo."
       }
     },
     "cta": {
       "button": "Aprende más sobre Ghana"
-    },
-    "learnMore": "Aprende más"
-  },
-  "whyChooseGhanaPreview": {
-    "title": "¿Por qué elegir Ghana?",
-    "subtitle": "Descubre qué hace de Ghana el destino perfecto para tu jornada educativa internacional",
-    "features": {
-      "quality": {
-        "title": "Educación de clase mundial",
-        "description": "Estudia en universidades reconocidas internacionalmente con programas de calidad acreditados por organismos globales"
-      },
-      "affordable": {
-        "title": "Vida asequible",
-        "description": "Experimenta educación y estilo de vida de calidad a una fracción del costo comparado con otros destinos"
-      },
-      "culture": {
-        "title": "Cultura rica",
-        "description": "Sumérgete en la cultura vibrante de Ghana, su historia y la calidez de la hospitalidad africana"
-      },
-      "language": {
-        "title": "Idioma inglés",
-        "description": "Estudia en inglés sin barreras idiomáticas - el idioma oficial de Ghana es el inglés"
-      }
-    },
-    "cta": {
-      "button": "Aprende más sobre Ghana",
-      "description": "Explora todo lo que Ghana tiene para ofrecer a estudiantes internacionales"
     },
     "learnMore": "Aprende más"
   },
@@ -357,10 +343,10 @@
     "description": "Tu socio de confianza para estudiar en Ghana. Proporcionamos apoyo integral desde las aplicaciones universitarias hasta establecerte en tu nuevo viaje académico en el destino más acogedor de África Occidental.",
     "followUs": "Síguenos:",
     "sections": {
-      "studyGhana": "Estudiar en Ghana",
-      "ourServices": "Nuestros Servicios",
-      "resources": "Recursos",
-      "company": "Empresa"
+      "whyGhana": "Por qué Ghana",
+      "study": "Estudiar",
+      "visit": "Visitar",
+      "resources": "Recursos"
     },
     "copyright": "© {{year}} EasyLife Ghana. Todos los derechos reservados."
   }

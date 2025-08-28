@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useTranslation } from "react-i18next"
 
 export default function HeroSection() {
@@ -10,18 +11,17 @@ export default function HeroSection() {
 
   const slides = [
     {
-      image: "https://www.ug.edu.gh/sites/default/files/2025-07/UG-main.jpg",
+      image: "/hero/university.png",
       titleKey: "hero.slides.university.title",
       subtitleKey: "hero.slides.university.subtitle",
     },
     {
-      image: "https://silcampusgh.com/img/class%20activities.jpg",
+      image: "/hero/class-activities.png",
       titleKey: "hero.slides.english.title",
       subtitleKey: "hero.slides.english.subtitle",
     },
     {
-      image:
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fb/46/ghana.jpg?w=1200&h=700&s=1",
+      image: "/hero/discover.png",
       titleKey: "hero.slides.discover.title",
       subtitleKey: "hero.slides.discover.subtitle",
     },
@@ -47,11 +47,16 @@ export default function HeroSection() {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
-            src={slide.image}
-            alt={t(slide.titleKey)}
-            className="w-full h-full object-cover"
-          />
+          <div className="w-full h-full">
+            <Image
+              src={slide.image}
+              alt={t(slide.titleKey)}
+              fill
+              className="object-cover"
+              priority={index === 0}
+              sizes="100vw"
+            />
+          </div>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
       ))}

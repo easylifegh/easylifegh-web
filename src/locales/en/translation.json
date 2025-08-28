@@ -14,14 +14,23 @@
     "newsAndArticles": "News and articles",
     "events": "Events",
     "language": "English",
-    "studyGhana": "Study in Ghana",
-    "ourServices": "Our Services",
-    "resources": "Resources"
+    "whyGhana": "Why Ghana",
+    "study": "Study",
+    "visit": "Visit",
+    "resources": "Resources",
+    "educationalExcellence": "Educational Excellence",
+    "livingInGhana": "Living in Ghana",
+    "gettingStarted": "Getting Started",
+    "settlingIn": "Settling In",
+    "professionalServices": "Professional Services",
+    "travelSupport": "Travel Support",
+    "planningTools": "Planning Tools",
+    "support": "Support"
   },
   "navigation": {
     "whyGhana": {
       "title": "Why Choose Ghana",
-      "description": "Discover the benefits of studying in Ghana."
+      "description": "Discover what makes Ghana the perfect destination for all visitors."
     },
     "universities": {
       "title": "Universities & Schools",
@@ -35,13 +44,9 @@
       "title": "Cost of Living",
       "description": "Affordable living costs and budgeting."
     },
-    "languageSchool": {
-      "title": "Language School Registration",
-      "description": "Register for language courses."
-    },
-    "placement": {
-      "title": "University Placement",
-      "description": "Get placed in your ideal university."
+    "academicServices": {
+      "title": "Academic Services",
+      "description": "Language schools and university placement support."
     },
     "visa": {
       "title": "Visa Assistance",
@@ -59,14 +64,6 @@
       "title": "Orientation Support",
       "description": "Get settled into your new life."
     },
-    "guide": {
-      "title": "Application Guide",
-      "description": "Step-by-step application process."
-    },
-    "stories": {
-      "title": "Student Stories",
-      "description": "Real experiences from our students."
-    },
     "blog": {
       "title": "Blog & News",
       "description": "Latest updates and insights."
@@ -75,9 +72,25 @@
       "title": "FAQs",
       "description": "Common questions answered."
     },
-    "brochure": {
-      "title": "Download Brochure",
+    "guide": {
+      "title": "Download Guide",
       "description": "Get our comprehensive guide."
+    },
+    "businessTravel": {
+      "title": "Business Travel Support",
+      "description": "Complete support for business travelers and investors."
+    },
+    "medicalTravel": {
+      "title": "Medical Travel Assistance",
+      "description": "Healthcare travel coordination and support."
+    },
+    "tourism": {
+      "title": "Tourism & Cultural Tours",
+      "description": "Guided tours and cultural experiences."
+    },
+    "documentation": {
+      "title": "Documentation Support",
+      "description": "Essential paperwork and setup assistance."
     }
   },
   "pages": {
@@ -97,13 +110,9 @@
       "title": "Cost of Living",
       "subtitle": "Discover affordable living costs and budgeting tips for studying in Ghana."
     },
-    "languageSchool": {
-      "title": "Language School Registration",
-      "subtitle": "Register for language courses to prepare for your studies."
-    },
-    "placement": {
-      "title": "University Placement",
-      "subtitle": "Get placed in your ideal university with our expert guidance."
+    "academic": {
+      "title": "Academic Services",
+      "subtitle": "Complete language school registration and university placement support."
     },
     "visa": {
       "title": "Visa Assistance",
@@ -121,14 +130,6 @@
       "title": "Orientation Support",
       "subtitle": "Get settled into your new life and academic environment."
     },
-    "guide": {
-      "title": "Application Guide",
-      "subtitle": "Step-by-step guide to the university application process."
-    },
-    "stories": {
-      "title": "Student Stories",
-      "subtitle": "Real experiences and success stories from our students."
-    },
     "blog": {
       "title": "Blog & News",
       "subtitle": "Latest updates, insights, and news about studying in Ghana."
@@ -137,8 +138,8 @@
       "title": "FAQs",
       "subtitle": "Frequently asked questions and answers about studying in Ghana."
     },
-    "brochure": {
-      "title": "Download Brochure",
+    "guide": {
+      "title": "Download Guide",
       "subtitle": "Get our comprehensive guide with all the information you need."
     },
     "contact": {
@@ -217,6 +218,22 @@
     "programs": {
       "title": "Programs Available",
       "subtitle": "Discover all the academic programs available in Ghana."
+    },
+    "business": {
+      "title": "Business Travel Support",
+      "subtitle": "Complete support and services for business travelers and investors visiting Ghana."
+    },
+    "medical": {
+      "title": "Medical Travel Assistance",
+      "subtitle": "Healthcare travel coordination and support for medical visitors to Ghana."
+    },
+    "tourism": {
+      "title": "Tourism & Cultural Tours",
+      "subtitle": "Guided tours and authentic cultural experiences throughout Ghana."
+    },
+    "documentation": {
+      "title": "Documentation Support",
+      "subtitle": "Essential paperwork and setup assistance for your life in Ghana."
     }
   },
   "notFound": {
@@ -247,28 +264,23 @@
   },
   "whyChooseGhana": {
     "title": "Why Choose Ghana?",
-    "subtitle": "Discover what makes Ghana the perfect destination for your international education journey",
     "features": {
-      "quality": {
-        "title": "World-Class Education",
-        "description": "Study at internationally recognized universities with quality programs accredited by global bodies"
+      "language": {
+        "title": "English Everywhere",
+        "description": "English is the official language."
+      },
+      "safety": {
+        "title": "Safe",
+        "description": "One of Africa's most peaceful and stable countries."
       },
       "affordable": {
-        "title": "Affordable Living",
-        "description": "Experience quality education and lifestyle at a fraction of the cost compared to other destinations"
-      },
-      "culture": {
-        "title": "Rich Culture",
-        "description": "Immerse yourself in Ghana's vibrant culture, history, and the warmth of African hospitality"
-      },
-      "language": {
-        "title": "English Speaking",
-        "description": "Study in English with no language barriers - Ghana's official language is English"
+        "title": "Affordable",
+        "description": "High-quality education, business, and travel at lower cost."
       }
     },
     "cta": {
       "button": "Learn More About Ghana",
-      "description": "Explore everything Ghana has to offer international students"
+      "description": "Explore everything Ghana has to offer all visitors"
     },
     "learnMore": "Learn more"
   },
@@ -332,10 +344,10 @@
     "description": "Your trusted partner for studying in Ghana. We provide comprehensive support from university applications to settling into your new academic journey in West Africa's most welcoming destination.",
     "followUs": "Follow us:",
     "sections": {
-      "studyGhana": "Study in Ghana",
-      "ourServices": "Our Services",
-      "resources": "Resources",
-      "company": "Company"
+      "whyGhana": "Why Ghana",
+      "study": "Study",
+      "visit": "Visit",
+      "resources": "Resources"
     },
     "copyright": "© {{year}} EasyLife Ghana. All rights reserved."
   }

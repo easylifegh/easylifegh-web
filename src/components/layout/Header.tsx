@@ -112,59 +112,48 @@ export default function Header() {
 
   const megaNav: MegaItem[] = [
     {
-      id: "study-ghana",
-      label: t("header.studyGhana"),
+      id: "why-ghana",
+      label: t("header.whyGhana"),
       type: "dropdown",
       groups: [
         {
-          heading: "Why Ghana",
           items: [
             {
-              title: t("navigation.whyGhana.title"),
-              description: t("navigation.whyGhana.description"),
-              path: "/why-ghana",
+              title: t("whyChooseGhana.features.language.title"),
+              description: t("whyChooseGhana.features.language.description"),
+              path: "/why-ghana#language",
             },
             {
-              title: t("navigation.universities.title"),
-              description: t("navigation.universities.description"),
-              path: "/universities",
-            },
-          ],
-        },
-        {
-          heading: "Student Life",
-          items: [
-            {
-              title: t("navigation.studentLife.title"),
-              description: t("navigation.studentLife.description"),
-              path: "/student-life",
+              title: t("whyChooseGhana.features.safety.title"),
+              description: t("whyChooseGhana.features.safety.description"),
+              path: "/why-ghana#safety",
             },
             {
-              title: t("navigation.costLiving.title"),
-              description: t("navigation.costLiving.description"),
-              path: "/cost-living",
+              title: t("whyChooseGhana.features.affordable.title"),
+              description: t("whyChooseGhana.features.affordable.description"),
+              path: "/why-ghana#affordable",
             },
           ],
         },
       ],
     },
     {
-      id: "services",
-      label: t("header.ourServices"),
+      id: "for-students",
+      label: t("header.study"),
       type: "dropdown",
       groups: [
         {
-          heading: "Application Support",
+          heading: t("header.gettingStarted"),
           items: [
             {
-              title: t("navigation.languageSchool.title"),
-              description: t("navigation.languageSchool.description"),
-              path: "/services/language-school",
+              title: t("navigation.academicServices.title"),
+              description: t("navigation.academicServices.description"),
+              path: "/services/academic",
             },
             {
-              title: t("navigation.placement.title"),
-              description: t("navigation.placement.description"),
-              path: "/services/placement",
+              title: t("navigation.accommodation.title"),
+              description: t("navigation.accommodation.description"),
+              path: "/services/accommodation",
             },
             {
               title: t("navigation.visa.title"),
@@ -174,17 +163,17 @@ export default function Header() {
           ],
         },
         {
-          heading: "Student Support",
+          heading: t("header.settlingIn"),
           items: [
-            {
-              title: t("navigation.accommodation.title"),
-              description: t("navigation.accommodation.description"),
-              path: "/services/accommodation",
-            },
             {
               title: t("navigation.pickup.title"),
               description: t("navigation.pickup.description"),
               path: "/services/pickup",
+            },
+            {
+              title: t("navigation.documentation.title"),
+              description: t("navigation.documentation.description"),
+              path: "/services/documentation",
             },
             {
               title: t("navigation.orientation.title"),
@@ -196,12 +185,37 @@ export default function Header() {
       ],
     },
     {
+      id: "for-visitors",
+      label: t("header.visit"),
+      type: "dropdown",
+      groups: [
+        {
+          items: [
+            {
+              title: t("navigation.tourism.title"),
+              description: t("navigation.tourism.description"),
+              path: "/services/tourism",
+            },
+            {
+              title: t("navigation.businessTravel.title"),
+              description: t("navigation.businessTravel.description"),
+              path: "/services/business",
+            },
+            {
+              title: t("navigation.medicalTravel.title"),
+              description: t("navigation.medicalTravel.description"),
+              path: "/services/medical",
+            },
+          ],
+        },
+      ],
+    },
+    {
       id: "resources",
       label: t("header.resources"),
       type: "dropdown",
       groups: [
         {
-          heading: "Helpful Guides",
           items: [
             {
               title: t("navigation.guide.title"),
@@ -209,29 +223,14 @@ export default function Header() {
               path: "/guide",
             },
             {
-              title: t("navigation.stories.title"),
-              description: t("navigation.stories.description"),
-              path: "/stories",
-            },
-            {
-              title: t("navigation.blog.title"),
-              description: t("navigation.blog.description"),
-              path: "/blog",
-            },
-          ],
-        },
-        {
-          heading: "Support",
-          items: [
-            {
               title: t("navigation.faq.title"),
               description: t("navigation.faq.description"),
               path: "/faq",
             },
             {
-              title: t("navigation.brochure.title"),
-              description: t("navigation.brochure.description"),
-              path: "/brochure",
+              title: t("navigation.blog.title"),
+              description: t("navigation.blog.description"),
+              path: "/blog",
             },
           ],
         },
@@ -286,29 +285,29 @@ export default function Header() {
                 <ClientOnly
                   fallback={
                     <span className="hover:text-gray-300 transition-colors">
-                      News and articles
+                      24/7 Support Available
                     </span>
                   }
                 >
-                  <Link
-                    href="/news"
-                    className="hover:text-gray-300 transition-colors"
-                  >
-                    {t("header.newsAndArticles")}
-                  </Link>
+                  <span className="hover:text-gray-300 transition-colors">
+                    24/7 Support Available
+                  </span>
                 </ClientOnly>
                 <ClientOnly
                   fallback={
-                    <span className="hover:text-gray-300 transition-colors">
+                    <Link
+                      href="/events"
+                      className="hover:text-gray-300 transition-colors"
+                    >
                       Events
-                    </span>
+                    </Link>
                   }
                 >
                   <Link
                     href="/events"
                     className="hover:text-gray-300 transition-colors"
                   >
-                    {t("header.events")}
+                    Events
                   </Link>
                 </ClientOnly>
                 <ClientOnly>
@@ -385,17 +384,19 @@ export default function Header() {
                             >
                               <ClientOnly
                                 fallback={
-                                  item.id === "study-ghana"
-                                    ? "Study in Ghana"
-                                    : item.id === "services"
-                                      ? "Our Services"
-                                      : item.id === "resources"
-                                        ? "Resources"
-                                        : item.id === "about"
-                                          ? "About"
-                                          : item.id === "contact"
-                                            ? "Contact"
-                                            : item.label
+                                  item.id === "why-ghana"
+                                    ? "Why Ghana"
+                                    : item.id === "for-students"
+                                      ? "Study"
+                                      : item.id === "for-visitors"
+                                        ? "Visit"
+                                        : item.id === "resources"
+                                          ? "Resources"
+                                          : item.id === "about"
+                                            ? "About"
+                                            : item.id === "contact"
+                                              ? "Contact"
+                                              : item.label
                                 }
                               >
                                 {item.label}
@@ -407,7 +408,9 @@ export default function Header() {
                               </span>
                             </button>
                             {opened && (
-                              <div className="mega-dropdown-panel absolute top-full left-0 w-[880px] max-w-[84vw] bg-white rounded-b-[4px] px-8 py-5 shadow-none z-[150]">
+                              <div
+                                className={`mega-dropdown-panel absolute top-full left-0 ${item.groups && item.groups.length === 1 ? "w-[320px]" : "w-[880px]"} max-w-[84vw] bg-white rounded-b-[4px] px-8 py-5 shadow-none z-[150]`}
+                              >
                                 <div className="grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-y-9 gap-x-10">
                                   {item.groups?.map((g, gi) => (
                                     <div
@@ -493,17 +496,19 @@ export default function Header() {
                           >
                             <ClientOnly
                               fallback={
-                                item.id === "study-ghana"
-                                  ? "Study in Ghana"
-                                  : item.id === "services"
-                                    ? "Our Services"
-                                    : item.id === "resources"
-                                      ? "Resources"
-                                      : item.id === "about"
-                                        ? "About"
-                                        : item.id === "contact"
-                                          ? "Contact"
-                                          : item.label
+                                item.id === "why-ghana"
+                                  ? "Why Ghana"
+                                  : item.id === "for-students"
+                                    ? "Study"
+                                    : item.id === "for-visitors"
+                                      ? "Visit"
+                                      : item.id === "resources"
+                                        ? "Resources"
+                                        : item.id === "about"
+                                          ? "About"
+                                          : item.id === "contact"
+                                            ? "Contact"
+                                            : item.label
                               }
                             >
                               {item.label}
@@ -594,17 +599,19 @@ export default function Header() {
                               <ClientOnly
                                 fallback={
                                   <span>
-                                    {item.id === "study-ghana"
-                                      ? "Study in Ghana"
-                                      : item.id === "services"
-                                        ? "Our Services"
-                                        : item.id === "resources"
-                                          ? "Resources"
-                                          : item.id === "about"
-                                            ? "About"
-                                            : item.id === "contact"
-                                              ? "Contact"
-                                              : item.label}
+                                    {item.id === "why-ghana"
+                                      ? "Why Ghana"
+                                      : item.id === "for-students"
+                                        ? "Study"
+                                        : item.id === "for-visitors"
+                                          ? "Visit"
+                                          : item.id === "resources"
+                                            ? "Resources"
+                                            : item.id === "about"
+                                              ? "About"
+                                              : item.id === "contact"
+                                                ? "Contact"
+                                                : item.label}
                                   </span>
                                 }
                               >
@@ -684,17 +691,19 @@ export default function Header() {
                           >
                             <ClientOnly
                               fallback={
-                                item.id === "study-ghana"
-                                  ? "Study in Ghana"
-                                  : item.id === "services"
-                                    ? "Our Services"
-                                    : item.id === "resources"
-                                      ? "Resources"
-                                      : item.id === "about"
-                                        ? "About"
-                                        : item.id === "contact"
-                                          ? "Contact"
-                                          : item.label
+                                item.id === "why-ghana"
+                                  ? "Why Ghana"
+                                  : item.id === "for-students"
+                                    ? "Study"
+                                    : item.id === "for-visitors"
+                                      ? "Visit"
+                                      : item.id === "resources"
+                                        ? "Resources"
+                                        : item.id === "about"
+                                          ? "About"
+                                          : item.id === "contact"
+                                            ? "Contact"
+                                            : item.label
                               }
                             >
                               {item.label}
