@@ -225,6 +225,26 @@
     "goHome": "Go Home",
     "getHelp": "Get Help"
   },
+  "hero": {
+    "slides": {
+      "university": {
+        "title": "Study at Ghana's Top Universities",
+        "subtitle": "Join thousands of international students pursuing world-class degrees in medicine, engineering, business and more"
+      },
+      "english": {
+        "title": "Master English in Ghana",
+        "subtitle": "Perfect your English skills in an immersive environment while experiencing African culture and hospitality"
+      },
+      "discover": {
+        "title": "Discover Beautiful Ghana",
+        "subtitle": "Explore West Africa's gateway nation with rich history, stunning landscapes, and vibrant cultural heritage"
+      }
+    },
+    "buttons": {
+      "applyNow": "Apply Now",
+      "downloadGuide": "Download Guide"
+    }
+  },
   "footer": {
     "description": "Your trusted partner for studying in Ghana. We provide comprehensive support from university applications to settling into your new academic journey in West Africa's most welcoming destination.",
     "followUs": "Follow us:",

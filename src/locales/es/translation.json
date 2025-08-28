@@ -219,6 +219,26 @@
       "subtitle": "Descubra todos los programas académicos disponibles en Ghana."
     }
   },
+  "hero": {
+    "slides": {
+      "university": {
+        "title": "Estudia en las mejores universidades de Ghana",
+        "subtitle": "Únete a miles de estudiantes internacionales que cursan títulos de clase mundial en medicina, ingeniería, negocios y más"
+      },
+      "english": {
+        "title": "Domina el inglés en Ghana",
+        "subtitle": "Perfecciona tus habilidades en inglés en un entorno inmersivo mientras experimentas la cultura y hospitalidad africanas"
+      },
+      "discover": {
+        "title": "Descubre la hermosa Ghana",
+        "subtitle": "Explora la nación puerta de entrada de África Occidental con rica historia, paisajes impresionantes y patrimonio cultural vibrante"
+      }
+    },
+    "buttons": {
+      "applyNow": "Aplicar ahora",
+      "downloadGuide": "Descargar guía"
+    }
+  },
   "notFound": {
     "title": "Pareces perdido",
     "subtitle": "Esta página se fue en su propia aventura de estudios en el extranjero. Te ayudamos a volver al camino correcto.",

@@ -2,29 +2,28 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function HeroSection() {
+  const { t } = useTranslation()
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
     {
       image: "https://www.ug.edu.gh/sites/default/files/2025-07/UG-main.jpg",
-      title: "Study at Ghana's Top Universities",
-      subtitle:
-        "Join thousands of international students pursuing world-class degrees in medicine, engineering, business and more",
+      titleKey: "hero.slides.university.title",
+      subtitleKey: "hero.slides.university.subtitle",
     },
     {
       image: "https://silcampusgh.com/img/class%20activities.jpg",
-      title: "Master English in Ghana",
-      subtitle:
-        "Perfect your English skills in an immersive environment while experiencing African culture and hospitality",
+      titleKey: "hero.slides.english.title",
+      subtitleKey: "hero.slides.english.subtitle",
     },
     {
       image:
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fb/46/ghana.jpg?w=1200&h=700&s=1",
-      title: "Discover Beautiful Ghana",
-      subtitle:
-        "Explore West Africa's gateway nation with rich history, stunning landscapes, and vibrant cultural heritage",
+      titleKey: "hero.slides.discover.title",
+      subtitleKey: "hero.slides.discover.subtitle",
     },
   ]
 
@@ -50,36 +49,38 @@ export default function HeroSection() {
         >
           <img
             src={slide.image}
-            alt={slide.title}
+            alt={t(slide.titleKey)}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
       ))}
 
-      <div className="relative z-10 flex items-center h-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex items-start h-full">
+        <div className="container mx-auto px-6 sm:px-6 lg:px-8 pt-18 sm:pt-16 md:pt-20">
           <div className="max-w-2xl text-white">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 sm:mb-12 md:mb-16 lg:mb-24">
-              {slides[currentSlide].title}
-            </h1>
+            <div className="-mt-2 sm:-mt-6 md:-mt-8 lg:-mt-12">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 sm:mb-6 md:mb-8 lg:mb-12">
+                {t(slides[currentSlide].titleKey)}
+              </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-12 md:mb-16 lg:mb-32">
-              {slides[currentSlide].subtitle}
-            </p>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-10 md:mb-16 lg:mb-24">
+                {t(slides[currentSlide].subtitleKey)}
+              </p>
+            </div>
 
-            <div className="flex flex-col gap-4 sm:gap-6 sm:flex-row">
+            <div className="flex flex-col gap-4 sm:gap-6 sm:flex-row mt-10 sm:mt-0 md:mt-16 lg:mt-24">
               <Link
                 href="/apply"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 inline-block text-center"
               >
-                Apply Now
+                {t("hero.buttons.applyNow")}
               </Link>
               <Link
                 href="/guide"
                 className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
               >
-                Download Guide
+                {t("hero.buttons.downloadGuide")}
               </Link>
             </div>
           </div>

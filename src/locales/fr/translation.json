@@ -219,6 +219,26 @@
       "subtitle": "Découvrez tous les programmes académiques disponibles au Ghana."
     }
   },
+  "hero": {
+    "slides": {
+      "university": {
+        "title": "Étudiez dans les meilleures universités du Ghana",
+        "subtitle": "Rejoignez des milliers d'étudiants internationaux poursuivant des diplômes de classe mondiale en médecine, ingénierie, commerce et plus"
+      },
+      "english": {
+        "title": "Maîtrisez l'anglais au Ghana",
+        "subtitle": "Perfectionnez vos compétences en anglais dans un environnement immersif tout en découvrant la culture et l'hospitalité africaines"
+      },
+      "discover": {
+        "title": "Découvrez le beau Ghana",
+        "subtitle": "Explorez la nation passerelle de l'Afrique de l'Ouest avec sa riche histoire, ses paysages magnifiques et son patrimoine culturel vibrant"
+      }
+    },
+    "buttons": {
+      "applyNow": "Postuler maintenant",
+      "downloadGuide": "Télécharger le guide"
+    }
+  },
   "notFound": {
     "title": "Vous semblez perdu",
     "subtitle": "Cette page est partie dans sa propre aventure d'études à l'étranger. Remettons-vous sur la bonne voie.",
