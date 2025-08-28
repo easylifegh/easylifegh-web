@@ -1,6 +1,7 @@
 import HeroSection from "@/components/homepage/HeroSection"
 import WhyChooseGhana from "@/components/homepage/WhyChooseGhana"
 import ApplicationProcess from "@/components/homepage/ApplicationProcess"
+import FAQ from "@/components/homepage/FAQ"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <WhyChooseGhana />
       <ApplicationProcess />
+      <FAQ />
     </div>
   )
 }

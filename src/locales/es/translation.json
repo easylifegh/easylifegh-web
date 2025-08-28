@@ -245,6 +245,31 @@
     "goHome": "Ir al inicio",
     "getHelp": "Obtener ayuda"
   },
+  "whyChooseGhana": {
+    "title": "¿Por qué elegir Ghana?",
+    "features": {
+      "quality": {
+        "title": "Educación de clase mundial",
+        "description": "Estudia en universidades reconocidas internacionalmente con programas de calidad acreditados por organismos globales"
+      },
+      "affordable": {
+        "title": "Vida asequible",
+        "description": "Experimenta educación y estilo de vida de calidad a una fracción del costo comparado con otros destinos"
+      },
+      "culture": {
+        "title": "Cultura rica",
+        "description": "Sumérgete en la cultura vibrante de Ghana, su historia y la calidez de la hospitalidad africana"
+      },
+      "language": {
+        "title": "Idioma inglés",
+        "description": "Estudia en inglés sin barreras idiomáticas - el idioma oficial de Ghana es el inglés"
+      }
+    },
+    "cta": {
+      "button": "Aprende más sobre Ghana"
+    },
+    "learnMore": "Aprende más"
+  },
   "whyChooseGhanaPreview": {
     "title": "¿Por qué elegir Ghana?",
     "subtitle": "Descubre qué hace de Ghana el destino perfecto para tu jornada educativa internacional",
@@ -298,6 +323,28 @@
       "arrival": {
         "title": "Llegar y establecerse",
         "description": "Aterriza en Ghana y comienza tu jornada académica con soporte continuo"
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "viewAll": "Ver todas las FAQ",
+    "questions": {
+      "cost": {
+        "question": "¿Cuánto cuesta estudiar en Ghana?",
+        "answer": "Las tasas de matrícula varían según la universidad y programa. Los costos de vida son muy asequibles, promediando $300-$500 por mes incluyendo alojamiento, comida y transporte."
+      },
+      "language": {
+        "question": "¿Necesito hablar un idioma local?",
+        "answer": "No, el idioma oficial de Ghana es el inglés. Todos los programas universitarios se enseñan en inglés, facilitando el estudio y comunicación para estudiantes internacionales."
+      },
+      "visa": {
+        "question": "¿Cuánto tiempo toma el proceso de visa?",
+        "answer": "El procesamiento de visa de estudiante típicamente toma 2-4 días una vez que todos los documentos son enviados. Te asistimos durante todo el proceso para asegurar una aprobación fluida y oportuna."
+      },
+      "safety": {
+        "question": "¿Es Ghana seguro para estudiantes internacionales?",
+        "answer": "Sí, Ghana es uno de los países más seguros en África Occidental. Es conocido por su estabilidad política, gente amable y actitud acogedora hacia estudiantes internacionales."
       }
     }
   },
