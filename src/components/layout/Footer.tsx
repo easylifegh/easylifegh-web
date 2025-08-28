@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Instagram, Linkedin } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
@@ -241,10 +241,16 @@ export default function Footer() {
                 </a>
                 <a
                   href="#"
-                  aria-label="LinkedIn"
-                  className="w-10 h-10 bg-[#0A66C2] text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="X"
+                  className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
                 >
-                  <Linkedin className="h-5 w-5" />
+                  <svg
+                    className="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
                 </a>
               </div>
             </div>
