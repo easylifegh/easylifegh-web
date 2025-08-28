@@ -245,6 +245,33 @@
       "downloadGuide": "Download Guide"
     }
   },
+  "whyChooseGhana": {
+    "title": "Why Choose Ghana?",
+    "subtitle": "Discover what makes Ghana the perfect destination for your international education journey",
+    "features": {
+      "quality": {
+        "title": "World-Class Education",
+        "description": "Study at internationally recognized universities with quality programs accredited by global bodies"
+      },
+      "affordable": {
+        "title": "Affordable Living",
+        "description": "Experience quality education and lifestyle at a fraction of the cost compared to other destinations"
+      },
+      "culture": {
+        "title": "Rich Culture",
+        "description": "Immerse yourself in Ghana's vibrant culture, history, and the warmth of African hospitality"
+      },
+      "language": {
+        "title": "English Speaking",
+        "description": "Study in English with no language barriers - Ghana's official language is English"
+      }
+    },
+    "cta": {
+      "button": "Learn More About Ghana",
+      "description": "Explore everything Ghana has to offer international students"
+    },
+    "learnMore": "Learn more"
+  },
   "footer": {
     "description": "Your trusted partner for studying in Ghana. We provide comprehensive support from university applications to settling into your new academic journey in West Africa's most welcoming destination.",
     "followUs": "Follow us:",
