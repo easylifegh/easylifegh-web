@@ -16,8 +16,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "EasyLife Ghana",
-  description:
-    "We guide and support international students with transparent information, admissions help and on‑the‑ground orientation so you can thrive studying in Ghana.",
   icons: {
     icon: "/favicon.png",
   },
