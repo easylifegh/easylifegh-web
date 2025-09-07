@@ -36,11 +36,12 @@ function CheckEmailContent() {
         <div className="mb-10 flex w-full justify-center">
           <Link href="/" aria-label="Go to homepage" className="inline-block">
             <Image
-              src="/logo.jpeg"
-              alt="Logo"
+              src="/logo.png"
+              alt="EasyLife Ghana"
               width={96}
               height={96}
               className="h-20 w-auto md:h-24"
+              priority
             />
           </Link>
         </div>
@@ -105,13 +106,12 @@ function CheckEmailContent() {
           >
             <ClientOnly
               fallback={
-                <Link
-                  href="/terms"
-                  className="transition-colors hover:text-green-700 underline"
+                <span
+                  className="transition-colors underline"
                   style={{ fontSize: "10px" }}
                 >
-                  Terms of Use
-                </Link>
+                  {t("pages.login.legal.termsOfUse")}
+                </span>
               }
             >
               <Link
@@ -124,13 +124,12 @@ function CheckEmailContent() {
             </ClientOnly>
             <ClientOnly
               fallback={
-                <Link
-                  href="/privacy"
-                  className="transition-colors hover:text-green-700 underline"
+                <span
+                  className="transition-colors underline"
                   style={{ fontSize: "10px" }}
                 >
-                  Privacy Policy
-                </Link>
+                  {t("pages.login.legal.privacyPolicy")}
+                </span>
               }
             >
               <Link
@@ -149,27 +148,15 @@ function CheckEmailContent() {
                 className="text-[#5F6B7A]"
                 style={{ fontSize: "10px", lineHeight: "2.4em" }}
               >
-                This site is protected by reCAPTCHA Enterprise.{" "}
-                <a
-                  href="https://policies.google.com/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-green-700"
-                  style={{ fontSize: "10px" }}
-                >
-                  Google&apos;s Privacy Policy
-                </a>{" "}
+                {t("pages.login.legal.recaptchaNotice")}{" "}
+                <span className="underline" style={{ fontSize: "10px" }}>
+                  {t("pages.login.legal.googlePrivacyPolicy")}
+                </span>{" "}
                 and{" "}
-                <a
-                  href="https://policies.google.com/terms"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-green-700"
-                  style={{ fontSize: "10px" }}
-                >
-                  Terms of Service
-                </a>{" "}
-                apply.
+                <span className="underline" style={{ fontSize: "10px" }}>
+                  {t("pages.login.legal.googleTermsOfService")}
+                </span>{" "}
+                {t("pages.login.legal.recaptchaApply")}
               </p>
             }
           >

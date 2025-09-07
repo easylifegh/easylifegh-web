@@ -152,6 +152,14 @@
       "continueWithGoogle": "Continuar con Google",
       "continueWithFacebook": "Continuar con Facebook",
       "continueWithApple": "Continuar con Apple",
+      "continueWithEmail": "Continuar con Email",
+      "backToOptions": "Volver a opciones de inicio de sesión",
+      "emailPlaceholder": "Ingresa tu dirección de email",
+      "leftPanel": {
+        "heading": "Bienvenido a EasyLife Ghana",
+        "description": "Tu socio de confianza para servicios académicos, turismo, viajes de negocios y asistencia médica en Ghana.",
+        "illustrationAlt": "Ilustración EasyLife Ghana"
+      },
       "checkEmail": {
         "title": "Revise su email",
         "sentTo": "Enviamos un enlace mágico a",
@@ -349,7 +357,7 @@
       },
       "standard": {
         "name": "Pack Estándar",
-        "subtitle": "Más Popular",
+        "subtitle": "Mejor Valor",
         "description": "Asistencia Remota",
         "processingTime": "3-10 días",
         "included": [
@@ -423,5 +431,9 @@
       "pricing": "Precios"
     },
     "copyright": "© {{year}} EasyLife Ghana. Todos los derechos reservados."
+  },
+  "whatsapp": {
+    "needHelp": "¿Necesitas ayuda?",
+    "contactUs": "Escríbenos"
   }
 }

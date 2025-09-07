@@ -321,11 +321,12 @@ export default function Header() {
                     className="flex items-center gap-2 md:gap-3 h-[64px] md:h-[72px] pr-1"
                   >
                     <Image
-                      src="/logo.jpeg"
+                      src="/logo.png"
                       alt="EasyLife Ghana"
-                      width={38}
-                      height={38}
-                      className="md:w-[42px] md:h-[42px] rounded-[8px] object-cover"
+                      width={96}
+                      height={96}
+                      className="h-20 w-auto md:h-24 rounded-[8px] object-cover"
+                      priority
                     />
                     <ClientOnly
                       fallback={

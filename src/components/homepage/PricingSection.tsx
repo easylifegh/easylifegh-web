@@ -1,6 +1,6 @@
 "use client"
 
-import { Check, X } from "lucide-react"
+import { Check, X, Crown } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
 
@@ -10,17 +10,14 @@ export default function PricingSection() {
   const pricingPlans = [
     {
       id: "basic",
-      price: 85,
       popular: false,
     },
     {
       id: "standard",
-      price: 150,
       popular: true,
     },
     {
       id: "premium",
-      price: 280,
       popular: false,
     },
   ]
@@ -50,22 +47,46 @@ export default function PricingSection() {
           {pricingPlans.map(plan => {
             const isPremium = plan.id === "premium"
             const isPopular = plan.popular
-            // Card style variants (visual only, content unchanged)
+            const inverted = plan.id === "basic" || plan.id === "premium" // dark backgrounds now basic (teal) & premium (indigo)
+            // Card style variants
             const base =
-              "relative flex flex-col h-full rounded-[48px] overflow-hidden transition-all duration-300 border backdrop-blur-sm"
+              "relative flex flex-col h-full rounded-[48px] transition-all duration-300 border backdrop-blur-sm"
             const variant =
               plan.id === "basic"
-                ? "bg-white/90 border-gray-200 hover:shadow-xl hover:border-gray-300"
+                ? "bg-gradient-to-b from-teal-600 via-teal-600 to-teal-500 border-teal-500 shadow-xl hover:shadow-2xl"
                 : plan.id === "standard"
                   ? "bg-gradient-to-b from-white via-indigo-50 to-white border-indigo-200 shadow-lg hover:shadow-xl"
-                  : "bg-gradient-to-b from-teal-600 via-teal-600 to-teal-500 border-teal-500 shadow-xl hover:shadow-2xl"
-            const ring = isPopular ? "ring-2 ring-offset-2 ring-[#17a253]" : ""
+                  : "bg-gradient-to-b from-indigo-600 via-indigo-600 to-indigo-500 border-indigo-500 shadow-xl hover:shadow-2xl"
+            const ring = isPopular
+              ? "ring-2 ring-offset-2 ring-[#17a253]"
+              : isPremium
+                ? "ring-4 ring-offset-2 ring-yellow-400/70"
+                : ""
+            const overflow = isPremium ? "overflow-visible" : "overflow-hidden"
 
             return (
-              <div key={plan.id} className={`${base} ${variant} ${ring} group`}>
-                {/* Decorative shape for first card to mimic sample design */}
-                {plan.id === "basic" && (
-                  <div className="pointer-events-none absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-[56px] opacity-90 mix-blend-multiply" />
+              <div
+                key={plan.id}
+                className={`${base} ${variant} ${ring} ${overflow} group`}
+              >
+                {/* Premium Crown & Glow */}
+                {isPremium && (
+                  <>
+                    <div className="pointer-events-none absolute inset-0 before:absolute before:inset-px before:rounded-[48px] before:bg-[linear-gradient(140deg,rgba(255,255,255,0.15),rgba(255,255,255,0)_40%),radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.25),rgba(255,255,255,0)_60%)]" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                      <div className="flex items-center gap-2 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-[#4b3200] px-5 py-2 rounded-full shadow-xl border border-amber-300/60 backdrop-blur-sm">
+                        <Crown className="h-4 w-4 drop-shadow-sm" />
+                        <span className="text-xs font-bold tracking-wide">
+                          PREMIUM
+                        </span>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Decorative shape now for premium instead of basic */}
+                {isPremium && (
+                  <div className="pointer-events-none absolute -bottom-12 -right-12 w-56 h-56 bg-gradient-to-br from-amber-400/50 via-amber-500/40 to-yellow-300/30 rounded-full blur-2xl opacity-70" />
                 )}
 
                 {/* Popular Badge */}
@@ -82,32 +103,29 @@ export default function PricingSection() {
                   <div className="text-center mb-10">
                     <h3
                       className={`text-2xl font-bold mb-2 ${
-                        isPremium ? "text-white" : "text-gray-900"
+                        inverted ? "text-white" : "text-gray-900"
                       }`}
                     >
                       {t(`pricing.plans.${plan.id}.name`)}
                     </h3>
                     <p
                       className={`${
-                        isPremium
+                        inverted
                           ? "text-white/80"
                           : "text-[#17a253] font-semibold"
                       } mb-5`}
                     >
                       {t(`pricing.plans.${plan.id}.subtitle`)}
                     </p>
-                    {/* Price */}
                     <div className="mb-2">
                       <div
                         className={`text-4xl font-bold mb-2 tracking-tight ${
-                          isPremium ? "text-white" : "text-gray-900"
+                          inverted ? "text-white" : "text-gray-900"
                         }`}
-                      >
-                        ${plan.price}
-                      </div>
+                      ></div>
                       <div
                         className={`text-sm ${
-                          isPremium ? "text-white/70" : "text-gray-500"
+                          inverted ? "text-white/70" : "text-gray-500"
                         }`}
                       >
                         {t(`pricing.plans.${plan.id}.description`)} •{" "}
@@ -122,7 +140,7 @@ export default function PricingSection() {
                     <div>
                       <h4
                         className={`font-semibold mb-5 tracking-wide text-sm uppercase ${
-                          isPremium ? "text-white/80" : "text-gray-900"
+                          inverted ? "text-white/80" : "text-gray-900"
                         }`}
                       >
                         {t("pricing.features.whatsIncluded")}
@@ -136,12 +154,12 @@ export default function PricingSection() {
                           <li
                             key={index}
                             className={`flex items-start gap-3 text-sm leading-snug ${
-                              isPremium ? "text-white/90" : "text-gray-700"
+                              inverted ? "text-white/90" : "text-gray-700"
                             }`}
                           >
                             <Check
                               className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                                isPremium ? "text-white/90" : "text-[#17a253]"
+                                inverted ? "text-white/90" : "text-[#17a253]"
                               }`}
                             />
                             <span>{feature}</span>
@@ -154,7 +172,7 @@ export default function PricingSection() {
                     <div>
                       <h4
                         className={`font-semibold mb-5 tracking-wide text-sm uppercase ${
-                          isPremium ? "text-white/80" : "text-gray-900"
+                          inverted ? "text-white/80" : "text-gray-900"
                         }`}
                       >
                         {t("pricing.features.notIncluded")}
@@ -168,12 +186,12 @@ export default function PricingSection() {
                           <li
                             key={index}
                             className={`flex items-start gap-3 text-sm leading-snug ${
-                              isPremium ? "text-white/60" : "text-gray-500"
+                              inverted ? "text-white/60" : "text-gray-500"
                             }`}
                           >
                             <X
                               className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                                isPremium ? "text-white/50" : "text-gray-400"
+                                inverted ? "text-white/50" : "text-gray-400"
                               }`}
                             />
                             <span>{feature}</span>

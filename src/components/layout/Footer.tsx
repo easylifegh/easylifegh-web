@@ -79,11 +79,12 @@ export default function Footer() {
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="EasyLife Ghana"
-                width={48}
-                height={48}
-                className="rounded-lg"
+                width={96}
+                height={96}
+                className="h-20 w-auto md:h-24 rounded-lg"
+                priority
               />
               <ClientOnly
                 fallback={
