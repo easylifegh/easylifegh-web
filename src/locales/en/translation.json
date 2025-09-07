@@ -128,7 +128,209 @@
     },
     "faq": {
       "title": "FAQs",
-      "subtitle": "Frequently asked questions and answers about studying in Ghana."
+      "subtitle": "Find comprehensive answers to all your questions about our services and studying in Ghana.",
+      "categories": {
+        "general": "General",
+        "academic": "Academic Services",
+        "visa": "Visa & Immigration",
+        "accommodation": "Accommodation",
+        "business": "Business Travel",
+        "medical": "Medical Travel",
+        "tourism": "Tourism & Tours"
+      },
+      "categoryDescriptions": {
+        "general": "General questions about EasyLife Ghana services and how we can help you.",
+        "academic": "Questions about university applications, academic requirements, and educational support.",
+        "visa": "Visa processing, documentation, and immigration assistance questions.",
+        "accommodation": "Housing options, costs, and accommodation support in Ghana.",
+        "business": "Business travel, investment opportunities, and corporate services.",
+        "medical": "Medical facilities, health insurance, and medical tourism information.",
+        "tourism": "Cultural tours, tourist attractions, and travel experiences in Ghana."
+      },
+      "questions": {
+        "general": {
+          "whatIsEasyLife": {
+            "question": "What is EasyLife Ghana and what services do you provide?",
+            "answer": "EasyLife Ghana is a comprehensive service provider helping international students, professionals, and travelers with their journey to Ghana. We offer university applications, visa assistance, accommodation arrangements, business travel coordination, medical travel assistance, and tourism & cultural tours."
+          },
+          "servicePackages": {
+            "question": "What are your different service packages?",
+            "answer": "We offer three main packages: Basic Pack (100% digital guidance with step-by-step support), Standard Pack (remote assistance with dedicated advisor), and Premium Pack (full service with in-person support, private transfers, and priority processing)."
+          },
+          "howItWorks": {
+            "question": "How does the EasyLife Ghana process work?",
+            "answer": "Our process starts with a free consultation to understand your needs, followed by service package selection, document preparation assistance, processing and coordination with relevant institutions, and ongoing support throughout your journey to Ghana."
+          },
+          "whyChooseUs": {
+            "question": "Why should I choose EasyLife Ghana over other service providers?",
+            "answer": "We offer personalized service with local expertise, comprehensive support from application to settlement, transparent pricing with no hidden fees, 24/7 support, and a proven track record of successful placements and satisfied clients."
+          },
+          "paymentMethods": {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept various payment methods including bank transfers, credit/debit cards, mobile money, and international payment platforms. Payment terms vary by package, with most services requiring payment before delivery."
+          },
+          "customerSupport": {
+            "question": "How can I contact customer support?",
+            "answer": "We offer 24/7 WhatsApp support, email assistance, phone consultations, and in-person meetings for Premium clients. You can reach us through our website, WhatsApp at +233 (0) 55 123 4567, or email at info@easylifeghana.com."
+          }
+        },
+        "academic": {
+          "universityApplication": {
+            "question": "How do you help with university applications?",
+            "answer": "We provide complete application support including university selection based on your goals, application form completion, document preparation and verification, submission coordination, and follow-up with admissions offices until you receive your acceptance letter."
+          },
+          "academicRequirements": {
+            "question": "What are the general academic requirements for studying in Ghana?",
+            "answer": "Requirements vary by program and university, but generally include completed high school or equivalent qualifications, English proficiency, transcripts, passport, medical examination, and specific program prerequisites. We help assess your qualifications and guide you through requirements."
+          },
+          "applicationTimeline": {
+            "question": "How long does the university application process take?",
+            "answer": "The timeline varies by university and program, typically 2-8 weeks from application submission to admission decision. We help expedite the process through our university partnerships and ensure all documents are submitted correctly the first time."
+          },
+          "scholarships": {
+            "question": "Do you help with scholarship applications?",
+            "answer": "Yes, we assist with identifying scholarship opportunities, preparing applications, and connecting you with various funding sources including government scholarships, university grants, and private foundation awards available to international students."
+          },
+          "courseSelection": {
+            "question": "How do you help me choose the right course and university?",
+            "answer": "We conduct detailed consultations to understand your career goals, academic background, and preferences. We then match you with suitable programs and universities, providing information on course content, career prospects, and university rankings."
+          },
+          "academicSupport": {
+            "question": "What ongoing academic support do you provide?",
+            "answer": "Beyond admission, we offer orientation support, academic advising, study resources, peer networking opportunities, and assistance with academic challenges. Premium clients receive dedicated academic mentorship throughout their studies."
+          }
+        },
+        "visa": {
+          "visaTypes": {
+            "question": "What types of visas can you help me obtain?",
+            "answer": "We assist with student visas, tourist visas, business visas, medical visas, and residence permits. Each visa type has specific requirements and processing procedures that we guide you through based on your purpose of travel."
+          },
+          "requiredDocuments": {
+            "question": "What documents do I need for a Ghanaian visa?",
+            "answer": "Common requirements include a valid passport, completed application form, passport photos, proof of accommodation, financial statements, travel itinerary, and specific documents based on visa type (admission letter for students, medical referral for medical visas, etc.)."
+          },
+          "processingTime": {
+            "question": "How long does visa processing take?",
+            "answer": "Processing times vary by visa type and our service level: Premium Pack (1-7 days), Standard Pack (3-10 days), Basic Pack (3-7 days with your self-submission). We expedite processing through proper documentation and our relationships with embassies."
+          },
+          "visaRejection": {
+            "question": "What happens if my visa application is rejected?",
+            "answer": "Visa rejections are rare with our service due to thorough preparation. If it occurs, we analyze the rejection reasons, address the issues, and resubmit your application. Premium clients receive free reapplication support."
+          },
+          "visaExtension": {
+            "question": "Can you help with visa extensions while in Ghana?",
+            "answer": "Yes, we assist with visa extensions, permit renewals, and status changes while you're in Ghana. Our local team handles the paperwork and liaisons with immigration authorities to ensure smooth processing."
+          },
+          "studentPermit": {
+            "question": "Do I need a student permit in addition to my visa?",
+            "answer": "Students staying longer than 90 days need to obtain a residence permit after arrival. We guide you through this process, including scheduling appointments, document preparation, and submission to ensure compliance with immigration requirements."
+          }
+        },
+        "accommodation": {
+          "accommodationTypes": {
+            "question": "What types of accommodation options are available?",
+            "answer": "We offer various options including on-campus dormitories, off-campus shared apartments, private studios, homestays with local families, and serviced apartments. Each option varies in cost, amenities, and proximity to universities or business districts."
+          },
+          "housingCosts": {
+            "question": "How much does accommodation cost in Ghana?",
+            "answer": "Costs vary by location and type: campus housing ($100-300/month), shared apartments ($150-400/month), private studios ($300-600/month), and serviced apartments ($500-1000/month). We help find options within your budget."
+          },
+          "campusHousing": {
+            "question": "How do I secure on-campus housing?",
+            "answer": "We assist with campus housing applications, which typically require early submission due to limited availability. We help complete applications, submit required documents, and follow up with university housing offices to secure your placement."
+          },
+          "privateHousing": {
+            "question": "What should I know about private housing in Ghana?",
+            "answer": "Private housing offers more independence but requires careful selection. We inspect properties, verify landlord credentials, negotiate lease terms, ensure legal compliance, and provide ongoing support for any housing issues that arise."
+          },
+          "safetyAndSecurity": {
+            "question": "How safe are the accommodation options you recommend?",
+            "answer": "Safety is our priority. We only recommend accommodations in safe neighborhoods with proper security measures. All our housing options are pre-inspected for security, cleanliness, and basic amenities. We also provide safety guidelines and emergency contacts."
+          },
+          "utilities": {
+            "question": "What utilities are typically included in accommodation?",
+            "answer": "Utility inclusions vary by property. Campus housing usually includes basic utilities, while private accommodations may require separate arrangements for electricity, water, internet, and cable. We help clarify what's included and assist with utility setup."
+          }
+        },
+        "business": {
+          "businessTravel": {
+            "question": "What business travel services do you provide?",
+            "answer": "We offer complete business travel support including visa facilitation, meeting coordination, local transportation, accommodation arrangement, interpreter services, business networking opportunities, and post-visit follow-up support."
+          },
+          "investmentOpportunities": {
+            "question": "Can you help me explore investment opportunities in Ghana?",
+            "answer": "Yes, we connect investors with local business opportunities, provide market research, facilitate meetings with potential partners, assist with regulatory compliance, and offer ongoing business development support in sectors like agriculture, technology, and real estate."
+          },
+          "businessVisa": {
+            "question": "What's required for a business visa to Ghana?",
+            "answer": "Business visa requirements include invitation letters from Ghanaian companies, business registration documents, bank statements, travel itinerary, and proof of business purpose. We help prepare all documentation and coordinate with sponsoring organizations."
+          },
+          "networkingEvents": {
+            "question": "Do you organize business networking events?",
+            "answer": "We facilitate connections with local business networks, chamber of commerce events, industry conferences, and government agencies. Premium business clients receive invitations to exclusive networking events and business forums."
+          },
+          "businessSetup": {
+            "question": "Can you help me set up a business in Ghana?",
+            "answer": "We provide business setup assistance including company registration, regulatory compliance, banking solutions, office space identification, local hiring support, and ongoing administrative services for international businesses establishing operations in Ghana."
+          },
+          "legalSupport": {
+            "question": "Do you provide legal support for business activities?",
+            "answer": "We work with qualified local legal partners to provide contract review, regulatory compliance advice, intellectual property protection, dispute resolution support, and other legal services required for successful business operations in Ghana."
+          }
+        },
+        "medical": {
+          "medicalFacilities": {
+            "question": "What medical facilities are available in Ghana?",
+            "answer": "Ghana has modern medical facilities including international hospitals, specialized medical centers, and clinics with qualified healthcare professionals. We partner with top-rated facilities in Accra, Kumasi, and other major cities to ensure quality care."
+          },
+          "healthInsurance": {
+            "question": "What health insurance options are available?",
+            "answer": "We help arrange international health insurance, local health insurance plans, and travel health coverage. Options include comprehensive medical coverage, emergency evacuation insurance, and specialized coverage for pre-existing conditions."
+          },
+          "medicalTourism": {
+            "question": "What medical tourism services do you offer?",
+            "answer": "Our medical tourism services include medical facility selection, appointment scheduling, treatment coordination, accommodation near medical facilities, transportation, interpreter services, and post-treatment recovery support."
+          },
+          "emergencyServices": {
+            "question": "What emergency medical services are available?",
+            "answer": "Ghana has 24/7 emergency services including ambulance services, emergency rooms, and air evacuation capabilities. We provide emergency contact information, coordinate with insurance providers, and ensure rapid access to appropriate care."
+          },
+          "prescriptionMeds": {
+            "question": "Can I get my prescription medications in Ghana?",
+            "answer": "Many international medications are available in Ghana through licensed pharmacies. We help identify equivalent medications, coordinate with local doctors for prescriptions, and ensure continuous access to necessary medications during your stay."
+          },
+          "specializedCare": {
+            "question": "Is specialized medical care available in Ghana?",
+            "answer": "Yes, Ghana offers specialized care in cardiology, orthopedics, oncology, fertility treatment, and other specialties. We help identify the best specialists and facilities for your specific medical needs and coordinate comprehensive care plans."
+          }
+        },
+        "tourism": {
+          "tourPackages": {
+            "question": "What tour packages do you offer?",
+            "answer": "We offer customized tour packages including historical tours (Cape Coast castles, Elmina), cultural experiences (traditional festivals, craft villages), nature tours (Kakum National Park, Volta Region), and adventure activities. Tours can be day trips or multi-day experiences."
+          },
+          "culturalSites": {
+            "question": "What are the must-visit cultural sites in Ghana?",
+            "answer": "Top cultural sites include Cape Coast and Elmina Castles (UNESCO World Heritage sites), Manhyia Palace Museum in Kumasi, W.E.B. Du Bois Center in Accra, traditional Ashanti villages, and various cultural festivals throughout the year."
+          },
+          "travelSafety": {
+            "question": "How safe is it to travel around Ghana?",
+            "answer": "Ghana is one of West Africa's safest countries with stable political environment and friendly people. We provide safety briefings, recommend safe travel routes, arrange reliable transportation, and offer 24/7 support during your travels."
+          },
+          "localCurrency": {
+            "question": "What should I know about money and currency in Ghana?",
+            "answer": "Ghana's currency is the Cedi (GHS). We advise on currency exchange, recommend reliable exchange points, help set up local banking if needed, and provide guidance on typical costs for various activities and services."
+          },
+          "transportation": {
+            "question": "What transportation options are available for tourists?",
+            "answer": "Transportation options include private car rentals with drivers, public buses, domestic flights, and organized tour transport. We arrange reliable, safe transportation based on your itinerary and comfort preferences, ensuring smooth travel between destinations."
+          },
+          "customTours": {
+            "question": "Can you create custom tours based on my interests?",
+            "answer": "Absolutely! We design personalized tours based on your interests, whether historical, cultural, adventure, business, or educational. We consider your schedule, budget, physical requirements, and special interests to create unique, memorable experiences."
+          }
+        }
+      }
     },
     "guide": {
       "title": "Download Guide",
@@ -530,21 +732,21 @@
     "title": "Frequently Asked Questions",
     "viewAll": "View All FAQs",
     "questions": {
-      "cost": {
-        "question": "How much does it cost to study in Ghana?",
-        "answer": "Tuition fees vary by university and program. Living costs are very affordable, averaging $300-$500 per month including accommodation, food, and transportation."
+      "services": {
+        "question": "What services does EasyLife Ghana provide?",
+        "answer": "We offer comprehensive support including university applications, visa assistance, accommodation arrangements, business travel coordination, medical travel assistance, and tourism & cultural tours throughout Ghana."
       },
-      "language": {
-        "question": "Do I need to speak a local language?",
-        "answer": "No, Ghana's official language is English. All university programs are taught in English, making it easy for international students to study and communicate."
+      "cost": {
+        "question": "How much do EasyLife Ghana services cost?",
+        "answer": "We offer three service packages - Basic Pack (digital guidance), Standard Pack (remote assistance), and Premium Pack (full service). Pricing varies based on your needs and the level of support required."
       },
       "visa": {
-        "question": "How long does the visa process take?",
-        "answer": "Student visa processing typically takes 2-4 days once all documents are submitted. We assist you throughout the entire process to ensure smooth and timely approval."
+        "question": "How long does the visa process take with your help?",
+        "answer": "With our Premium Pack, visa processing typically takes 1-7 days. Standard and Basic packages take 3-10 days. We handle all documentation and ensure smooth, timely approval with government agencies."
       },
-      "safety": {
-        "question": "Is Ghana safe for international students?",
-        "answer": "Yes, Ghana is one of the safest countries in West Africa. It's known for its political stability, friendly people, and welcoming attitude towards international students."
+      "support": {
+        "question": "What kind of ongoing support do you provide?",
+        "answer": "We offer 24/7 WhatsApp support, dedicated advisors, airport pickup, accommodation assistance, and continuous support for settling into Ghana. Premium clients get priority 24/7 support for one month."
       }
     }
   },

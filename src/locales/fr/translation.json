@@ -529,21 +529,21 @@
     "title": "Questions fréquemment posées",
     "viewAll": "Voir toutes les FAQ",
     "questions": {
-      "cost": {
-        "question": "Combien coûte étudier au Ghana?",
-        "answer": "Les frais de scolarité varient selon l'université et le programme. Le coût de la vie est très abordable, en moyenne 300-500 $ par mois incluant logement, nourriture et transport."
+      "services": {
+        "question": "Quels services propose EasyLife Ghana?",
+        "answer": "Nous offrons un soutien complet incluant les candidatures universitaires, l'assistance visa, les arrangements d'hébergement, la coordination de voyages d'affaires, l'assistance voyage médical, et les circuits touristiques et culturels à travers le Ghana."
       },
-      "language": {
-        "question": "Dois-je parler une langue locale?",
-        "answer": "Non, la langue officielle du Ghana est l'anglais. Tous les programmes universitaires sont enseignés en anglais, facilitant les études et la communication pour les étudiants internationaux."
+      "cost": {
+        "question": "Combien coûtent les services d'EasyLife Ghana?",
+        "answer": "Nous offrons trois forfaits de services - Pack de Base (conseils numériques), Pack Standard (assistance à distance), et Pack Premium (service complet). Les prix varient selon vos besoins et le niveau de support requis."
       },
       "visa": {
-        "question": "Combien de temps prend le processus de visa?",
-        "answer": "Le traitement du visa étudiant prend généralement 2-4 jours une fois tous les documents soumis. Nous vous assistons tout au long du processus pour assurer une approbation fluide et rapide."
+        "question": "Combien de temps prend le processus de visa avec votre aide?",
+        "answer": "Avec notre Pack Premium, le traitement des visas prend généralement 1-7 jours. Les packs Standard et de Base prennent 3-10 jours. Nous gérons toute la documentation et assurons une approbation fluide et rapide avec les agences gouvernementales."
       },
-      "safety": {
-        "question": "Le Ghana est-il sûr pour les étudiants internationaux?",
-        "answer": "Oui, le Ghana est l'un des pays les plus sûrs d'Afrique de l'Ouest. Il est connu pour sa stabilité politique, ses habitants amicaux et son attitude accueillante envers les étudiants internationaux."
+      "support": {
+        "question": "Quel type de soutien continu fournissez-vous?",
+        "answer": "Nous offrons un support WhatsApp 24/7, des conseillers dédiés, le service de prise en charge à l'aéroport, l'assistance d'hébergement, et un soutien continu pour s'installer au Ghana. Les clients Premium reçoivent un support prioritaire 24/7 pendant un mois."
       }
     }
   },
