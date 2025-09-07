@@ -128,7 +128,209 @@
     },
     "faq": {
       "title": "FAQ",
-      "subtitle": "Questions fréquemment posées et réponses sur les études au Ghana."
+      "subtitle": "Questions fréquemment posées et réponses sur les études au Ghana.",
+      "categories": {
+        "general": "Général",
+        "academic": "Services académiques",
+        "visa": "Visa & Immigration",
+        "accommodation": "Hébergement",
+        "business": "Voyage d'affaires",
+        "medical": "Voyage médical",
+        "tourism": "Tourisme & Circuits"
+      },
+      "categoryDescriptions": {
+        "general": "Questions générales sur les services EasyLife Ghana et comment nous pouvons vous aider.",
+        "academic": "Questions sur les candidatures universitaires, les exigences académiques et le support éducatif.",
+        "visa": "Questions sur le traitement des visas, la documentation et l'assistance immigration.",
+        "accommodation": "Options de logement, coûts et support d'hébergement au Ghana.",
+        "business": "Voyages d'affaires, opportunités d'investissement et services corporatifs.",
+        "medical": "Établissements médicaux, assurance santé et informations sur le tourisme médical.",
+        "tourism": "Circuits culturels, attractions touristiques et expériences de voyage au Ghana."
+      },
+      "questions": {
+        "general": {
+          "whatIsEasyLife": {
+            "question": "Qu'est-ce qu'EasyLife Ghana et quels services fournissez-vous ?",
+            "answer": "EasyLife Ghana est un prestataire de services complet aidant les étudiants internationaux, les professionnels et les voyageurs dans leur parcours vers le Ghana. Nous offrons candidatures universitaires, assistance visa, arrangements d'hébergement, coordination de voyages d'affaires, assistance voyage médical et circuits touristiques & culturels."
+          },
+          "servicePackages": {
+            "question": "Quels sont vos différents forfaits de services ?",
+            "answer": "Nous proposons trois forfaits principaux : Pack Basic (guidage 100% numérique avec support étape par étape), Pack Standard (assistance à distance avec conseiller dédié) et Pack Premium (service complet avec support en personne, transferts privés et traitement prioritaire)."
+          },
+          "howItWorks": {
+            "question": "Comment fonctionne le processus EasyLife Ghana ?",
+            "answer": "Notre processus commence par une consultation gratuite pour comprendre vos besoins, suivie du choix du forfait, de l'assistance à la préparation des documents, du traitement et de la coordination avec les institutions concernées, puis d'un support continu tout au long de votre parcours au Ghana."
+          },
+          "whyChooseUs": {
+            "question": "Pourquoi choisir EasyLife Ghana plutôt qu'un autre prestataire ?",
+            "answer": "Nous offrons un service personnalisé avec expertise locale, un support complet de la candidature à l'installation, une tarification transparente sans frais cachés, un support 24/7 et un solide historique de placements réussis et de clients satisfaits."
+          },
+          "paymentMethods": {
+            "question": "Quels moyens de paiement acceptez-vous ?",
+            "answer": "Nous acceptons virements bancaires, cartes de crédit/débit, mobile money et plateformes de paiement internationales. Les modalités varient selon le forfait ; la plupart des services exigent un paiement avant la livraison."
+          },
+          "customerSupport": {
+            "question": "Comment puis-je contacter le support client ?",
+            "answer": "Nous offrons un support WhatsApp 24/7, assistance par email, consultations téléphoniques et rencontres en personne pour les clients Premium. Vous pouvez nous joindre via notre site, WhatsApp au +233 (0) 55 123 4567 ou par email à info@easylifeghana.com."
+          }
+        },
+        "academic": {
+          "universityApplication": {
+            "question": "Comment aidez-vous pour les candidatures universitaires ?",
+            "answer": "Nous fournissons un support complet : sélection des universités selon vos objectifs, remplissage des formulaires, préparation et vérification des documents, coordination de la soumission et suivi avec les admissions jusqu'à la lettre d'acceptation."
+          },
+          "academicRequirements": {
+            "question": "Quelles sont les exigences académiques générales pour étudier au Ghana ?",
+            "answer": "Elles varient selon le programme et l'université mais incluent généralement diplôme secondaire ou équivalent, maîtrise de l'anglais, relevés de notes, passeport, examen médical et prérequis spécifiques. Nous évaluons vos qualifications et vous guidons."
+          },
+          "applicationTimeline": {
+            "question": "Combien de temps prend le processus de candidature universitaire ?",
+            "answer": "Le délai varie (en général 2 à 8 semaines) entre la soumission et la décision. Nous accélérons grâce à nos partenariats et à une soumission correcte des documents dès le départ."
+          },
+          "scholarships": {
+            "question": "Aidez-vous pour les bourses ?",
+            "answer": "Oui, nous identifions les opportunités de bourses, aidons à préparer les dossiers et vous connectons à des sources de financement (bourses gouvernementales, subventions universitaires, fondations privées)."
+          },
+          "courseSelection": {
+            "question": "Comment m'aidez-vous à choisir le bon cursus et la bonne université ?",
+            "answer": "Nous menons des consultations détaillées (objectifs de carrière, parcours académique, préférences) puis proposons des programmes adaptés avec informations sur contenu, perspectives et classement."
+          },
+          "academicSupport": {
+            "question": "Quel support académique continu fournissez-vous ?",
+            "answer": "Au-delà de l'admission : orientation, conseils académiques, ressources d'étude, opportunités de réseau et assistance aux défis scolaires. Les clients Premium reçoivent un mentorat académique dédié."
+          }
+        },
+        "visa": {
+          "visaTypes": {
+            "question": "Quels types de visas pouvez-vous m'aider à obtenir ?",
+            "answer": "Nous aidons pour les visas étudiant, touristique, affaires, médical et les permis de résidence. Chaque type a ses exigences spécifiques que nous clarifions selon votre objectif de voyage."
+          },
+          "requiredDocuments": {
+            "question": "Quels documents sont nécessaires pour un visa ghanéen ?",
+            "answer": "Passeport valide, formulaire complété, photos, preuve d'hébergement, relevés financiers, itinéraire de voyage et documents spécifiques (lettre d'admission pour étudiants, référence médicale, etc.)."
+          },
+          "processingTime": {
+            "question": "Combien de temps prend le traitement du visa ?",
+            "answer": "Selon le type et le forfait : Pack Premium (1-7 jours), Standard (3-10 jours), Basic (3-7 jours avec auto-soumission). Nous accélérons via une documentation correcte et nos relations."
+          },
+          "visaRejection": {
+            "question": "Que se passe-t-il si ma demande de visa est refusée ?",
+            "answer": "Les refus sont rares grâce à notre préparation. Le cas échéant, nous analysons les raisons, corrigeons et redéposons. Re-soumission gratuite pour les clients Premium."
+          },
+          "visaExtension": {
+            "question": "Pouvez-vous aider pour les extensions de visa ?",
+            "answer": "Oui, nous gérons extensions, renouvellements et changements de statut. Notre équipe locale prépare les dossiers et coordonne avec l'immigration."
+          },
+          "studentPermit": {
+            "question": "Ai-je besoin d'un permis de séjour étudiant en plus du visa ?",
+            "answer": "Pour un séjour > 90 jours, un permis de résidence est requis après l'arrivée. Nous vous guidons (rendez-vous, documents, dépôt) pour conformité."
+          }
+        },
+        "accommodation": {
+          "accommodationTypes": {
+            "question": "Quels types de logement sont disponibles ?",
+            "answer": "Résidences universitaires, appartements partagés, studios privés, familles d'accueil, appartements avec services. Chaque option varie en coût, équipements et distance."
+          },
+          "housingCosts": {
+            "question": "Combien coûte le logement au Ghana ?",
+            "answer": "Selon type/localisation : campus (100-300$/mois), coloc (150-400$), studio (300-600$), meublé avec services (500-1000$). Nous trouvons selon votre budget."
+          },
+          "campusHousing": {
+            "question": "Comment obtenir un logement sur le campus ?",
+            "answer": "Nous assistons pour les demandes (soumission précoce importante), complétons formulaires, soumettons documents et assurons le suivi avec le service logement."
+          },
+          "privateHousing": {
+            "question": "Que savoir sur le logement privé ?",
+            "answer": "Plus d'indépendance mais nécessite vérification : inspection, validation du propriétaire, négociation du bail, conformité légale et support continu en cas de problème."
+          },
+          "safetyAndSecurity": {
+            "question": "La sécurité des logements recommandés est-elle assurée ?",
+            "answer": "Oui, sécurité prioritaire : quartiers sûrs, mesures adéquates, inspection préalable (sécurité, propreté, commodités) + lignes directes d'urgence."
+          },
+          "utilities": {
+            "question": "Quels services/charges sont inclus ?",
+            "answer": "Campus : services de base inclus. Privé : électricité, eau, internet parfois séparés. Nous clarifions et aidons à la mise en place."
+          }
+        },
+        "business": {
+          "businessTravel": {
+            "question": "Quels services de voyage d'affaires proposez-vous ?",
+            "answer": "Facilitation de visa, coordination de réunions, transport local, hébergement, interprétariat, opportunités de réseau et suivi post-visite."
+          },
+          "investmentOpportunities": {
+            "question": "Aidez-vous à explorer des opportunités d'investissement ?",
+            "answer": "Oui, mise en relation avec opportunités locales, recherche de marché, organisation de rencontres, conformité réglementaire et support développement dans divers secteurs."
+          },
+          "businessVisa": {
+            "question": "Quelles exigences pour un visa d'affaires ?",
+            "answer": "Lettres d'invitation, documents d'enregistrement, relevés bancaires, itinéraire et preuve d'objet professionnel. Nous préparons et coordonnons l'ensemble."
+          },
+          "networkingEvents": {
+            "question": "Organisez-vous des événements de réseautage ?",
+            "answer": "Oui, accès réseaux locaux, chambres de commerce, conférences, organismes publics. Clients Premium : invitations exclusives."
+          },
+          "businessSetup": {
+            "question": "Pouvez-vous aider à créer une entreprise au Ghana ?",
+            "answer": "Enregistrement, conformité, solutions bancaires, recherche de bureaux, recrutement local et services administratifs continus."
+          },
+          "legalSupport": {
+            "question": "Fournissez-vous un support juridique ?",
+            "answer": "Via partenaires juridiques : revue de contrats, conformité, propriété intellectuelle, résolution de litiges, autres besoins légaux."
+          }
+        },
+        "medical": {
+          "medicalFacilities": {
+            "question": "Quelles installations médicales existent au Ghana ?",
+            "answer": "Hôpitaux internationaux, centres spécialisés, cliniques qualifiées à Accra, Kumasi, etc. Partenariats avec établissements de qualité."
+          },
+          "healthInsurance": {
+            "question": "Quelles options d'assurance santé ?",
+            "answer": "Assurances internationales, locales et couverture voyage. Options : couverture complète, évacuation d'urgence, cas préexistants."
+          },
+          "medicalTourism": {
+            "question": "Quels services de tourisme médical offrez-vous ?",
+            "answer": "Sélection d'établissement, planification de rendez-vous, coordination de traitement, logement proche, transport, interprétariat et suivi post-traitement."
+          },
+          "emergencyServices": {
+            "question": "Quels services d'urgence sont disponibles ?",
+            "answer": "Ambulances 24/7, urgences hospitalières, évacuation aérienne. Nous fournissons contacts d'urgence et coordination avec assureurs."
+          },
+          "prescriptionMeds": {
+            "question": "Puis-je obtenir mes médicaments sur prescription ?",
+            "answer": "Nombreux médicaments internationaux disponibles en pharmacies agréées. Nous aidons à identifier équivalents, coordonner prescriptions et assurer la continuité."
+          },
+          "specializedCare": {
+            "question": "Des soins spécialisés sont-ils disponibles ?",
+            "answer": "Oui, cardiologie, orthopédie, oncologie, fertilité et autres. Nous identifions spécialistes & établissements adaptés et coordonnons un plan de soins complet."
+          }
+        },
+        "tourism": {
+          "tourPackages": {
+            "question": "Quels forfaits touristiques proposez-vous ?",
+            "answer": "Circuits personnalisés : historique (châteaux Cape Coast, Elmina), culturel (festivals, villages artisanaux), nature (Parc Kakum, Région de la Volta), aventure. Excursions d'une journée ou séjours multi-jours."
+          },
+          "culturalSites": {
+            "question": "Quels sites culturels incontournables ?",
+            "answer": "Châteaux de Cape Coast & Elmina, Musée du Palais Manhyia, Centre W.E.B. Du Bois, villages Ashanti traditionnels, festivals culturels divers."
+          },
+          "travelSafety": {
+            "question": "Voyager au Ghana est-il sûr ?",
+            "answer": "Oui, pays stable et accueillant. Briefings sécurité, itinéraires sûrs, transport fiable et support 24/7 pendant vos déplacements."
+          },
+          "localCurrency": {
+            "question": "Que savoir sur la monnaie ?",
+            "answer": "La devise est le Cedi (GHS). Conseil sur change, points fiables, ouverture bancaire locale et guide des coûts typiques."
+          },
+          "transportation": {
+            "question": "Quels moyens de transport pour les touristes ?",
+            "answer": "Voitures privées avec chauffeurs, bus publics, vols domestiques, transports de circuits organisés. Nous organisons selon itinéraire et confort."
+          },
+          "customTours": {
+            "question": "Proposez-vous des circuits sur mesure ?",
+            "answer": "Absolument. Personnalisation selon intérêts (histoire, culture, aventure, business, éducation), budget, contraintes et préférences pour une expérience mémorable."
+          }
+        }
+      }
     },
     "guide": {
       "title": "Télécharger le guide",
