@@ -179,6 +179,17 @@
         "recaptchaApply": "s'appliquent."
       }
     },
+    "auth": {
+      "error": {
+        "title": "Erreur d'authentification",
+        "message": "Désolé, nous n'avons pas pu vous authentifier. Cela pourrait être dû à un lien expiré ou à un code d'authentification invalide.",
+        "returnToLogin": "Retour à la connexion",
+        "helpTitle": "Besoin d'aide ?",
+        "helpTip1": "Essayez de demander un nouveau lien magique",
+        "helpTip2": "Assurez-vous d'utiliser le lien le plus récent de votre email",
+        "helpTip3": "Contactez le support si le problème persiste"
+      }
+    },
     "about": {
       "title": "À propos de nous",
       "subtitle": "Découvrez EasyLife Ghana et notre mission d'aider les étudiants internationaux."

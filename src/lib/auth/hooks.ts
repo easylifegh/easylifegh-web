@@ -1,64 +1,31 @@
-import { useState } from "react"
-import {
-  signInWithGoogle,
-  signInWithFacebook,
-  signInWithApple,
-  sendSignInLinkToEmail,
-  signInWithEmailLink,
-  isSignInWithEmailLink,
-} from "./services"
+import { useState, useEffect } from "react"
+import { authService } from "./services"
+import type { User } from "./types"
 
 export function useGoogleAuth() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const signIn = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const result = await signInWithGoogle()
-      return result.user
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "An error occurred")
-    } finally {
-      setLoading(false)
-    }
-  }
-  return { signIn, loading, error }
-}
 
-export function useFacebookAuth() {
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
   const signIn = async () => {
     setLoading(true)
     setError(null)
     try {
-      const result = await signInWithFacebook()
-      return result.user
+      const result = await authService.signInWithGoogle()
+      if (result.error) {
+        setError(result.error)
+        return null
+      }
+      // For OAuth flows, the user will be redirected
+      // The actual user data will be available after redirect
+      return null
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "An error occurred")
+      return null
     } finally {
       setLoading(false)
     }
   }
-  return { signIn, loading, error }
-}
 
-export function useAppleAuth() {
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const signIn = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const result = await signInWithApple()
-      return result.user
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "An error occurred")
-    } finally {
-      setLoading(false)
-    }
-  }
   return { signIn, loading, error }
 }
 
@@ -71,29 +38,12 @@ export function useEmailAuth() {
     setLoading(true)
     setError(null)
     try {
-      await sendSignInLinkToEmail(email)
-      setLinkSent(true)
-      // Store email in localStorage for later verification
-      localStorage.setItem("emailForSignIn", email)
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "An error occurred")
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const signInWithMagicLink = async (emailLink: string, userEmail?: string) => {
-    setLoading(true)
-    setError(null)
-    try {
-      const emailToUse =
-        userEmail || localStorage.getItem("emailForSignIn") || ""
-      if (!emailToUse) {
-        throw new Error("Email address required")
+      const result = await authService.signInWithMagicLink(email)
+      if (result.error) {
+        setError(result.error)
+      } else {
+        setLinkSent(true)
       }
-      const result = await signInWithEmailLink(emailToUse, emailLink)
-      localStorage.removeItem("emailForSignIn")
-      return result.user
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "An error occurred")
     } finally {
@@ -103,10 +53,85 @@ export function useEmailAuth() {
 
   return {
     sendMagicLink,
-    signInWithMagicLink,
     loading,
     error,
     linkSent,
-    isSignInWithEmailLink,
+  }
+}
+
+export function useAuth() {
+  const [user, setUser] = useState<User | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    // Only run in client environment
+    if (typeof window === "undefined") return
+
+    // Get initial user
+    const getInitialUser = async () => {
+      try {
+        const currentUser = await authService.getUser()
+        setUser(currentUser)
+      } catch (e) {
+        // Don't show AuthSessionMissingError as an error to the user
+        if (
+          e instanceof Error &&
+          (e.message === "Auth session missing!" ||
+            e.name === "AuthSessionMissingError")
+        ) {
+          setUser(null)
+        } else {
+          setError(e instanceof Error ? e.message : "An error occurred")
+          console.error("Auth initialization error:", e)
+        }
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getInitialUser()
+
+    // Listen for auth state changes
+    let unsubscribe: (() => void) | undefined
+    try {
+      unsubscribe = authService.onAuthStateChange(user => {
+        setUser(user)
+        setLoading(false)
+      })
+    } catch (e) {
+      console.error("Auth state change listener error:", e)
+      setLoading(false)
+    }
+
+    return () => {
+      if (unsubscribe) {
+        unsubscribe()
+      }
+    }
+  }, [])
+
+  const signOut = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+      const result = await authService.signOut()
+      if (result.error) {
+        setError(result.error)
+      } else {
+        setUser(null)
+      }
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An error occurred")
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return {
+    user,
+    loading,
+    error,
+    signOut,
   }
 }

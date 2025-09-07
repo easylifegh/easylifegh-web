@@ -1,33 +1,18 @@
 "use client"
 
-import React, { useEffect, Suspense } from "react"
+import React, { Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useSearchParams } from "next/navigation"
 import { useTranslation } from "react-i18next"
-import { useEmailAuth } from "../../../lib/auth/hooks"
 import ClientOnly from "@/components/ClientOnly"
 
 function CheckEmailContent() {
-  const router = useRouter()
   const searchParams = useSearchParams()
   const { t } = useTranslation()
   const email = searchParams.get("email") || ""
-  const { signInWithMagicLink, isSignInWithEmailLink } = useEmailAuth()
-
-  useEffect(() => {
-    // Check if this page was loaded via magic link
-    if (isSignInWithEmailLink(window.location.href)) {
-      signInWithMagicLink(window.location.href, email)
-        .then(() => {
-          window.location.href = "/dashboard"
-        })
-        .catch(error => {
-          console.error("Magic link sign-in error:", error)
-          router.push("/login?error=invalid-link")
-        })
-    }
-  }, [email, signInWithMagicLink, isSignInWithEmailLink, router])
+  // With Supabase, magic links redirect directly to the callback URL
+  // This page is just for showing the "check your email" message
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white px-4">

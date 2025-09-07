@@ -36,8 +36,8 @@ function LoginContent() {
 
   // Social login handlers
   const handleGoogle = async () => {
+    // OAuth will redirect automatically, no need to manually redirect
     await signInGoogle()
-    window.location.href = "/dashboard"
   }
 
   return (

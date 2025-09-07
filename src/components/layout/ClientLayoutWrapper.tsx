@@ -4,6 +4,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import React from "react"
 import dynamic from "next/dynamic"
+import { AuthProvider } from "@/lib/auth/context"
 
 const WhatsappFloatingButton = dynamic(
   () => import("@/components/WhatsappFloatingButton"),
@@ -22,11 +23,11 @@ export default function ClientLayoutWrapper({
   const pathname = usePathname()
   const hideChrome = pathname?.startsWith("/login")
   return (
-    <>
+    <AuthProvider>
       {!hideChrome && <Header />}
       <main>{children}</main>
       {!hideChrome && <Footer />}
       {!hideChrome && <WhatsappFloatingButton />}
-    </>
+    </AuthProvider>
   )
 }
