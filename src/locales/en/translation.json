@@ -225,7 +225,62 @@
     },
     "about": {
       "title": "About Us",
-      "subtitle": "Learn about EasyLife Ghana and our mission to help international students."
+      "subtitle": "Learn about EasyLife Ghana and our mission to help international students.",
+      "tagline": "Empowering Your Journey",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To provide comprehensive, reliable, and personalized services that make your transition to Ghana as smooth and successful as possible. We are committed to empowering international students, professionals, and travelers with the tools and support they need to thrive in Ghana."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be West Africa's leading platform connecting international students and professionals with opportunities in Ghana, creating a bridge between cultures and fostering global education and business relationships."
+      },
+      "values": {
+        "title": "Our Values",
+        "subtitle": "The principles that guide everything we do and help us serve you better.",
+        "excellence": {
+          "title": "Excellence",
+          "description": "Every student deserves world-class service. From our initial consultation to your successful settlement in Ghana, we maintain the highest standards in everything we do. Our track record speaks for itself - we don't just meet expectations, we exceed them."
+        },
+        "trust": {
+          "title": "Trust",
+          "description": "Trust is the foundation of every successful journey. We've built our reputation on transparency, honesty, and reliability. When you choose EasyLife Ghana, you're choosing a partner who will be with you every step of the way, with no hidden fees or surprises."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "The world is evolving, and so are we. We leverage cutting-edge technology and innovative approaches to streamline your experience. From digital applications to AI-powered matching with universities, we're always finding new ways to make your journey smoother and more efficient."
+        },
+        "support": {
+          "title": "Support",
+          "description": "Your success is our mission. That's why we provide comprehensive support that goes beyond just paperwork. From pre-arrival guidance to post-arrival integration, our dedicated team of experts is always available to help you navigate any challenge and celebrate every milestone."
+        },
+        "community": {
+          "title": "Community",
+          "description": "Building a strong community of international students and professionals."
+        },
+        "impact": {
+          "title": "Impact",
+          "description": "Making a positive impact on lives through education and opportunity."
+        }
+      },
+      "story": {
+        "title": "Our Story",
+        "paragraph1": "Founded with a passion for connecting people with opportunities, EasyLife Ghana has been at the forefront of international education and travel services. Our journey began with a simple belief: that everyone deserves the chance to pursue their dreams, regardless of borders.",
+        "paragraph2": "We understand the challenges of moving to a new country, which is why we've created comprehensive solutions that address every aspect of your journey - from university applications and visa assistance to accommodation and cultural integration.",
+        "paragraph3": "Today, we continue to evolve our services to meet the changing needs of our global community while maintaining our commitment to excellence and personalized support. Every success story motivates us to do more and reach further."
+      },
+      "stats": {
+        "students": "Students Served",
+        "universities": "Universities Partnered",
+        "successRate": "Success Rate",
+        "support": "Support Available"
+      },
+      "cta": {
+        "title": "Ready to Start Your Journey?",
+        "description": "Join hundreds of students and professionals who have successfully made Ghana their home with our expert guidance and support.",
+        "contactButton": "Contact Us",
+        "getStartedButton": "Get Started"
+      }
     },
     "team": {
       "title": "Our Team",

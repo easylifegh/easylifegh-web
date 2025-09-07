@@ -225,7 +225,62 @@
     },
     "about": {
       "title": "Acerca de nosotros",
-      "subtitle": "Aprenda sobre EasyLife Ghana y nuestra misión de ayudar a estudiantes internacionales."
+      "subtitle": "Aprenda sobre EasyLife Ghana y nuestra misión de ayudar a estudiantes internacionales.",
+      "tagline": "Empoderando Su Viaje",
+      "mission": {
+        "title": "Nuestra Misión",
+        "description": "Proporcionar servicios integrales, confiables y personalizados que hagan su transición a Ghana lo más fluida y exitosa posible. Estamos comprometidos a empoderar a estudiantes internacionales, profesionales y viajeros con las herramientas y el apoyo que necesitan para prosperar en Ghana."
+      },
+      "vision": {
+        "title": "Nuestra Visión",
+        "description": "Ser la plataforma líder de África Occidental que conecte a estudiantes internacionales y profesionales con oportunidades en Ghana, creando un puente entre culturas y fomentando la educación global y las relaciones comerciales."
+      },
+      "values": {
+        "title": "Nuestros Valores",
+        "subtitle": "Los principios que guían todo lo que hacemos y nos ayudan a servirle mejor.",
+        "excellence": {
+          "title": "Excelencia",
+          "description": "Nos esforzamos por la excelencia en cada servicio que proporcionamos para asegurar su éxito."
+        },
+        "trust": {
+          "title": "Confianza",
+          "description": "Construyendo relaciones duraderas a través de la transparencia y confiabilidad."
+        },
+        "innovation": {
+          "title": "Innovación",
+          "description": "Mejorando constantemente nuestros servicios con soluciones y tecnología innovadoras."
+        },
+        "support": {
+          "title": "Apoyo",
+          "description": "Apoyo dedicado 24/7 para guiarle a lo largo de su viaje."
+        },
+        "community": {
+          "title": "Comunidad",
+          "description": "Construyendo una comunidad fuerte de estudiantes internacionales y profesionales."
+        },
+        "impact": {
+          "title": "Impacto",
+          "description": "Haciendo un impacto positivo en las vidas a través de la educación y oportunidades."
+        }
+      },
+      "story": {
+        "title": "Nuestra Historia",
+        "paragraph1": "Fundada con una pasión por conectar a las personas con oportunidades, EasyLife Ghana ha estado a la vanguardia de los servicios de educación internacional y viajes. Nuestro viaje comenzó con una creencia simple: que todos merecen la oportunidad de perseguir sus sueños, sin importar las fronteras.",
+        "paragraph2": "Entendemos los desafíos de mudarse a un nuevo país, por eso hemos creado soluciones integrales que abordan cada aspecto de su viaje - desde solicitudes universitarias y asistencia con visas hasta alojamiento e integración cultural.",
+        "paragraph3": "Hoy, continuamos evolucionando nuestros servicios para satisfacer las necesidades cambiantes de nuestra comunidad global mientras mantenemos nuestro compromiso con la excelencia y el apoyo personalizado. Cada historia de éxito nos motiva a hacer más y llegar más lejos."
+      },
+      "stats": {
+        "students": "Estudiantes Atendidos",
+        "universities": "Universidades Asociadas",
+        "successRate": "Tasa de Éxito",
+        "support": "Soporte Disponible"
+      },
+      "cta": {
+        "title": "¿Listo para Comenzar Su Viaje?",
+        "description": "Únase a cientos de estudiantes y profesionales que han hecho de Ghana su hogar exitosamente con nuestra orientación experta y apoyo.",
+        "contactButton": "Contáctanos",
+        "getStartedButton": "Comenzar"
+      }
     },
     "team": {
       "title": "Nuestro equipo",
