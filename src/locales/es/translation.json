@@ -136,7 +136,40 @@
     },
     "contact": {
       "title": "Contacto",
-      "subtitle": "Póngase en contacto con nuestro equipo para cualquier pregunta o asistencia."
+      "subtitle": "Póngase en contacto con nuestro equipo para cualquier pregunta o asistencia.",
+      "getInTouch": "Póngase en Contacto",
+      "description": "Estamos aquí para ayudarle en su viaje a Ghana. Ya sea que necesite servicios académicos, apoyo comercial, asistencia médica o guía turística, nuestro equipo de expertos está listo para asistirle en cada paso del camino.",
+      "email": "Email",
+      "phone": "Teléfono",
+      "chatWithUs": "Chatea con nosotros",
+      "office": "Oficina",
+      "officeHours": "Horario de Oficina",
+      "sendMessage": "Envíanos un Mensaje",
+      "messageSuccess": "¡Gracias! Su mensaje ha sido enviado exitosamente. Le responderemos dentro de 24 horas.",
+      "messageError": "Lo sentimos, hubo un error al enviar su mensaje. Por favor inténtelo de nuevo o contáctenos directamente.",
+      "form": {
+        "name": "Nombre Completo *",
+        "namePlaceholder": "Ingrese su nombre completo",
+        "email": "Dirección de Email *",
+        "emailPlaceholder": "Ingrese su dirección de email",
+        "phone": "Número de Teléfono",
+        "phonePlaceholder": "Ingrese su número de teléfono",
+        "subject": "Asunto *",
+        "selectSubject": "Seleccione un asunto",
+        "message": "Mensaje *",
+        "messagePlaceholder": "Díganos cómo podemos ayudarle...",
+        "sending": "Enviando...",
+        "send": "Enviar Mensaje",
+        "subjects": {
+          "universityApplication": "Solicitud Universitaria",
+          "visaAssistance": "Asistencia con Visa",
+          "accommodation": "Alojamiento",
+          "businessTravel": "Viaje de Negocios",
+          "medicalTravel": "Viaje Médico",
+          "tourism": "Turismo y Tours Culturales",
+          "general": "Consulta General"
+        }
+      }
     },
     "apply": {
       "title": "Aplicar ahora",

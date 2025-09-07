@@ -136,7 +136,40 @@
     },
     "contact": {
       "title": "Contact",
-      "subtitle": "Contactez notre équipe pour toute question ou assistance."
+      "subtitle": "Contactez notre équipe pour toute question ou assistance.",
+      "getInTouch": "Entrer en Contact",
+      "description": "Nous sommes là pour vous aider dans votre parcours au Ghana. Que vous ayez besoin de services académiques, de support commercial, d'assistance médicale ou de conseils touristiques, notre équipe d'experts est prête à vous aider à chaque étape.",
+      "email": "Email",
+      "phone": "Téléphone",
+      "chatWithUs": "Discutez avec nous",
+      "office": "Bureau",
+      "officeHours": "Heures d'Ouverture",
+      "sendMessage": "Envoyez-nous un Message",
+      "messageSuccess": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons dans les 24 heures.",
+      "messageError": "Désolé, il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer ou nous contacter directement.",
+      "form": {
+        "name": "Nom Complet *",
+        "namePlaceholder": "Entrez votre nom complet",
+        "email": "Adresse Email *",
+        "emailPlaceholder": "Entrez votre adresse email",
+        "phone": "Numéro de Téléphone",
+        "phonePlaceholder": "Entrez votre numéro de téléphone",
+        "subject": "Sujet *",
+        "selectSubject": "Sélectionnez un sujet",
+        "message": "Message *",
+        "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+        "sending": "Envoi en cours...",
+        "send": "Envoyer le Message",
+        "subjects": {
+          "universityApplication": "Candidature Universitaire",
+          "visaAssistance": "Assistance Visa",
+          "accommodation": "Hébergement",
+          "businessTravel": "Voyage d'Affaires",
+          "medicalTravel": "Voyage Médical",
+          "tourism": "Tourisme et Visites Culturelles",
+          "general": "Demande Générale"
+        }
+      }
     },
     "apply": {
       "title": "Postuler maintenant",

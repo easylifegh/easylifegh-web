@@ -136,7 +136,40 @@
     },
     "contact": {
       "title": "Contact",
-      "subtitle": "Get in touch with our team for any questions or assistance."
+      "subtitle": "Get in touch with our team for any questions or assistance.",
+      "getInTouch": "Get in Touch",
+      "description": "We're here to help you with your journey to Ghana. Whether you need academic services, business support, medical assistance, or tourism guidance, our expert team is ready to assist you every step of the way.",
+      "email": "Email",
+      "phone": "Phone",
+      "chatWithUs": "Chat with us",
+      "office": "Office",
+      "officeHours": "Office Hours",
+      "sendMessage": "Send us a Message",
+      "messageSuccess": "Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.",
+      "messageError": "Sorry, there was an error sending your message. Please try again or contact us directly.",
+      "form": {
+        "name": "Full Name *",
+        "namePlaceholder": "Enter your full name",
+        "email": "Email Address *",
+        "emailPlaceholder": "Enter your email address",
+        "phone": "Phone Number",
+        "phonePlaceholder": "Enter your phone number",
+        "subject": "Subject *",
+        "selectSubject": "Select a subject",
+        "message": "Message *",
+        "messagePlaceholder": "Tell us how we can help you...",
+        "sending": "Sending...",
+        "send": "Send Message",
+        "subjects": {
+          "universityApplication": "University Application",
+          "visaAssistance": "Visa Assistance",
+          "accommodation": "Accommodation",
+          "businessTravel": "Business Travel",
+          "medicalTravel": "Medical Travel",
+          "tourism": "Tourism & Cultural Tours",
+          "general": "General Inquiry"
+        }
+      }
     },
     "apply": {
       "title": "Apply Now",
