@@ -296,11 +296,129 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "subtitle": "Learn how we protect and handle your personal information."
+      "subtitle": "Learn how we protect and handle your personal information.",
+      "lastUpdated": "Last updated:",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "At EasyLife Ghana, we are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services."
+        },
+        "collection": {
+          "title": "2. Information We Collect",
+          "intro": "We may collect the following types of information:",
+          "personal": {
+            "title": "Personal Information",
+            "contact": "Full name, email address, and phone number",
+            "documents": "Passport information and travel documents",
+            "education": "Educational background and academic records",
+            "financial": "Financial information for payment processing"
+          },
+          "usage": {
+            "title": "Usage Information",
+            "analytics": "Website usage data and analytics",
+            "device": "Device information and IP addresses",
+            "communication": "Communication preferences and history"
+          }
+        },
+        "usage": {
+          "title": "3. How We Use Your Information",
+          "intro": "We use your information to:",
+          "list": {
+            "provide": "Provide and deliver our services",
+            "process": "Process applications and handle communications",
+            "improve": "Improve our services and user experience",
+            "notify": "Send important updates and service notifications",
+            "comply": "Comply with legal requirements and regulations"
+          }
+        },
+        "sharing": {
+          "title": "4. Information Sharing",
+          "content": "We may share your information with trusted partners and service providers who assist us in delivering our services, including universities, visa processing agencies, and accommodation providers. We only share information necessary for these services and ensure all partners maintain appropriate privacy standards."
+        },
+        "security": {
+          "title": "5. Data Security",
+          "content": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes encryption, secure data storage, and regular security assessments."
+        },
+        "rights": {
+          "title": "6. Your Rights",
+          "intro": "You have the right to:",
+          "list": {
+            "access": "Access and review your personal information",
+            "correct": "Request corrections to inaccurate information",
+            "delete": "Request deletion of your personal data",
+            "optout": "Opt out of marketing communications",
+            "portability": "Data portability and transfer rights"
+          }
+        },
+        "cookies": {
+          "title": "7. Cookies and Tracking",
+          "content": "We use cookies and similar tracking technologies to improve your browsing experience, analyze website traffic, and provide personalized content. You can control cookie preferences through your browser settings."
+        },
+        "thirdparty": {
+          "title": "8. Third-Party Services",
+          "content": "Our website may contain links to third-party websites and services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies before providing any personal information."
+        },
+        "changes": {
+          "title": "9. Changes to This Policy",
+          "content": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the updated policy on our website and updating the \"Last Updated\" date above."
+        },
+        "contact": {
+          "title": "10. Contact Us",
+          "intro": "If you have questions about this Privacy Policy or our data practices, please contact us at:"
+        }
+      }
     },
     "terms": {
       "title": "Terms of Service",
-      "subtitle": "Read our terms and conditions for using EasyLife Ghana services."
+      "subtitle": "Read our terms and conditions for using EasyLife Ghana services.",
+      "lastUpdated": "Last updated:",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "Welcome to EasyLife Ghana. These Terms of Service govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms."
+        },
+        "services": {
+          "title": "2. Our Services",
+          "intro": "EasyLife Ghana provides comprehensive support services for individuals traveling to Ghana, including:",
+          "list": {
+            "academic": "University application assistance and academic consulting",
+            "visa": "Visa application support and documentation guidance",
+            "accommodation": "Accommodation arrangement and housing support",
+            "tourism": "Tourism and cultural tour planning",
+            "business": "Business travel coordination and medical travel assistance"
+          }
+        },
+        "responsibilities": {
+          "title": "3. User Responsibilities",
+          "intro": "When using our services, you agree to:",
+          "list": {
+            "accurate": "Provide accurate and complete information",
+            "comply": "Comply with all applicable laws and regulations",
+            "payment": "Pay all fees and charges as agreed",
+            "respect": "Respect our staff and maintain professional communication"
+          }
+        },
+        "payment": {
+          "title": "4. Payment Terms",
+          "content": "All fees are due as specified in your service agreement. We accept various payment methods and require payment before service delivery. Refunds are subject to our refund policy."
+        },
+        "liability": {
+          "title": "5. Limitation of Liability",
+          "content": "While we strive to provide excellent service, we cannot guarantee specific outcomes. Our liability is limited to the fees paid for our services. We are not responsible for decisions made by third parties such as universities or government agencies."
+        },
+        "privacy": {
+          "title": "6. Privacy",
+          "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your personal information."
+        },
+        "changes": {
+          "title": "7. Changes to Terms",
+          "content": "We may update these terms from time to time. We will notify you of any significant changes and the updated terms will be posted on our website with the revision date."
+        },
+        "contact": {
+          "title": "8. Contact Us",
+          "intro": "If you have questions about these Terms of Service, please contact us at:"
+        }
+      }
     },
     "news": {
       "title": "News and Articles",

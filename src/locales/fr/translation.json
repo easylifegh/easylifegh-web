@@ -296,11 +296,129 @@
     },
     "privacy": {
       "title": "Politique de confidentialité",
-      "subtitle": "Apprenez comment nous protégeons et gérons vos informations personnelles."
+      "subtitle": "Apprenez comment nous protégeons et gérons vos informations personnelles.",
+      "lastUpdated": "Dernière mise à jour :",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "Chez EasyLife Ghana, nous nous engageons à protéger votre vie privée et vos informations personnelles. Cette Politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez nos services."
+        },
+        "collection": {
+          "title": "2. Informations que nous collectons",
+          "intro": "Nous pouvons collecter les types d'informations suivants :",
+          "personal": {
+            "title": "Informations personnelles",
+            "contact": "Nom complet, adresse e-mail et numéro de téléphone",
+            "documents": "Informations de passeport et documents de voyage",
+            "education": "Formation académique et dossiers scolaires",
+            "financial": "Informations financières pour le traitement des paiements"
+          },
+          "usage": {
+            "title": "Informations d'utilisation",
+            "analytics": "Données d'utilisation du site web et analyses",
+            "device": "Informations sur l'appareil et adresses IP",
+            "communication": "Préférences et historique de communication"
+          }
+        },
+        "usage": {
+          "title": "3. Comment nous utilisons vos informations",
+          "intro": "Nous utilisons vos informations pour :",
+          "list": {
+            "provide": "Fournir et livrer nos services",
+            "process": "Traiter les candidatures et gérer les communications",
+            "improve": "Améliorer nos services et l'expérience utilisateur",
+            "notify": "Envoyer des mises à jour importantes et des notifications de service",
+            "comply": "Se conformer aux exigences légales et réglementaires"
+          }
+        },
+        "sharing": {
+          "title": "4. Partage d'informations",
+          "content": "Nous pouvons partager vos informations avec des partenaires de confiance et des fournisseurs de services qui nous aident à fournir nos services, y compris les universités, les agences de traitement des visas et les fournisseurs d'hébergement. Nous ne partageons que les informations nécessaires à ces services et nous nous assurons que tous les partenaires maintiennent des normes de confidentialité appropriées."
+        },
+        "security": {
+          "title": "5. Sécurité des données",
+          "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos informations personnelles contre l'accès non autorisé, l'altération, la divulgation ou la destruction. Cela inclut le chiffrement, le stockage sécurisé des données et des évaluations de sécurité régulières."
+        },
+        "rights": {
+          "title": "6. Vos droits",
+          "intro": "Vous avez le droit de :",
+          "list": {
+            "access": "Accéder et examiner vos informations personnelles",
+            "correct": "Demander des corrections aux informations inexactes",
+            "delete": "Demander la suppression de vos données personnelles",
+            "optout": "Vous désabonner des communications marketing",
+            "portability": "Droits de portabilité et de transfert des données"
+          }
+        },
+        "cookies": {
+          "title": "7. Cookies et suivi",
+          "content": "Nous utilisons des cookies et des technologies de suivi similaires pour améliorer votre expérience de navigation, analyser le trafic du site web et fournir du contenu personnalisé. Vous pouvez contrôler les préférences des cookies via les paramètres de votre navigateur."
+        },
+        "thirdparty": {
+          "title": "8. Services tiers",
+          "content": "Notre site web peut contenir des liens vers des sites web et services tiers. Nous ne sommes pas responsables des pratiques de confidentialité de ces tiers. Nous vous encourageons à consulter leurs politiques de confidentialité avant de fournir des informations personnelles."
+        },
+        "changes": {
+          "title": "9. Modifications de cette politique",
+          "content": "Nous pouvons mettre à jour cette Politique de confidentialité de temps en temps. Nous vous aviserons de tout changement important en publiant la politique mise à jour sur notre site web et en mettant à jour la date de 'Dernière mise à jour' ci-dessus."
+        },
+        "contact": {
+          "title": "10. Nous contacter",
+          "intro": "Si vous avez des questions concernant cette Politique de confidentialité ou nos pratiques de données, veuillez nous contacter à :"
+        }
+      }
     },
     "terms": {
       "title": "Conditions d'utilisation",
-      "subtitle": "Lisez nos termes et conditions d'utilisation des services EasyLife Ghana."
+      "subtitle": "Lisez nos termes et conditions d'utilisation des services EasyLife Ghana.",
+      "lastUpdated": "Dernière mise à jour :",
+      "sections": {
+        "introduction": {
+          "title": "1. Introduction",
+          "content": "Bienvenue chez EasyLife Ghana. Ces Conditions d'utilisation régissent votre utilisation de notre site web et de nos services. En accédant ou en utilisant nos services, vous acceptez d'être lié par ces conditions."
+        },
+        "services": {
+          "title": "2. Nos services",
+          "intro": "EasyLife Ghana fournit des services de support complets pour les individus voyageant au Ghana, y compris :",
+          "list": {
+            "academic": "Assistance pour les candidatures universitaires et conseil académique",
+            "visa": "Support pour les demandes de visa et conseils de documentation",
+            "accommodation": "Arrangement d'hébergement et support de logement",
+            "tourism": "Planification de tourisme et de circuits culturels",
+            "business": "Coordination des voyages d'affaires et assistance aux voyages médicaux"
+          }
+        },
+        "responsibilities": {
+          "title": "3. Responsabilités de l'utilisateur",
+          "intro": "En utilisant nos services, vous acceptez de :",
+          "list": {
+            "accurate": "Fournir des informations exactes et complètes",
+            "comply": "Respecter toutes les lois et réglementations applicables",
+            "payment": "Payer tous les frais et charges convenus",
+            "respect": "Respecter notre personnel et maintenir une communication professionnelle"
+          }
+        },
+        "payment": {
+          "title": "4. Conditions de paiement",
+          "content": "Tous les frais sont dus comme spécifié dans votre accord de service. Nous acceptons diverses méthodes de paiement et exigeons le paiement avant la livraison du service. Les remboursements sont soumis à notre politique de remboursement."
+        },
+        "liability": {
+          "title": "5. Limitation de responsabilité",
+          "content": "Bien que nous nous efforcions de fournir un excellent service, nous ne pouvons garantir des résultats spécifiques. Notre responsabilité est limitée aux frais payés pour nos services. Nous ne sommes pas responsables des décisions prises par des tiers tels que les universités ou les agences gouvernementales."
+        },
+        "privacy": {
+          "title": "6. Confidentialité",
+          "content": "Votre vie privée est importante pour nous. Veuillez consulter notre Politique de confidentialité pour comprendre comment nous collectons, utilisons et protégeons vos informations personnelles."
+        },
+        "changes": {
+          "title": "7. Modifications des conditions",
+          "content": "Nous pouvons mettre à jour ces conditions de temps en temps. Nous vous aviserons de tout changement important et les conditions mises à jour seront publiées sur notre site web avec la date de révision."
+        },
+        "contact": {
+          "title": "8. Nous contacter",
+          "intro": "Si vous avez des questions concernant ces Conditions d'utilisation, veuillez nous contacter à :"
+        }
+      }
     },
     "news": {
       "title": "Actualités et articles",

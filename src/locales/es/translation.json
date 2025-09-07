@@ -296,11 +296,129 @@
     },
     "privacy": {
       "title": "Política de privacidad",
-      "subtitle": "Aprenda cómo protegemos y manejamos su información personal."
+      "subtitle": "Aprenda cómo protegemos y manejamos su información personal.",
+      "lastUpdated": "Última actualización:",
+      "sections": {
+        "introduction": {
+          "title": "1. Introducción",
+          "content": "En EasyLife Ghana, estamos comprometidos a proteger su privacidad e información personal. Esta Política de privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando usa nuestros servicios."
+        },
+        "collection": {
+          "title": "2. Información que recopilamos",
+          "intro": "Podemos recopilar los siguientes tipos de información:",
+          "personal": {
+            "title": "Información personal",
+            "contact": "Nombre completo, dirección de correo electrónico y número de teléfono",
+            "documents": "Información de pasaporte y documentos de viaje",
+            "education": "Antecedentes educativos y registros académicos",
+            "financial": "Información financiera para el procesamiento de pagos"
+          },
+          "usage": {
+            "title": "Información de uso",
+            "analytics": "Datos de uso del sitio web y análisis",
+            "device": "Información del dispositivo y direcciones IP",
+            "communication": "Preferencias de comunicación e historial"
+          }
+        },
+        "usage": {
+          "title": "3. Cómo usamos su información",
+          "intro": "Usamos su información para:",
+          "list": {
+            "provide": "Proporcionar y entregar nuestros servicios",
+            "process": "Procesar solicitudes y manejar comunicaciones",
+            "improve": "Mejorar nuestros servicios y experiencia del usuario",
+            "notify": "Enviar actualizaciones importantes y notificaciones de servicio",
+            "comply": "Cumplir con requisitos legales y regulaciones"
+          }
+        },
+        "sharing": {
+          "title": "4. Compartir información",
+          "content": "Podemos compartir su información con socios de confianza y proveedores de servicios que nos ayudan a entregar nuestros servicios, incluidas universidades, agencias de procesamiento de visas y proveedores de alojamiento. Solo compartimos la información necesaria para estos servicios y nos aseguramos de que todos los socios mantengan estándares de privacidad apropiados."
+        },
+        "security": {
+          "title": "5. Seguridad de datos",
+          "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Esto incluye encriptación, almacenamiento seguro de datos y evaluaciones de seguridad regulares."
+        },
+        "rights": {
+          "title": "6. Sus derechos",
+          "intro": "Usted tiene derecho a:",
+          "list": {
+            "access": "Acceder y revisar su información personal",
+            "correct": "Solicitar correcciones a información inexacta",
+            "delete": "Solicitar la eliminación de sus datos personales",
+            "optout": "Optar por no recibir comunicaciones de marketing",
+            "portability": "Derechos de portabilidad y transferencia de datos"
+          }
+        },
+        "cookies": {
+          "title": "7. Cookies y seguimiento",
+          "content": "Usamos cookies y tecnologías de seguimiento similares para mejorar su experiencia de navegación, analizar el tráfico del sitio web y proporcionar contenido personalizado. Puede controlar las preferencias de cookies a través de la configuración de su navegador."
+        },
+        "thirdparty": {
+          "title": "8. Servicios de terceros",
+          "content": "Nuestro sitio web puede contener enlaces a sitios web y servicios de terceros. No somos responsables de las prácticas de privacidad de estos terceros. Le recomendamos que revise sus políticas de privacidad antes de proporcionar cualquier información personal."
+        },
+        "changes": {
+          "title": "9. Cambios a esta política",
+          "content": "Podemos actualizar esta Política de privacidad de vez en cuando. Le notificaremos de cualquier cambio significativo publicando la política actualizada en nuestro sitio web y actualizando la fecha de 'Última actualización' arriba."
+        },
+        "contact": {
+          "title": "10. Contáctenos",
+          "intro": "Si tiene preguntas sobre esta Política de privacidad o nuestras prácticas de datos, por favor contáctenos en:"
+        }
+      }
     },
     "terms": {
       "title": "Términos de servicio",
-      "subtitle": "Lea nuestros términos y condiciones para usar los servicios de EasyLife Ghana."
+      "subtitle": "Lea nuestros términos y condiciones para usar los servicios de EasyLife Ghana.",
+      "lastUpdated": "Última actualización:",
+      "sections": {
+        "introduction": {
+          "title": "1. Introducción",
+          "content": "Bienvenido a EasyLife Ghana. Estos Términos de servicio rigen su uso de nuestro sitio web y servicios. Al acceder o usar nuestros servicios, acepta estar sujeto a estos términos."
+        },
+        "services": {
+          "title": "2. Nuestros servicios",
+          "intro": "EasyLife Ghana proporciona servicios de apoyo integrales para individuos que viajan a Ghana, incluyendo:",
+          "list": {
+            "academic": "Asistencia con aplicaciones universitarias y consultoría académica",
+            "visa": "Apoyo con solicitudes de visa y guía de documentación",
+            "accommodation": "Arreglos de alojamiento y apoyo de vivienda",
+            "tourism": "Planificación de turismo y tours culturales",
+            "business": "Coordinación de viajes de negocios y asistencia de viajes médicos"
+          }
+        },
+        "responsibilities": {
+          "title": "3. Responsabilidades del usuario",
+          "intro": "Al usar nuestros servicios, acepta:",
+          "list": {
+            "accurate": "Proporcionar información precisa y completa",
+            "comply": "Cumplir con todas las leyes y regulaciones aplicables",
+            "payment": "Pagar todas las tarifas y cargos según se acuerde",
+            "respect": "Respetar a nuestro personal y mantener comunicación profesional"
+          }
+        },
+        "payment": {
+          "title": "4. Términos de pago",
+          "content": "Todas las tarifas se deben según se especifica en su acuerdo de servicio. Aceptamos varios métodos de pago y requerimos el pago antes de la entrega del servicio. Los reembolsos están sujetos a nuestra política de reembolso."
+        },
+        "liability": {
+          "title": "5. Limitación de responsabilidad",
+          "content": "Aunque nos esforzamos por brindar un excelente servicio, no podemos garantizar resultados específicos. Nuestra responsabilidad se limita a las tarifas pagadas por nuestros servicios. No somos responsables de las decisiones tomadas por terceros como universidades o agencias gubernamentales."
+        },
+        "privacy": {
+          "title": "6. Privacidad",
+          "content": "Su privacidad es importante para nosotros. Por favor revise nuestra Política de privacidad para entender cómo recopilamos, usamos y protegemos su información personal."
+        },
+        "changes": {
+          "title": "7. Cambios a los términos",
+          "content": "Podemos actualizar estos términos de vez en cuando. Le notificaremos de cualquier cambio significativo y los términos actualizados se publicarán en nuestro sitio web con la fecha de revisión."
+        },
+        "contact": {
+          "title": "8. Contáctenos",
+          "intro": "Si tiene preguntas sobre estos Términos de servicio, por favor contáctenos en:"
+        }
+      }
     },
     "news": {
       "title": "Noticias y artículos",
