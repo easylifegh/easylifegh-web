@@ -76,7 +76,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col gap-4 sm:gap-6 sm:flex-row mt-10 sm:mt-0 md:mt-16 lg:mt-24">
               <Link
-                href="/apply"
+                href="/login"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 inline-block text-center"
               >
                 {t("hero.buttons.applyNow")}

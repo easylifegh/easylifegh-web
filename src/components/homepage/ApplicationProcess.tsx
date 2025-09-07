@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { useTranslation } from "react-i18next"
+import Image from "next/image"
 
 export default function ApplicationProcess() {
   const { t } = useTranslation()
@@ -21,24 +21,6 @@ export default function ApplicationProcess() {
             strokeLinejoin="round"
             strokeWidth={2}
             d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          />
-        </svg>
-      ),
-    },
-    {
-      key: "selection",
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
           />
         </svg>
       ),
@@ -132,11 +114,14 @@ export default function ApplicationProcess() {
           {/* Left Side - Image */}
           <div className="order-2 lg:order-1 flex items-center justify-center">
             <div className="relative max-w-md mx-auto">
-              <img
+              <Image
                 src="/person.png"
                 alt="Application process illustration"
+                width={600}
+                height={400}
                 className="w-full h-auto object-contain"
                 style={{ maxHeight: "400px" }}
+                priority
               />
             </div>
           </div>
@@ -153,35 +138,21 @@ export default function ApplicationProcess() {
 
             <div className="space-y-3">
               {steps.map(step => (
-                <Link
+                <div
                   key={step.key}
-                  href="/login"
-                  className="group block bg-white border border-gray-200 rounded-lg hover:border-green-300 transition-colors duration-200"
+                  className="block bg-white border border-gray-200 rounded-lg"
                 >
                   <div className="px-6 py-4 flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 group-hover:bg-green-100 transition-colors duration-200 flex-shrink-0">
+                    <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 flex-shrink-0">
                       {step.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">
+                      <h3 className="text-lg font-semibold text-gray-900">
                         {t(`applicationProcess.steps.${step.key}.title`)}
                       </h3>
                     </div>
-                    <svg
-                      className="w-5 h-5 text-gray-400 group-hover:text-green-600 transition-colors duration-200"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

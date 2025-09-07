@@ -8,6 +8,74 @@ import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 import ClientOnly from "@/components/ClientOnly"
 
+// Mobile-optimized Language Switcher - Horizontal Toggle Style
+function MobileLanguageSwitcher() {
+  const { i18n } = useTranslation()
+
+  const languages = [
+    { code: "en", label: "English", flag: "🇺🇸" },
+    { code: "fr", label: "Français", flag: "🇫🇷" },
+    { code: "es", label: "Español", flag: "🇪🇸" },
+  ]
+
+  const currentLanguage =
+    languages.find(lang => i18n.language === lang.code) || languages[0]
+
+  const changeLanguage = async (code: string) => {
+    // Don't change if it's the same language
+    if (code === i18n.language) {
+      return
+    }
+
+    // Change the i18n language
+    await i18n.changeLanguage(code)
+
+    // Store preference in localStorage
+    localStorage.setItem("i18nextLng", code)
+
+    // Refresh to ensure proper language loading
+    window.location.reload()
+  }
+
+  const getLanguageTitle = () => {
+    switch (currentLanguage.code) {
+      case "fr":
+        return "Langue"
+      case "es":
+        return "Idioma"
+      default:
+        return "Language"
+    }
+  }
+
+  return (
+    <div className="w-full max-w-[300px]">
+      <div className="mb-3 text-center">
+        <span className="text-sm text-gray-500 font-medium">
+          {getLanguageTitle()}
+        </span>
+      </div>
+      <div className="flex bg-gray-100 rounded-lg p-1">
+        {languages.map(lang => (
+          <button
+            key={lang.code}
+            onClick={() => changeLanguage(lang.code)}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              currentLanguage.code === lang.code
+                ? "bg-[#17a253] text-white shadow-sm"
+                : "text-gray-700 hover:bg-white hover:shadow-sm"
+            }`}
+          >
+            <span className="text-base">{lang.flag}</span>
+            <span className="hidden sm:inline">{lang.label}</span>
+            <span className="sm:hidden">{lang.code.toUpperCase()}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Header() {
   const pathname = usePathname()
   const { t } = useTranslation()
@@ -112,85 +180,17 @@ export default function Header() {
 
   const megaNav: MegaItem[] = [
     {
-      id: "why-ghana",
-      label: t("header.whyGhana"),
+      id: "services",
+      label: t("header.services"),
       type: "dropdown",
       groups: [
         {
-          items: [
-            {
-              title: t("whyChooseGhana.features.language.title"),
-              description: t("whyChooseGhana.features.language.description"),
-              path: "/why-ghana#language",
-            },
-            {
-              title: t("whyChooseGhana.features.safety.title"),
-              description: t("whyChooseGhana.features.safety.description"),
-              path: "/why-ghana#safety",
-            },
-            {
-              title: t("whyChooseGhana.features.affordable.title"),
-              description: t("whyChooseGhana.features.affordable.description"),
-              path: "/why-ghana#affordable",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: "for-students",
-      label: t("header.study"),
-      type: "dropdown",
-      groups: [
-        {
-          heading: t("header.gettingStarted"),
           items: [
             {
               title: t("navigation.academicServices.title"),
               description: t("navigation.academicServices.description"),
               path: "/services/academic",
             },
-            {
-              title: t("navigation.accommodation.title"),
-              description: t("navigation.accommodation.description"),
-              path: "/services/accommodation",
-            },
-            {
-              title: t("navigation.visa.title"),
-              description: t("navigation.visa.description"),
-              path: "/services/visa",
-            },
-          ],
-        },
-        {
-          heading: t("header.settlingIn"),
-          items: [
-            {
-              title: t("navigation.pickup.title"),
-              description: t("navigation.pickup.description"),
-              path: "/services/pickup",
-            },
-            {
-              title: t("navigation.documentation.title"),
-              description: t("navigation.documentation.description"),
-              path: "/services/documentation",
-            },
-            {
-              title: t("navigation.orientation.title"),
-              description: t("navigation.orientation.description"),
-              path: "/services/orientation",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: "for-visitors",
-      label: t("header.visit"),
-      type: "dropdown",
-      groups: [
-        {
-          items: [
             {
               title: t("navigation.tourism.title"),
               description: t("navigation.tourism.description"),
@@ -237,6 +237,12 @@ export default function Header() {
       ],
     },
     {
+      id: "pricing",
+      label: t("header.pricing"),
+      type: "link",
+      path: "/#pricing",
+    },
+    {
       id: "about",
       label: t("common.about"),
       type: "link",
@@ -277,9 +283,9 @@ export default function Header() {
             : "bg-white"
         } ${openDropdown ? "!bg-white !shadow-none !backdrop-blur-none" : ""}`}
       >
-        {/* Top Mini Header */}
-        <div className="bg-gray-800 text-white">
-          <div className="container mx-auto px-4 lg:px-8">
+        {/* Top Mini Header - Hidden on mobile and tablet */}
+        <div className="hidden xl:block bg-gray-800 text-white">
+          <div className="container mx-auto px-4 xl:px-8">
             <div className="flex items-center justify-end h-8 text-sm">
               <div className="flex items-center gap-6">
                 <ClientOnly
@@ -292,23 +298,6 @@ export default function Header() {
                   <span className="hover:text-gray-300 transition-colors">
                     24/7 Support Available
                   </span>
-                </ClientOnly>
-                <ClientOnly
-                  fallback={
-                    <Link
-                      href="/events"
-                      className="hover:text-gray-300 transition-colors"
-                    >
-                      Events
-                    </Link>
-                  }
-                >
-                  <Link
-                    href="/events"
-                    className="hover:text-gray-300 transition-colors"
-                  >
-                    Events
-                  </Link>
                 </ClientOnly>
                 <ClientOnly>
                   <LanguageSwitcher
@@ -323,36 +312,36 @@ export default function Header() {
         {/* Main Navigation */}
         <div className="border-b border-gray-200">
           <nav>
-            <div className="container mx-auto px-4 lg:px-8">
-              <div className="flex items-center justify-between h-[72px]">
+            <div className="container mx-auto px-4 md:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-[64px] md:h-[72px]">
                 {/* Brand */}
                 <div className="flex items-center flex-grow">
                   <Link
                     href="/"
-                    className="flex items-center gap-3 h-[72px] pr-1"
+                    className="flex items-center gap-2 md:gap-3 h-[64px] md:h-[72px] pr-1"
                   >
                     <Image
                       src="/logo.jpeg"
                       alt="EasyLife Ghana"
-                      width={42}
-                      height={42}
-                      className="rounded-[8px] object-cover"
+                      width={38}
+                      height={38}
+                      className="md:w-[42px] md:h-[42px] rounded-[8px] object-cover"
                     />
                     <ClientOnly
                       fallback={
-                        <span className="text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                        <span className="text-[1.2rem] md:text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
                           EasyLife Ghana
                         </span>
                       }
                     >
-                      <span className="text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                      <span className="text-[1.2rem] md:text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
                         {t("header.brand")}
                       </span>
                     </ClientOnly>
                   </Link>
 
                   {/* Desktop Navigation */}
-                  <ul className="hidden lg:flex items-center ml-12 gap-10">
+                  <ul className="hidden lg:flex items-center ml-4 xl:ml-12 gap-4 xl:gap-10">
                     {megaNav.map(item => {
                       const isActive = item.path
                         ? pathname === item.path
@@ -372,7 +361,7 @@ export default function Header() {
                             <button
                               type="button"
                               data-id={item.id}
-                              className={`dropdown-trigger flex items-center h-[72px] px-1 text-[0.975rem] font-normal text-gray-900 relative transition-colors duration-250 hover:text-[#17a253] group ${opened ? "text-[#17a253] font-medium" : ""}`}
+                              className={`dropdown-trigger flex items-center h-[64px] md:h-[72px] px-0.5 xl:px-1 text-[0.975rem] font-normal text-gray-900 relative transition-colors duration-250 hover:text-[#17a253] group ${opened ? "text-[#17a253] font-medium" : ""}`}
                               aria-haspopup="true"
                               aria-expanded={opened}
                               onMouseEnter={() => setOpenDropdown(item.id)}
@@ -386,10 +375,10 @@ export default function Header() {
                                 fallback={
                                   item.id === "why-ghana"
                                     ? "Why Ghana"
-                                    : item.id === "for-students"
-                                      ? "Study"
-                                      : item.id === "for-visitors"
-                                        ? "Visit"
+                                    : item.id === "services"
+                                      ? "Services"
+                                      : item.id === "pricing"
+                                        ? "Pricing"
                                         : item.id === "resources"
                                           ? "Resources"
                                           : item.id === "about"
@@ -488,20 +477,32 @@ export default function Header() {
                         >
                           <Link
                             href={item.path!}
-                            className={`flex items-center h-[72px] px-1 text-[0.975rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative ${
+                            className={`flex items-center h-[64px] md:h-[72px] px-0.5 xl:px-1 text-[0.975rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative ${
                               isActive
                                 ? "text-[#17a253] font-medium"
                                 : "text-gray-900"
                             }`}
+                            onClick={e => {
+                              if (item.path === "/#pricing") {
+                                e.preventDefault()
+                                const element =
+                                  document.getElementById("pricing")
+                                if (element) {
+                                  element.scrollIntoView({ behavior: "smooth" })
+                                } else {
+                                  window.location.href = "/#pricing"
+                                }
+                              }
+                            }}
                           >
                             <ClientOnly
                               fallback={
                                 item.id === "why-ghana"
                                   ? "Why Ghana"
-                                  : item.id === "for-students"
-                                    ? "Study"
-                                    : item.id === "for-visitors"
-                                      ? "Visit"
+                                  : item.id === "services"
+                                    ? "Services"
+                                    : item.id === "pricing"
+                                      ? "Pricing"
                                       : item.id === "resources"
                                         ? "Resources"
                                         : item.id === "about"
@@ -521,24 +522,23 @@ export default function Header() {
                 </div>
 
                 {/* Right Actions */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 md:gap-3">
                   <Link
-                    href="/login?intent=return"
-                    className="hidden lg:inline-flex items-center bg-white border-[1.5px] border-black rounded-full px-6 py-[0.65rem] font-medium text-[0.95rem] text-black leading-none transition-all duration-250 hover:bg-gray-100 active:bg-gray-200"
+                    href="/login"
+                    className="hidden lg:inline-flex items-center bg-white border-2 border-black text-black rounded-full px-5 xl:px-7 py-[0.6rem] xl:py-[0.65rem] font-semibold text-[0.95rem] xl:text-base leading-none tracking-[0.25px] xl:tracking-[0.3px] transition-all duration-250 hover:bg-gray-50 active:bg-gray-100 active:translate-y-px whitespace-nowrap"
                   >
                     {t("common.login")}
                   </Link>
-
                   <Link
-                    href="/login?intent=get-started"
-                    className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-7 py-[0.65rem] font-semibold text-base text-white leading-none tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px"
+                    href="/login"
+                    className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-5 xl:px-7 py-[0.6rem] xl:py-[0.65rem] font-semibold text-[0.95rem] xl:text-base text-white leading-none tracking-[0.25px] xl:tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px whitespace-nowrap"
                   >
                     {t("common.getStarted")}
                   </Link>
 
                   {/* Mobile Toggle */}
                   <button
-                    className={`lg:hidden w-12 h-12 bg-transparent border-0 relative flex items-center justify-center ${isMenuOpen ? "active" : ""}`}
+                    className={`lg:hidden w-10 h-10 md:w-12 md:h-12 bg-transparent border-0 relative flex items-center justify-center ${isMenuOpen ? "active" : ""}`}
                     type="button"
                     onClick={toggleMobileMenu}
                     aria-controls="mobile-menu"
@@ -601,10 +601,10 @@ export default function Header() {
                                   <span>
                                     {item.id === "why-ghana"
                                       ? "Why Ghana"
-                                      : item.id === "for-students"
-                                        ? "Study"
-                                        : item.id === "for-visitors"
-                                          ? "Visit"
+                                      : item.id === "services"
+                                        ? "Services"
+                                        : item.id === "pricing"
+                                          ? "Pricing"
                                           : item.id === "resources"
                                             ? "Resources"
                                             : item.id === "about"
@@ -687,16 +687,32 @@ export default function Header() {
                           <Link
                             href={item.path!}
                             className="block px-4 py-[1.05rem] text-[1.05rem] text-gray-900 no-underline"
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={e => {
+                              setIsMenuOpen(false)
+                              if (item.path === "/#pricing") {
+                                e.preventDefault()
+                                setTimeout(() => {
+                                  const element =
+                                    document.getElementById("pricing")
+                                  if (element) {
+                                    element.scrollIntoView({
+                                      behavior: "smooth",
+                                    })
+                                  } else {
+                                    window.location.href = "/#pricing"
+                                  }
+                                }, 100)
+                              }
+                            }}
                           >
                             <ClientOnly
                               fallback={
                                 item.id === "why-ghana"
                                   ? "Why Ghana"
-                                  : item.id === "for-students"
-                                    ? "Study"
-                                    : item.id === "for-visitors"
-                                      ? "Visit"
+                                  : item.id === "services"
+                                    ? "Services"
+                                    : item.id === "pricing"
+                                      ? "Pricing"
                                       : item.id === "resources"
                                         ? "Resources"
                                         : item.id === "about"
@@ -718,44 +734,57 @@ export default function Header() {
                 {/* Mobile Actions */}
                 <div className="sticky bottom-0 border-t border-gray-200 p-3 bg-gradient-to-b from-white to-gray-50 pb-[calc(env(safe-area-inset-bottom)+1rem)]">
                   <div className="flex flex-col gap-3">
-                    <ClientOnly
-                      fallback={
+                    {/* Language Switcher - Mobile Optimized */}
+                    <div className="flex items-center justify-center py-2">
+                      <ClientOnly>
+                        <MobileLanguageSwitcher />
+                      </ClientOnly>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex gap-3">
+                      {/* Login Button */}
+                      <ClientOnly
+                        fallback={
+                          <Link
+                            href="/login"
+                            className="flex-1 h-[52px] flex items-center justify-center bg-white border-2 border-black text-black rounded-full font-semibold transition-all duration-250 active:bg-gray-100"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Log In
+                          </Link>
+                        }
+                      >
                         <Link
-                          href="/login?intent=return"
-                          className="w-full h-[52px] flex items-center justify-center bg-white border-[1.5px] border-black rounded-full font-medium text-black transition-all duration-250 active:bg-gray-100"
+                          href="/login"
+                          className="flex-1 h-[52px] flex items-center justify-center bg-white border-2 border-black text-black rounded-full font-semibold transition-all duration-250 active:bg-gray-100"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          Log In
+                          {t("common.login")}
                         </Link>
-                      }
-                    >
-                      <Link
-                        href="/login?intent=return"
-                        className="w-full h-[52px] flex items-center justify-center bg-white border-[1.5px] border-black rounded-full font-medium text-black transition-all duration-250 active:bg-gray-100"
-                        onClick={() => setIsMenuOpen(false)}
+                      </ClientOnly>
+
+                      {/* Get Started Button */}
+                      <ClientOnly
+                        fallback={
+                          <Link
+                            href="/login"
+                            className="flex-1 h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Get Started
+                          </Link>
+                        }
                       >
-                        {t("common.login")}
-                      </Link>
-                    </ClientOnly>
-                    <ClientOnly
-                      fallback={
                         <Link
-                          href="/login?intent=get-started"
-                          className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
+                          href="/login"
+                          className="flex-1 h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          Get Started
+                          {t("common.getStarted")}
                         </Link>
-                      }
-                    >
-                      <Link
-                        href="/login?intent=get-started"
-                        className="w-full h-[52px] flex items-center justify-center bg-[#17a253] rounded-full font-semibold text-white transition-all duration-250 active:bg-[#148947]"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {t("common.getStarted")}
-                      </Link>
-                    </ClientOnly>
+                      </ClientOnly>
+                    </div>
                   </div>
                 </div>
               </div>

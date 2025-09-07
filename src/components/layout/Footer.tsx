@@ -13,27 +13,9 @@ export default function Footer() {
   // English fallback sections
   const fallbackSections = [
     {
-      heading: "Why Ghana",
-      links: [
-        { label: "English Everywhere", to: "/why-ghana#language" },
-        { label: "Safe", to: "/why-ghana#safety" },
-        { label: "Affordable", to: "/why-ghana#affordable" },
-      ],
-    },
-    {
-      heading: "Study",
+      heading: "Services",
       links: [
         { label: "Academic Services", to: "/services/academic" },
-        { label: "Student Accommodation", to: "/services/accommodation" },
-        { label: "Student Visa Support", to: "/services/visa" },
-        { label: "Airport Pickup", to: "/services/pickup" },
-        { label: "Documentation Support", to: "/services/documentation" },
-        { label: "Orientation Program", to: "/services/orientation" },
-      ],
-    },
-    {
-      heading: "Visit",
-      links: [
         { label: "Tourism & Cultural Tours", to: "/services/tourism" },
         { label: "Business Travel Support", to: "/services/business" },
         { label: "Medical Travel Assistance", to: "/services/medical" },
@@ -45,48 +27,42 @@ export default function Footer() {
         { label: "Download Guide", to: "/guide" },
         { label: "FAQs", to: "/faq" },
         { label: "Blog & Updates", to: "/blog" },
+      ],
+    },
+    {
+      heading: "Company",
+      links: [
         { label: "About Us", to: "/about" },
         { label: "Contact", to: "/contact" },
+        { label: "Pricing", to: "/#pricing" },
       ],
     },
   ]
 
   const footerSections = [
     {
-      heading: "whyGhana",
+      heading: "services",
       links: [
-        { label: "English Everywhere", to: "/why-ghana#language" },
-        { label: "Safe", to: "/why-ghana#safety" },
-        { label: "Affordable", to: "/why-ghana#affordable" },
-      ],
-    },
-    {
-      heading: "study",
-      links: [
-        { label: "Academic Services", to: "/services/academic" },
-        { label: "Student Accommodation", to: "/services/accommodation" },
-        { label: "Student Visa Support", to: "/services/visa" },
-        { label: "Airport Pickup", to: "/services/pickup" },
-        { label: "Documentation Support", to: "/services/documentation" },
-        { label: "Orientation Program", to: "/services/orientation" },
-      ],
-    },
-    {
-      heading: "visit",
-      links: [
-        { label: "Tourism & Cultural Tours", to: "/services/tourism" },
-        { label: "Business Travel Support", to: "/services/business" },
-        { label: "Medical Travel Assistance", to: "/services/medical" },
+        { labelKey: "academicServices", to: "/services/academic" },
+        { labelKey: "tourismCulturalTours", to: "/services/tourism" },
+        { labelKey: "businessTravelSupport", to: "/services/business" },
+        { labelKey: "medicalTravelAssistance", to: "/services/medical" },
       ],
     },
     {
       heading: "resources",
       links: [
-        { label: "Download Guide", to: "/guide" },
-        { label: "FAQs", to: "/faq" },
-        { label: "Blog & Updates", to: "/blog" },
-        { label: "About Us", to: "/about" },
-        { label: "Contact", to: "/contact" },
+        { labelKey: "downloadGuide", to: "/guide" },
+        { labelKey: "faqs", to: "/faq" },
+        { labelKey: "blogUpdates", to: "/blog" },
+      ],
+    },
+    {
+      heading: "company",
+      links: [
+        { labelKey: "aboutUs", to: "/about" },
+        { labelKey: "contact", to: "/contact" },
+        { labelKey: "pricing", to: "/#pricing" },
       ],
     },
   ]
@@ -140,7 +116,7 @@ export default function Footer() {
           {/* Footer Links Grid */}
           <ClientOnly
             fallback={
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 {fallbackSections.map(section => (
                   <div key={section.heading}>
                     <h3 className="font-semibold text-gray-900 mb-6 text-sm uppercase tracking-wider">
@@ -164,7 +140,7 @@ export default function Footer() {
               </div>
             }
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {footerSections.map(section => (
                 <div key={section.heading}>
                   <h3 className="font-semibold text-gray-900 mb-6 text-sm uppercase tracking-wider">
@@ -178,7 +154,7 @@ export default function Footer() {
                           className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
                           onClick={() => window.scrollTo(0, 0)}
                         >
-                          {link.label}
+                          {t(`footer.links.${link.labelKey}`)}
                         </Link>
                       </li>
                     ))}

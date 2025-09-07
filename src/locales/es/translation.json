@@ -46,7 +46,7 @@
     },
     "academicServices": {
       "title": "Servicios académicos",
-      "description": "Escuelas de idiomas y apoyo de colocación universitaria."
+      "description": "Escuelas de idiomas y colocación universitaria."
     },
     "visa": {
       "title": "Asistencia con visa",
@@ -55,10 +55,6 @@
     "accommodation": {
       "title": "Ayuda con alojamiento",
       "description": "Encuentre el lugar perfecto para quedarse."
-    },
-    "pickup": {
-      "title": "Recogida en aeropuerto",
-      "description": "Llegada segura y transporte."
     },
     "orientation": {
       "title": "Apoyo de orientación",
@@ -78,7 +74,7 @@
     },
     "businessTravel": {
       "title": "Apoyo viaje de negocios",
-      "description": "Apoyo completo para viajeros de negocios e inversores."
+      "description": "Apoyo para viajeros de negocios e inversores."
     },
     "medicalTravel": {
       "title": "Asistencia viaje médico",
@@ -121,10 +117,6 @@
     "accommodation": {
       "title": "Ayuda con alojamiento",
       "subtitle": "Encuentre el lugar perfecto para quedarse durante sus estudios en Ghana."
-    },
-    "pickup": {
-      "title": "Recogida en aeropuerto",
-      "subtitle": "Servicios de llegada segura y transporte para estudiantes internacionales."
     },
     "orientation": {
       "title": "Apoyo de orientación",
@@ -290,10 +282,6 @@
         "title": "Consulta gratuita",
         "description": "Discute tus objetivos, preferencias y antecedentes académicos con nuestros consejeros expertos"
       },
-      "selection": {
-        "title": "Elegir programa y universidad",
-        "description": "Selecciona la mejor universidad y programa que coincida con tus aspiraciones profesionales"
-      },
       "application": {
         "title": "Enviar aplicación",
         "description": "Completa tu aplicación universitaria con nuestra guía y soporte documental"
@@ -339,14 +327,100 @@
     "description": "Crea tu cuenta para acceder a solicitudes de escuelas y universidades, asistencia con visa y orientación experta.",
     "button": "Empezar"
   },
+  "pricing": {
+    "title": "Elige tu Plan Perfecto",
+    "plans": {
+      "basic": {
+        "name": "Pack Básico",
+        "subtitle": "Esencial",
+        "description": "100% Digital",
+        "processingTime": "3-7 días",
+        "included": [
+          "Guía paso a paso para preparar documentos de solicitud de visa",
+          "Tarjeta SIM local",
+          "Guía digital de instalación (transporte, dinero, vida diaria)",
+          "Soporte WhatsApp en 24 horas"
+        ],
+        "notIncluded": [
+          "Servicio de recogida en aeropuerto",
+          "Transporte privado",
+          "Asistencia administrativa en persona"
+        ]
+      },
+      "standard": {
+        "name": "Pack Estándar",
+        "subtitle": "Más Popular",
+        "description": "Asistencia Remota",
+        "processingTime": "3-10 días",
+        "included": [
+          "Todo en el Pack Básico",
+          "Asesor dedicado para formularios y procedimientos",
+          "Seguimiento de llegada en tiempo real",
+          "Llamada de bienvenida personalizada",
+          "Consulta de vivienda y vecindario",
+          "Acceso a la red de socios de EasyLife"
+        ],
+        "notIncluded": [
+          "Traslados privados al aeropuerto",
+          "Soporte continuo en persona después de la llegada",
+          "Acompañamiento físico a oficinas gubernamentales"
+        ]
+      },
+      "premium": {
+        "name": "Pack Premium",
+        "subtitle": "Servicio Completo",
+        "description": "Soporte Completo",
+        "processingTime": "1-7 días",
+        "included": [
+          "Todo en los Packs Básico y Estándar",
+          "Procesamiento completo de visa por el equipo EasyLife",
+          "Recibimiento por agente dedicado en aeropuerto",
+          "Traslado privado al aeropuerto",
+          "Día completo de instalación guiada",
+          "Soporte premium 24/7 por un mes",
+          "Soporte administrativo en persona",
+          "Procesamiento prioritario"
+        ],
+        "notIncluded": [
+          "Tarifas oficiales del gobierno",
+          "Solicitudes personalizadas fuera del alcance del paquete",
+          "Soporte extendido de alojamiento"
+        ]
+      }
+    },
+    "features": {
+      "whatsIncluded": "Qué está incluido",
+      "notIncluded": "No incluido",
+      "mostPopular": "Más Popular"
+    },
+    "cta": {
+      "helpText": "¿Necesitas ayuda eligiendo el plan correcto para ti?",
+      "contactButton": "Contactar Nuestro Equipo"
+    }
+  },
   "footer": {
     "description": "Tu socio de confianza para estudiar en Ghana. Proporcionamos apoyo integral desde las aplicaciones universitarias hasta establecerte en tu nuevo viaje académico en el destino más acogedor de África Occidental.",
     "followUs": "Síguenos:",
     "sections": {
       "whyGhana": "Por qué Ghana",
-      "study": "Estudiar",
-      "visit": "Visitar",
-      "resources": "Recursos"
+      "services": "Servicios",
+      "resources": "Recursos",
+      "company": "Empresa"
+    },
+    "links": {
+      "englishEverywhere": "Inglés en todas partes",
+      "safe": "Seguro",
+      "affordable": "Asequible",
+      "academicServices": "Servicios académicos",
+      "tourismCulturalTours": "Turismo y tours culturales",
+      "businessTravelSupport": "Apoyo viaje de negocios",
+      "medicalTravelAssistance": "Asistencia viaje médico",
+      "downloadGuide": "Descargar guía",
+      "faqs": "Preguntas frecuentes",
+      "blogUpdates": "Blog y actualizaciones",
+      "aboutUs": "Acerca de nosotros",
+      "contact": "Contacto",
+      "pricing": "Precios"
     },
     "copyright": "© {{year}} EasyLife Ghana. Todos los derechos reservados."
   }

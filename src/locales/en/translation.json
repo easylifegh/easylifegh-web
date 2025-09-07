@@ -15,13 +15,13 @@
     "events": "Events",
     "language": "English",
     "whyGhana": "Why Ghana",
-    "study": "Study",
-    "visit": "Visit",
+    "services": "Services",
+    "pricing": "Pricing",
     "resources": "Resources",
     "educationalExcellence": "Educational Excellence",
     "livingInGhana": "Living in Ghana",
-    "gettingStarted": "Getting Started",
-    "settlingIn": "Settling In",
+    "academicAndSettlement": "Academic & Settlement",
+    "specializedServices": "Specialized Services",
     "professionalServices": "Professional Services",
     "travelSupport": "Travel Support",
     "planningTools": "Planning Tools",
@@ -46,7 +46,7 @@
     },
     "academicServices": {
       "title": "Academic Services",
-      "description": "Language schools and university placement support."
+      "description": "Language schools and university placement."
     },
     "visa": {
       "title": "Visa Assistance",
@@ -55,10 +55,6 @@
     "accommodation": {
       "title": "Accommodation Help",
       "description": "Find the perfect place to stay."
-    },
-    "pickup": {
-      "title": "Airport Pickup",
-      "description": "Safe arrival and transportation."
     },
     "orientation": {
       "title": "Orientation Support",
@@ -78,7 +74,7 @@
     },
     "businessTravel": {
       "title": "Business Travel Support",
-      "description": "Complete support for business travelers and investors."
+      "description": "Support for business travelers and investors."
     },
     "medicalTravel": {
       "title": "Medical Travel Assistance",
@@ -121,10 +117,6 @@
     "accommodation": {
       "title": "Accommodation Help",
       "subtitle": "Find the perfect place to stay during your studies in Ghana."
-    },
-    "pickup": {
-      "title": "Airport Pickup",
-      "subtitle": "Safe arrival and transportation services for international students."
     },
     "orientation": {
       "title": "Orientation Support",
@@ -291,10 +283,6 @@
         "title": "Free Consultation",
         "description": "Discuss your goals, preferences, and academic background with our expert counselors"
       },
-      "selection": {
-        "title": "Choose Program & University",
-        "description": "Select the best university and program that matches your career aspirations"
-      },
       "application": {
         "title": "Submit Application",
         "description": "Complete your university application with our guidance and document support"
@@ -340,14 +328,100 @@
     "description": "Create your account to access school and university applications, visa assistance, and expert guidance.",
     "button": "Get Started"
   },
+  "pricing": {
+    "title": "Choose Your Perfect Plan",
+    "plans": {
+      "basic": {
+        "name": "Basic Pack",
+        "subtitle": "Essential",
+        "description": "100% Digital",
+        "processingTime": "3-7 days",
+        "included": [
+          "Step-by-step guidance to prepare your visa application documents",
+          "Local SIM card",
+          "Digital settling-in guide (transport, money, daily life)",
+          "WhatsApp support within 24 hours"
+        ],
+        "notIncluded": [
+          "Airport pickup service",
+          "Private transportation",
+          "In-person administrative assistance"
+        ]
+      },
+      "standard": {
+        "name": "Standard Pack",
+        "subtitle": "Most Popular",
+        "description": "Remote Assistance",
+        "processingTime": "3-10 days",
+        "included": [
+          "Everything in the Basic Pack",
+          "Dedicated advisor for forms and procedures",
+          "Real-time arrival tracking",
+          "Personalized welcome call",
+          "Housing and neighborhood consultation",
+          "Access to EasyLife partner network"
+        ],
+        "notIncluded": [
+          "Private airport transfers",
+          "Continuous in-person support after arrival",
+          "Physical accompaniment to government offices"
+        ]
+      },
+      "premium": {
+        "name": "Premium Pack",
+        "subtitle": "Full Service",
+        "description": "Complete Support",
+        "processingTime": "1-7 days",
+        "included": [
+          "Everything in Basic & Standard Packs",
+          "Full visa processing by EasyLife team",
+          "Dedicated airport agent greeting",
+          "Private airport transfer",
+          "Full guided installation day",
+          "Premium 24/7 support for one month",
+          "In-person administrative support",
+          "Priority processing"
+        ],
+        "notIncluded": [
+          "Official government fees",
+          "Custom requests outside package scope",
+          "Extended accommodation support"
+        ]
+      }
+    },
+    "features": {
+      "whatsIncluded": "What's Included",
+      "notIncluded": "Not Included",
+      "mostPopular": "Most Popular"
+    },
+    "cta": {
+      "helpText": "Need help choosing the right plan for you?",
+      "contactButton": "Contact Our Team"
+    }
+  },
   "footer": {
     "description": "Your trusted partner for studying in Ghana. We provide comprehensive support from university applications to settling into your new academic journey in West Africa's most welcoming destination.",
     "followUs": "Follow us:",
     "sections": {
       "whyGhana": "Why Ghana",
-      "study": "Study",
-      "visit": "Visit",
-      "resources": "Resources"
+      "services": "Services",
+      "resources": "Resources",
+      "company": "Company"
+    },
+    "links": {
+      "englishEverywhere": "English Everywhere",
+      "safe": "Safe",
+      "affordable": "Affordable",
+      "academicServices": "Academic Services",
+      "tourismCulturalTours": "Tourism & Cultural Tours",
+      "businessTravelSupport": "Business Travel Support",
+      "medicalTravelAssistance": "Medical Travel Assistance",
+      "downloadGuide": "Download Guide",
+      "faqs": "FAQs",
+      "blogUpdates": "Blog & Updates",
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "pricing": "Pricing"
     },
     "copyright": "© {{year}} EasyLife Ghana. All rights reserved."
   }
