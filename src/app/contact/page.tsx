@@ -46,21 +46,47 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen w-full bg-white">
-      {/* Header Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      {/* Wave Hero Header (aligned with About page style) */}
+      <header className="relative">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-40 md:pt-28 md:pb-52">
           <div className="text-center">
-            <ClientOnly fallback={<div className="h-12" />}>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#0D1623] mb-6">
+            <ClientOnly fallback={<div className="h-20" />}>
+              <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0D1623] after:content-[''] after:block after:h-1 after:w-24 after:mx-auto after:mt-6 after:rounded-full after:bg-gradient-to-r after:from-emerald-500 after:to-emerald-300">
                 {t("pages.contact.title")}
               </h1>
-              <p className="text-xl text-[#5F6B7A] max-w-3xl mx-auto">
+              <p className="mt-8 text-xl md:text-2xl text-[#5F6B7A] max-w-3xl mx-auto leading-relaxed">
                 {t("pages.contact.subtitle")}
               </p>
             </ClientOnly>
           </div>
         </div>
-      </div>
+        {/* Layered Waves */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-[1px]"
+        >
+          <svg
+            className="w-full h-20 md:h-24 text-emerald-50"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0 80c120 20 240-40 360-40s240 60 360 60 240-60 360-60 240 60 360 40v40H0z"
+            />
+          </svg>
+          <svg
+            className="w-full h-16 -mt-8 text-white mix-blend-multiply opacity-70"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0 90c160 10 240-50 400-50s240 70 360 70 240-70 360-70 240 70 320 50v30H0z"
+            />
+          </svg>
+        </div>
+      </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -90,9 +116,9 @@ export default function ContactPage() {
               {/* Email */}
               <div className="group">
                 <div className="flex items-center space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-all duration-200">
-                  <div className="flex-shrink-0 w-11 h-11 bg-[#17a253] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-[#17a253]">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -124,9 +150,9 @@ export default function ContactPage() {
               {/* Phone */}
               <div className="group">
                 <div className="flex items-center space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-all duration-200">
-                  <div className="flex-shrink-0 w-11 h-11 bg-[#17a253] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-[#17a253]">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -158,9 +184,9 @@ export default function ContactPage() {
               {/* WhatsApp */}
               <div className="group">
                 <div className="flex items-center space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-all duration-200">
-                  <div className="flex-shrink-0 w-11 h-11 bg-[#17a253] rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-[#17a253]">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -440,9 +466,9 @@ export default function ContactPage() {
           {/* Office Address */}
           <div className="group">
             <div className="flex items-start space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-all duration-200">
-              <div className="flex-shrink-0 w-11 h-11 bg-[#17a253] rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-[#17a253]">
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

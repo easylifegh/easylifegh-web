@@ -4,74 +4,97 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
 
+// Keep story paragraph keys for timeline
+const STORY_PARAGRAPHS = ["paragraph1", "paragraph2", "paragraph3"] as const
+
 export default function AboutPage() {
   const { t } = useTranslation()
 
   return (
-    <div className="min-h-screen w-full bg-white">
-      {/* Header Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div className="relative min-h-screen w-full overflow-hidden bg-white">
+      {/* Hero with layered soft waves */}
+      <header className="relative">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-40 md:pt-28 md:pb-52">
           <div className="text-center">
-            <ClientOnly fallback={<div className="h-12" />}>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#0D1623] mb-6">
+            <ClientOnly fallback={<div className="h-20" />}>
+              <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0D1623] after:content-[''] after:block after:h-1 after:w-24 after:mx-auto after:mt-6 after:rounded-full after:bg-gradient-to-r after:from-emerald-500 after:to-emerald-300">
                 {t("pages.about.title")}
               </h1>
-              <p className="text-xl text-[#5F6B7A] max-w-3xl mx-auto">
+              <p className="mt-8 text-xl md:text-2xl text-[#5F6B7A] max-w-3xl mx-auto leading-relaxed">
                 {t("pages.about.subtitle")}
               </p>
             </ClientOnly>
           </div>
         </div>
-      </div>
+        {/* Waves */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-[1px]"
+        >
+          <svg
+            className="w-full h-20 md:h-24 text-emerald-50"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0 80c120 20 240-40 360-40s240 60 360 60 240-60 360-60 240 60 360 40v40H0z"
+            />
+          </svg>
+          <svg
+            className="w-full h-16 -mt-8 text-white mix-blend-multiply opacity-70"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0 90c160 10 240-50 400-50s240 70 360 70 240-70 360-70 240 70 320 50v30H0z"
+            />
+          </svg>
+        </div>
+      </header>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Mission & Vision Section */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
-          <div>
+      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Mission & Vision (flat cards) */}
+        <div className="relative grid lg:grid-cols-2 gap-12 lg:gap-20 mb-24">
+          {/* Vertical divider for large screens */}
+          <div
+            aria-hidden
+            className="hidden lg:block absolute inset-y-0 left-1/2 w-px bg-gradient-to-b from-transparent via-emerald-200 to-transparent"
+          />
+          <div className="relative rounded-xl bg-white p-2 sm:p-4 lg:p-2 xl:p-4">
             <ClientOnly fallback={<div className="h-8" />}>
-              <h2 className="text-3xl font-bold text-[#0D1623] mb-6">
+              <h2 className="text-3xl font-bold text-[#0D1623] mb-6 tracking-tight">
                 {t("pages.about.mission.title")}
               </h2>
             </ClientOnly>
             <p className="text-[#5F6B7A] text-lg leading-relaxed">
-              <ClientOnly
-                fallback={
-                  <span>
-                    Our mission is to make your transition to Ghana as smooth
-                    and successful as possible.
-                  </span>
-                }
-              >
+              <ClientOnly fallback={<span />}>
                 {t("pages.about.mission.description")}
               </ClientOnly>
             </p>
           </div>
-
-          <div>
+          {/* Horizontal divider on mobile/tablet */}
+          <div
+            aria-hidden
+            className="lg:hidden h-px bg-gradient-to-r from-transparent via-emerald-200 to-transparent"
+          />
+          <div className="relative rounded-xl bg-white p-2 sm:p-4 lg:p-2 xl:p-4">
             <ClientOnly fallback={<div className="h-8" />}>
-              <h2 className="text-3xl font-bold text-[#0D1623] mb-6">
+              <h2 className="text-3xl font-bold text-[#0D1623] mb-6 tracking-tight">
                 {t("pages.about.vision.title")}
               </h2>
             </ClientOnly>
             <p className="text-[#5F6B7A] text-lg leading-relaxed">
-              <ClientOnly
-                fallback={
-                  <span>
-                    To be West Africa&apos;s leading platform connecting
-                    international students and professionals with opportunities
-                    in Ghana.
-                  </span>
-                }
-              >
+              <ClientOnly fallback={<span />}>
                 {t("pages.about.vision.description")}
               </ClientOnly>
             </p>
           </div>
         </div>
 
-        {/* Our Values Section */}
-        <div className="mb-20">
+        {/* Values (accent line hover) */}
+        <div className="mb-24">
           <div className="text-center mb-16">
             <ClientOnly fallback={<div className="h-8" />}>
               <h2 className="text-3xl font-bold text-[#0D1623] mb-4">
@@ -85,7 +108,8 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-12">
             {/* Excellence */}
-            <div>
+            <div className="group relative pl-4">
+              <span className="pointer-events-none absolute left-0 top-0 h-full w-[3px] origin-top scale-y-0 bg-gradient-to-b from-emerald-500 to-emerald-300 transition-transform duration-300 group-hover:scale-y-100" />
               <div className="flex items-start space-x-5">
                 <div className="flex-shrink-0">
                   <svg
@@ -109,17 +133,7 @@ export default function AboutPage() {
                     </ClientOnly>
                   </h3>
                   <p className="text-[#5F6B7A] leading-relaxed">
-                    <ClientOnly
-                      fallback={
-                        <span>
-                          Every student deserves world-class service. From our
-                          initial consultation to your successful settlement in
-                          Ghana, we maintain the highest standards in everything
-                          we do. Our track record speaks for itself - we
-                          don&apos;t just meet expectations, we exceed them.
-                        </span>
-                      }
-                    >
+                    <ClientOnly fallback={<span />}>
                       {t("pages.about.values.excellence.description")}
                     </ClientOnly>
                   </p>
@@ -128,7 +142,8 @@ export default function AboutPage() {
             </div>
 
             {/* Trust */}
-            <div>
+            <div className="group relative pl-4">
+              <span className="pointer-events-none absolute left-0 top-0 h-full w-[3px] origin-top scale-y-0 bg-gradient-to-b from-emerald-500 to-emerald-300 transition-transform duration-300 group-hover:scale-y-100" />
               <div className="flex items-start space-x-5">
                 <div className="flex-shrink-0">
                   <svg
@@ -152,18 +167,7 @@ export default function AboutPage() {
                     </ClientOnly>
                   </h3>
                   <p className="text-[#5F6B7A] leading-relaxed">
-                    <ClientOnly
-                      fallback={
-                        <span>
-                          Trust is the foundation of every successful journey.
-                          We&apos;ve built our reputation on transparency,
-                          honesty, and reliability. When you choose EasyLife
-                          Ghana, you&apos;re choosing a partner who will be with
-                          you every step of the way, with no hidden fees or
-                          surprises.
-                        </span>
-                      }
-                    >
+                    <ClientOnly fallback={<span />}>
                       {t("pages.about.values.trust.description")}
                     </ClientOnly>
                   </p>
@@ -172,7 +176,8 @@ export default function AboutPage() {
             </div>
 
             {/* Innovation */}
-            <div>
+            <div className="group relative pl-4">
+              <span className="pointer-events-none absolute left-0 top-0 h-full w-[3px] origin-top scale-y-0 bg-gradient-to-b from-emerald-500 to-emerald-300 transition-transform duration-300 group-hover:scale-y-100" />
               <div className="flex items-start space-x-5">
                 <div className="flex-shrink-0">
                   <svg
@@ -196,18 +201,7 @@ export default function AboutPage() {
                     </ClientOnly>
                   </h3>
                   <p className="text-[#5F6B7A] leading-relaxed">
-                    <ClientOnly
-                      fallback={
-                        <span>
-                          The world is evolving, and so are we. We leverage
-                          cutting-edge technology and innovative approaches to
-                          streamline your experience. From digital applications
-                          to AI-powered matching with universities, we&apos;re
-                          always finding new ways to make your journey smoother
-                          and more efficient.
-                        </span>
-                      }
-                    >
+                    <ClientOnly fallback={<span />}>
                       {t("pages.about.values.innovation.description")}
                     </ClientOnly>
                   </p>
@@ -216,7 +210,8 @@ export default function AboutPage() {
             </div>
 
             {/* Support */}
-            <div>
+            <div className="group relative pl-4">
+              <span className="pointer-events-none absolute left-0 top-0 h-full w-[3px] origin-top scale-y-0 bg-gradient-to-b from-emerald-500 to-emerald-300 transition-transform duration-300 group-hover:scale-y-100" />
               <div className="flex items-start space-x-5">
                 <div className="flex-shrink-0">
                   <svg
@@ -240,18 +235,7 @@ export default function AboutPage() {
                     </ClientOnly>
                   </h3>
                   <p className="text-[#5F6B7A] leading-relaxed">
-                    <ClientOnly
-                      fallback={
-                        <span>
-                          Your success is our mission. That&apos;s why we
-                          provide comprehensive support that goes beyond just
-                          paperwork. From pre-arrival guidance to post-arrival
-                          integration, our dedicated team of experts is always
-                          available to help you navigate any challenge and
-                          celebrate every milestone.
-                        </span>
-                      }
-                    >
+                    <ClientOnly fallback={<span />}>
                       {t("pages.about.values.support.description")}
                     </ClientOnly>
                   </p>
@@ -261,64 +245,51 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Our Story Section */}
-        <div className="mb-20">
+        {/* Story / Timeline */}
+        <section className="mb-14">
           <div className="max-w-4xl mx-auto">
             <ClientOnly fallback={<div className="h-8" />}>
-              <h2 className="text-3xl font-bold text-[#0D1623] mb-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0D1623] mb-14">
                 {t("pages.about.story.title")}
               </h2>
             </ClientOnly>
-            <div className="space-y-6 text-[#5F6B7A] text-lg leading-relaxed text-left">
-              <p>
-                <ClientOnly
-                  fallback={
-                    <span>
-                      Founded with a passion for connecting people with
-                      opportunities, EasyLife Ghana has been at the forefront of
-                      international education and travel services. Our journey
-                      began with a simple belief: that everyone deserves the
-                      chance to pursue their dreams, regardless of borders.
-                    </span>
-                  }
-                >
-                  {t("pages.about.story.paragraph1")}
-                </ClientOnly>
-              </p>
-              <p>
-                <ClientOnly
-                  fallback={
-                    <span>
-                      We understand the challenges of moving to a new country,
-                      which is why we&apos;ve created comprehensive solutions
-                      that address every aspect of your journey - from
-                      university applications and visa assistance to
-                      accommodation and cultural integration.
-                    </span>
-                  }
-                >
-                  {t("pages.about.story.paragraph2")}
-                </ClientOnly>
-              </p>
-              <p>
-                <ClientOnly
-                  fallback={
-                    <span>
-                      Today, we continue to evolve our services to meet the
-                      changing needs of our global community while maintaining
-                      our commitment to excellence and personalized support.
-                      Every success story motivates us to do more and reach
-                      further.
-                    </span>
-                  }
-                >
-                  {t("pages.about.story.paragraph3")}
-                </ClientOnly>
-              </p>
+            <div className="relative pl-6 md:pl-8">
+              <div className="absolute left-2 md:left-3 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-300 via-emerald-200 to-transparent" />
+              <ul className="space-y-10">
+                {STORY_PARAGRAPHS.map(pKey => (
+                  <li key={pKey} className="relative">
+                    <div className="absolute -left-[26px] md:-left-[30px] mt-1 flex h-5 w-5 items-center justify-center">
+                      <span className="h-3.5 w-3.5 rounded-full bg-white ring-2 ring-emerald-300 shadow" />
+                    </div>
+                    <p className="text-[#425165] text-lg leading-relaxed">
+                      <ClientOnly fallback={<span />}>
+                        {t(`pages.about.story.${pKey}`)}
+                      </ClientOnly>
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+
+      {/* Local styles for subtle fade in (no external deps) */}
+      <style jsx>{`
+        @media (prefers-reduced-motion: no-preference) {
+          .reveal {
+            opacity: 0;
+            transform: translateY(12px);
+            transition:
+              opacity 0.7s ease,
+              transform 0.7s ease;
+          }
+          .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </div>
   )
 }
