@@ -92,7 +92,130 @@
   "pages": {
     "whyGhana": {
       "title": "Pourquoi choisir le Ghana",
-      "subtitle": "Découvrez pourquoi le Ghana est la destination parfaite pour votre parcours éducatif international."
+      "subtitle": "Découvrez pourquoi le Ghana est la destination parfaite pour votre parcours éducatif international.",
+      "stats": {
+        "language": "Environnement anglophone",
+        "safety": "Stable et paisible",
+        "affordability": "Coûts de vie réduits",
+        "universities": "Universités accréditées"
+      },
+      "advantages": {
+        "title": "Principaux atouts",
+        "items": {
+          "language": {
+            "title": "Anglais partout",
+            "description": "Étudier, vivre et interagir dans un environnement anglophone sur les campus et dans la vie quotidienne."
+          },
+          "safety": {
+            "title": "Sûr et accueillant",
+            "description": "Le Ghana est l'une des démocraties les plus stables d'Afrique avec une réputation d'hospitalité."
+          },
+          "affordability": {
+            "title": "Coût abordable",
+            "description": "Frais de scolarité, logement et dépenses quotidiennes comparativement plus bas."
+          },
+          "culture": {
+            "title": "Culture riche",
+            "description": "Festivals vibrants, musique, cuisine, artisanat et traditions uniques."
+          },
+          "location": {
+            "title": "Position stratégique",
+            "description": "Porte d'entrée de l'Afrique de l'Ouest avec forte connectivité régionale."
+          },
+          "economy": {
+            "title": "Économie en croissance",
+            "description": "Marché émergent dynamique offrant des opportunités en technologie, énergie et services."
+          }
+        }
+      },
+      "education": {
+        "title": "Éducation et opportunités",
+        "intro": "Le Ghana offre des universités accréditées, des programmes variés et un environnement d'apprentissage soutenant l'innovation.",
+        "points": {
+          "accreditation": "Qualifications reconnues internationalement et standards de qualité",
+          "programs": "Large éventail de programmes : santé, ingénierie, business, informatique, sciences sociales",
+          "support": "Orientation, conseil académique et intégration pour les étudiants internationaux"
+        }
+      },
+      "culture": {
+        "title": "Culture et mode de vie",
+        "intro": "Le Ghana mélange tradition et modernité : festivals, rythmes musicaux, cuisine savoureuse, artisanat et sens profond de la communauté.",
+        "items": {
+          "festivals": "Festivals",
+          "cuisine": "Cuisine",
+          "music": "Musique & Danse",
+          "hospitality": "Hospitalité"
+        },
+        "descriptions": {
+          "festivals": "Célébrations culturelles toute l'année valorisant héritage et identité.",
+          "cuisine": "Plats nutritifs et savoureux avec céréales, plantains, produits frais et épices locales.",
+          "music": "Afrobeats, highlife, gospel et rythmes traditionnels animent la vie quotidienne.",
+          "hospitality": "Chaleur et accueil facilitant l'adaptation rapide des étudiants internationaux."
+        }
+      },
+      "cost": {
+        "title": "Aperçu du coût de la vie",
+        "disclaimer": "Coûts relatifs approximatifs versus grandes villes occidentales (à titre indicatif).",
+        "categories": {
+          "housing": "Logement",
+          "food": "Alimentation",
+          "transport": "Transport",
+          "utilities": "Services publics",
+          "entertainment": "Loisirs & Divertissement"
+        }
+      },
+      "studentLife": {
+        "title": "Vie étudiante et support",
+        "items": {
+          "community": "Communauté campus",
+          "orientation": "Programmes d'orientation",
+          "housing": "Logement sécurisé",
+          "networks": "Réseaux & Alumni"
+        },
+        "descriptions": {
+          "community": "Clubs, groupes et initiatives collaboratives inclusifs.",
+          "orientation": "Guidage d'arrivée et intégration académique sans heurts.",
+          "housing": "Options de logement vérifiées priorisant sécurité et confort.",
+          "networks": "Réseaux professionnels et d'anciens ouvrant des opportunités."
+        }
+      },
+      "connectivity": {
+        "title": "Connectivité et accès",
+        "items": {
+          "airport": "Aéroport international moderne",
+          "digital": "Infrastructure numérique en expansion",
+          "regional": "Hub régional de voyage"
+        },
+        "descriptions": {
+          "airport": "L'aéroport d'Accra connecte directement des destinations mondiales.",
+          "digital": "Réseaux mobiles fiables, adoption fintech et couverture internet croissante.",
+          "regional": "Point de départ pour explorer marchés et cultures ouest-africains."
+        }
+      },
+      "business": {
+        "title": "Business et innovation",
+        "intro": "Écosystème d'innovation en essor soutenu par entrepreneuriat, finance numérique et diversification sectorielle.",
+        "items": {
+          "startups": "Écosystèmes startups actifs (fintech, santé, agritech)",
+          "sectors": "Secteurs à potentiel : énergie, logistique, edtech, industries créatives",
+          "partnerships": "Opportunités de collaboration académique et industrielle"
+        }
+      },
+      "healthcare": {
+        "title": "Santé & bien-être",
+        "items": {
+          "facilities": "Accès à des établissements médicaux modernes",
+          "emergency": "Services d'urgence dans les grandes villes",
+          "insurance": "Options d'assurance pour visiteurs internationaux"
+        }
+      },
+      "cta": {
+        "title": "Commencez votre parcours au Ghana",
+        "subtitle": "Nous vous guidons à chaque étape : candidatures, visas, logement et plus encore.",
+        "applyButton": "Postuler",
+        "guideButton": "Télécharger le guide",
+        "contactButton": "Contactez-nous"
+      }
     },
     "universities": {
       "title": "Universités et écoles",

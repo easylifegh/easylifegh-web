@@ -92,7 +92,130 @@
   "pages": {
     "whyGhana": {
       "title": "Por qué elegir Ghana",
-      "subtitle": "Descubre por qué Ghana es el destino perfecto para tu jornada educativa internacional."
+      "subtitle": "Descubre por qué Ghana es el destino perfecto para tu jornada educativa internacional.",
+      "stats": {
+        "language": "Entorno de habla inglesa",
+        "safety": "Estable y pacífico",
+        "affordability": "Costo de vida menor",
+        "universities": "Universidades acreditadas"
+      },
+      "advantages": {
+        "title": "Ventajas clave",
+        "items": {
+          "language": {
+            "title": "Inglés en todas partes",
+            "description": "Estudia, vive e interactúa en un entorno de habla inglesa en campus y vida diaria."
+          },
+          "safety": {
+            "title": "Seguro y acogedor",
+            "description": "Ghana es una de las democracias más estables de África con reputación de hospitalidad."
+          },
+          "affordability": {
+            "title": "Vida asequible",
+            "description": "Disfruta costos comparativamente menores de matrícula, vivienda y gastos diarios."
+          },
+          "culture": {
+            "title": "Cultura rica",
+            "description": "Festivales vibrantes, música, gastronomía, artesanía y tradiciones únicas."
+          },
+          "location": {
+            "title": "Ubicación estratégica",
+            "description": "Puerta de entrada de África Occidental con fuerte conectividad regional."
+          },
+          "economy": {
+            "title": "Economía en crecimiento",
+            "description": "Mercado emergente dinámico con oportunidades en tecnología, energía y servicios."
+          }
+        }
+      },
+      "education": {
+        "title": "Educación y oportunidades",
+        "intro": "Ghana ofrece universidades acreditadas, programas diversos y un entorno de aprendizaje que impulsa la innovación.",
+        "points": {
+          "accreditation": "Calificaciones reconocidas internacionalmente y estándares de calidad",
+          "programs": "Amplia gama de programas: salud, ingeniería, negocios, TI y ciencias sociales",
+          "support": "Orientación, asesoría académica e integración para estudiantes internacionales"
+        }
+      },
+      "culture": {
+        "title": "Cultura y estilo de vida",
+        "intro": "Ghana combina tradición y modernidad: festivales, ritmos musicales, cocina sabrosa, artesanía y fuerte sentido comunitario.",
+        "items": {
+          "festivals": "Festivales",
+          "cuisine": "Gastronomía",
+          "music": "Música y danza",
+          "hospitality": "Hospitalidad"
+        },
+        "descriptions": {
+          "festivals": "Celebraciones culturales durante todo el año que resaltan herencia e identidad.",
+          "cuisine": "Platos nutritivos y sabrosos con granos, plátanos, productos frescos y especias locales.",
+          "music": "Afrobeats, highlife, góspel y ritmos tradicionales energizan la vida diaria.",
+          "hospitality": "Calidez y bienvenida que facilitan la adaptación de estudiantes internacionales."
+        }
+      },
+      "cost": {
+        "title": "Panorama del costo de vida",
+        "disclaimer": "Costos relativos aproximados vs. grandes ciudades occidentales (solo referencia).",
+        "categories": {
+          "housing": "Vivienda",
+          "food": "Alimentación",
+          "transport": "Transporte",
+          "utilities": "Servicios",
+          "entertainment": "Ocio y entretenimiento"
+        }
+      },
+      "studentLife": {
+        "title": "Vida estudiantil y apoyo",
+        "items": {
+          "community": "Comunidad del campus",
+          "orientation": "Programas de orientación",
+          "housing": "Alojamiento seguro",
+          "networks": "Redes y exalumnos"
+        },
+        "descriptions": {
+          "community": "Clubes inclusivos, grupos y iniciativas colaborativas.",
+          "orientation": "Guía de llegada e integración académica sin fricciones.",
+          "housing": "Opciones verificadas priorizando seguridad y confort.",
+          "networks": "Redes profesionales y de exalumnos abren oportunidades."
+        }
+      },
+      "connectivity": {
+        "title": "Conectividad y acceso",
+        "items": {
+          "airport": "Aeropuerto internacional moderno",
+          "digital": "Infraestructura digital en expansión",
+          "regional": "Centro regional de viajes"
+        },
+        "descriptions": {
+          "airport": "El aeropuerto de Accra conecta directamente destinos globales.",
+          "digital": "Redes móviles fiables, adopción fintech y cobertura de internet creciente.",
+          "regional": "Punto de partida para explorar mercados y culturas de África Occidental."
+        }
+      },
+      "business": {
+        "title": "Negocios e innovación",
+        "intro": "Ecosistema de innovación en ascenso respaldado por emprendimiento, finanzas digitales y diversificación sectorial.",
+        "items": {
+          "startups": "Ecosistemas startup activos (fintech, salud, agritech)",
+          "sectors": "Sectores con potencial: energía, logística, edtech, industrias creativas",
+          "partnerships": "Oportunidades de colaboración académica e industrial"
+        }
+      },
+      "healthcare": {
+        "title": "Salud y bienestar",
+        "items": {
+          "facilities": "Acceso a instalaciones médicas modernas",
+          "emergency": "Servicios de emergencia en las principales ciudades",
+          "insurance": "Opciones de seguros para visitantes internacionales"
+        }
+      },
+      "cta": {
+        "title": "Comienza tu viaje a Ghana",
+        "subtitle": "Te guiamos en cada paso: solicitudes, visas, alojamiento y más.",
+        "applyButton": "Aplicar",
+        "guideButton": "Descargar guía",
+        "contactButton": "Contáctanos"
+      }
     },
     "universities": {
       "title": "Universidades y escuelas",

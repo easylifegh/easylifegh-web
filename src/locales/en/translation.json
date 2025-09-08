@@ -92,7 +92,130 @@
   "pages": {
     "whyGhana": {
       "title": "Why Choose Ghana",
-      "subtitle": "Discover why Ghana is the perfect destination for your international education journey."
+      "subtitle": "Discover why Ghana is the perfect destination for your international education journey.",
+      "stats": {
+        "language": "English-speaking environment",
+        "safety": "Stable & peaceful",
+        "affordability": "Lower living costs",
+        "universities": "Accredited universities"
+      },
+      "advantages": {
+        "title": "Key Advantages",
+        "items": {
+          "language": {
+            "title": "English Everywhere",
+            "description": "Study, live, and engage in an English-speaking environment across campuses, business hubs and everyday life."
+          },
+          "safety": {
+            "title": "Safe & Welcoming",
+            "description": "Ghana is one of Africa's most stable democracies with a reputation for hospitality and peaceful coexistence."
+          },
+          "affordability": {
+            "title": "Affordable Living",
+            "description": "Enjoy comparatively lower tuition, housing, and daily expenses while maintaining a comfortable lifestyle."
+          },
+          "culture": {
+            "title": "Rich Culture",
+            "description": "Experience vibrant festivals, music, cuisine, crafts and traditions that make Ghana culturally unique."
+          },
+          "location": {
+            "title": "Strategic Location",
+            "description": "West Africa's gateway with strong regional connectivity for travel, trade and exploration."
+          },
+          "economy": {
+            "title": "Growing Economy",
+            "description": "A dynamic emerging market with opportunities in technology, energy, agriculture and services."
+          }
+        }
+      },
+      "education": {
+        "title": "Education & Opportunities",
+        "intro": "Ghana offers accredited universities, diverse academic programs, supportive learning environments and growing innovation ecosystems.",
+        "points": {
+          "accreditation": "Internationally recognized qualifications and quality assurance standards",
+          "programs": "Wide range of programs spanning health sciences, engineering, business, IT and social sciences",
+          "support": "Orientation, academic advising and integration support for international students"
+        }
+      },
+      "culture": {
+        "title": "Culture & Lifestyle",
+        "intro": "Ghana blends tradition and modernity: vibrant festivals, rhythmic music, flavorful cuisine, handcrafted artistry and a deep sense of community.",
+        "items": {
+          "festivals": "Festivals",
+          "cuisine": "Cuisine",
+          "music": "Music & Dance",
+          "hospitality": "Hospitality"
+        },
+        "descriptions": {
+          "festivals": "Year‑round cultural celebrations highlighting heritage, history and community identity.",
+          "cuisine": "Nutritious and flavorful dishes featuring grains, plantains, fresh produce and regional spices.",
+          "music": "Afrobeats, highlife, gospel and traditional rhythms energize daily life and social spaces.",
+          "hospitality": "Warm, welcoming social culture that helps international students adapt quickly."
+        }
+      },
+      "cost": {
+        "title": "Cost of Living Snapshot",
+        "disclaimer": "Approximate relative costs vs. major Western cities (for guidance only).",
+        "categories": {
+          "housing": "Housing",
+          "food": "Food",
+          "transport": "Transport",
+          "utilities": "Utilities",
+          "entertainment": "Leisure & Entertainment"
+        }
+      },
+      "studentLife": {
+        "title": "Student Life & Support",
+        "items": {
+          "community": "Campus Community",
+          "orientation": "Orientation Programs",
+          "housing": "Secure Housing",
+          "networks": "Alumni & Networks"
+        },
+        "descriptions": {
+          "community": "Inclusive student groups, clubs and peer-led initiatives foster belonging and collaboration.",
+          "orientation": "Arrival guidance and academic integration support ensure a smooth transition.",
+          "housing": "Verified accommodation options prioritizing safety, accessibility and comfort.",
+          "networks": "Growing alumni and professional networks open pathways to internships and careers."
+        }
+      },
+      "connectivity": {
+        "title": "Connectivity & Access",
+        "items": {
+          "airport": "Modern International Airport",
+          "digital": "Expanding Digital Infrastructure",
+          "regional": "Regional Travel Hub"
+        },
+        "descriptions": {
+          "airport": "Accra's international airport provides direct links to major global destinations.",
+          "digital": "Reliable mobile networks, fintech adoption and growing broadband coverage.",
+          "regional": "Launch point for exploring West African markets, culture and opportunities."
+        }
+      },
+      "business": {
+        "title": "Business & Innovation",
+        "intro": "A rising innovation landscape supported by entrepreneurship programs, digital finance adoption and sector diversification.",
+        "items": {
+          "startups": "Active startup ecosystems in fintech, healthtech and agritech",
+          "sectors": "High-potential sectors: energy, logistics, education technology, creative arts",
+          "partnerships": "Opportunities for academic, research and industry collaboration"
+        }
+      },
+      "healthcare": {
+        "title": "Healthcare & Wellbeing",
+        "items": {
+          "facilities": "Access to modern private and public medical facilities",
+          "emergency": "Emergency and urgent care services in major cities",
+          "insurance": "Multiple insurance options for international visitors"
+        }
+      },
+      "cta": {
+        "title": "Start Your Ghana Journey Today",
+        "subtitle": "We're here to guide you through every step—applications, visas, housing and beyond.",
+        "applyButton": "Apply Now",
+        "guideButton": "Download Guide",
+        "contactButton": "Contact Us"
+      }
     },
     "universities": {
       "title": "Universities & Schools",
