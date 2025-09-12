@@ -3,6 +3,10 @@
 import { Check, X, Crown } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
+import RevealOnScroll from "@/components/motion/RevealOnScroll"
+import StaggerContainer from "@/components/motion/StaggerContainer"
+import { motion } from "framer-motion"
+import { hoverEffects } from "@/lib/motion"
 
 export default function PricingSection() {
   const { t } = useTranslation()
@@ -26,24 +30,29 @@ export default function PricingSection() {
     <section id="pricing" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <ClientOnly
-            fallback={
-              <>
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                  Choose Your Perfect Plan
-                </h2>
-              </>
-            }
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              {t("pricing.title")}
-            </h2>
-          </ClientOnly>
-        </div>
+        <RevealOnScroll>
+          <div className="text-center mb-16">
+            <ClientOnly
+              fallback={
+                <>
+                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Choose Your Perfect Plan
+                  </h2>
+                </>
+              }
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                {t("pricing.title")}
+              </h2>
+            </ClientOnly>
+          </div>
+        </RevealOnScroll>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-3 gap-10">
+        <StaggerContainer
+          className="grid lg:grid-cols-3 gap-10"
+          staggerChildren={0.15}
+        >
           {pricingPlans.map(plan => {
             const isPremium = plan.id === "premium"
             const isPopular = plan.popular
@@ -65,9 +74,11 @@ export default function PricingSection() {
             const overflow = isPremium ? "overflow-visible" : "overflow-hidden"
 
             return (
-              <div
+              <motion.div
                 key={plan.id}
                 className={`${base} ${variant} ${ring} ${overflow} group`}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
               >
                 {/* Premium Crown & Glow */}
                 {isPremium && (
@@ -201,21 +212,24 @@ export default function PricingSection() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )
           })}
-        </div>
+        </StaggerContainer>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">{t("pricing.cta.helpText")}</p>
-          <a
-            href="/contact"
-            className="inline-flex items-center bg-[#17a253] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#148947] transition-colors duration-200"
-          >
-            {t("pricing.cta.contactButton")}
-          </a>
-        </div>
+        <RevealOnScroll delay={0.3}>
+          <div className="text-center mt-16">
+            <p className="text-gray-600 mb-6">{t("pricing.cta.helpText")}</p>
+            <motion.a
+              href="/contact"
+              className="inline-flex items-center bg-[#17a253] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#148947] transition-colors duration-200"
+              whileHover={hoverEffects.lift}
+            >
+              {t("pricing.cta.contactButton")}
+            </motion.a>
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   )

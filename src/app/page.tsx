@@ -4,16 +4,37 @@ import ApplicationProcess from "@/components/homepage/ApplicationProcess"
 import PricingSection from "@/components/homepage/PricingSection"
 import FAQ from "@/components/homepage/FAQ"
 import CallToAction from "@/components/homepage/CallToAction"
+import SectionDivider from "@/components/motion/SectionDivider"
+import ParallaxSection from "@/components/motion/ParallaxSection"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       <HeroSection />
-      <WhyChooseGhana />
+
+      <SectionDivider variant="wave" color="#f9fafb" />
+
+      <ParallaxSection speed={0.3}>
+        <WhyChooseGhana />
+      </ParallaxSection>
+
+      <SectionDivider variant="curve" color="#ffffff" />
+
       <ApplicationProcess />
-      <PricingSection />
+
+      <SectionDivider variant="angle" color="#f9fafb" />
+
+      <ParallaxSection speed={0.2}>
+        <PricingSection />
+      </ParallaxSection>
+
+      <SectionDivider variant="wave" color="#f9fafb" />
+
       <FAQ />
-      <CallToAction />
+
+      <ParallaxSection speed={0.4}>
+        <CallToAction />
+      </ParallaxSection>
     </div>
   )
 }

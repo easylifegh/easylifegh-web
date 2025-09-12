@@ -372,6 +372,7 @@ export default function Header() {
                                 )
                               }
                             >
+                              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#17a253] transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>
                               <ClientOnly
                                 fallback={
                                   item.id === "why-ghana"
@@ -478,7 +479,7 @@ export default function Header() {
                         >
                           <Link
                             href={item.path!}
-                            className={`flex items-center h-[64px] md:h-[72px] px-0.5 xl:px-1 text-[0.975rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative ${
+                            className={`flex items-center h-[64px] md:h-[72px] px-0.5 xl:px-1 text-[0.975rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative group ${
                               isActive
                                 ? "text-[#17a253] font-medium"
                                 : "text-gray-900"
@@ -496,6 +497,9 @@ export default function Header() {
                               }
                             }}
                           >
+                            <span
+                              className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#17a253] transform transition-transform duration-300 origin-left ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                            ></span>
                             <ClientOnly
                               fallback={
                                 item.id === "why-ghana"

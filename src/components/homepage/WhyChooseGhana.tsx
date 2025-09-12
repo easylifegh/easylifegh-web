@@ -2,6 +2,10 @@
 
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
+import RevealOnScroll from "@/components/motion/RevealOnScroll"
+import StaggerContainer from "@/components/motion/StaggerContainer"
+import { motion } from "framer-motion"
+import { hoverEffects } from "@/lib/motion"
 
 export default function WhyChooseGhana() {
   const { t } = useTranslation()
@@ -66,20 +70,33 @@ export default function WhyChooseGhana() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            {t("whyChooseGhana.title")}
-          </h2>
-        </div>
+        <RevealOnScroll>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              {t("whyChooseGhana.title")}
+            </h2>
+          </div>
+        </RevealOnScroll>
 
         {/* Desktop Grid */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-12 mb-12">
+        <StaggerContainer
+          className="hidden lg:grid lg:grid-cols-3 gap-12 mb-12"
+          staggerChildren={0.2}
+        >
           {features.map(feature => (
-            <div key={feature.key} className="text-center group">
+            <motion.div
+              key={feature.key}
+              className="text-center group"
+              whileHover={hoverEffects.lift}
+            >
               <div className="mb-6">
-                <div className="w-16 h-16 mx-auto flex items-center justify-center mb-4">
+                <motion.div
+                  className="w-16 h-16 mx-auto flex items-center justify-center mb-4"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
                   {feature.icon}
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {t(`whyChooseGhana.features.${feature.key}.title`)}
                 </h3>
@@ -87,52 +104,66 @@ export default function WhyChooseGhana() {
                   {t(`whyChooseGhana.features.${feature.key}.description`)}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* Mobile Cards */}
-        <div className="lg:hidden space-y-6 mb-12">
+        <StaggerContainer
+          className="lg:hidden space-y-6 mb-12"
+          staggerChildren={0.15}
+        >
           {features.map(feature => (
-            <div
+            <motion.div
               key={feature.key}
               className="bg-gray-50 rounded-xl p-6 text-center"
+              whileHover={hoverEffects.scale}
             >
-              <div className="w-14 h-14 mx-auto flex items-center justify-center mb-4">
+              <motion.div
+                className="w-14 h-14 mx-auto flex items-center justify-center mb-4"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
                 {feature.icon}
-              </div>
+              </motion.div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {t(`whyChooseGhana.features.${feature.key}.title`)}
               </h3>
               <p className="text-gray-600 text-sm">
                 {t(`whyChooseGhana.features.${feature.key}.description`)}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* CTA */}
-        <div className="text-center">
-          <Link
-            href="/why-ghana"
-            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors duration-200 gap-2"
-          >
-            {t("whyChooseGhana.cta.button")}
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </Link>
-        </div>
+        <RevealOnScroll delay={0.3}>
+          <div className="text-center">
+            <motion.div whileHover={hoverEffects.lift}>
+              <Link
+                href="/why-ghana"
+                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 transition-colors duration-200 gap-2"
+              >
+                {t("whyChooseGhana.cta.button")}
+                <motion.svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  whileHover={{ x: 3 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </motion.svg>
+              </Link>
+            </motion.div>
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   )
