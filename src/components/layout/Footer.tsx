@@ -26,7 +26,7 @@ export default function Footer() {
       links: [
         { label: "Download Guide", to: "/guide" },
         { label: "FAQs", to: "/faq" },
-        { label: "Blog & Updates", to: "/blog" },
+        // { label: "Blog & Updates", to: "/blog" },
       ],
     },
     {
@@ -54,7 +54,7 @@ export default function Footer() {
       links: [
         { labelKey: "downloadGuide", to: "/guide" },
         { labelKey: "faqs", to: "/faq" },
-        { labelKey: "blogUpdates", to: "/blog" },
+        // { labelKey: "blogUpdates", to: "/blog" },
       ],
     },
     {

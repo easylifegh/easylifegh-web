@@ -227,11 +227,11 @@ export default function Header() {
               description: t("navigation.faq.description"),
               path: "/faq",
             },
-            {
-              title: t("navigation.blog.title"),
-              description: t("navigation.blog.description"),
-              path: "/blog",
-            },
+            // {
+            //   title: t("navigation.blog.title"),
+            //   description: t("navigation.blog.description"),
+            //   path: "/blog",
+            // },
           ],
         },
       ],
@@ -528,7 +528,7 @@ export default function Header() {
 
                 {/* Right Actions */}
                 <div className="flex items-center gap-2 md:gap-3">
-                  <Link
+                  {/* <Link
                     href="/login"
                     className="hidden lg:inline-flex items-center bg-white border-2 border-black text-black rounded-full px-5 xl:px-7 py-[0.6rem] xl:py-[0.65rem] font-semibold text-[0.95rem] xl:text-base leading-none tracking-[0.25px] xl:tracking-[0.3px] transition-all duration-250 hover:bg-gray-50 active:bg-gray-100 active:translate-y-px whitespace-nowrap"
                   >
@@ -539,7 +539,7 @@ export default function Header() {
                     className="hidden lg:inline-flex items-center bg-[#17a253] border border-[#17a253] rounded-full px-5 xl:px-7 py-[0.6rem] xl:py-[0.65rem] font-semibold text-[0.95rem] xl:text-base text-white leading-none tracking-[0.25px] xl:tracking-[0.3px] transition-all duration-250 hover:bg-[#148947] active:bg-[#0f6f38] active:translate-y-px whitespace-nowrap"
                   >
                     {t("common.getStarted")}
-                  </Link>
+                  </Link> */}
 
                   {/* Mobile Toggle */}
                   <button
@@ -749,7 +749,7 @@ export default function Header() {
                     {/* Action Buttons */}
                     <div className="flex gap-3">
                       {/* Login Button */}
-                      <ClientOnly
+                      {/* <ClientOnly
                         fallback={
                           <Link
                             href="/login"
@@ -767,10 +767,10 @@ export default function Header() {
                         >
                           {t("common.login")}
                         </Link>
-                      </ClientOnly>
+                      </ClientOnly> */}
 
                       {/* Get Started Button */}
-                      <ClientOnly
+                      {/* <ClientOnly
                         fallback={
                           <Link
                             href="/login"
@@ -788,7 +788,7 @@ export default function Header() {
                         >
                           {t("common.getStarted")}
                         </Link>
-                      </ClientOnly>
+                      </ClientOnly> */}
                     </div>
                   </div>
                 </div>

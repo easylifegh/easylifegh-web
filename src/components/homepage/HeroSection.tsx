@@ -6,8 +6,6 @@ import Image from "next/image"
 import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import AnimatedText from "@/components/motion/AnimatedText"
-import AnimatedBackground from "@/components/motion/AnimatedBackground"
-import { hoverEffects } from "@/lib/motion"
 
 export default function HeroSection() {
   const { t } = useTranslation()
@@ -44,7 +42,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-[70vh] overflow-hidden">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {slides.map(
           (slide, index) =>
             index === currentSlide && (
@@ -67,7 +65,6 @@ export default function HeroSection() {
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/50"></div>
-                <AnimatedBackground variant="gradient" className="opacity-20" />
               </motion.div>
             )
         )}
@@ -121,15 +118,15 @@ export default function HeroSection() {
                 ease: [0.25, 0.4, 0.25, 1],
               }}
             >
-              <motion.div whileHover={hoverEffects.lift}>
+              <motion.div>
                 <Link
-                  href="/login"
+                  href="/#pricing"
                   className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl inline-block text-center"
                 >
                   {t("hero.buttons.applyNow")}
                 </Link>
               </motion.div>
-              <motion.div whileHover={hoverEffects.lift}>
+              <motion.div>
                 <Link
                   href="/guide"
                   className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 inline-block text-center"
