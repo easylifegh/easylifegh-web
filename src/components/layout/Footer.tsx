@@ -70,7 +70,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-white mt-20 border-t border-gray-100"
+      className="bg-yellow-400 mt-20 border-t border-yellow-300"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -101,7 +101,7 @@ export default function Footer() {
             </div>
             <ClientOnly
               fallback={
-                <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+                <p className="text-gray-700 text-lg leading-relaxed max-w-2xl">
                   Your trusted partner for studying in Ghana. We provide
                   comprehensive support from university applications to settling
                   into your new academic journey in West Africa&apos;s most
@@ -109,7 +109,7 @@ export default function Footer() {
                 </p>
               }
             >
-              <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
+              <p className="text-gray-700 text-lg leading-relaxed max-w-2xl">
                 {t("footer.description")}
               </p>
             </ClientOnly>
@@ -130,14 +130,14 @@ export default function Footer() {
                           {link.to === "/guide" ? (
                             <button
                               onClick={() => downloadGuide(i18n.language)}
-                              className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm text-left bg-transparent border-none cursor-pointer"
+                              className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-sm text-left bg-transparent border-none cursor-pointer"
                             >
                               {link.label}
                             </button>
                           ) : (
                             <Link
                               href={link.to}
-                              className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
+                              className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-sm"
                               onClick={() => window.scrollTo(0, 0)}
                             >
                               {link.label}
@@ -163,14 +163,14 @@ export default function Footer() {
                         {link.to === "/guide" ? (
                           <button
                             onClick={() => downloadGuide(i18n.language)}
-                            className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm text-left bg-transparent border-none cursor-pointer"
+                            className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-sm text-left bg-transparent border-none cursor-pointer"
                           >
                             {t(`footer.links.${link.labelKey}`)}
                           </button>
                         ) : (
                           <Link
                             href={link.to}
-                            className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
+                            className="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-sm"
                             onClick={() => window.scrollTo(0, 0)}
                           >
                             {t(`footer.links.${link.labelKey}`)}
@@ -186,7 +186,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Footer Bottom */}
-      <div className="border-t border-gray-200">
+      <div className="border-t border-yellow-300">
         <div className="py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Social Media */}
