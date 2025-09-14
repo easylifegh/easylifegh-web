@@ -68,8 +68,13 @@ export default function WhyChooseGhana() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
+    <section className="py-20 bg-gray-50 relative">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-15"
+        style={{ backgroundImage: "url('/why-ghana/campus.png')" }}
+      />
+      <div className="container mx-auto px-6 lg:px-8 max-w-6xl relative z-10">
         <RevealOnScroll>
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -108,30 +113,32 @@ export default function WhyChooseGhana() {
           ))}
         </StaggerContainer>
 
-        {/* Mobile Cards */}
+        {/* Mobile/Tablet Layout - Same as Desktop */}
         <StaggerContainer
-          className="lg:hidden space-y-6 mb-12"
+          className="lg:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12"
           staggerChildren={0.15}
         >
           {features.map(feature => (
             <motion.div
               key={feature.key}
-              className="bg-gray-50 rounded-xl p-6 text-center"
+              className="text-center group"
               whileHover={hoverEffects.scale}
             >
-              <motion.div
-                className="w-14 h-14 mx-auto flex items-center justify-center mb-4"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
-              >
-                {feature.icon}
-              </motion.div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {t(`whyChooseGhana.features.${feature.key}.title`)}
-              </h3>
-              <p className="text-gray-600 text-sm">
-                {t(`whyChooseGhana.features.${feature.key}.description`)}
-              </p>
+              <div className="mb-6">
+                <motion.div
+                  className="w-14 h-14 sm:w-16 sm:h-16 mx-auto flex items-center justify-center mb-4"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {feature.icon}
+                </motion.div>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
+                  {t(`whyChooseGhana.features.${feature.key}.title`)}
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  {t(`whyChooseGhana.features.${feature.key}.description`)}
+                </p>
+              </div>
             </motion.div>
           ))}
         </StaggerContainer>

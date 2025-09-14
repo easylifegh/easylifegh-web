@@ -6,9 +6,10 @@ import Image from "next/image"
 import { useTranslation } from "react-i18next"
 import { motion, AnimatePresence } from "framer-motion"
 import AnimatedText from "@/components/motion/AnimatedText"
+import { downloadGuide } from "@/utils/downloadGuide"
 
 export default function HeroSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
@@ -48,10 +49,10 @@ export default function HeroSection() {
             index === currentSlide && (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.4, 0.25, 1] }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
                 className="absolute inset-0"
               >
                 <div className="w-full h-full">
@@ -120,19 +121,19 @@ export default function HeroSection() {
             >
               <motion.div>
                 <Link
-                  href="/#pricing"
+                  href="/#how-to-apply"
                   className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-3xl inline-block text-center"
                 >
                   {t("hero.buttons.applyNow")}
                 </Link>
               </motion.div>
               <motion.div>
-                <Link
-                  href="/guide"
+                <button
+                  onClick={() => downloadGuide(i18n.language)}
                   className="border-2 border-white hover:bg-white hover:text-black text-white px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 inline-block text-center"
                 >
                   {t("hero.buttons.downloadGuide")}
-                </Link>
+                </button>
               </motion.div>
             </motion.div>
           </div>

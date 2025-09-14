@@ -140,6 +140,7 @@ export default function ApplicationProcess() {
 
   return (
     <section
+      id="how-to-apply"
       ref={sectionRef}
       className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden"
     >

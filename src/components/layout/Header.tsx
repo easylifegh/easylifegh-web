@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 import ClientOnly from "@/components/ClientOnly"
+import { downloadGuide } from "@/utils/downloadGuide"
 
 // Mobile-optimized Language Switcher - Horizontal Toggle Style
 function MobileLanguageSwitcher() {
@@ -78,7 +79,7 @@ function MobileLanguageSwitcher() {
 
 export default function Header() {
   const pathname = usePathname()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -430,37 +431,67 @@ export default function Header() {
                                             key={link.path}
                                             className="list-none m-0 p-0"
                                           >
-                                            <Link
-                                              href={link.path}
-                                              className="block py-1.5 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative"
-                                              onClick={() =>
-                                                setOpenDropdown(null)
-                                              }
-                                            >
-                                              <ClientOnly
-                                                fallback={
-                                                  <>
-                                                    <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
-                                                      {link.title}
-                                                    </span>
-                                                    {link.description && (
-                                                      <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
-                                                        {link.description}
-                                                      </span>
-                                                    )}
-                                                  </>
-                                                }
+                                            {link.path === "/guide" ? (
+                                              <button
+                                                onClick={() => {
+                                                  downloadGuide(i18n.language)
+                                                  setOpenDropdown(null)
+                                                }}
+                                                className="block py-1.5 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative text-left w-full bg-transparent border-none cursor-pointer"
                                               >
-                                                <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
-                                                  {link.title}
-                                                </span>
-                                                {link.description && (
-                                                  <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
+                                                <ClientOnly
+                                                  fallback={
+                                                    <>
+                                                      <span className="block font-medium">
+                                                        Download Guide
+                                                      </span>
+                                                      <span className="text-[0.8rem] text-gray-500 leading-tight">
+                                                        Get our settlement guide
+                                                      </span>
+                                                    </>
+                                                  }
+                                                >
+                                                  <span className="block font-medium">
+                                                    {link.title}
+                                                  </span>
+                                                  <span className="text-[0.8rem] text-gray-500 leading-tight">
                                                     {link.description}
                                                   </span>
-                                                )}
-                                              </ClientOnly>
-                                            </Link>
+                                                </ClientOnly>
+                                              </button>
+                                            ) : (
+                                              <Link
+                                                href={link.path}
+                                                className="block py-1.5 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative"
+                                                onClick={() =>
+                                                  setOpenDropdown(null)
+                                                }
+                                              >
+                                                <ClientOnly
+                                                  fallback={
+                                                    <>
+                                                      <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
+                                                        {link.title}
+                                                      </span>
+                                                      {link.description && (
+                                                        <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
+                                                          {link.description}
+                                                        </span>
+                                                      )}
+                                                    </>
+                                                  }
+                                                >
+                                                  <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
+                                                    {link.title}
+                                                  </span>
+                                                  {link.description && (
+                                                    <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
+                                                      {link.description}
+                                                    </span>
+                                                  )}
+                                                </ClientOnly>
+                                              </Link>
+                                            )}
                                           </li>
                                         ))}
                                       </ul>
@@ -648,38 +679,69 @@ export default function Header() {
                                         </div>
                                       </ClientOnly>
                                     )}
-                                    {g.items.map(link => (
-                                      <Link
-                                        key={link.path}
-                                        href={link.path}
-                                        className="block py-2.5 text-gray-900 no-underline text-[0.93rem] hover:text-[#17a253] transition-colors duration-250"
-                                        onClick={() => setIsMenuOpen(false)}
-                                      >
-                                        <ClientOnly
-                                          fallback={
-                                            <>
-                                              <span className="block font-medium">
-                                                {link.title}
-                                              </span>
-                                              {link.description && (
-                                                <span className="block text-gray-500 text-sm mt-0.5">
-                                                  {link.description}
-                                                </span>
-                                              )}
-                                            </>
-                                          }
+                                    {g.items.map(link =>
+                                      link.path === "/guide" ? (
+                                        <button
+                                          key={link.path}
+                                          onClick={() => {
+                                            downloadGuide(i18n.language)
+                                            setIsMenuOpen(false)
+                                          }}
+                                          className="block py-2.5 text-gray-900 no-underline text-[0.93rem] hover:text-[#17a253] transition-colors duration-250 text-left w-full bg-transparent border-none"
                                         >
-                                          <span className="block font-medium">
-                                            {link.title}
-                                          </span>
-                                          {link.description && (
-                                            <span className="block text-gray-500 text-sm mt-0.5">
+                                          <ClientOnly
+                                            fallback={
+                                              <>
+                                                <span className="block font-medium">
+                                                  Download Guide
+                                                </span>
+                                                <span className="text-[0.8rem] text-gray-500 leading-tight">
+                                                  Get our settlement guide
+                                                </span>
+                                              </>
+                                            }
+                                          >
+                                            <span className="block font-medium">
+                                              {link.title}
+                                            </span>
+                                            <span className="text-[0.8rem] text-gray-500 leading-tight">
                                               {link.description}
                                             </span>
-                                          )}
-                                        </ClientOnly>
-                                      </Link>
-                                    ))}
+                                          </ClientOnly>
+                                        </button>
+                                      ) : (
+                                        <Link
+                                          key={link.path}
+                                          href={link.path}
+                                          className="block py-2.5 text-gray-900 no-underline text-[0.93rem] hover:text-[#17a253] transition-colors duration-250"
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          <ClientOnly
+                                            fallback={
+                                              <>
+                                                <span className="block font-medium">
+                                                  {link.title}
+                                                </span>
+                                                {link.description && (
+                                                  <span className="block text-gray-500 text-sm mt-0.5">
+                                                    {link.description}
+                                                  </span>
+                                                )}
+                                              </>
+                                            }
+                                          >
+                                            <span className="block font-medium">
+                                              {link.title}
+                                            </span>
+                                            {link.description && (
+                                              <span className="block text-gray-500 text-sm mt-0.5">
+                                                {link.description}
+                                              </span>
+                                            )}
+                                          </ClientOnly>
+                                        </Link>
+                                      )
+                                    )}
                                   </div>
                                 ))}
                               </div>

@@ -62,10 +62,10 @@ export default function PricingSection() {
               "relative flex flex-col h-full rounded-[48px] transition-all duration-300 border backdrop-blur-sm"
             const variant =
               plan.id === "basic"
-                ? "bg-gradient-to-b from-teal-600 via-teal-600 to-teal-500 border-teal-500 shadow-xl hover:shadow-2xl"
+                ? "bg-gradient-to-b from-teal-600 via-teal-600 to-teal-500 border-teal-500 shadow-xl"
                 : plan.id === "standard"
-                  ? "bg-gradient-to-b from-white via-indigo-50 to-white border-indigo-200 shadow-lg hover:shadow-xl"
-                  : "bg-gradient-to-b from-indigo-600 via-indigo-600 to-indigo-500 border-indigo-500 shadow-xl hover:shadow-2xl"
+                  ? "bg-gradient-to-b from-white via-indigo-50 to-white border-indigo-200 shadow-lg"
+                  : "bg-gradient-to-b from-indigo-600 via-indigo-600 to-indigo-500 border-indigo-500 shadow-xl"
             const ring = isPopular
               ? "ring-2 ring-offset-2 ring-[#17a253]"
               : isPremium
@@ -74,11 +74,9 @@ export default function PricingSection() {
             const overflow = isPremium ? "overflow-visible" : "overflow-hidden"
 
             return (
-              <motion.div
+              <div
                 key={plan.id}
                 className={`${base} ${variant} ${ring} ${overflow} group`}
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
               >
                 {/* Premium Crown & Glow */}
                 {isPremium && (
@@ -212,7 +210,7 @@ export default function PricingSection() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </StaggerContainer>
@@ -221,13 +219,12 @@ export default function PricingSection() {
         <RevealOnScroll delay={0.3}>
           <div className="text-center mt-16">
             <p className="text-gray-600 mb-6">{t("pricing.cta.helpText")}</p>
-            <motion.a
+            <a
               href="/contact"
               className="inline-flex items-center bg-[#17a253] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#148947] transition-colors duration-200"
-              whileHover={hoverEffects.lift}
             >
               {t("pricing.cta.contactButton")}
-            </motion.a>
+            </a>
           </div>
         </RevealOnScroll>
       </div>

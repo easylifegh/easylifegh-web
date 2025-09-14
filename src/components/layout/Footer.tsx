@@ -5,9 +5,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
+import { downloadGuide } from "@/utils/downloadGuide"
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const year = new Date().getFullYear()
 
   // English fallback sections
@@ -126,13 +127,22 @@ export default function Footer() {
                     <ul className="space-y-3 mt-2">
                       {section.links.map(link => (
                         <li key={link.to}>
-                          <Link
-                            href={link.to}
-                            className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
-                            onClick={() => window.scrollTo(0, 0)}
-                          >
-                            {link.label}
-                          </Link>
+                          {link.to === "/guide" ? (
+                            <button
+                              onClick={() => downloadGuide(i18n.language)}
+                              className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm text-left bg-transparent border-none cursor-pointer"
+                            >
+                              {link.label}
+                            </button>
+                          ) : (
+                            <Link
+                              href={link.to}
+                              className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
+                              onClick={() => window.scrollTo(0, 0)}
+                            >
+                              {link.label}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -150,13 +160,22 @@ export default function Footer() {
                   <ul className="space-y-3 mt-2">
                     {section.links.map(link => (
                       <li key={link.to}>
-                        <Link
-                          href={link.to}
-                          className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
-                          onClick={() => window.scrollTo(0, 0)}
-                        >
-                          {t(`footer.links.${link.labelKey}`)}
-                        </Link>
+                        {link.to === "/guide" ? (
+                          <button
+                            onClick={() => downloadGuide(i18n.language)}
+                            className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm text-left bg-transparent border-none cursor-pointer"
+                          >
+                            {t(`footer.links.${link.labelKey}`)}
+                          </button>
+                        ) : (
+                          <Link
+                            href={link.to}
+                            className="text-gray-600 hover:text-[#17a253] transition-colors duration-200 text-sm"
+                            onClick={() => window.scrollTo(0, 0)}
+                          >
+                            {t(`footer.links.${link.labelKey}`)}
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>
