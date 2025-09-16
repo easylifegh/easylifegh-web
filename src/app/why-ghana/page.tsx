@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
+import { downloadGuide } from "@/utils/downloadGuide"
 
 // Simple helper icon component (outline style)
 const Icon: React.FC<{ path: string; className?: string }> = ({
@@ -25,7 +26,7 @@ const Icon: React.FC<{ path: string; className?: string }> = ({
 )
 
 export default function WhyGhanaPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   // Add custom CSS for animations and scroll effects
   React.useEffect(() => {
@@ -175,56 +176,6 @@ export default function WhyGhanaPage() {
       </header>
 
       <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-28">
-        {/* Education & Opportunities (split) */}
-        <section>
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div className="relative">
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-emerald-100 to-transparent rounded-full blur-xl" />
-              <h2 className="text-3xl font-bold text-[#0D1623] mb-6">
-                {t("pages.whyGhana.education.title")}
-              </h2>
-              <p className="text-[#425165] leading-relaxed mb-8">
-                {t("pages.whyGhana.education.intro")}
-              </p>
-              <ul className="space-y-4">
-                {(["accreditation", "programs", "support"] as const).map(k => (
-                  <li key={k} className="flex items-start space-x-3">
-                    <span className="mt-1 text-emerald-600">
-                      <Icon path="M5 13l4 4L19 7" />
-                    </span>
-                    <span className="text-[#5F6B7A]">
-                      {t(`pages.whyGhana.education.points.${k}`)}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
-                <div className="absolute inset-0 opacity-[0.07] mix-blend-multiply bg-[radial-gradient(circle_at_30%_20%,#10b981,transparent_60%)]" />
-                <div className="relative w-full h-72">
-                  <Image
-                    src="/why-ghana/campus.png"
-                    alt="Ghana modern campus"
-                    fill
-                    priority={false}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px"
-                    className="object-cover object-center"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-[#0D1623] mb-3 text-lg">
-                    {t("pages.whyGhana.education.title")}
-                  </h3>
-                  <p className="text-sm text-[#5F6B7A] leading-relaxed">
-                    {t("pages.whyGhana.education.intro")}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Culture & Lifestyle - Alternating Layout Style */}
         <section className="relative py-20">
           <div className="mb-20 text-center max-w-4xl mx-auto">
@@ -296,11 +247,12 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Homowo Festival
+                        {t("pages.whyGhana.culture.festivals.homowo.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Harvest celebration of the Ga people with traditional
-                        food and dance
+                        {t(
+                          "pages.whyGhana.culture.festivals.homowo.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -319,10 +271,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Yam Festival
+                        {t("pages.whyGhana.culture.festivals.yam.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Annual thanksgiving celebration for successful harvest
+                        {t("pages.whyGhana.culture.festivals.yam.description")}
                       </p>
                     </div>
                   </div>
@@ -341,10 +293,12 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Chale Wote Festival
+                        {t("pages.whyGhana.culture.festivals.chaleWote.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Contemporary street art and performance festival
+                        {t(
+                          "pages.whyGhana.culture.festivals.chaleWote.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -382,11 +336,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Jollof Rice
+                        {t("pages.whyGhana.culture.cuisine.jollof.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Ghana&apos;s signature spiced rice dish with vegetables
-                        and meat
+                        {t("pages.whyGhana.culture.cuisine.jollof.description")}
                       </p>
                     </div>
                   </div>
@@ -405,11 +358,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Fufu & Soup
+                        {t("pages.whyGhana.culture.cuisine.fufu.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Traditional staple served with flavorful groundnut or
-                        palm nut soup
+                        {t("pages.whyGhana.culture.cuisine.fufu.description")}
                       </p>
                     </div>
                   </div>
@@ -428,10 +380,12 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Kelewele
+                        {t("pages.whyGhana.culture.cuisine.kelewele.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Spiced fried plantains - a popular street food snack
+                        {t(
+                          "pages.whyGhana.culture.cuisine.kelewele.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -519,11 +473,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Highlife Music
+                        {t("pages.whyGhana.culture.music.highlife.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Ghana&apos;s signature genre blending traditional and
-                        jazz influences
+                        {t("pages.whyGhana.culture.music.highlife.description")}
                       </p>
                     </div>
                   </div>
@@ -542,11 +495,12 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Afrobeats
+                        {t("pages.whyGhana.culture.music.afrobeats.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Contemporary fusion of African rhythms with global
-                        sounds
+                        {t(
+                          "pages.whyGhana.culture.music.afrobeats.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -565,10 +519,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Traditional Drums
+                        {t("pages.whyGhana.culture.music.drums.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Djembe, talking drums, and other percussion instruments
+                        {t("pages.whyGhana.culture.music.drums.description")}
                       </p>
                     </div>
                   </div>
@@ -607,11 +561,12 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Akwaaba Welcome
+                        {t("pages.whyGhana.culture.hospitality.akwaaba.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        The famous Ghanaian greeting meaning &quot;welcome&quot;
-                        in Twi
+                        {t(
+                          "pages.whyGhana.culture.hospitality.akwaaba.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -631,10 +586,14 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Community Spirit
+                        {t(
+                          "pages.whyGhana.culture.hospitality.community.title"
+                        )}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Strong sense of community and extended family bonds
+                        {t(
+                          "pages.whyGhana.culture.hospitality.community.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -653,11 +612,12 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Ubuntu Philosophy
+                        {t("pages.whyGhana.culture.hospitality.ubuntu.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        &quot;I am because we are&quot; - the spirit of mutual
-                        support
+                        {t(
+                          "pages.whyGhana.culture.hospitality.ubuntu.description"
+                        )}
                       </p>
                     </div>
                   </div>
@@ -721,11 +681,13 @@ export default function WhyGhanaPage() {
               <div className="space-y-8">
                 <div className="text-center md:text-left mb-8">
                   <h3 className="text-3xl font-bold text-[#0D1623] mb-4">
-                    Traditional Dance & Arts
+                    {t("pages.whyGhana.culture.items.dance")}
                   </h3>
                   <p className="text-[#5F6B7A] max-w-xl">
-                    Experience the vibrant rhythms and colorful expressions of
-                    Ghanaian culture
+                    {t("pages.whyGhana.culture.descriptions.dance", {
+                      defaultValue:
+                        "Experience the vibrant rhythms and colorful expressions of Ghanaian culture",
+                    })}
                   </p>
                 </div>
 
@@ -744,10 +706,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Adowa Dance
+                        {t("pages.whyGhana.culture.dance.adowa.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Traditional ceremonial dance of the Akan people
+                        {t("pages.whyGhana.culture.dance.adowa.description")}
                       </p>
                     </div>
                   </div>
@@ -766,11 +728,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Drumming Traditions
+                        {t("pages.whyGhana.culture.dance.drumming.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Ancient rhythms that tell stories and connect
-                        communities
+                        {t("pages.whyGhana.culture.dance.drumming.description")}
                       </p>
                     </div>
                   </div>
@@ -789,10 +750,10 @@ export default function WhyGhanaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#0D1623] mb-2">
-                        Kente Weaving
+                        {t("pages.whyGhana.culture.dance.kente.title")}
                       </h4>
                       <p className="text-sm text-[#5F6B7A]">
-                        Sacred cloth patterns with deep cultural meaning
+                        {t("pages.whyGhana.culture.dance.kente.description")}
                       </p>
                     </div>
                   </div>
@@ -806,138 +767,101 @@ export default function WhyGhanaPage() {
           <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-tr from-emerald-50/40 to-emerald-100/30 rounded-full blur-3xl" />
         </section>
 
-        {/* (Removed sections: Advantages, Cost of Living, Student Life) */}
-
-        {/* Connectivity & Access - Clean Circular Design */}
-        <section className="relative py-20">
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0D1623] mb-6">
-              {t("pages.whyGhana.connectivity.title")}
-            </h2>
-            <p className="text-lg text-[#5F6B7A] leading-relaxed max-w-2xl mx-auto">
-              Stay seamlessly connected to the world while experiencing
-              Ghana&apos;s rich culture
-            </p>
+        {/* Ghana's Location - Full Viewport Background */}
+        <div
+          className="relative py-20 overflow-hidden"
+          style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}
+        >
+          {/* Full Viewport Background Map with Flag */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/why-ghana/ghana.png"
+              alt="Map of West Africa with Ghana flag pin showing location"
+              fill
+              priority={false}
+              sizes="100vw"
+              className="object-cover object-center opacity-40"
+            />
+            <div className="absolute inset-0 bg-white/75"></div>
           </div>
 
-          {/* Clean Circular Connectivity Diagram */}
-          <div className="flex justify-center connectivity-diagram">
-            <div className="relative w-[600px] h-[600px] max-w-full">
-              <svg viewBox="0 0 600 600" className="w-full h-full">
-                <defs>
-                  <linearGradient
-                    id="airportGradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                  >
-                    <stop offset="0%" stopColor="#10b981" />
-                    <stop offset="100%" stopColor="#059669" />
-                  </linearGradient>
-                  <linearGradient
-                    id="digitalGradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                  >
-                    <stop offset="0%" stopColor="#34d399" />
-                    <stop offset="100%" stopColor="#10b981" />
-                  </linearGradient>
-                  <linearGradient
-                    id="regionalGradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                  >
-                    <stop offset="0%" stopColor="#065f46" />
-                    <stop offset="100%" stopColor="#047857" />
-                  </linearGradient>
-                </defs>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-xl">
+              {/* Flat Content - No Card */}
+              <h2 className="text-3xl font-bold text-[#0D1623] mb-6">
+                {t("pages.whyGhana.location.title")}
+              </h2>
+              <p className="text-[#425165] leading-relaxed mb-8">
+                {t("pages.whyGhana.location.intro")}
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <span className="mt-1 text-emerald-600">
+                    <Icon path="M5 13l4 4L19 7" />
+                  </span>
+                  <span className="text-[#5F6B7A]">
+                    {t("pages.whyGhana.location.features.coastline")}
+                  </span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="mt-1 text-emerald-600">
+                    <Icon path="M5 13l4 4L19 7" />
+                  </span>
+                  <span className="text-[#5F6B7A]">
+                    {t("pages.whyGhana.location.features.climate")}
+                  </span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="mt-1 text-emerald-600">
+                    <Icon path="M5 13l4 4L19 7" />
+                  </span>
+                  <span className="text-[#5F6B7A]">
+                    {t("pages.whyGhana.location.features.borders")}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-                {/* Airport Connectivity Section */}
-                <path
-                  d="M 300,50 A 250,250 0 0,1 516.51,216.51 L 300,300 Z"
-                  fill="url(#airportGradient)"
-                  className="connectivity-section section-1 hover:opacity-90 transition-all duration-500 cursor-pointer"
-                />
-
-                {/* Digital Infrastructure Section */}
-                <path
-                  d="M 516.51,216.51 A 250,250 0 0,1 516.51,383.49 L 300,300 Z"
-                  fill="url(#digitalGradient)"
-                  className="connectivity-section section-2 hover:opacity-90 transition-all duration-500 cursor-pointer"
-                />
-
-                {/* Regional Access Section */}
-                <path
-                  d="M 516.51,383.49 A 250,250 0 0,1 83.49,383.49 L 300,300 Z"
-                  fill="url(#regionalGradient)"
-                  className="connectivity-section section-3 hover:opacity-90 transition-all duration-500 cursor-pointer"
-                />
-
-                {/* Text directly on sections */}
-                <text
-                  x="400"
-                  y="150"
-                  textAnchor="middle"
-                  className="text-xl font-bold fill-white"
-                >
-                  Airport Access
-                </text>
-                <text
-                  x="400"
-                  y="170"
-                  textAnchor="middle"
-                  className="text-sm fill-white/90"
-                >
-                  Global Gateway
-                </text>
-
-                <text
-                  x="480"
-                  y="300"
-                  textAnchor="middle"
-                  className="text-xl font-bold fill-white"
-                >
-                  Digital
-                </text>
-                <text
-                  x="480"
-                  y="320"
-                  textAnchor="middle"
-                  className="text-xl font-bold fill-white"
-                >
-                  Network
-                </text>
-                <text
-                  x="480"
-                  y="340"
-                  textAnchor="middle"
-                  className="text-sm fill-white/90"
-                >
-                  5G & Fiber
-                </text>
-
-                <text
-                  x="300"
-                  y="450"
-                  textAnchor="middle"
-                  className="text-xl font-bold fill-white"
-                >
-                  Regional Hub
-                </text>
-                <text
-                  x="300"
-                  y="470"
-                  textAnchor="middle"
-                  className="text-sm fill-white/90"
-                >
-                  West Africa Gateway
-                </text>
-              </svg>
+        {/* Education & Opportunities (split) */}
+        <section>
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div className="relative">
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-emerald-100 to-transparent rounded-full blur-xl" />
+              <h2 className="text-3xl font-bold text-[#0D1623] mb-6">
+                {t("pages.whyGhana.education.title")}
+              </h2>
+              <p className="text-[#425165] leading-relaxed mb-8">
+                {t("pages.whyGhana.education.intro")}
+              </p>
+              <ul className="space-y-4">
+                {(["accreditation", "programs", "support"] as const).map(k => (
+                  <li key={k} className="flex items-start space-x-3">
+                    <span className="mt-1 text-emerald-600">
+                      <Icon path="M5 13l4 4L19 7" />
+                    </span>
+                    <span className="text-[#5F6B7A]">
+                      {t(`pages.whyGhana.education.points.${k}`)}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <div className="absolute inset-0 opacity-[0.07] mix-blend-multiply bg-[radial-gradient(circle_at_30%_20%,#10b981,transparent_60%)]" />
+                <div className="relative w-full h-56">
+                  <Image
+                    src="/why-ghana/campus.png"
+                    alt="Ghana modern campus"
+                    fill
+                    priority={false}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px"
+                    className="object-cover object-center"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -963,6 +887,19 @@ export default function WhyGhanaPage() {
                 </li>
               ))}
             </ul>
+            <div className="mt-12 relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/why-ghana/business.png"
+                  alt="Business and innovation opportunities in Ghana"
+                  fill
+                  priority={false}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px"
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 via-transparent to-transparent" />
+            </div>
           </div>
           <div>
             <h2 className="text-3xl font-bold text-[#0D1623] mb-14">
@@ -1007,17 +944,28 @@ export default function WhyGhanaPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/login"
+                href="/#how-to-apply"
                 className="rounded-md bg-emerald-600 text-white px-6 py-3 text-sm font-semibold hover:bg-emerald-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/60"
               >
                 {t("pages.whyGhana.cta.applyButton")}
               </Link>
-              <Link
-                href="/guide"
-                className="rounded-md border border-emerald-300 bg-white text-emerald-700 px-6 py-3 text-sm font-semibold hover:border-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50"
+              <ClientOnly
+                fallback={
+                  <Link
+                    href="/guide"
+                    className="rounded-md border border-emerald-300 bg-white text-emerald-700 px-6 py-3 text-sm font-semibold hover:border-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50"
+                  >
+                    {t("pages.whyGhana.cta.guideButton")}
+                  </Link>
+                }
               >
-                {t("pages.whyGhana.cta.guideButton")}
-              </Link>
+                <button
+                  onClick={() => downloadGuide(i18n.language)}
+                  className="rounded-md border border-emerald-300 bg-white text-emerald-700 px-6 py-3 text-sm font-semibold hover:border-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/50"
+                >
+                  {t("pages.whyGhana.cta.guideButton")}
+                </button>
+              </ClientOnly>
               <Link
                 href="/contact"
                 className="rounded-md border border-transparent text-emerald-700 px-6 py-3 text-sm font-semibold hover:text-emerald-900 focus:outline-none"
@@ -1032,5 +980,3 @@ export default function WhyGhanaPage() {
     </div>
   )
 }
-
-// Circular culture visualization component (desktop only)

@@ -12,17 +12,9 @@ export default function Home() {
     <div className="min-h-screen bg-white relative overflow-hidden">
       <HeroSection />
 
-      <SectionDivider variant="wave" color="#f9fafb" />
-
-      <ParallaxSection speed={0.3}>
-        <WhyChooseGhana />
-      </ParallaxSection>
-
-      <SectionDivider variant="curve" color="#ffffff" />
+      <WhyChooseGhana />
 
       <ApplicationProcess />
-
-      <SectionDivider variant="angle" color="#f9fafb" />
 
       <ParallaxSection speed={0.2}>
         <PricingSection />

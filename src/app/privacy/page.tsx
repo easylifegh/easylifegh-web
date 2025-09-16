@@ -444,7 +444,9 @@ export default function PrivacyPage() {
               <p className="text-[#5F6B7A] text-sm leading-relaxed">
                 Email: privacy@easylifeghana.com
                 <br />
-                Phone: +233 (0) 24 123 4567
+                Phone: +233 (0) 26 215 5555
+                <br />
+                Phone: +233 (0) 53 825 4404
                 <br />
                 Address: 123 Liberation Road, Accra Central, Ghana
               </p>

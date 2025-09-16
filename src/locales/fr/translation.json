@@ -144,13 +144,94 @@
           "festivals": "Festivals",
           "cuisine": "Cuisine",
           "music": "Musique & Danse",
-          "hospitality": "Hospitalité"
+          "hospitality": "Hospitalité",
+          "dance": "Danse et Arts Traditionnels"
         },
         "descriptions": {
           "festivals": "Célébrations culturelles toute l'année valorisant héritage et identité.",
           "cuisine": "Plats nutritifs et savoureux avec céréales, plantains, produits frais et épices locales.",
           "music": "Afrobeats, highlife, gospel et rythmes traditionnels animent la vie quotidienne.",
-          "hospitality": "Chaleur et accueil facilitant l'adaptation rapide des étudiants internationaux."
+          "hospitality": "Chaleur et accueil facilitant l'adaptation rapide des étudiants internationaux.",
+          "dance": "Découvrez les rythmes vibrants et les expressions colorées de la culture ghanéenne"
+        },
+        "festivals": {
+          "homowo": {
+            "title": "Festival Homowo",
+            "description": "Célébration de récolte du peuple Ga avec nourriture et danse traditionnelles"
+          },
+          "yam": {
+            "title": "Festival de l'Igname",
+            "description": "Célébration annuelle d'action de grâces pour une récolte réussie"
+          },
+          "chaleWote": {
+            "title": "Festival Chale Wote",
+            "description": "Festival contemporain d'art de rue et de spectacles"
+          }
+        },
+        "cuisine": {
+          "jollof": {
+            "title": "Riz Jollof",
+            "description": "Le plat de riz épicé emblématique du Ghana avec légumes et viande"
+          },
+          "fufu": {
+            "title": "Fufu & Soupe",
+            "description": "Aliment de base traditionnel servi avec une savoureuse soupe d'arachide ou de palme"
+          },
+          "kelewele": {
+            "title": "Kelewele",
+            "description": "Plantains frits épicés - un en-cas populaire de street food"
+          }
+        },
+        "music": {
+          "highlife": {
+            "title": "Musique Highlife",
+            "description": "Le genre emblématique du Ghana mélangeant influences traditionnelles et jazz"
+          },
+          "afrobeats": {
+            "title": "Afrobeats",
+            "description": "Fusion contemporaine de rythmes africains avec des sons mondiaux"
+          },
+          "drums": {
+            "title": "Tambours Traditionnels",
+            "description": "Djembé, tambours parlants et autres instruments de percussion"
+          }
+        },
+        "hospitality": {
+          "akwaaba": {
+            "title": "Accueil Akwaaba",
+            "description": "Le fameux salut ghanéen signifiant \"bienvenue\" en Twi"
+          },
+          "community": {
+            "title": "Esprit Communautaire",
+            "description": "Fort sens de la communauté et liens familiaux étendus"
+          },
+          "ubuntu": {
+            "title": "Philosophie Ubuntu",
+            "description": "\"Je suis parce que nous sommes\" - l'esprit de soutien mutuel"
+          }
+        },
+        "dance": {
+          "adowa": {
+            "title": "Danse Adowa",
+            "description": "Danse cérémonielle traditionnelle du peuple Akan"
+          },
+          "drumming": {
+            "title": "Traditions de Tambours",
+            "description": "Rythmes anciens qui racontent des histoires et connectent les communautés"
+          },
+          "kente": {
+            "title": "Tissage Kente",
+            "description": "Motifs de tissus sacrés avec une signification culturelle profonde"
+          }
+        }
+      },
+      "location": {
+        "title": "Situation du Ghana",
+        "intro": "Situé sur la côte atlantique de l'Afrique de l'Ouest, le Ghana est parfaitement positionné entre le Sahara et le golfe de Guinée, offrant un climat tropical et un accès côtier.",
+        "features": {
+          "coastline": "Littoral atlantique avec de belles plages et villes côtières",
+          "climate": "Climat tropical avec des saisons humides et sèches distinctes",
+          "borders": "Bordé par la Côte d'Ivoire, le Burkina Faso et le Togo"
         }
       },
       "cost": {
@@ -257,6 +338,7 @@
         "academic": "Services académiques",
         "visa": "Visa & Immigration",
         "accommodation": "Hébergement",
+        "settlement": "Installation & Vie",
         "business": "Voyage d'affaires",
         "medical": "Voyage médical",
         "tourism": "Tourisme & Circuits"
@@ -266,6 +348,7 @@
         "academic": "Questions sur les candidatures universitaires, les exigences académiques et le support éducatif.",
         "visa": "Questions sur le traitement des visas, la documentation et l'assistance immigration.",
         "accommodation": "Options de logement, coûts et support d'hébergement au Ghana.",
+        "settlement": "Orientation pratique pour vivre au Ghana incluant transport, banque, santé et éléments essentiels de la vie quotidienne.",
         "business": "Voyages d'affaires, opportunités d'investissement et services corporatifs.",
         "medical": "Établissements médicaux, assurance santé et informations sur le tourisme médical.",
         "tourism": "Circuits culturels, attractions touristiques et expériences de voyage au Ghana."
@@ -290,11 +373,15 @@
           },
           "paymentMethods": {
             "question": "Quels moyens de paiement acceptez-vous ?",
-            "answer": "Nous acceptons virements bancaires, cartes de crédit/débit, mobile money et plateformes de paiement internationales. Les modalités varient selon le forfait ; la plupart des services exigent un paiement avant la livraison."
+            "answer": "Nous acceptons virements bancaires, cartes de crédit/débit, Mobile Money (MTN MoMo, AirtelTigo Money), et plateformes de paiement internationales. Note : La E-Levy du Ghana de 1,5% s'applique aux transferts électroniques. Les modalités varient selon le forfait."
           },
           "customerSupport": {
             "question": "Comment puis-je contacter le support client ?",
-            "answer": "Nous offrons un support WhatsApp 24/7, assistance par email, consultations téléphoniques et rencontres en personne pour les clients Premium. Vous pouvez nous joindre via notre site, WhatsApp au +233 (0) 55 123 4567 ou par email à info@easylifeghana.com."
+            "answer": "Nous offrons un support WhatsApp 24/7, assistance par email, consultations téléphoniques et rencontres en personne pour les clients Premium. Vous pouvez nous joindre au +233 26 215 5555 ou +233 53 825 4404 (24/7), ou par email à info@easylifeghana.com."
+          },
+          "settlementGuide": {
+            "question": "Fournissez-vous un support d'installation après l'arrivée ?",
+            "answer": "Oui, notre guide d'installation complet couvre le logement temporaire (3-15 jours), l'assistance pour le logement permanent dans des quartiers sûrs comme East Legon et Osu, l'activation de carte SIM locale, le support bancaire, l'orientation transport avec des apps comme Bolt et Yango, les recommandations gastronomiques et les contacts d'urgence 24/7."
           }
         },
         "academic": {
@@ -850,32 +937,32 @@
       }
     }
   },
-  "faq": {
-    "title": "Questions fréquemment posées",
-    "viewAll": "Voir toutes les FAQ",
-    "questions": {
-      "services": {
-        "question": "Quels services propose EasyLife Ghana?",
-        "answer": "Nous offrons un soutien complet incluant les candidatures universitaires, l'assistance visa, les arrangements d'hébergement, la coordination de voyages d'affaires, l'assistance voyage médical, et les circuits touristiques et culturels à travers le Ghana."
-      },
-      "cost": {
-        "question": "Combien coûtent les services d'EasyLife Ghana?",
-        "answer": "Nous offrons trois forfaits de services - Pack de Base (conseils numériques), Pack Standard (assistance à distance), et Pack Premium (service complet). Les prix varient selon vos besoins et le niveau de support requis."
-      },
-      "visa": {
-        "question": "Combien de temps prend le processus de visa avec votre aide?",
-        "answer": "Avec notre Pack Premium, le traitement des visas prend généralement 1-7 jours. Les packs Standard et de Base prennent 3-10 jours. Nous gérons toute la documentation et assurons une approbation fluide et rapide avec les agences gouvernementales."
-      },
-      "support": {
-        "question": "Quel type de soutien continu fournissez-vous?",
-        "answer": "Nous offrons un support WhatsApp 24/7, des conseillers dédiés, le service de prise en charge à l'aéroport, l'assistance d'hébergement, et un soutien continu pour s'installer au Ghana. Les clients Premium reçoivent un support prioritaire 24/7 pendant un mois."
-      }
-    }
-  },
   "callToAction": {
     "title": "Prêt à étudier au Ghana?",
     "description": "Créez votre compte pour accéder aux candidatures d'écoles et d'universités, à l'assistance visa et aux conseils d'experts.",
     "button": "Commencer"
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "viewAll": "Voir Toutes les FAQ",
+    "questions": {
+      "services": {
+        "question": "Quels services d'installation complets EasyLife Ghana fournit-il ?",
+        "answer": "Nous offrons un support d'installation complet incluant logement temporaire (3-15 jours), assistance logement permanent dans des quartiers sûrs, activation service mobile, support bancaire, orientation transport, traitement visa et permis de résidence, recommandations établissements médicaux et support continu 24/7."
+      },
+      "cost": {
+        "question": "Combien coûtent les services EasyLife Ghana ?",
+        "answer": "Nous offrons trois forfaits de service - Pack Basic (orientation 100% digitale), Pack Standard (assistance à distance avec conseiller dédié), et Pack Premium (service complet avec support en personne, transferts aéroport et traitement prioritaire). Les prix varient selon vos besoins et niveau de support requis."
+      },
+      "visa": {
+        "question": "Quelles sont les exigences visa actuelles et délais de traitement pour le Ghana en 2024 ?",
+        "answer": "Les visas étudiants nécessitent lettre d'admission, certificat médical, vaccination fièvre jaune, et coûtent $100-200. Traitement : 7 jours (accéléré) ou 15-20 jours (régulier). Permis de résidence (USD 300 + GHS 900 médical + USD 120 ID) requis dans les 90 jours pour séjours supérieurs à 90 jours."
+      },
+      "settlement": {
+        "question": "Quel support d'installation fournissez-vous après mon arrivée au Ghana ?",
+        "answer": "Orientation complète d'installation incluant activation carte SIM (MTN/AirtelTigo), configuration Mobile Money, apps transport (Bolt, Yango, Uber), assistance bancaire, contacts établissements médicaux, recommandations gastronomiques et support urgence 24/7 au +233 26 215 5555."
+      }
+    }
   },
   "pricing": {
     "title": "Choisissez Votre Plan Parfait",
@@ -965,6 +1052,7 @@
       "tourismCulturalTours": "Tourisme et visites culturelles",
       "businessTravelSupport": "Support voyage d'affaires",
       "medicalTravelAssistance": "Assistance voyage médical",
+      "whyChooseGhana": "Pourquoi choisir le Ghana",
       "downloadGuide": "Télécharger le guide",
       "faqs": "FAQ",
       "blogUpdates": "Blog et actualités",

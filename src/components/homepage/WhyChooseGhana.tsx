@@ -68,11 +68,11 @@ export default function WhyChooseGhana() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50 relative">
+    <section className="py-20 bg-gray-10 relative">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed opacity-15"
-        style={{ backgroundImage: "url('/why-ghana/campus.png')" }}
+        style={{ backgroundImage: "url('/why-ghana/why-ghana.png')" }}
       />
       <div className="container mx-auto px-6 lg:px-8 max-w-6xl relative z-10">
         <RevealOnScroll>

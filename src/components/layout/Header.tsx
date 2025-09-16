@@ -219,6 +219,11 @@ export default function Header() {
         {
           items: [
             {
+              title: t("navigation.whyGhana.title"),
+              description: t("navigation.whyGhana.description"),
+              path: "/why-ghana",
+            },
+            {
               title: t("navigation.guide.title"),
               description: t("navigation.guide.description"),
               path: "/guide",

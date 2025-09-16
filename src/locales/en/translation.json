@@ -144,13 +144,94 @@
           "festivals": "Festivals",
           "cuisine": "Cuisine",
           "music": "Music & Dance",
-          "hospitality": "Hospitality"
+          "hospitality": "Hospitality",
+          "dance": "Traditional Dance & Arts"
         },
         "descriptions": {
           "festivals": "Year‑round cultural celebrations highlighting heritage, history and community identity.",
           "cuisine": "Nutritious and flavorful dishes featuring grains, plantains, fresh produce and regional spices.",
           "music": "Afrobeats, highlife, gospel and traditional rhythms energize daily life and social spaces.",
-          "hospitality": "Warm, welcoming social culture that helps international students adapt quickly."
+          "hospitality": "Warm, welcoming social culture that helps international students adapt quickly.",
+          "dance": "Experience the vibrant rhythms and colorful expressions of Ghanaian culture"
+        },
+        "festivals": {
+          "homowo": {
+            "title": "Homowo Festival",
+            "description": "Harvest celebration of the Ga people with traditional food and dance"
+          },
+          "yam": {
+            "title": "Yam Festival",
+            "description": "Annual thanksgiving celebration for successful harvest"
+          },
+          "chaleWote": {
+            "title": "Chale Wote Festival",
+            "description": "Contemporary street art and performance festival"
+          }
+        },
+        "cuisine": {
+          "jollof": {
+            "title": "Jollof Rice",
+            "description": "Ghana's signature spiced rice dish with vegetables and meat"
+          },
+          "fufu": {
+            "title": "Fufu & Soup",
+            "description": "Traditional staple served with flavorful groundnut or palm nut soup"
+          },
+          "kelewele": {
+            "title": "Kelewele",
+            "description": "Spiced fried plantains - a popular street food snack"
+          }
+        },
+        "music": {
+          "highlife": {
+            "title": "Highlife Music",
+            "description": "Ghana's signature genre blending traditional and jazz influences"
+          },
+          "afrobeats": {
+            "title": "Afrobeats",
+            "description": "Contemporary fusion of African rhythms with global sounds"
+          },
+          "drums": {
+            "title": "Traditional Drums",
+            "description": "Djembe, talking drums, and other percussion instruments"
+          }
+        },
+        "hospitality": {
+          "akwaaba": {
+            "title": "Akwaaba Welcome",
+            "description": "The famous Ghanaian greeting meaning \"welcome\" in Twi"
+          },
+          "community": {
+            "title": "Community Spirit",
+            "description": "Strong sense of community and extended family bonds"
+          },
+          "ubuntu": {
+            "title": "Ubuntu Philosophy",
+            "description": "\"I am because we are\" - the spirit of mutual support"
+          }
+        },
+        "dance": {
+          "adowa": {
+            "title": "Adowa Dance",
+            "description": "Traditional ceremonial dance of the Akan people"
+          },
+          "drumming": {
+            "title": "Drumming Traditions",
+            "description": "Ancient rhythms that tell stories and connect communities"
+          },
+          "kente": {
+            "title": "Kente Weaving",
+            "description": "Sacred cloth patterns with deep cultural meaning"
+          }
+        }
+      },
+      "location": {
+        "title": "Ghana's Location",
+        "intro": "Located on West Africa's Atlantic coast, Ghana sits perfectly positioned between the Sahara and the Gulf of Guinea, offering tropical climate and coastal access.",
+        "features": {
+          "coastline": "Atlantic coastline with beautiful beaches and coastal cities",
+          "climate": "Tropical climate with distinct wet and dry seasons",
+          "borders": "Bordered by Côte d'Ivoire, Burkina Faso, and Togo"
         }
       },
       "cost": {
@@ -257,6 +338,7 @@
         "academic": "Academic Services",
         "visa": "Visa & Immigration",
         "accommodation": "Accommodation",
+        "settlement": "Settlement & Living",
         "business": "Business Travel",
         "medical": "Medical Travel",
         "tourism": "Tourism & Tours"
@@ -266,6 +348,7 @@
         "academic": "Questions about university applications, academic requirements, and educational support.",
         "visa": "Visa processing, documentation, and immigration assistance questions.",
         "accommodation": "Housing options, costs, and accommodation support in Ghana.",
+        "settlement": "Practical guidance for living in Ghana including transportation, banking, healthcare, and daily life essentials.",
         "business": "Business travel, investment opportunities, and corporate services.",
         "medical": "Medical facilities, health insurance, and medical tourism information.",
         "tourism": "Cultural tours, tourist attractions, and travel experiences in Ghana."
@@ -290,11 +373,15 @@
           },
           "paymentMethods": {
             "question": "What payment methods do you accept?",
-            "answer": "We accept various payment methods including bank transfers, credit/debit cards, mobile money, and international payment platforms. Payment terms vary by package, with most services requiring payment before delivery."
+            "answer": "We accept bank transfers, credit/debit cards, Mobile Money (MTN MoMo, AirtelTigo Money), and international payment platforms. Note: Ghana's E-Levy of 1.5% applies to electronic transfers. Payment terms vary by package, with most services requiring payment before delivery."
           },
           "customerSupport": {
             "question": "How can I contact customer support?",
-            "answer": "We offer 24/7 WhatsApp support, email assistance, phone consultations, and in-person meetings for Premium clients. You can reach us through our website, WhatsApp at +233 (0) 55 123 4567, or email at info@easylifeghana.com."
+            "answer": "We offer 24/7 WhatsApp support, email assistance, phone consultations, and in-person meetings for Premium clients. You can reach us at +233 26 215 5555 or +233 53 825 4404 (24/7), or email at info@easylifeghana.com."
+          },
+          "settlementGuide": {
+            "question": "Do you provide settlement support after arrival?",
+            "answer": "Yes, our comprehensive settlement guide covers temporary housing (3-15 days), permanent housing assistance in safe neighborhoods like East Legon and Osu, local SIM card activation, banking support, transportation guidance with apps like Bolt and Yango, dining recommendations, and 24/7 emergency contacts."
           }
         },
         "academic": {
@@ -329,12 +416,12 @@
             "answer": "We assist with student visas, tourist visas, business visas, medical visas, and residence permits. Each visa type has specific requirements and processing procedures that we guide you through based on your purpose of travel."
           },
           "requiredDocuments": {
-            "question": "What documents do I need for a Ghanaian visa?",
-            "answer": "Common requirements include a valid passport, completed application form, passport photos, proof of accommodation, financial statements, travel itinerary, and specific documents based on visa type (admission letter for students, medical referral for medical visas, etc.)."
+            "question": "What documents do I need for a Ghanaian student visa in 2024?",
+            "answer": "You need a completed visa application form, passport valid for at least 6 months with blank pages, admission letter from a recognized institution, proof of tuition payment, medical certificate, yellow fever vaccination certificate, proof of accommodation, and return ticket. Fees range $100-200 USD."
           },
           "processingTime": {
-            "question": "How long does visa processing take?",
-            "answer": "Processing times vary by visa type and our service level: Premium Pack (1-7 days), Standard Pack (3-10 days), Basic Pack (3-7 days with your self-submission). We expedite processing through proper documentation and our relationships with embassies."
+            "question": "How long does visa processing take in 2024?",
+            "answer": "Processing times are 7 working days (expedited service) or 15-20 working days (regular service). We recommend applying at least one month before travel. Our Premium Pack (1-7 days), Standard Pack (3-10 days), Basic Pack (3-7 days with self-submission)."
           },
           "visaRejection": {
             "question": "What happens if my visa application is rejected?",
@@ -345,14 +432,14 @@
             "answer": "Yes, we assist with visa extensions, permit renewals, and status changes while you're in Ghana. Our local team handles the paperwork and liaisons with immigration authorities to ensure smooth processing."
           },
           "studentPermit": {
-            "question": "Do I need a student permit in addition to my visa?",
-            "answer": "Students staying longer than 90 days need to obtain a residence permit after arrival. We guide you through this process, including scheduling appointments, document preparation, and submission to ensure compliance with immigration requirements."
+            "question": "What about residence permits for students in 2024?",
+            "answer": "Within 90 days of arrival, you must apply for a student residence permit through Ghana Immigration Service (GIS). The fee is USD 300, plus GHS 900 for medical examination at GIS, and USD 120 for Ghana non-citizen ID card (valid 1 year, renewable at USD 60). Processing takes 2-3 weeks."
           }
         },
         "accommodation": {
           "accommodationTypes": {
             "question": "What types of accommodation options are available?",
-            "answer": "We offer various options including on-campus dormitories, off-campus shared apartments, private studios, homestays with local families, and serviced apartments. Each option varies in cost, amenities, and proximity to universities or business districts."
+            "answer": "We offer temporary housing (3-15 days) through Airbnb, guesthouses, and partner hotels near the airport with leisure centers and amenities. For permanent housing, we arrange visits through our field agents to recommended neighborhoods including East Legon, Osu, Adenta, Spintex, Achimota, North Legon, Cantoment, Tetegu, Tesano, Dzowurlu, and Haatso."
           },
           "housingCosts": {
             "question": "How much does accommodation cost in Ghana?",
@@ -373,6 +460,40 @@
           "utilities": {
             "question": "What utilities are typically included in accommodation?",
             "answer": "Utility inclusions vary by property. Campus housing usually includes basic utilities, while private accommodations may require separate arrangements for electricity, water, internet, and cable. We help clarify what's included and assist with utility setup."
+          }
+        },
+        "settlement": {
+          "temporaryHousing": {
+            "question": "What happens when I first arrive in Ghana?",
+            "answer": "Upon arrival, we provide temporary housing for 3-15 days while you settle in. This includes booking through Airbnb, guesthouses, or partner hotels with proximity to the airport, leisure centers, and amenities. Airport transfer is included for some packages."
+          },
+          "mobileConnectivity": {
+            "question": "How do I get mobile service and internet in Ghana?",
+            "answer": "We provide a temporary SIM card (1 month included) from recommended operators AirtelTigo or MTN. Activation is handled through EasyLife upon arrival. Unlimited internet packages are available with special rates for students and professionals."
+          },
+          "bankingPayments": {
+            "question": "What banking and payment options are available in Ghana?",
+            "answer": "Ghana uses the Ghanaian Cedi (GHS). Main payment methods include Mobile Money (MTN MoMo, AirtelTigo Money) and Visa/Mastercard at selected shops. EasyLife assists with opening local bank accounts. Note: E-Levy of 1.5% applies to electronic transfers."
+          },
+          "transportation": {
+            "question": "What are the best transportation options in Ghana?",
+            "answer": "From the airport, use EasyLife transfer or authorized Bolt/Taxi. Recommended apps: Bolt, Yango, and Uber (Yango often offers the cheapest rates with 5% commission vs 20% for others). Other options include Trotro minibuses (cheap but complex initially). Car rental with driver available through EasyLife."
+          },
+          "healthcare": {
+            "question": "What medical facilities and emergency services are available?",
+            "answer": "Emergency number: 112. Recommended hospitals include Nyaho Medical Centre (050-143-6662, 24/7 at Airport Residential Area), University of Ghana Medical Centre (UGMC) in Legon, Euracare at North Labone (24 Peter Ala Adjetey Ave), Bloom Hospital, Aneeja Hospital, Ridge Medical Centre, and Oxford Street Clinic."
+          },
+          "diningAndShopping": {
+            "question": "Where can I find good restaurants and shopping in Ghana?",
+            "answer": "Recommended restaurants: Le Must, Bondai, Bistro 22, Treehouse, Kozo, Tunnel Lounge, Noble House. Supermarkets: Shoprite, Maxmart, Palace Mall. Food delivery: Glovo, Bolt Food, or via EasyLife contact. Always prefer sealed bottled water (Bel-Aqua, Voltic)."
+          },
+          "documentationSupport": {
+            "question": "What documents do I need to handle after arrival?",
+            "answer": "Ghana Card and residence permit applications require full support from EasyLife. We handle all documentation and administrative procedures including translation and legalization services through our legal team. Within 90 days, students must apply for residence permits (USD 300 + GHS 900 medical + USD 120 ID card)."
+          },
+          "additionalServices": {
+            "question": "What other settlement services does EasyLife provide?",
+            "answer": "We offer school enrollment for children, university admission support, assistance finding places of worship, job search and business opportunity guidance, cultural/tourist orientation, and ongoing 24/7 emergency support at +233 26 215 5555 or +233 53 825 4404."
           }
         },
         "business": {
@@ -856,20 +977,20 @@
     "viewAll": "View All FAQs",
     "questions": {
       "services": {
-        "question": "What services does EasyLife Ghana provide?",
-        "answer": "We offer comprehensive support including university applications, visa assistance, accommodation arrangements, business travel coordination, medical travel assistance, and tourism & cultural tours throughout Ghana."
+        "question": "What comprehensive settlement services does EasyLife Ghana provide?",
+        "answer": "We offer complete settlement support including temporary housing (3-15 days), permanent housing assistance in safe neighborhoods, mobile service activation, banking support, transportation guidance, visa and residence permit processing, medical facility recommendations, and ongoing 24/7 support."
       },
       "cost": {
         "question": "How much do EasyLife Ghana services cost?",
-        "answer": "We offer three service packages - Basic Pack (digital guidance), Standard Pack (remote assistance), and Premium Pack (full service). Pricing varies based on your needs and the level of support required."
+        "answer": "We offer three service packages - Basic Pack (100% digital guidance), Standard Pack (remote assistance with dedicated advisor), and Premium Pack (full service with in-person support, airport transfers, and priority processing). Pricing varies based on your needs and support level required."
       },
       "visa": {
-        "question": "How long does the visa process take with your help?",
-        "answer": "With our Premium Pack, visa processing typically takes 1-7 days. Standard and Basic packages take 3-10 days. We handle all documentation and ensure smooth, timely approval with government agencies."
+        "question": "What are the current visa requirements and processing times for Ghana in 2024?",
+        "answer": "Student visas require admission letter, medical certificate, yellow fever vaccination, and cost $100-200. Processing: 7 days (expedited) or 15-20 days (regular). Residence permits (USD 300 + GHS 900 medical + USD 120 ID) required within 90 days for stays over 90 days."
       },
-      "support": {
-        "question": "What kind of ongoing support do you provide?",
-        "answer": "We offer 24/7 WhatsApp support, dedicated advisors, airport pickup, accommodation assistance, and continuous support for settling into Ghana. Premium clients get priority 24/7 support for one month."
+      "settlement": {
+        "question": "What settlement support do you provide after I arrive in Ghana?",
+        "answer": "Complete settlement guidance including SIM card activation (MTN/AirtelTigo), Mobile Money setup, transportation apps (Bolt, Yango, Uber), banking assistance, medical facility contacts, dining recommendations, and 24/7 emergency support at +233 26 215 5555."
       }
     }
   },
@@ -966,6 +1087,7 @@
       "tourismCulturalTours": "Tourism & Cultural Tours",
       "businessTravelSupport": "Business Travel Support",
       "medicalTravelAssistance": "Medical Travel Assistance",
+      "whyChooseGhana": "Why Choose Ghana",
       "downloadGuide": "Download Guide",
       "faqs": "FAQs",
       "blogUpdates": "Blog & Updates",

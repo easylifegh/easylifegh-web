@@ -172,10 +172,10 @@ export default function ContactPage() {
                       </ClientOnly>
                     </h3>
                     <p className="text-[#5F6B7A] text-sm">
-                      +233 (0) 24 123 4567
+                      +233 (0) 26 215 5555
                     </p>
                     <p className="text-[#5F6B7A] text-sm">
-                      +233 (0) 20 987 6543
+                      +233 (0) 53 825 4404
                     </p>
                   </div>
                 </div>

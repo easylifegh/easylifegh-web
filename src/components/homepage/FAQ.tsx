@@ -12,7 +12,7 @@ export default function FAQ() {
   const { t } = useTranslation()
   const [openQuestion, setOpenQuestion] = useState<string | null>(null)
 
-  const questions = ["services", "cost", "visa", "support"]
+  const questions = ["services", "cost", "visa", "settlement"]
 
   const toggleQuestion = (questionKey: string) => {
     setOpenQuestion(openQuestion === questionKey ? null : questionKey)

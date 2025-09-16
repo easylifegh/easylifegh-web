@@ -1,8 +1,8 @@
 export const downloadGuide = (language: string = "en") => {
   const guideFiles = {
-    en: "/guide/Settlement Guide  EasyLife Ghana.pdf.pdf",
-    es: "/guide/GUÍA DE INSTALACIÓN  EasyLife Ghana.pdf.pdf",
-    fr: "/guide/Guide d'installation  EasyLife Ghana .pdf.pdf",
+    en: "/guide/Guide.pdf",
+    es: "/guide/GUÍA.pdf",
+    fr: "/guide/Guide_fr.pdf",
   }
 
   const filePath =

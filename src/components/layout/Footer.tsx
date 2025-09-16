@@ -25,6 +25,7 @@ export default function Footer() {
     {
       heading: "Resources",
       links: [
+        { label: "Why Choose Ghana", to: "/why-ghana" },
         { label: "Download Guide", to: "/guide" },
         { label: "FAQs", to: "/faq" },
         // { label: "Blog & Updates", to: "/blog" },
@@ -53,6 +54,7 @@ export default function Footer() {
     {
       heading: "resources",
       links: [
+        { labelKey: "whyChooseGhana", to: "/why-ghana" },
         { labelKey: "downloadGuide", to: "/guide" },
         { labelKey: "faqs", to: "/faq" },
         // { labelKey: "blogUpdates", to: "/blog" },
