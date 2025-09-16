@@ -319,36 +319,36 @@ export default function Header() {
         <div className="border-b border-gray-200">
           <nav>
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-[64px] md:h-[72px]">
+              <div className="flex items-center justify-between h-[80px] md:h-[96px] lg:h-[112px]">
                 {/* Brand */}
                 <div className="flex items-center flex-grow">
                   <Link
                     href="/"
-                    className="flex items-center gap-2 md:gap-3 h-[64px] md:h-[72px] pr-1"
+                    className="flex items-center gap-2 md:gap-3 lg:gap-4 h-[80px] md:h-[96px] lg:h-[112px] pr-1"
                   >
                     <Image
                       src="/logo.png"
                       alt="EasyLife Ghana"
                       width={96}
                       height={96}
-                      className="h-20 w-auto md:h-24 rounded-[8px] object-cover"
+                      className="h-24 w-auto md:h-28 lg:h-32 rounded-[8px] object-cover"
                       priority
                     />
                     <ClientOnly
                       fallback={
-                        <span className="text-[1.2rem] md:text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                        <span className="text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
                           EasyLife Ghana
                         </span>
                       }
                     >
-                      <span className="text-[1.2rem] md:text-[1.4rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                      <span className="text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
                         {t("header.brand")}
                       </span>
                     </ClientOnly>
                   </Link>
 
                   {/* Desktop Navigation */}
-                  <ul className="hidden lg:flex items-center ml-4 xl:ml-12 gap-4 xl:gap-10">
+                  <ul className="hidden lg:flex items-center ml-4 xl:ml-12 gap-6 xl:gap-12">
                     {megaNav.map(item => {
                       const isActive = item.path
                         ? pathname === item.path
@@ -368,7 +368,7 @@ export default function Header() {
                             <button
                               type="button"
                               data-id={item.id}
-                              className={`dropdown-trigger flex items-center h-[64px] md:h-[72px] px-0.5 xl:px-1 text-[0.975rem] font-normal text-gray-900 relative transition-colors duration-250 hover:text-[#17a253] group ${opened ? "text-[#17a253] font-medium" : ""}`}
+                              className={`dropdown-trigger flex items-center h-[80px] md:h-[96px] lg:h-[112px] px-0.5 xl:px-1 text-[1.1rem] lg:text-[1.2rem] font-normal text-gray-900 relative transition-colors duration-250 hover:text-[#17a253] group ${opened ? "text-[#17a253] font-medium" : ""}`}
                               aria-haspopup="true"
                               aria-expanded={opened}
                               onMouseEnter={() => setOpenDropdown(item.id)}
@@ -406,9 +406,9 @@ export default function Header() {
                             </button>
                             {opened && (
                               <div
-                                className={`mega-dropdown-panel absolute top-full left-0 ${item.groups && item.groups.length === 1 ? "w-[320px]" : "w-[880px]"} max-w-[84vw] bg-white rounded-b-[4px] px-8 py-5 shadow-none z-[150]`}
+                                className={`mega-dropdown-panel absolute top-full left-0 ${item.groups && item.groups.length === 1 ? "w-[340px]" : "w-[900px]"} max-w-[84vw] bg-white rounded-b-[4px] px-8 py-6 shadow-none z-[150]`}
                               >
-                                <div className="grid grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-y-9 gap-x-10">
+                                <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-y-10 gap-x-10">
                                   {item.groups?.map((g, gi) => (
                                     <div
                                       key={gi}
@@ -425,7 +425,7 @@ export default function Header() {
                                             </div>
                                           }
                                         >
-                                          <div className="text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.75px] mb-2">
+                                          <div className="text-[0.75rem] font-semibold text-gray-500 uppercase tracking-[0.75px] mb-3">
                                             {g.heading}
                                           </div>
                                         </ClientOnly>
@@ -442,7 +442,7 @@ export default function Header() {
                                                   downloadGuide(i18n.language)
                                                   setOpenDropdown(null)
                                                 }}
-                                                className="block py-1.5 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative text-left w-full bg-transparent border-none cursor-pointer"
+                                                className="block py-2 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative text-left w-full bg-transparent border-none cursor-pointer"
                                               >
                                                 <ClientOnly
                                                   fallback={
@@ -456,10 +456,10 @@ export default function Header() {
                                                     </>
                                                   }
                                                 >
-                                                  <span className="block font-medium">
+                                                  <span className="block font-medium text-[1rem]">
                                                     {link.title}
                                                   </span>
-                                                  <span className="text-[0.8rem] text-gray-500 leading-tight">
+                                                  <span className="text-[0.85rem] text-gray-500 leading-tight">
                                                     {link.description}
                                                   </span>
                                                 </ClientOnly>
@@ -467,7 +467,7 @@ export default function Header() {
                                             ) : (
                                               <Link
                                                 href={link.path}
-                                                className="block py-1.5 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative"
+                                                className="block py-2 px-0 text-gray-900 no-underline transition-colors duration-250 hover:text-[#17a253] active:text-[#0f6f38] relative"
                                                 onClick={() =>
                                                   setOpenDropdown(null)
                                                 }
@@ -486,11 +486,11 @@ export default function Header() {
                                                     </>
                                                   }
                                                 >
-                                                  <span className="block font-semibold text-[0.92rem] tracking-[0.2px] leading-tight">
+                                                  <span className="block font-semibold text-[1rem] tracking-[0.2px] leading-tight">
                                                     {link.title}
                                                   </span>
                                                   {link.description && (
-                                                    <span className="block text-[0.72rem] leading-[1.05rem] text-gray-600 mt-1 max-w-[240px]">
+                                                    <span className="block text-[0.85rem] leading-[1.15rem] text-gray-600 mt-1 max-w-[260px]">
                                                       {link.description}
                                                     </span>
                                                   )}
@@ -515,7 +515,7 @@ export default function Header() {
                         >
                           <Link
                             href={item.path!}
-                            className={`flex items-center h-[64px] md:h-[72px] px-0.5 xl:px-1 text-[0.975rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative group ${
+                            className={`flex items-center h-[80px] md:h-[96px] lg:h-[112px] px-0.5 xl:px-1 text-[1.1rem] lg:text-[1.2rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative group ${
                               isActive
                                 ? "text-[#17a253] font-medium"
                                 : "text-gray-900"
@@ -579,7 +579,7 @@ export default function Header() {
 
                   {/* Mobile Toggle */}
                   <button
-                    className={`lg:hidden w-10 h-10 md:w-12 md:h-12 bg-transparent border-0 relative flex items-center justify-center ${isMenuOpen ? "active" : ""}`}
+                    className={`lg:hidden w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-transparent border-0 relative flex items-center justify-center ${isMenuOpen ? "active" : ""}`}
                     type="button"
                     onClick={toggleMobileMenu}
                     aria-controls="mobile-menu"
@@ -588,15 +588,15 @@ export default function Header() {
                       isMenuOpen ? "Close navigation" : "Open navigation"
                     }
                   >
-                    <div className="relative w-6 h-6">
+                    <div className="relative w-7 h-7 md:w-8 md:h-8">
                       <span
-                        className={`absolute w-[26px] h-0.5 bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-[6px]"}`}
+                        className={`absolute w-[28px] md:w-[32px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-[6px] md:top-[8px]"}`}
                       />
                       <span
-                        className={`absolute w-[26px] h-0.5 bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+                        className={`absolute w-[28px] md:w-[32px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
                       />
                       <span
-                        className={`absolute w-[26px] h-0.5 bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-[6px]"}`}
+                        className={`absolute w-[28px] md:w-[32px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-[6px] md:bottom-[8px]"}`}
                       />
                     </div>
                   </button>
@@ -629,7 +629,7 @@ export default function Header() {
                           >
                             <button
                               type="button"
-                              className={`w-full flex items-center justify-between px-4 py-[1.05rem] text-left text-[1.05rem] text-gray-900 bg-none border-0 ${isOpen ? "font-semibold" : ""}`}
+                              className={`w-full flex items-center justify-between px-6 py-[1.25rem] text-left text-[1.15rem] text-gray-900 bg-none border-0 ${isOpen ? "font-semibold" : ""}`}
                               aria-expanded={isOpen}
                               onClick={() =>
                                 setMobileOpen(cur =>
@@ -659,13 +659,13 @@ export default function Header() {
                                 <span>{item.label}</span>
                               </ClientOnly>
                               <span
-                                className={`text-[0.75rem] transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "rotate-180" : ""}`}
+                                className={`text-[0.85rem] transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? "rotate-180" : ""}`}
                               >
                                 ▾
                               </span>
                             </button>
                             {isOpen && (
-                              <div className="bg-white px-4 py-2 pb-4">
+                              <div className="bg-white px-6 py-3 pb-5">
                                 {item.groups?.map((g, gi) => (
                                   <div
                                     key={gi}
@@ -674,7 +674,7 @@ export default function Header() {
                                     {g.heading && (
                                       <ClientOnly
                                         fallback={
-                                          <div className="mb-1 text-[0.7rem] font-semibold text-gray-500 uppercase tracking-[0.5px]">
+                                          <div className="mb-2 text-[0.75rem] font-semibold text-gray-500 uppercase tracking-[0.5px]">
                                             {g.heading}
                                           </div>
                                         }
@@ -692,24 +692,24 @@ export default function Header() {
                                             downloadGuide(i18n.language)
                                             setIsMenuOpen(false)
                                           }}
-                                          className="block py-2.5 text-gray-900 no-underline text-[0.93rem] hover:text-[#17a253] transition-colors duration-250 text-left w-full bg-transparent border-none"
+                                          className="block py-3 text-gray-900 no-underline text-[1rem] hover:text-[#17a253] transition-colors duration-250 text-left w-full bg-transparent border-none"
                                         >
                                           <ClientOnly
                                             fallback={
                                               <>
-                                                <span className="block font-medium">
+                                                <span className="block font-medium text-[1rem]">
                                                   Download Guide
                                                 </span>
-                                                <span className="text-[0.8rem] text-gray-500 leading-tight">
+                                                <span className="text-[0.85rem] text-gray-500 leading-tight">
                                                   Get our settlement guide
                                                 </span>
                                               </>
                                             }
                                           >
-                                            <span className="block font-medium">
+                                            <span className="block font-medium text-[1rem]">
                                               {link.title}
                                             </span>
-                                            <span className="text-[0.8rem] text-gray-500 leading-tight">
+                                            <span className="text-[0.85rem] text-gray-500 leading-tight">
                                               {link.description}
                                             </span>
                                           </ClientOnly>
@@ -718,28 +718,28 @@ export default function Header() {
                                         <Link
                                           key={link.path}
                                           href={link.path}
-                                          className="block py-2.5 text-gray-900 no-underline text-[0.93rem] hover:text-[#17a253] transition-colors duration-250"
+                                          className="block py-3 text-gray-900 no-underline text-[1rem] hover:text-[#17a253] transition-colors duration-250"
                                           onClick={() => setIsMenuOpen(false)}
                                         >
                                           <ClientOnly
                                             fallback={
                                               <>
-                                                <span className="block font-medium">
+                                                <span className="block font-medium text-[1rem]">
                                                   {link.title}
                                                 </span>
                                                 {link.description && (
-                                                  <span className="block text-gray-500 text-sm mt-0.5">
+                                                  <span className="block text-gray-500 text-[0.85rem] mt-0.5">
                                                     {link.description}
                                                   </span>
                                                 )}
                                               </>
                                             }
                                           >
-                                            <span className="block font-medium">
+                                            <span className="block font-medium text-[1rem]">
                                               {link.title}
                                             </span>
                                             {link.description && (
-                                              <span className="block text-gray-500 text-sm mt-0.5">
+                                              <span className="block text-gray-500 text-[0.85rem] mt-0.5">
                                                 {link.description}
                                               </span>
                                             )}
@@ -758,7 +758,7 @@ export default function Header() {
                         <div key={item.id} className="border-b border-gray-100">
                           <Link
                             href={item.path!}
-                            className="block px-4 py-[1.05rem] text-[1.05rem] text-gray-900 no-underline"
+                            className="block px-6 py-[1.25rem] text-[1.15rem] text-gray-900 no-underline"
                             onClick={e => {
                               setIsMenuOpen(false)
                               if (item.path === "/#pricing") {

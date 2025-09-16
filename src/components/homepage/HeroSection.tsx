@@ -42,7 +42,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative h-[70vh] overflow-hidden">
+    <section className="relative h-screen overflow-hidden">
       <AnimatePresence>
         {slides.map(
           (slide, index) =>
@@ -72,7 +72,7 @@ export default function HeroSection() {
       </AnimatePresence>
 
       <div className="relative z-10 flex items-start h-full">
-        <div className="container mx-auto px-6 sm:px-6 lg:px-8 pt-18 sm:pt-16 md:pt-20">
+        <div className="container mx-auto px-6 sm:px-6 lg:px-8 pt-32 sm:pt-36 md:pt-40 lg:pt-44">
           <div className="max-w-2xl text-white">
             <motion.div
               className="-mt-2 sm:-mt-6 md:-mt-8 lg:-mt-12"
