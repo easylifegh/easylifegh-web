@@ -312,7 +312,490 @@
     },
     "academic": {
       "title": "Academic Services",
-      "subtitle": "Complete language school registration and university placement support."
+      "subtitle": "English language programs, university admission, and technical education to help you achieve your academic goals in Ghana.",
+      "process": {
+        "title": "Our Academic Support Process",
+        "steps": {
+          "assessment": {
+            "step": "1",
+            "title": "Educational Assessment",
+            "description": "We evaluate your academic background, qualifications, and career goals to recommend the perfect educational pathway in Ghana.",
+            "features": [
+              "Academic transcript evaluation",
+              "Career pathway consultation"
+            ]
+          },
+          "selection": {
+            "step": "2",
+            "title": "Institution Selection",
+            "description": "Based on your assessment, we help you choose from Ghana's top universities, language schools, or technical institutes that match your goals.",
+            "features": [
+              "Institution ranking & comparison",
+              "Program requirements matching"
+            ]
+          },
+          "application": {
+            "step": "3",
+            "title": "Application Submission",
+            "description": "We prepare and submit your complete application package, including all required academic documents, transcripts, and application forms.",
+            "features": [
+              "Document preparation & review",
+              "Application submission tracking"
+            ]
+          },
+          "enrollment": {
+            "step": "4",
+            "title": "Enrollment Completion",
+            "description": "Once accepted, we finalize your enrollment, secure your student placement, and ensure all academic requirements are confirmed.",
+            "features": ["Admission confirmation", "Registration & orientation"]
+          }
+        }
+      },
+      "englishPrograms": {
+        "title": "English Programs",
+        "subtitle": "Choose from our comprehensive range of English language courses",
+        "programs": {
+          "esl": {
+            "title": "English as Second Language (ESL)",
+            "duration": "3-12 months",
+            "description": "Comprehensive English foundation program designed for non-native speakers. Covers basic to advanced grammar, vocabulary, pronunciation, and conversation skills in an immersive English-speaking environment.",
+            "outcomes": [
+              "Speak English confidently in daily situations",
+              "Understand and use proper grammar structures",
+              "Build vocabulary for personal and professional use",
+              "Gain cultural understanding of English-speaking contexts"
+            ],
+            "ideal": "Beginners to intermediate English learners"
+          },
+          "businessEnglish": {
+            "title": "Business English",
+            "duration": "2-6 months",
+            "description": "Professional English communication for the workplace. Focus on business terminology, presentations, meetings, negotiations, and email communication.",
+            "outcomes": [
+              "Lead confident business presentations",
+              "Participate effectively in professional meetings",
+              "Write compelling business emails and reports",
+              "Negotiate successfully in English"
+            ],
+            "ideal": "Working professionals and entrepreneurs"
+          },
+          "academicEnglish": {
+            "title": "Academic English",
+            "duration": "3-9 months",
+            "description": "Preparation for university-level English. Academic writing, research skills, critical thinking, and university entrance requirements.",
+            "outcomes": [
+              "Write research papers and essays effectively",
+              "Develop critical thinking and analysis skills",
+              "Master academic presentation techniques",
+              "Meet university English requirements"
+            ],
+            "ideal": "Future university students"
+          },
+          "professionalEnglish": {
+            "title": "Professional English",
+            "duration": "2-8 months",
+            "description": "Specialized English for specific professions including healthcare, engineering, law, and technology sectors.",
+            "outcomes": [
+              "Use technical terminology confidently",
+              "Create professional industry documents",
+              "Communicate complex ideas clearly",
+              "Advance in your chosen field"
+            ],
+            "ideal": "Career professionals seeking advancement"
+          },
+          "ieltsPrep": {
+            "title": "IELTS Preparation",
+            "duration": "1-6 months",
+            "description": "Intensive preparation for the International English Language Testing System. Focus on all four skills: listening, reading, writing, and speaking.",
+            "outcomes": [
+              "Achieve target IELTS band score",
+              "Master all four language skills",
+              "Use effective test-taking strategies",
+              "Gain confidence for exam day"
+            ],
+            "ideal": "Students planning to study abroad"
+          },
+          "communicationSkills": {
+            "title": "Communication Skills",
+            "duration": "2-4 months",
+            "description": "Enhanced verbal and non-verbal communication, public speaking, presentation skills, and interpersonal communication.",
+            "outcomes": [
+              "Speak confidently to any audience",
+              "Master non-verbal communication",
+              "Build strong interpersonal relationships",
+              "Lead with communication excellence"
+            ],
+            "ideal": "Leaders and public speakers"
+          },
+          "intensiveEnglish": {
+            "title": "Intensive English",
+            "duration": "1-3 months",
+            "description": "Fast-track English improvement with daily intensive sessions. Accelerated learning for quick language acquisition.",
+            "outcomes": [
+              "See rapid improvement in weeks",
+              "Gain intensive daily practice",
+              "Receive personalized attention",
+              "Achieve quick language goals"
+            ],
+            "ideal": "Students with time constraints"
+          },
+          "conversationClasses": {
+            "title": "Conversation Classes",
+            "duration": "Ongoing",
+            "description": "Practical speaking practice in relaxed, social settings. Focus on fluency, natural expressions, and cultural understanding.",
+            "outcomes": [
+              "Speak naturally in social situations",
+              "Understand cultural nuances",
+              "Build lasting friendships",
+              "Gain everyday conversation confidence"
+            ],
+            "ideal": "Anyone wanting speaking practice"
+          }
+        }
+      },
+      "languageSchools": {
+        "title": "Language Schools in Ghana",
+        "subtitle": "Explore trusted institutions across Ghana",
+        "schools": {
+          "gil": {
+            "name": "Ghana Institute of Languages (GIL)",
+            "location": "Barnes Road, Accra",
+            "established": "1961",
+            "tagline": "Excellence in International Languages",
+            "description": "Public institution offering French among many other international languages with good reputation for quality education.",
+            "specialties": ["French", "English", "International Languages"],
+            "website": "https://gil.edu.gh/"
+          },
+          "ace": {
+            "name": "ACE School of Languages",
+            "location": "Abeka Lapaz, Accra",
+            "established": "2005",
+            "tagline": "Multilingual Excellence",
+            "description": "Offers French, Spanish, Twi with exam preparation and flexible weekend/short courses for busy professionals.",
+            "specialties": ["French", "Spanish", "Twi", "Exam Prep"],
+            "website": "https://aceschooloflanguages.com/"
+          },
+          "celps": {
+            "name": "CELPS (Centre of Languages and Professional Studies)",
+            "location": "Alajo, behind Paper House, Accra",
+            "established": "2008",
+            "tagline": "Professional Language Training",
+            "description": "English and professional language training with French programs. Known locally for quality instruction.",
+            "specialties": ["English", "French", "Professional Training"],
+            "website": "https://celpsghana.com/"
+          },
+          "hopeLife": {
+            "name": "Hope Life Institute",
+            "location": "Kotobabi/New Town area, Accra",
+            "established": "2010",
+            "tagline": "Languages for Life Success",
+            "description": "Mostly English but also foreign languages including French. Offers exam preparation and is well known locally.",
+            "specialties": ["English", "French", "Exam Preparation"],
+            "website": "https://hopelifeinstitute.com/"
+          },
+          "goethe": {
+            "name": "Goethe-Institut Ghana",
+            "location": "Kakramadu Road, Cantonments, Accra",
+            "established": "1968",
+            "tagline": "German Language & Cultural Exchange",
+            "description": "Offers German language courses and hosts cultural & language exchange communities fostering multilingual environment.",
+            "specialties": [
+              "German Language",
+              "Cultural Exchange",
+              "Multilingual Community"
+            ],
+            "website": "https://goethe.de/ghana"
+          },
+          "durra": {
+            "name": "Durra Institute",
+            "location": "East Legon, Accra",
+            "established": "2010",
+            "tagline": "Multilingual Professional Training",
+            "description": "Offers French among its language programs with intensive courses available for rapid language acquisition.",
+            "specialties": ["French", "English", "Intensive Programs"],
+            "website": "https://www.durragh.com/"
+          }
+        }
+      },
+      "universityPrograms": {
+        "title": "University Programs",
+        "subtitle": "From undergraduate to doctoral levels across all disciplines",
+        "programs": {
+          "bachelor": {
+            "title": "Bachelor's Degree Programs",
+            "duration": "4 years",
+            "description": "Comprehensive undergraduate programs across multiple disciplines including Arts, Sciences, Engineering, Business, and Medicine.",
+            "fields": [
+              "Engineering",
+              "Medicine",
+              "Business Administration",
+              "Computer Science",
+              "Liberal Arts",
+              "Agriculture",
+              "Education"
+            ],
+            "requirements": "WASSCE (C6 in 6 subjects) or International Equivalent"
+          },
+          "master": {
+            "title": "Master's Degree Programs",
+            "duration": "1-2 years",
+            "description": "Advanced graduate programs for specialized knowledge and research in your chosen field with thesis and coursework options.",
+            "fields": [
+              "MBA",
+              "Public Administration",
+              "Engineering",
+              "IT",
+              "Health Sciences",
+              "Development Studies",
+              "Agriculture"
+            ],
+            "requirements": "Bachelor's Degree (2nd Class Lower or Better)"
+          },
+          "phd": {
+            "title": "PhD & Doctoral Programs",
+            "duration": "4-6 years",
+            "description": "Research-intensive doctoral programs leading to PhD qualification with original research contribution to your field.",
+            "fields": [
+              "Research",
+              "Academia",
+              "Scientific Innovation",
+              "Policy Development",
+              "Advanced Engineering",
+              "Medical Research"
+            ],
+            "requirements": "Master's Degree or Exceptional Bachelor's"
+          },
+          "professional": {
+            "title": "Professional Programs",
+            "duration": "1-3 years",
+            "description": "Career-focused programs designed for working professionals including executive education and professional certifications.",
+            "fields": [
+              "Executive MBA",
+              "Professional Certifications",
+              "Continuing Education",
+              "Leadership Development",
+              "Industry Training"
+            ],
+            "requirements": "Work Experience (2+ years) + Relevant Background"
+          }
+        }
+      },
+      "universities": {
+        "title": "Universities in Ghana",
+        "subtitle": "Explore leading institutions offering world-class higher education",
+        "institutions": {
+          "ug": {
+            "name": "University of Ghana",
+            "type": "Public Research University",
+            "location": "Legon, Accra",
+            "established": "1948",
+            "programs": ["Bachelor's", "Master's", "PhD"],
+            "ranking": "#1 in Ghana",
+            "students": "38,000+"
+          },
+          "knust": {
+            "name": "Kwame Nkrumah University of Science and Technology",
+            "type": "Public Technical University",
+            "location": "Kumasi",
+            "established": "1952",
+            "programs": ["Engineering", "Medicine", "Technology", "Sciences"],
+            "ranking": "#2 in Ghana",
+            "students": "35,000+"
+          },
+          "gimpa": {
+            "name": "Ghana Institute of Management & Public Administration",
+            "type": "Public Management University",
+            "location": "Accra",
+            "established": "1961",
+            "programs": ["Business", "Public Administration", "Management"],
+            "ranking": "Top Business School",
+            "students": "15,000+"
+          },
+          "ashesi": {
+            "name": "Ashesi University",
+            "type": "Private Liberal Arts University",
+            "location": "Berekuso",
+            "established": "2002",
+            "programs": [
+              "Computer Science",
+              "Engineering",
+              "Business",
+              "Liberal Arts"
+            ],
+            "ranking": "Top Private University",
+            "students": "1,500+"
+          },
+          "ucc": {
+            "name": "University of Cape Coast",
+            "type": "Public University",
+            "location": "Cape Coast",
+            "established": "1962",
+            "programs": ["Education", "Arts", "Sciences", "Business"],
+            "ranking": "#3 in Ghana",
+            "students": "25,000+"
+          },
+          "ait": {
+            "name": "Accra Institute of Technology",
+            "type": "Private Technical University",
+            "location": "Accra",
+            "established": "1998",
+            "programs": ["IT", "Engineering", "Business Technology"],
+            "ranking": "Leading IT University",
+            "students": "8,000+"
+          },
+          "central": {
+            "name": "Central University",
+            "type": "Private University",
+            "location": "Tema",
+            "established": "1988",
+            "programs": ["Business", "Theology", "IT", "Liberal Arts"],
+            "ranking": "Top Private",
+            "students": "12,000+"
+          },
+          "puc": {
+            "name": "Presbyterian University College",
+            "type": "Private Religious University",
+            "location": "Abetifi",
+            "established": "1996",
+            "programs": ["Agriculture", "Business", "Development Studies"],
+            "ranking": "Top Agricultural",
+            "students": "6,500+"
+          }
+        }
+      },
+      "technicalPrograms": {
+        "title": "Technical Programs",
+        "subtitle": "Industry-focused training from basic trades to advanced technology",
+        "programs": {
+          "engineeringTech": {
+            "title": "Engineering Technology",
+            "duration": "2-4 years",
+            "description": "Hands-on engineering programs covering mechanical, electrical, civil, and electronic engineering applications.",
+            "specializations": [
+              "Mechanical Engineering",
+              "Electrical Engineering",
+              "Civil Engineering",
+              "Electronic Engineering",
+              "Automotive Technology"
+            ],
+            "outcome": "Engineering Technician/Technologist"
+          },
+          "informationTech": {
+            "title": "Information Technology",
+            "duration": "2-3 years",
+            "description": "Modern IT programs covering software development, networking, cybersecurity, and digital systems management.",
+            "specializations": [
+              "Software Development",
+              "Network Administration",
+              "Cybersecurity",
+              "Database Management",
+              "Web Development"
+            ],
+            "outcome": "IT Specialist/Developer"
+          },
+          "appliedSciences": {
+            "title": "Applied Sciences",
+            "duration": "2-4 years",
+            "description": "Practical science programs with laboratory work and real-world applications in various scientific fields.",
+            "specializations": [
+              "Laboratory Technology",
+              "Environmental Science",
+              "Food Science",
+              "Agricultural Technology",
+              "Health Sciences"
+            ],
+            "outcome": "Science Technician/Analyst"
+          },
+          "businessTech": {
+            "title": "Business Technology",
+            "duration": "2-3 years",
+            "description": "Modern business programs integrating technology, entrepreneurship, and practical business skills for the digital economy.",
+            "specializations": [
+              "Digital Marketing",
+              "E-commerce",
+              "Business Analytics",
+              "Project Management",
+              "Entrepreneurship"
+            ],
+            "outcome": "Business Analyst/Manager"
+          },
+          "tradesCrafts": {
+            "title": "Skilled Trades & Crafts",
+            "duration": "1-3 years",
+            "description": "Traditional and modern trades training for skilled artisans and craftspeople with emphasis on practical skills.",
+            "specializations": [
+              "Welding",
+              "Carpentry",
+              "Plumbing",
+              "Electrical Installation",
+              "Construction",
+              "Automotive Repair"
+            ],
+            "outcome": "Skilled Tradesperson/Artisan"
+          }
+        }
+      },
+      "technicalSchools": {
+        "title": "Technical Schools in Ghana",
+        "subtitle": "Industry-focused institutions preparing skilled professionals",
+        "institutions": {
+          "atu": {
+            "name": "Accra Technical University",
+            "type": "Technical University",
+            "location": "Accra",
+            "established": "1949",
+            "programs": [
+              "Engineering Technology",
+              "Applied Sciences",
+              "Business Technology"
+            ],
+            "achievement": "Modern Facilities",
+            "students": "12,000+"
+          },
+          "kti": {
+            "name": "Kumasi Technical Institute",
+            "type": "Government Technical Institute",
+            "location": "Kumasi",
+            "established": "1954",
+            "programs": [
+              "Automotive",
+              "Welding",
+              "Electronics",
+              "Construction"
+            ],
+            "achievement": "Industry Partnership",
+            "students": "4,200+"
+          },
+          "ttu": {
+            "name": "Takoradi Technical University",
+            "type": "Technical University",
+            "location": "Takoradi",
+            "established": "1954",
+            "programs": [
+              "Petroleum Engineering",
+              "Mining",
+              "Marine Technology"
+            ],
+            "achievement": "Oil & Gas Focus",
+            "students": "8,500+"
+          },
+          "btu": {
+            "name": "Bolgatanga Technical University",
+            "type": "Regional Technical University",
+            "location": "Bolgatanga",
+            "established": "1999",
+            "programs": ["Agriculture Technology", "ICT", "Applied Sciences"],
+            "achievement": "Agricultural Innovation",
+            "students": "5,000+"
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to Start Your Academic Journey in Ghana?",
+        "subtitle": "From language learning to advanced degrees, we will guide you through every step of the process. Get personalized advice and start your application today.",
+        "consultationButton": "Get Free Consultation",
+        "applicationButton": "Start Application"
+      }
     },
     "visa": {
       "title": "Visa Assistance",

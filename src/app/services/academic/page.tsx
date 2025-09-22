@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import React, { useMemo } from "react"
+import { useTranslation } from "react-i18next"
 import RevealOnScroll from "@/components/motion/RevealOnScroll"
 import ServiceGallery from "@/components/shared/ServiceGallery"
 import ProviderCard from "@/components/shared/ProviderCard"
@@ -9,558 +10,626 @@ import ProcessStep from "@/components/shared/ProcessStep"
 import { Hero } from "@/components/shared"
 
 export default function AcademicServicePage() {
+  const { t } = useTranslation()
   const englishPrograms = useMemo(
     () => [
       {
         id: "esl",
-        title: "English as Second Language (ESL)",
-        duration: "3-12 months",
-        description:
-          "Comprehensive English foundation program designed for non-native speakers. Covers basic to advanced grammar, vocabulary, pronunciation, and conversation skills in an immersive English-speaking environment.",
-        outcomes: [
-          "Speak English confidently in daily situations",
-          "Understand and use proper grammar structures",
-          "Build vocabulary for personal and professional use",
-          "Gain cultural understanding of English-speaking contexts",
-        ],
-        ideal: "Beginners to intermediate English learners",
+        title: t("pages.academic.englishPrograms.programs.esl.title"),
+        duration: t("pages.academic.englishPrograms.programs.esl.duration"),
+        description: t(
+          "pages.academic.englishPrograms.programs.esl.description"
+        ),
+        outcomes: t("pages.academic.englishPrograms.programs.esl.outcomes", {
+          returnObjects: true,
+        }) as string[],
+        ideal: t("pages.academic.englishPrograms.programs.esl.ideal"),
       },
       {
         id: "business-english",
-        title: "Business English",
-        duration: "2-6 months",
-        description:
-          "Professional English communication for the workplace. Focus on business terminology, presentations, meetings, negotiations, and email communication.",
-        outcomes: [
-          "Lead confident business presentations",
-          "Participate effectively in professional meetings",
-          "Write compelling business emails and reports",
-          "Negotiate successfully in English",
-        ],
-        ideal: "Working professionals and entrepreneurs",
+        title: t(
+          "pages.academic.englishPrograms.programs.businessEnglish.title"
+        ),
+        duration: t(
+          "pages.academic.englishPrograms.programs.businessEnglish.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.businessEnglish.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.businessEnglish.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t(
+          "pages.academic.englishPrograms.programs.businessEnglish.ideal"
+        ),
       },
       {
         id: "academic-english",
-        title: "Academic English",
-        duration: "3-9 months",
-        description:
-          "Preparation for university-level English. Academic writing, research skills, critical thinking, and university entrance requirements.",
-        outcomes: [
-          "Write research papers and essays effectively",
-          "Develop critical thinking and analysis skills",
-          "Master academic presentation techniques",
-          "Meet university English requirements",
-        ],
-        ideal: "Future university students",
+        title: t(
+          "pages.academic.englishPrograms.programs.academicEnglish.title"
+        ),
+        duration: t(
+          "pages.academic.englishPrograms.programs.academicEnglish.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.academicEnglish.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.academicEnglish.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t(
+          "pages.academic.englishPrograms.programs.academicEnglish.ideal"
+        ),
       },
       {
         id: "professional-english",
-        title: "Professional English",
-        duration: "2-8 months",
-        description:
-          "Specialized English for specific professions including healthcare, engineering, law, and technology sectors.",
-        outcomes: [
-          "Use technical terminology confidently",
-          "Create professional industry documents",
-          "Communicate complex ideas clearly",
-          "Advance in your chosen field",
-        ],
-        ideal: "Career professionals seeking advancement",
+        title: t(
+          "pages.academic.englishPrograms.programs.professionalEnglish.title"
+        ),
+        duration: t(
+          "pages.academic.englishPrograms.programs.professionalEnglish.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.professionalEnglish.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.professionalEnglish.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t(
+          "pages.academic.englishPrograms.programs.professionalEnglish.ideal"
+        ),
       },
       {
         id: "ielts-prep",
-        title: "IELTS Preparation",
-        duration: "1-6 months",
-        description:
-          "Intensive preparation for the International English Language Testing System. Focus on all four skills: listening, reading, writing, and speaking.",
-        outcomes: [
-          "Achieve target IELTS band score",
-          "Master all four language skills",
-          "Use effective test-taking strategies",
-          "Gain confidence for exam day",
-        ],
-        ideal: "Students planning to study abroad",
+        title: t("pages.academic.englishPrograms.programs.ieltsPrep.title"),
+        duration: t(
+          "pages.academic.englishPrograms.programs.ieltsPrep.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.ieltsPrep.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.ieltsPrep.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t("pages.academic.englishPrograms.programs.ieltsPrep.ideal"),
       },
       {
         id: "communication-skills",
-        title: "Communication Skills",
-        duration: "2-4 months",
-        description:
-          "Enhanced verbal and non-verbal communication, public speaking, presentation skills, and interpersonal communication.",
-        outcomes: [
-          "Speak confidently to any audience",
-          "Master non-verbal communication",
-          "Build strong interpersonal relationships",
-          "Lead with communication excellence",
-        ],
-        ideal: "Leaders and public speakers",
+        title: t(
+          "pages.academic.englishPrograms.programs.communicationSkills.title"
+        ),
+        duration: t(
+          "pages.academic.englishPrograms.programs.communicationSkills.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.communicationSkills.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.communicationSkills.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t(
+          "pages.academic.englishPrograms.programs.communicationSkills.ideal"
+        ),
       },
       {
         id: "intensive-english",
-        title: "Intensive English",
-        duration: "1-3 months",
-        description:
-          "Fast-track English improvement with daily intensive sessions. Accelerated learning for quick language acquisition.",
-        outcomes: [
-          "See rapid improvement in weeks",
-          "Gain intensive daily practice",
-          "Receive personalized attention",
-          "Achieve quick language goals",
-        ],
-        ideal: "Students with time constraints",
+        title: t(
+          "pages.academic.englishPrograms.programs.intensiveEnglish.title"
+        ),
+        duration: t(
+          "pages.academic.englishPrograms.programs.intensiveEnglish.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.intensiveEnglish.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.intensiveEnglish.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t(
+          "pages.academic.englishPrograms.programs.intensiveEnglish.ideal"
+        ),
       },
       {
         id: "conversation-classes",
-        title: "Conversation Classes",
-        duration: "Ongoing",
-        description:
-          "Practical speaking practice in relaxed, social settings. Focus on fluency, natural expressions, and cultural understanding.",
-        outcomes: [
-          "Speak naturally in social situations",
-          "Understand cultural nuances",
-          "Build lasting friendships",
-          "Gain everyday conversation confidence",
-        ],
-        ideal: "Anyone wanting speaking practice",
+        title: t(
+          "pages.academic.englishPrograms.programs.conversationClasses.title"
+        ),
+        duration: t(
+          "pages.academic.englishPrograms.programs.conversationClasses.duration"
+        ),
+        description: t(
+          "pages.academic.englishPrograms.programs.conversationClasses.description"
+        ),
+        outcomes: t(
+          "pages.academic.englishPrograms.programs.conversationClasses.outcomes",
+          { returnObjects: true }
+        ) as string[],
+        ideal: t(
+          "pages.academic.englishPrograms.programs.conversationClasses.ideal"
+        ),
       },
     ],
-    []
+    [t]
   )
 
   const universityPrograms = [
     {
       id: "bachelor",
-      title: "Bachelor's Degree Programs",
-      duration: "4 years",
-      description:
-        "Comprehensive undergraduate programs across multiple disciplines including Arts, Sciences, Engineering, Business, and Medicine.",
-      fields: [
-        "Engineering",
-        "Medicine",
-        "Business Administration",
-        "Computer Science",
-        "Liberal Arts",
-        "Agriculture",
-        "Education",
-      ],
-      requirements: "WASSCE (C6 in 6 subjects) or International Equivalent",
+      title: t("pages.academic.universityPrograms.programs.bachelor.title"),
+      duration: t(
+        "pages.academic.universityPrograms.programs.bachelor.duration"
+      ),
+      description: t(
+        "pages.academic.universityPrograms.programs.bachelor.description"
+      ),
+      fields: t("pages.academic.universityPrograms.programs.bachelor.fields", {
+        returnObjects: true,
+      }) as string[],
+      requirements: t(
+        "pages.academic.universityPrograms.programs.bachelor.requirements"
+      ),
     },
     {
       id: "master",
-      title: "Master's Degree Programs",
-      duration: "1-2 years",
-      description:
-        "Advanced graduate programs for specialized knowledge and research in your chosen field with thesis and coursework options.",
-      fields: [
-        "MBA",
-        "Public Administration",
-        "Engineering",
-        "IT",
-        "Health Sciences",
-        "Development Studies",
-        "Agriculture",
-      ],
-      requirements: "Bachelor's Degree (2nd Class Lower or Better)",
+      title: t("pages.academic.universityPrograms.programs.master.title"),
+      duration: t("pages.academic.universityPrograms.programs.master.duration"),
+      description: t(
+        "pages.academic.universityPrograms.programs.master.description"
+      ),
+      fields: t("pages.academic.universityPrograms.programs.master.fields", {
+        returnObjects: true,
+      }) as string[],
+      requirements: t(
+        "pages.academic.universityPrograms.programs.master.requirements"
+      ),
     },
     {
       id: "phd",
-      title: "PhD & Doctoral Programs",
-      duration: "4-6 years",
-      description:
-        "Research-intensive doctoral programs leading to PhD qualification with original research contribution to your field.",
-      fields: [
-        "Research",
-        "Academia",
-        "Scientific Innovation",
-        "Policy Development",
-        "Advanced Engineering",
-        "Medical Research",
-      ],
-      requirements: "Master's Degree or Exceptional Bachelor's",
+      title: t("pages.academic.universityPrograms.programs.phd.title"),
+      duration: t("pages.academic.universityPrograms.programs.phd.duration"),
+      description: t(
+        "pages.academic.universityPrograms.programs.phd.description"
+      ),
+      fields: t("pages.academic.universityPrograms.programs.phd.fields", {
+        returnObjects: true,
+      }) as string[],
+      requirements: t(
+        "pages.academic.universityPrograms.programs.phd.requirements"
+      ),
     },
     {
       id: "professional",
-      title: "Professional Programs",
-      duration: "1-3 years",
-      description:
-        "Career-focused programs designed for working professionals including executive education and professional certifications.",
-      fields: [
-        "Executive MBA",
-        "Professional Certifications",
-        "Continuing Education",
-        "Leadership Development",
-        "Industry Training",
-      ],
-      requirements: "Work Experience (2+ years) + Relevant Background",
+      title: t("pages.academic.universityPrograms.programs.professional.title"),
+      duration: t(
+        "pages.academic.universityPrograms.programs.professional.duration"
+      ),
+      description: t(
+        "pages.academic.universityPrograms.programs.professional.description"
+      ),
+      fields: t(
+        "pages.academic.universityPrograms.programs.professional.fields",
+        { returnObjects: true }
+      ) as string[],
+      requirements: t(
+        "pages.academic.universityPrograms.programs.professional.requirements"
+      ),
     },
   ]
 
   const technicalPrograms = [
     {
       id: "engineering-tech",
-      title: "Engineering Technology",
-      duration: "2-4 years",
-      description:
-        "Hands-on engineering programs covering mechanical, electrical, civil, and electronic engineering applications.",
-      specializations: [
-        "Mechanical Engineering",
-        "Electrical Engineering",
-        "Civil Engineering",
-        "Electronic Engineering",
-        "Automotive Technology",
-      ],
-      outcome: "Engineering Technician/Technologist",
+      title: t(
+        "pages.academic.technicalPrograms.programs.engineeringTech.title"
+      ),
+      duration: t(
+        "pages.academic.technicalPrograms.programs.engineeringTech.duration"
+      ),
+      description: t(
+        "pages.academic.technicalPrograms.programs.engineeringTech.description"
+      ),
+      specializations: t(
+        "pages.academic.technicalPrograms.programs.engineeringTech.specializations",
+        { returnObjects: true }
+      ) as string[],
+      outcome: t(
+        "pages.academic.technicalPrograms.programs.engineeringTech.outcome"
+      ),
     },
     {
       id: "information-tech",
-      title: "Information Technology",
-      duration: "2-3 years",
-      description:
-        "Modern IT programs covering software development, networking, cybersecurity, and digital systems management.",
-      specializations: [
-        "Software Development",
-        "Network Administration",
-        "Cybersecurity",
-        "Database Management",
-        "Web Development",
-      ],
-      outcome: "IT Specialist/Developer",
+      title: t(
+        "pages.academic.technicalPrograms.programs.informationTech.title"
+      ),
+      duration: t(
+        "pages.academic.technicalPrograms.programs.informationTech.duration"
+      ),
+      description: t(
+        "pages.academic.technicalPrograms.programs.informationTech.description"
+      ),
+      specializations: t(
+        "pages.academic.technicalPrograms.programs.informationTech.specializations",
+        { returnObjects: true }
+      ) as string[],
+      outcome: t(
+        "pages.academic.technicalPrograms.programs.informationTech.outcome"
+      ),
     },
     {
       id: "applied-sciences",
-      title: "Applied Sciences",
-      duration: "2-4 years",
-      description:
-        "Practical science programs with laboratory work and real-world applications in various scientific fields.",
-      specializations: [
-        "Laboratory Technology",
-        "Environmental Science",
-        "Food Science",
-        "Agricultural Technology",
-        "Health Sciences",
-      ],
-      outcome: "Science Technician/Analyst",
+      title: t(
+        "pages.academic.technicalPrograms.programs.appliedSciences.title"
+      ),
+      duration: t(
+        "pages.academic.technicalPrograms.programs.appliedSciences.duration"
+      ),
+      description: t(
+        "pages.academic.technicalPrograms.programs.appliedSciences.description"
+      ),
+      specializations: t(
+        "pages.academic.technicalPrograms.programs.appliedSciences.specializations",
+        { returnObjects: true }
+      ) as string[],
+      outcome: t(
+        "pages.academic.technicalPrograms.programs.appliedSciences.outcome"
+      ),
     },
     {
       id: "business-tech",
-      title: "Business Technology",
-      duration: "2-3 years",
-      description:
-        "Modern business programs integrating technology, entrepreneurship, and practical business skills for the digital economy.",
-      specializations: [
-        "Digital Marketing",
-        "E-commerce",
-        "Business Analytics",
-        "Project Management",
-        "Entrepreneurship",
-      ],
-      outcome: "Business Analyst/Manager",
+      title: t("pages.academic.technicalPrograms.programs.businessTech.title"),
+      duration: t(
+        "pages.academic.technicalPrograms.programs.businessTech.duration"
+      ),
+      description: t(
+        "pages.academic.technicalPrograms.programs.businessTech.description"
+      ),
+      specializations: t(
+        "pages.academic.technicalPrograms.programs.businessTech.specializations",
+        { returnObjects: true }
+      ) as string[],
+      outcome: t(
+        "pages.academic.technicalPrograms.programs.businessTech.outcome"
+      ),
     },
     {
       id: "trades-crafts",
-      title: "Skilled Trades & Crafts",
-      duration: "1-3 years",
-      description:
-        "Traditional and modern trades training for skilled artisans and craftspeople with emphasis on practical skills.",
-      specializations: [
-        "Welding",
-        "Carpentry",
-        "Plumbing",
-        "Electrical Installation",
-        "Construction",
-        "Automotive Repair",
-      ],
-      outcome: "Skilled Tradesperson/Artisan",
+      title: t("pages.academic.technicalPrograms.programs.tradesCrafts.title"),
+      duration: t(
+        "pages.academic.technicalPrograms.programs.tradesCrafts.duration"
+      ),
+      description: t(
+        "pages.academic.technicalPrograms.programs.tradesCrafts.description"
+      ),
+      specializations: t(
+        "pages.academic.technicalPrograms.programs.tradesCrafts.specializations",
+        { returnObjects: true }
+      ) as string[],
+      outcome: t(
+        "pages.academic.technicalPrograms.programs.tradesCrafts.outcome"
+      ),
     },
   ]
 
   const languageSchools = [
     {
-      name: "Ghana Institute of Languages",
-      location: "Accra Central",
-      established: "1961",
-      tagline: "Excellence in English Language Education",
-      description:
-        "Leading institution offering comprehensive English programs for international students and professionals.",
-      specialties: ["ESL", "Business English", "IELTS Prep"],
+      name: t("pages.academic.languageSchools.schools.gil.name"),
+      location: t("pages.academic.languageSchools.schools.gil.location"),
+      established: t("pages.academic.languageSchools.schools.gil.established"),
+      tagline: t("pages.academic.languageSchools.schools.gil.tagline"),
+      description: t("pages.academic.languageSchools.schools.gil.description"),
+      specialties: t("pages.academic.languageSchools.schools.gil.specialties", {
+        returnObjects: true,
+      }) as string[],
       image: "gil-accra.jpg",
-      students: "2,500+",
-      website: "https://gil.edu.gh",
+      website: t("pages.academic.languageSchools.schools.gil.website"),
     },
     {
-      name: "Durra Institute",
-      location: "East Legon, Accra",
-      established: "2010",
-      tagline: "Professional English Excellence",
-      description:
-        "Modern institute specializing in professional and academic English development programs.",
-      specialties: [
-        "Professional English",
-        "Academic English",
-        "Communication",
-      ],
-      image: "durra-east-legon.jpg",
-      students: "1,800+",
-      website: "https://durra.edu.gh",
+      name: t("pages.academic.languageSchools.schools.ace.name"),
+      location: t("pages.academic.languageSchools.schools.ace.location"),
+      established: t("pages.academic.languageSchools.schools.ace.established"),
+      tagline: t("pages.academic.languageSchools.schools.ace.tagline"),
+      description: t("pages.academic.languageSchools.schools.ace.description"),
+      specialties: t("pages.academic.languageSchools.schools.ace.specialties", {
+        returnObjects: true,
+      }) as string[],
+      image: "ace-languages.jpg",
+      website: t("pages.academic.languageSchools.schools.ace.website"),
     },
     {
-      name: "Linguistic Center Ghana",
-      location: "Kumasi",
-      established: "2005",
-      tagline: "Intensive Language Training Hub",
-      description:
-        "Dedicated to rapid English improvement through intensive and conversation-focused programs.",
-      specialties: ["Intensive English", "Conversation", "ESL"],
-      image: "linguistic-kumasi.jpg",
-      students: "1,200+",
-      website: "https://linguistic.edu.gh",
+      name: t("pages.academic.languageSchools.schools.celps.name"),
+      location: t("pages.academic.languageSchools.schools.celps.location"),
+      established: t(
+        "pages.academic.languageSchools.schools.celps.established"
+      ),
+      tagline: t("pages.academic.languageSchools.schools.celps.tagline"),
+      description: t(
+        "pages.academic.languageSchools.schools.celps.description"
+      ),
+      specialties: t(
+        "pages.academic.languageSchools.schools.celps.specialties",
+        { returnObjects: true }
+      ) as string[],
+      image: "celps.jpg",
+      website: t("pages.academic.languageSchools.schools.celps.website"),
     },
     {
-      name: "International Language Academy",
-      location: "Cape Coast",
-      established: "2008",
-      tagline: "Global Standards, Local Excellence",
-      description:
-        "International-standard English programs preparing students for global opportunities.",
-      specialties: ["Academic English", "IELTS", "Professional"],
-      image: "ila-cape-coast.jpg",
-      students: "900+",
-      website: "https://ila.edu.gh",
+      name: t("pages.academic.languageSchools.schools.hopeLife.name"),
+      location: t("pages.academic.languageSchools.schools.hopeLife.location"),
+      established: t(
+        "pages.academic.languageSchools.schools.hopeLife.established"
+      ),
+      tagline: t("pages.academic.languageSchools.schools.hopeLife.tagline"),
+      description: t(
+        "pages.academic.languageSchools.schools.hopeLife.description"
+      ),
+      specialties: t(
+        "pages.academic.languageSchools.schools.hopeLife.specialties",
+        { returnObjects: true }
+      ) as string[],
+      image: "hope-life.jpg",
+      website: t("pages.academic.languageSchools.schools.hopeLife.website"),
     },
     {
-      name: "Elite English Center",
-      location: "Tamale",
-      established: "2012",
-      tagline: "Premium English Education",
-      description:
-        "Elite training center focused on business communication and professional development.",
-      specialties: ["Business English", "ESL", "Communication"],
-      image: "elite-tamale.jpg",
-      students: "750+",
-      website: "https://elite.edu.gh",
+      name: t("pages.academic.languageSchools.schools.goethe.name"),
+      location: t("pages.academic.languageSchools.schools.goethe.location"),
+      established: t(
+        "pages.academic.languageSchools.schools.goethe.established"
+      ),
+      tagline: t("pages.academic.languageSchools.schools.goethe.tagline"),
+      description: t(
+        "pages.academic.languageSchools.schools.goethe.description"
+      ),
+      specialties: t(
+        "pages.academic.languageSchools.schools.goethe.specialties",
+        { returnObjects: true }
+      ) as string[],
+      image: "goethe-institut.jpg",
+      website: t("pages.academic.languageSchools.schools.goethe.website"),
     },
     {
-      name: "Modern Language Institute",
-      location: "Ho, Volta Region",
-      established: "2015",
-      tagline: "Contemporary Language Solutions",
-      description:
-        "Modern approach to English learning with innovative teaching methodologies and techniques.",
-      specialties: ["Conversation", "Academic", "Intensive"],
-      image: "mli-ho.jpg",
-      students: "650+",
-      website: "https://mli.edu.gh",
+      name: t("pages.academic.languageSchools.schools.durra.name"),
+      location: t("pages.academic.languageSchools.schools.durra.location"),
+      established: t(
+        "pages.academic.languageSchools.schools.durra.established"
+      ),
+      tagline: t("pages.academic.languageSchools.schools.durra.tagline"),
+      description: t(
+        "pages.academic.languageSchools.schools.durra.description"
+      ),
+      specialties: t(
+        "pages.academic.languageSchools.schools.durra.specialties",
+        { returnObjects: true }
+      ) as string[],
+      image: "durra-institute.jpg",
+      website: t("pages.academic.languageSchools.schools.durra.website"),
     },
   ]
 
   const Universities = [
     {
-      name: "University of Ghana",
-      type: "Public Research University",
-      location: "Legon, Accra",
-      established: "1948",
-      programs: ["Bachelor's", "Master's", "PhD"],
+      name: t("pages.academic.universities.institutions.ug.name"),
+      type: t("pages.academic.universities.institutions.ug.type"),
+      location: t("pages.academic.universities.institutions.ug.location"),
+      established: t("pages.academic.universities.institutions.ug.established"),
+      programs: t("pages.academic.universities.institutions.ug.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "university-of-ghana.jpg",
-      ranking: "#1 in Ghana",
-      students: "38,000+",
+      ranking: t("pages.academic.universities.institutions.ug.ranking"),
+      students: t("pages.academic.universities.institutions.ug.students"),
     },
     {
-      name: "Kwame Nkrumah University of Science and Technology",
-      type: "Public Technical University",
-      location: "Kumasi",
-      established: "1952",
-      programs: ["Engineering", "Medicine", "Technology", "Sciences"],
+      name: t("pages.academic.universities.institutions.knust.name"),
+      type: t("pages.academic.universities.institutions.knust.type"),
+      location: t("pages.academic.universities.institutions.knust.location"),
+      established: t(
+        "pages.academic.universities.institutions.knust.established"
+      ),
+      programs: t("pages.academic.universities.institutions.knust.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "knust-university.jpg",
-      ranking: "#2 in Ghana",
-      students: "35,000+",
+      ranking: t("pages.academic.universities.institutions.knust.ranking"),
+      students: t("pages.academic.universities.institutions.knust.students"),
     },
     {
-      name: "Ghana Institute of Management & Public Administration",
-      type: "Public Management University",
-      location: "Accra",
-      established: "1961",
-      programs: ["Business", "Public Administration", "Management"],
+      name: t("pages.academic.universities.institutions.gimpa.name"),
+      type: t("pages.academic.universities.institutions.gimpa.type"),
+      location: t("pages.academic.universities.institutions.gimpa.location"),
+      established: t(
+        "pages.academic.universities.institutions.gimpa.established"
+      ),
+      programs: t("pages.academic.universities.institutions.gimpa.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "gimpa-university.jpg",
-      ranking: "Top Business School",
-      students: "15,000+",
+      ranking: t("pages.academic.universities.institutions.gimpa.ranking"),
+      students: t("pages.academic.universities.institutions.gimpa.students"),
     },
     {
-      name: "Ashesi University",
-      type: "Private Liberal Arts University",
-      location: "Berekuso",
-      established: "2002",
-      programs: ["Computer Science", "Engineering", "Business", "Liberal Arts"],
+      name: t("pages.academic.universities.institutions.ashesi.name"),
+      type: t("pages.academic.universities.institutions.ashesi.type"),
+      location: t("pages.academic.universities.institutions.ashesi.location"),
+      established: t(
+        "pages.academic.universities.institutions.ashesi.established"
+      ),
+      programs: t("pages.academic.universities.institutions.ashesi.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "ashesi-university.jpg",
-      ranking: "Top Private University",
-      students: "1,500+",
+      ranking: t("pages.academic.universities.institutions.ashesi.ranking"),
+      students: t("pages.academic.universities.institutions.ashesi.students"),
     },
     {
-      name: "University of Cape Coast",
-      type: "Public University",
-      location: "Cape Coast",
-      established: "1962",
-      programs: ["Education", "Arts", "Sciences", "Business"],
+      name: t("pages.academic.universities.institutions.ucc.name"),
+      type: t("pages.academic.universities.institutions.ucc.type"),
+      location: t("pages.academic.universities.institutions.ucc.location"),
+      established: t(
+        "pages.academic.universities.institutions.ucc.established"
+      ),
+      programs: t("pages.academic.universities.institutions.ucc.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "ucc-university.jpg",
-      ranking: "#3 in Ghana",
-      students: "25,000+",
+      ranking: t("pages.academic.universities.institutions.ucc.ranking"),
+      students: t("pages.academic.universities.institutions.ucc.students"),
     },
     {
-      name: "Accra Institute of Technology",
-      type: "Private Technical University",
-      location: "Accra",
-      established: "1998",
-      programs: ["IT", "Engineering", "Business Technology"],
+      name: t("pages.academic.universities.institutions.ait.name"),
+      type: t("pages.academic.universities.institutions.ait.type"),
+      location: t("pages.academic.universities.institutions.ait.location"),
+      established: t(
+        "pages.academic.universities.institutions.ait.established"
+      ),
+      programs: t("pages.academic.universities.institutions.ait.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "ait-university.jpg",
-      ranking: "Leading IT University",
-      students: "8,000+",
+      ranking: t("pages.academic.universities.institutions.ait.ranking"),
+      students: t("pages.academic.universities.institutions.ait.students"),
     },
     {
-      name: "Central University",
-      type: "Private University",
-      location: "Tema",
-      established: "1988",
-      programs: ["Business", "Theology", "IT", "Liberal Arts"],
+      name: t("pages.academic.universities.institutions.central.name"),
+      type: t("pages.academic.universities.institutions.central.type"),
+      location: t("pages.academic.universities.institutions.central.location"),
+      established: t(
+        "pages.academic.universities.institutions.central.established"
+      ),
+      programs: t("pages.academic.universities.institutions.central.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "central-university.jpg",
-      ranking: "Top Private",
-      students: "12,000+",
+      ranking: t("pages.academic.universities.institutions.central.ranking"),
+      students: t("pages.academic.universities.institutions.central.students"),
     },
     {
-      name: "Presbyterian University College",
-      type: "Private Religious University",
-      location: "Abetifi",
-      established: "1996",
-      programs: ["Agriculture", "Business", "Development Studies"],
+      name: t("pages.academic.universities.institutions.puc.name"),
+      type: t("pages.academic.universities.institutions.puc.type"),
+      location: t("pages.academic.universities.institutions.puc.location"),
+      established: t(
+        "pages.academic.universities.institutions.puc.established"
+      ),
+      programs: t("pages.academic.universities.institutions.puc.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "puc-university.jpg",
-      ranking: "Top Agricultural",
-      students: "6,500+",
+      ranking: t("pages.academic.universities.institutions.puc.ranking"),
+      students: t("pages.academic.universities.institutions.puc.students"),
     },
   ]
 
   const TechnicalSchools = [
     {
-      name: "Asuansi Technical Institute",
-      type: "Oldest Technical School (Since 1917)",
-      location: "Asuansi",
-      established: "1917",
-      programs: [
-        "Mechanical Engineering",
-        "Electrical Engineering",
-        "Construction",
-      ],
-      image: "asuansi-technical.jpg",
-      achievement: "Historic Institution",
-      students: "3,500+",
-    },
-    {
-      name: "Keta Secondary Technical School (KETASCO)",
-      type: "Award-Winning Technical School",
-      location: "Keta",
-      established: "1975",
-      programs: ["Science & Math", "Technical Sciences", "Applied Engineering"],
-      achievement: "2024 National Science & Math Quiz Finalist",
-      image: "ketasco-technical.jpg",
-      students: "2,800+",
-    },
-    {
-      name: "Accra Technical University",
-      type: "Technical University",
-      location: "Accra",
-      established: "1949",
-      programs: [
-        "Engineering Technology",
-        "Applied Sciences",
-        "Business Technology",
-      ],
+      name: t("pages.academic.technicalSchools.institutions.atu.name"),
+      type: t("pages.academic.technicalSchools.institutions.atu.type"),
+      location: t("pages.academic.technicalSchools.institutions.atu.location"),
+      established: t(
+        "pages.academic.technicalSchools.institutions.atu.established"
+      ),
+      programs: t("pages.academic.technicalSchools.institutions.atu.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "accra-technical-university.jpg",
-      achievement: "Modern Facilities",
-      students: "12,000+",
+      achievement: t(
+        "pages.academic.technicalSchools.institutions.atu.achievement"
+      ),
+      students: t("pages.academic.technicalSchools.institutions.atu.students"),
     },
     {
-      name: "Kumasi Technical Institute",
-      type: "Government Technical Institute",
-      location: "Kumasi",
-      established: "1954",
-      programs: ["Automotive", "Welding", "Electronics", "Construction"],
+      name: t("pages.academic.technicalSchools.institutions.kti.name"),
+      type: t("pages.academic.technicalSchools.institutions.kti.type"),
+      location: t("pages.academic.technicalSchools.institutions.kti.location"),
+      established: t(
+        "pages.academic.technicalSchools.institutions.kti.established"
+      ),
+      programs: t("pages.academic.technicalSchools.institutions.kti.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "kumasi-technical.jpg",
-      achievement: "Industry Partnership",
-      students: "4,200+",
+      achievement: t(
+        "pages.academic.technicalSchools.institutions.kti.achievement"
+      ),
+      students: t("pages.academic.technicalSchools.institutions.kti.students"),
     },
     {
-      name: "Tema Technical Institute",
-      type: "Industrial Technical School",
-      location: "Tema",
-      established: "1968",
-      programs: ["Marine Engineering", "Port Operations", "Logistics"],
-      image: "tema-technical.jpg",
-      achievement: "Maritime Excellence",
-      students: "2,500+",
-    },
-    {
-      name: "Takoradi Technical University",
-      type: "Technical University",
-      location: "Takoradi",
-      established: "1954",
-      programs: ["Petroleum Engineering", "Mining", "Marine Technology"],
+      name: t("pages.academic.technicalSchools.institutions.ttu.name"),
+      type: t("pages.academic.technicalSchools.institutions.ttu.type"),
+      location: t("pages.academic.technicalSchools.institutions.ttu.location"),
+      established: t(
+        "pages.academic.technicalSchools.institutions.ttu.established"
+      ),
+      programs: t("pages.academic.technicalSchools.institutions.ttu.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "ttu-technical.jpg",
-      achievement: "Oil & Gas Focus",
-      students: "8,500+",
+      achievement: t(
+        "pages.academic.technicalSchools.institutions.ttu.achievement"
+      ),
+      students: t("pages.academic.technicalSchools.institutions.ttu.students"),
     },
     {
-      name: "Bolgatanga Technical University",
-      type: "Regional Technical University",
-      location: "Bolgatanga",
-      established: "1999",
-      programs: ["Agriculture Technology", "ICT", "Applied Sciences"],
+      name: t("pages.academic.technicalSchools.institutions.btu.name"),
+      type: t("pages.academic.technicalSchools.institutions.btu.type"),
+      location: t("pages.academic.technicalSchools.institutions.btu.location"),
+      established: t(
+        "pages.academic.technicalSchools.institutions.btu.established"
+      ),
+      programs: t("pages.academic.technicalSchools.institutions.btu.programs", {
+        returnObjects: true,
+      }) as string[],
       image: "btu-technical.jpg",
-      achievement: "Agricultural Innovation",
-      students: "5,000+",
+      achievement: t(
+        "pages.academic.technicalSchools.institutions.btu.achievement"
+      ),
+      students: t("pages.academic.technicalSchools.institutions.btu.students"),
     },
   ]
 
   const process = [
     {
-      step: "1",
-      title: "Educational Assessment",
-      description:
-        "We evaluate your academic background, qualifications, and career goals to recommend the perfect educational pathway in Ghana.",
+      step: t("pages.academic.process.steps.assessment.step"),
+      title: t("pages.academic.process.steps.assessment.title"),
+      description: t("pages.academic.process.steps.assessment.description"),
       icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
-      features: [
-        "Academic transcript evaluation",
-        "Career pathway consultation",
-      ],
+      features: t("pages.academic.process.steps.assessment.features", {
+        returnObjects: true,
+      }) as string[],
       image: "academic-assessment.jpg",
     },
     {
-      step: "2",
-      title: "Institution Selection",
-      description:
-        "Based on your assessment, we help you choose from Ghana's top universities, language schools, or technical institutes that match your goals.",
+      step: t("pages.academic.process.steps.selection.step"),
+      title: t("pages.academic.process.steps.selection.title"),
+      description: t("pages.academic.process.steps.selection.description"),
       icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
-      features: [
-        "Institution ranking & comparison",
-        "Program requirements matching",
-      ],
+      features: t("pages.academic.process.steps.selection.features", {
+        returnObjects: true,
+      }) as string[],
       image: "institution-selection.jpg",
     },
     {
-      step: "3",
-      title: "Application Submission",
-      description:
-        "We prepare and submit your complete application package, including all required academic documents, transcripts, and application forms.",
+      step: t("pages.academic.process.steps.application.step"),
+      title: t("pages.academic.process.steps.application.title"),
+      description: t("pages.academic.process.steps.application.description"),
       icon: "M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
-      features: [
-        "Document preparation & review",
-        "Application submission tracking",
-      ],
+      features: t("pages.academic.process.steps.application.features", {
+        returnObjects: true,
+      }) as string[],
       image: "application-submission.jpg",
     },
     {
-      step: "4",
-      title: "Enrollment Completion",
-      description:
-        "Once accepted, we finalize your enrollment, secure your student placement, and ensure all academic requirements are confirmed.",
+      step: t("pages.academic.process.steps.enrollment.step"),
+      title: t("pages.academic.process.steps.enrollment.title"),
+      description: t("pages.academic.process.steps.enrollment.description"),
       icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-      features: ["Admission confirmation", "Registration & orientation"],
+      features: t("pages.academic.process.steps.enrollment.features", {
+        returnObjects: true,
+      }) as string[],
       image: "enrollment-completion.jpg",
     },
   ]
@@ -568,14 +637,14 @@ export default function AcademicServicePage() {
   return (
     <section id="academic" className="scroll-mt-32">
       <Hero
-        title="Academic Services"
-        subtitle="English language programs, university admission, and technical education to help you achieve your academic goals in Ghana."
+        title={t("pages.academic.title")}
+        subtitle={t("pages.academic.subtitle")}
       />
       {/* Our Academic Support Process */}
       <ProcessStep
         process={process}
-        title="Our Academic Support Process"
-        imageBasePath="/academic"
+        title={t("pages.academic.process.title")}
+        imageBasePath="/academic/process"
       />
 
       <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
@@ -585,9 +654,8 @@ export default function AcademicServicePage() {
         </RevealOnScroll>
         <ServiceGallery
           items={englishPrograms}
-          title="English Programs"
-          subtitle="Choose from our comprehensive range of English language courses"
-          imageBasePath="/academic"
+          title={t("pages.academic.englishPrograms.title")}
+          subtitle={t("pages.academic.englishPrograms.subtitle")}
           color="emerald"
           layout="side-by-side"
         />
@@ -597,9 +665,9 @@ export default function AcademicServicePage() {
           <div className="mb-20 mt-16">
             <ProviderCard
               providers={languageSchools}
-              title="Language Schools in Ghana"
-              subtitle="Explore trusted institutions across Ghana"
-              imageBasePath="/academic"
+              title={t("pages.academic.languageSchools.title")}
+              subtitle={t("pages.academic.languageSchools.subtitle")}
+              imageBasePath="/academic/language-schools"
             />
           </div>
         </RevealOnScroll>
@@ -609,17 +677,16 @@ export default function AcademicServicePage() {
           <div className="mb-20">
             <ServiceGallery
               items={universityPrograms}
-              title="University Programs"
-              subtitle="From undergraduate to doctoral levels across all disciplines"
-              imageBasePath="/academic"
+              title={t("pages.academic.universityPrograms.title")}
+              subtitle={t("pages.academic.universityPrograms.subtitle")}
               color="blue"
               layout="side-by-side"
             />
             <ProviderCard
               providers={Universities}
-              title="Universities in Ghana"
-              subtitle="Explore leading institutions offering world-class higher education"
-              imageBasePath="/academic"
+              title={t("pages.academic.universities.title")}
+              subtitle={t("pages.academic.universities.subtitle")}
+              imageBasePath="/academic/universities"
             />
           </div>
         </RevealOnScroll>
@@ -629,17 +696,16 @@ export default function AcademicServicePage() {
           <div className="mb-20">
             <ServiceGallery
               items={technicalPrograms}
-              title="Technical Programs"
-              subtitle="Industry-focused training from basic trades to advanced technology"
-              imageBasePath="/academic"
+              title={t("pages.academic.technicalPrograms.title")}
+              subtitle={t("pages.academic.technicalPrograms.subtitle")}
               color="purple"
               layout="side-by-side"
             />
             <ProviderCard
               providers={TechnicalSchools}
-              title="Technical Schools in Ghana"
-              subtitle="Industry-focused institutions preparing skilled professionals"
-              imageBasePath="/academic"
+              title={t("pages.academic.technicalSchools.title")}
+              subtitle={t("pages.academic.technicalSchools.subtitle")}
+              imageBasePath="/academic/technical-schools"
             />
           </div>
         </RevealOnScroll>
@@ -650,25 +716,23 @@ export default function AcademicServicePage() {
         <RevealOnScroll delay={0.8}>
           <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl border border-emerald-100 p-8 text-center">
             <h3 className="text-2xl font-bold text-[#0D1623] mb-4">
-              Ready to Start Your Academic Journey in Ghana?
+              {t("pages.academic.cta.title")}
             </h3>
             <p className="text-[#5F6B7A] mb-8 max-w-2xl mx-auto">
-              From language learning to advanced degrees, we will guide you
-              through every step of the process. Get personalized advice and
-              start your application today.
+              {t("pages.academic.cta.subtitle")}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >
-                Get Free Consultation
+                {t("pages.academic.cta.consultationButton")}
               </Link>
               <Link
                 href="/#how-to-apply"
                 className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >
-                Start Application
+                {t("pages.academic.cta.applicationButton")}
               </Link>
             </div>
           </div>

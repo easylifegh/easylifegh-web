@@ -102,7 +102,7 @@ export default function ProviderCard({
               transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
               className="rounded-3xl overflow-hidden min-h-[500px] flex flex-col lg:flex-row"
             >
-              <div className="flex-1 relative">
+              <div className="relative h-96 sm:h-[32rem] md:h-[36rem] lg:flex-1 lg:h-auto">
                 <Image
                   src={`${imageBasePath}/${providers[currentIndex].image}`}
                   alt={`${providers[currentIndex].name} facility`}

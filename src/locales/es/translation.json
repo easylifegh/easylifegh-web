@@ -312,7 +312,510 @@
     },
     "academic": {
       "title": "Servicios académicos",
-      "subtitle": "Registro completo en escuelas de idiomas y apoyo de colocación universitaria."
+      "subtitle": "Programas de idioma inglés, admisión universitaria y educación técnica para ayudarte a alcanzar tus objetivos académicos en Ghana.",
+      "process": {
+        "title": "Nuestro proceso de apoyo académico",
+        "steps": {
+          "assessment": {
+            "step": "1",
+            "title": "Evaluación educativa",
+            "description": "Evaluamos tu formación académica, calificaciones y objetivos profesionales para recomendar el camino educativo perfecto en Ghana.",
+            "features": [
+              "Evaluación de expedientes académicos",
+              "Consulta de trayectoria profesional"
+            ]
+          },
+          "selection": {
+            "step": "2",
+            "title": "Selección de institución",
+            "description": "Basado en tu evaluación, te ayudamos a elegir entre las mejores universidades, escuelas de idiomas o institutos técnicos de Ghana que coincidan con tus objetivos.",
+            "features": [
+              "Ranking y comparación de instituciones",
+              "Coincidencia de requisitos de programa"
+            ]
+          },
+          "application": {
+            "step": "3",
+            "title": "Envío de solicitud",
+            "description": "Preparamos y enviamos tu paquete completo de solicitud, incluyendo todos los documentos académicos requeridos, expedientes y formularios de solicitud.",
+            "features": [
+              "Preparación y revisión de documentos",
+              "Seguimiento de envío de solicitud"
+            ]
+          },
+          "enrollment": {
+            "step": "4",
+            "title": "Finalización de inscripción",
+            "description": "Una vez aceptado, finalizamos tu inscripción, aseguramos tu colocación estudiantil y nos aseguramos de que todos los requisitos académicos estén confirmados.",
+            "features": ["Confirmación de admisión", "Registro y orientación"]
+          }
+        }
+      },
+      "englishPrograms": {
+        "title": "Programas de inglés",
+        "subtitle": "Elige entre nuestra gama completa de cursos de idioma inglés",
+        "programs": {
+          "esl": {
+            "title": "Inglés como segundo idioma (ESL)",
+            "duration": "3-12 meses",
+            "description": "Programa integral de fundamentos de inglés diseñado para hablantes no nativos. Cubre gramática básica a avanzada, vocabulario, pronunciación y habilidades de conversación en un entorno inmersivo de habla inglesa.",
+            "outcomes": [
+              "Hablar inglés con confianza en situaciones diarias",
+              "Entender y usar estructuras gramaticales apropiadas",
+              "Construir vocabulario para uso personal y profesional",
+              "Obtener comprensión cultural de contextos de habla inglesa"
+            ],
+            "ideal": "Estudiantes de inglés principiantes a intermedios"
+          },
+          "businessEnglish": {
+            "title": "Inglés de negocios",
+            "duration": "2-6 meses",
+            "description": "Comunicación profesional en inglés para el lugar de trabajo. Enfoque en terminología comercial, presentaciones, reuniones, negociaciones y comunicación por email.",
+            "outcomes": [
+              "Liderar presentaciones comerciales con confianza",
+              "Participar efectivamente en reuniones profesionales",
+              "Escribir emails y reportes comerciales convincentes",
+              "Negociar exitosamente en inglés"
+            ],
+            "ideal": "Profesionales activos y empresarios"
+          },
+          "academicEnglish": {
+            "title": "Inglés académico",
+            "duration": "3-9 meses",
+            "description": "Preparación para inglés de nivel universitario. Escritura académica, habilidades de investigación, pensamiento crítico y requisitos de ingreso universitario.",
+            "outcomes": [
+              "Escribir efectivamente artículos de investigación y ensayos",
+              "Desarrollar pensamiento crítico y habilidades de análisis",
+              "Dominar técnicas de presentación académica",
+              "Cumplir requisitos de inglés universitario"
+            ],
+            "ideal": "Futuros estudiantes universitarios"
+          },
+          "professionalEnglish": {
+            "title": "Inglés profesional",
+            "duration": "2-8 meses",
+            "description": "Inglés especializado para profesiones específicas incluyendo salud, ingeniería, derecho y sectores tecnológicos.",
+            "outcomes": [
+              "Usar terminología técnica con confianza",
+              "Crear documentos industriales profesionales",
+              "Comunicar ideas complejas claramente",
+              "Avanzar en tu campo elegido"
+            ],
+            "ideal": "Profesionales de carrera buscando avance"
+          },
+          "ieltsPrep": {
+            "title": "Preparación IELTS",
+            "duration": "1-6 meses",
+            "description": "Preparación intensiva para el Sistema Internacional de Evaluación de Idioma Inglés. Enfoque en las cuatro habilidades: escucha, lectura, escritura y habla.",
+            "outcomes": [
+              "Lograr puntaje objetivo de banda IELTS",
+              "Dominar las cuatro habilidades del idioma",
+              "Usar estrategias efectivas para tomar exámenes",
+              "Ganar confianza para el día del examen"
+            ],
+            "ideal": "Estudiantes planeando estudiar en el extranjero"
+          },
+          "communicationSkills": {
+            "title": "Habilidades de comunicación",
+            "duration": "2-4 meses",
+            "description": "Comunicación verbal y no verbal mejorada, hablar en público, habilidades de presentación y comunicación interpersonal.",
+            "outcomes": [
+              "Hablar con confianza a cualquier audiencia",
+              "Dominar la comunicación no verbal",
+              "Construir relaciones interpersonales sólidas",
+              "Liderar con excelencia en comunicación"
+            ],
+            "ideal": "Líderes y oradores públicos"
+          },
+          "intensiveEnglish": {
+            "title": "Inglés intensivo",
+            "duration": "1-3 meses",
+            "description": "Mejora acelerada del inglés con sesiones intensivas diarias. Aprendizaje acelerado para adquisición rápida del idioma.",
+            "outcomes": [
+              "Ver mejora rápida en semanas",
+              "Obtener práctica intensiva diaria",
+              "Recibir atención personalizada",
+              "Lograr objetivos lingüísticos rápidos"
+            ],
+            "ideal": "Estudiantes con limitaciones de tiempo"
+          },
+          "conversationClasses": {
+            "title": "Clases de conversación",
+            "duration": "Continuo",
+            "description": "Práctica de conversación práctica en entornos relajados y sociales. Enfoque en fluidez, expresiones naturales y comprensión cultural.",
+            "outcomes": [
+              "Hablar naturalmente en situaciones sociales",
+              "Entender matices culturales",
+              "Construir amistades duraderas",
+              "Ganar confianza en conversación cotidiana"
+            ],
+            "ideal": "Cualquiera que quiera practicar conversación"
+          }
+        }
+      },
+      "languageSchools": {
+        "title": "Escuelas de idiomas en Ghana",
+        "subtitle": "Explora instituciones de confianza en todo Ghana",
+        "schools": {
+          "ghanaInstituteLanguages": {
+            "name": "Instituto Ghanés de Idiomas",
+            "location": "Dzorwulu, Accra",
+            "established": "1961",
+            "tagline": "Excelencia multilingüe durante seis décadas",
+            "description": "Institución líder que ofrece cursos de inglés, francés, alemán y español con énfasis en inmersión cultural.",
+            "specialties": [
+              "Francés",
+              "Inglés comercial",
+              "Cursos multilingües"
+            ],
+            "website": "https://gil.edu.gh/"
+          },
+          "aceSchoolLanguages": {
+            "name": "Escuela ACE de Idiomas",
+            "location": "Osu, Accra",
+            "established": "2005",
+            "tagline": "Excelencia académica en educación lingüística",
+            "description": "Formación lingüística moderna especializada en francés e inglés con enfoques pedagógicos innovadores.",
+            "specialties": [
+              "Francés intensivo",
+              "Inglés comercial",
+              "Preparación de exámenes"
+            ],
+            "website": "https://aceschooloflanguages.com/"
+          },
+          "celps": {
+            "name": "CELPS (Centro de Aprendizaje de Inglés y Programas de Estudio)",
+            "location": "Ridge, Accra",
+            "established": "1998",
+            "tagline": "Tu puerta hacia la maestría lingüística",
+            "description": "Centro de formación lingüística reconocido que ofrece programas de inglés y francés para estudiantes y profesionales.",
+            "specialties": [
+              "Francés comercial",
+              "Inglés académico",
+              "Formación profesional"
+            ],
+            "website": "https://celpsghana.com/"
+          },
+          "hopeLifeInstitute": {
+            "name": "Instituto Hope Life",
+            "location": "Tema",
+            "established": "2010",
+            "tagline": "Transformando vidas a través de la educación lingüística",
+            "description": "Instituto dedicado a la enseñanza de francés e inglés con enfoque en desarrollo personal y profesional.",
+            "specialties": [
+              "Francés principiante-avanzado",
+              "Desarrollo profesional",
+              "Clases nocturnas"
+            ],
+            "website": "https://hopelifeinstitute.com/"
+          },
+          "goetheInstitut": {
+            "name": "Goethe-Institut Ghana",
+            "location": "Ridge, Accra",
+            "established": "1962",
+            "tagline": "Idioma y cultura alemanes",
+            "description": "Instituto cultural alemán oficial que promueve el idioma alemán y los intercambios culturales, también ofreciendo cursos de francés.",
+            "specialties": [
+              "Idioma alemán",
+              "Programas culturales",
+              "Francés como lengua extranjera"
+            ],
+            "website": "https://goethe.de/ghana"
+          },
+          "durraInstitute": {
+            "name": "Instituto Durra",
+            "location": "East Legon, Accra",
+            "established": "2010",
+            "tagline": "Excelencia en idiomas y desarrollo profesional",
+            "description": "Instituto moderno que ofrece cursos de francés e inglés comercial con enfoque en desarrollo profesional.",
+            "specialties": [
+              "Francés comercial",
+              "Desarrollo profesional",
+              "Formación continua"
+            ],
+            "website": "https://www.durragh.com/"
+          }
+        }
+      },
+      "universityPrograms": {
+        "title": "Programas universitarios",
+        "subtitle": "Desde pregrado hasta doctorado en todas las disciplinas",
+        "programs": {
+          "bachelor": {
+            "title": "Programas de licenciatura",
+            "duration": "4 años",
+            "description": "Programas integrales de pregrado en múltiples disciplinas incluyendo Artes, Ciencias, Ingeniería, Negocios y Medicina.",
+            "fields": [
+              "Ingeniería",
+              "Medicina",
+              "Administración de empresas",
+              "Ciencias de la computación",
+              "Artes liberales",
+              "Agricultura",
+              "Educación"
+            ],
+            "requirements": "WASSCE (C6 en 6 materias) o equivalente internacional"
+          },
+          "master": {
+            "title": "Programas de maestría",
+            "duration": "1-2 años",
+            "description": "Programas avanzados de posgrado para conocimiento especializado e investigación en tu campo elegido con opciones de tesis y cursos.",
+            "fields": [
+              "MBA",
+              "Administración pública",
+              "Ingeniería",
+              "TI",
+              "Ciencias de la salud",
+              "Estudios de desarrollo",
+              "Agricultura"
+            ],
+            "requirements": "Licenciatura (2ª clase inferior o mejor)"
+          },
+          "phd": {
+            "title": "Programas de PhD y doctorado",
+            "duration": "4-6 años",
+            "description": "Programas doctorales intensivos en investigación que llevan a calificación PhD con contribución de investigación original a tu campo.",
+            "fields": [
+              "Investigación",
+              "Academia",
+              "Innovación científica",
+              "Desarrollo de políticas",
+              "Ingeniería avanzada",
+              "Investigación médica"
+            ],
+            "requirements": "Maestría o licenciatura excepcional"
+          },
+          "professional": {
+            "title": "Programas profesionales",
+            "duration": "1-3 años",
+            "description": "Programas enfocados en carrera diseñados para profesionales activos incluyendo educación ejecutiva y certificaciones profesionales.",
+            "fields": [
+              "MBA ejecutivo",
+              "Certificaciones profesionales",
+              "Educación continua",
+              "Desarrollo de liderazgo",
+              "Entrenamiento industrial"
+            ],
+            "requirements": "Experiencia laboral (2+ años) + antecedentes relevantes"
+          }
+        }
+      },
+      "universities": {
+        "title": "Universidades en Ghana",
+        "subtitle": "Explora instituciones líderes que ofrecen educación superior de clase mundial",
+        "institutions": {
+          "ug": {
+            "name": "Universidad de Ghana",
+            "type": "Universidad pública de investigación",
+            "location": "Legon, Accra",
+            "established": "1948",
+            "programs": ["Licenciatura", "Maestría", "PhD"],
+            "ranking": "#1 en Ghana",
+            "students": "38,000+"
+          },
+          "knust": {
+            "name": "Universidad de Ciencia y Tecnología Kwame Nkrumah",
+            "type": "Universidad técnica pública",
+            "location": "Kumasi",
+            "established": "1952",
+            "programs": ["Ingeniería", "Medicina", "Tecnología", "Ciencias"],
+            "ranking": "#2 en Ghana",
+            "students": "35,000+"
+          },
+          "gimpa": {
+            "name": "Instituto Ghanés de Gestión y Administración Pública",
+            "type": "Universidad pública de gestión",
+            "location": "Accra",
+            "established": "1961",
+            "programs": ["Negocios", "Administración pública", "Gestión"],
+            "ranking": "Escuela de negocios líder",
+            "students": "15,000+"
+          },
+          "ashesi": {
+            "name": "Universidad Ashesi",
+            "type": "Universidad privada de artes liberales",
+            "location": "Berekuso",
+            "established": "2002",
+            "programs": [
+              "Ciencias de la computación",
+              "Ingeniería",
+              "Negocios",
+              "Artes liberales"
+            ],
+            "ranking": "Universidad privada líder",
+            "students": "1,500+"
+          },
+          "ucc": {
+            "name": "Universidad de Cape Coast",
+            "type": "Universidad pública",
+            "location": "Cape Coast",
+            "established": "1962",
+            "programs": ["Educación", "Artes", "Ciencias", "Negocios"],
+            "ranking": "#3 en Ghana",
+            "students": "25,000+"
+          },
+          "ait": {
+            "name": "Instituto de Tecnología de Accra",
+            "type": "Universidad técnica privada",
+            "location": "Accra",
+            "established": "1998",
+            "programs": ["TI", "Ingeniería", "Tecnología de negocios"],
+            "ranking": "Universidad TI líder",
+            "students": "8,000+"
+          },
+          "central": {
+            "name": "Universidad Central",
+            "type": "Universidad privada",
+            "location": "Tema",
+            "established": "1988",
+            "programs": ["Negocios", "Teología", "TI", "Artes liberales"],
+            "ranking": "Privada líder",
+            "students": "12,000+"
+          },
+          "puc": {
+            "name": "Colegio Universitario Presbiteriano",
+            "type": "Universidad religiosa privada",
+            "location": "Abetifi",
+            "established": "1996",
+            "programs": ["Agricultura", "Negocios", "Estudios de desarrollo"],
+            "ranking": "Agricultura líder",
+            "students": "6,500+"
+          }
+        }
+      },
+      "technicalPrograms": {
+        "title": "Programas técnicos",
+        "subtitle": "Entrenamiento enfocado en la industria desde oficios básicos hasta tecnología avanzada",
+        "programs": {
+          "engineeringTech": {
+            "title": "Tecnología de ingeniería",
+            "duration": "2-4 años",
+            "description": "Programas prácticos de ingeniería cubriendo aplicaciones de ingeniería mecánica, eléctrica, civil y electrónica.",
+            "specializations": [
+              "Ingeniería mecánica",
+              "Ingeniería eléctrica",
+              "Ingeniería civil",
+              "Ingeniería electrónica",
+              "Tecnología automotriz"
+            ],
+            "outcome": "Técnico/Tecnólogo en ingeniería"
+          },
+          "informationTech": {
+            "title": "Tecnología de la información",
+            "duration": "2-3 años",
+            "description": "Programas modernos de TI cubriendo desarrollo de software, redes, ciberseguridad y gestión de sistemas digitales.",
+            "specializations": [
+              "Desarrollo de software",
+              "Administración de redes",
+              "Ciberseguridad",
+              "Gestión de bases de datos",
+              "Desarrollo web"
+            ],
+            "outcome": "Especialista/Desarrollador TI"
+          },
+          "appliedSciences": {
+            "title": "Ciencias aplicadas",
+            "duration": "2-4 años",
+            "description": "Programas prácticos de ciencias con trabajo de laboratorio y aplicaciones del mundo real en varios campos científicos.",
+            "specializations": [
+              "Tecnología de laboratorio",
+              "Ciencia ambiental",
+              "Ciencia de alimentos",
+              "Tecnología agrícola",
+              "Ciencias de la salud"
+            ],
+            "outcome": "Técnico/Analista científico"
+          },
+          "businessTech": {
+            "title": "Tecnología de negocios",
+            "duration": "2-3 años",
+            "description": "Programas modernos de negocios integrando tecnología, emprendimiento y habilidades prácticas de negocios para la economía digital.",
+            "specializations": [
+              "Marketing digital",
+              "E-commerce",
+              "Analítica de negocios",
+              "Gestión de proyectos",
+              "Emprendimiento"
+            ],
+            "outcome": "Analista/Gerente de negocios"
+          },
+          "tradesCrafts": {
+            "title": "Oficios y artesanías especializados",
+            "duration": "1-3 años",
+            "description": "Entrenamiento en oficios tradicionales y modernos para artesanos y artistas calificados con énfasis en habilidades prácticas.",
+            "specializations": [
+              "Soldadura",
+              "Carpintería",
+              "Plomería",
+              "Instalación eléctrica",
+              "Construcción",
+              "Reparación automotriz"
+            ],
+            "outcome": "Artesano/Artista calificado"
+          }
+        }
+      },
+      "technicalSchools": {
+        "title": "Escuelas técnicas en Ghana",
+        "subtitle": "Instituciones enfocadas en la industria preparando profesionales calificados",
+        "institutions": {
+          "atu": {
+            "name": "Universidad Técnica de Accra",
+            "type": "Universidad técnica",
+            "location": "Accra",
+            "established": "1949",
+            "programs": [
+              "Tecnología de ingeniería",
+              "Ciencias aplicadas",
+              "Tecnología de negocios"
+            ],
+            "achievement": "Instalaciones modernas",
+            "students": "12,000+"
+          },
+          "kti": {
+            "name": "Instituto Técnico de Kumasi",
+            "type": "Instituto técnico gubernamental",
+            "location": "Kumasi",
+            "established": "1954",
+            "programs": [
+              "Automotriz",
+              "Soldadura",
+              "Electrónica",
+              "Construcción"
+            ],
+            "achievement": "Asociación industrial",
+            "students": "4,200+"
+          },
+          "ttu": {
+            "name": "Universidad Técnica de Takoradi",
+            "type": "Universidad técnica",
+            "location": "Takoradi",
+            "established": "1954",
+            "programs": [
+              "Ingeniería petrolera",
+              "Minería",
+              "Tecnología marina"
+            ],
+            "achievement": "Enfoque en petróleo y gas",
+            "students": "8,500+"
+          },
+          "btu": {
+            "name": "Universidad Técnica de Bolgatanga",
+            "type": "Universidad técnica regional",
+            "location": "Bolgatanga",
+            "established": "1999",
+            "programs": ["Tecnología agrícola", "TIC", "Ciencias aplicadas"],
+            "achievement": "Innovación agrícola",
+            "students": "5,000+"
+          }
+        }
+      },
+      "cta": {
+        "title": "¿Listo para comenzar tu viaje académico en Ghana?",
+        "subtitle": "Desde aprendizaje de idiomas hasta títulos avanzados, te guiaremos a través de cada paso del proceso. Obtén asesoramiento personalizado y comienza tu solicitud hoy.",
+        "consultationButton": "Obtener consulta gratuita",
+        "applicationButton": "Comenzar solicitud"
+      }
     },
     "visa": {
       "title": "Asistencia con visa",
