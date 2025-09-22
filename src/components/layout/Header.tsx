@@ -266,7 +266,7 @@ export default function Header() {
     <>
       <style jsx global>{`
         body.has-fixed-header {
-          padding-top: var(--header-current-height, 110px);
+          padding-top: var(--header-current-height, 88px);
         }
         .mega-dropdown-panel {
           animation: panelFade 0.14s cubic-bezier(0.4, 0, 0.2, 1);
@@ -319,36 +319,36 @@ export default function Header() {
         <div className="border-b border-gray-200">
           <nav>
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-[80px] md:h-[96px] lg:h-[112px]">
+              <div className="flex items-center justify-between h-[64px] md:h-[72px] lg:h-[80px]">
                 {/* Brand */}
                 <div className="flex items-center flex-grow">
                   <Link
                     href="/"
-                    className="flex items-center gap-2 md:gap-3 lg:gap-4 h-[80px] md:h-[96px] lg:h-[112px] pr-1"
+                    className="flex items-center gap-3 md:gap-4 lg:gap-5 h-[64px] md:h-[72px] lg:h-[80px] pr-2"
                   >
                     <Image
                       src="/logo.png"
                       alt="EasyLife Ghana"
                       width={96}
                       height={96}
-                      className="h-24 w-auto md:h-28 lg:h-32 rounded-[8px] object-cover"
+                      className="h-[48px] w-auto md:h-[54px] lg:h-[60px] rounded-[6px] object-cover"
                       priority
                     />
                     <ClientOnly
                       fallback={
-                        <span className="text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                        <span className="text-[1.3rem] md:text-[1.45rem] lg:text-[1.65rem] font-semibold tracking-[-0.02em] text-gray-900 leading-none">
                           EasyLife Ghana
                         </span>
                       }
                     >
-                      <span className="text-[1.4rem] md:text-[1.6rem] lg:text-[1.8rem] font-semibold tracking-[-0.5px] text-gray-900 leading-none">
+                      <span className="text-[1.3rem] md:text-[1.45rem] lg:text-[1.65rem] font-semibold tracking-[-0.02em] text-gray-900 leading-none">
                         {t("header.brand")}
                       </span>
                     </ClientOnly>
                   </Link>
 
                   {/* Desktop Navigation */}
-                  <ul className="hidden lg:flex items-center ml-4 xl:ml-12 gap-6 xl:gap-12">
+                  <ul className="hidden lg:flex items-center ml-6 xl:ml-10 gap-4 xl:gap-8">
                     {megaNav.map(item => {
                       const isActive = item.path
                         ? pathname === item.path
@@ -368,7 +368,7 @@ export default function Header() {
                             <button
                               type="button"
                               data-id={item.id}
-                              className={`dropdown-trigger flex items-center h-[80px] md:h-[96px] lg:h-[112px] px-0.5 xl:px-1 text-[1.1rem] lg:text-[1.2rem] font-normal text-gray-900 relative transition-colors duration-250 hover:text-[#17a253] group ${opened ? "text-[#17a253] font-medium" : ""}`}
+                              className={`dropdown-trigger flex items-center h-[64px] md:h-[72px] lg:h-[80px] px-1 xl:px-2 text-[0.95rem] lg:text-[1.05rem] font-medium text-gray-700 relative transition-colors duration-250 hover:text-[#17a253] group ${opened ? "text-[#17a253] font-semibold" : ""}`}
                               aria-haspopup="true"
                               aria-expanded={opened}
                               onMouseEnter={() => setOpenDropdown(item.id)}
@@ -515,10 +515,10 @@ export default function Header() {
                         >
                           <Link
                             href={item.path!}
-                            className={`flex items-center h-[80px] md:h-[96px] lg:h-[112px] px-0.5 xl:px-1 text-[1.1rem] lg:text-[1.2rem] font-normal transition-colors duration-250 hover:text-[#17a253] relative group ${
+                            className={`flex items-center h-[64px] md:h-[72px] lg:h-[80px] px-1 xl:px-2 text-[0.95rem] lg:text-[1.05rem] font-medium transition-colors duration-250 hover:text-[#17a253] relative group ${
                               isActive
-                                ? "text-[#17a253] font-medium"
-                                : "text-gray-900"
+                                ? "text-[#17a253] font-semibold"
+                                : "text-gray-700"
                             }`}
                             onClick={e => {
                               if (item.path === "/#pricing") {
@@ -579,7 +579,7 @@ export default function Header() {
 
                   {/* Mobile Toggle */}
                   <button
-                    className={`lg:hidden w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-transparent border-0 relative flex items-center justify-center ${isMenuOpen ? "active" : ""}`}
+                    className={`lg:hidden w-10 h-10 md:w-12 md:h-12 bg-transparent border-0 relative flex items-center justify-center ${isMenuOpen ? "active" : ""}`}
                     type="button"
                     onClick={toggleMobileMenu}
                     aria-controls="mobile-menu"
@@ -588,15 +588,15 @@ export default function Header() {
                       isMenuOpen ? "Close navigation" : "Open navigation"
                     }
                   >
-                    <div className="relative w-7 h-7 md:w-8 md:h-8">
+                    <div className="relative w-6 h-6 md:w-7 md:h-7">
                       <span
-                        className={`absolute w-[28px] md:w-[32px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-[6px] md:top-[8px]"}`}
+                        className={`absolute w-[24px] md:w-[28px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-[5px] md:top-[6px]"}`}
                       />
                       <span
-                        className={`absolute w-[28px] md:w-[32px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+                        className={`absolute w-[24px] md:w-[28px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
                       />
                       <span
-                        className={`absolute w-[28px] md:w-[32px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-[6px] md:bottom-[8px]"}`}
+                        className={`absolute w-[24px] md:w-[28px] h-[2px] bg-gray-900 rounded-[1px] left-1/2 -translate-x-1/2 transition-all duration-[0.4s] ease-[cubic-bezier(0.4,0,0.2,1)] ${isMenuOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-[5px] md:bottom-[6px]"}`}
                       />
                     </div>
                   </button>
@@ -608,8 +608,8 @@ export default function Header() {
             <div
               className={`lg:hidden fixed left-0 right-0 bg-white border-t border-gray-200 z-[900] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-y-auto ${
                 isMenuOpen
-                  ? "top-[var(--header-current-height,110px)] h-[calc(100vh-var(--header-current-height,110px))] opacity-100 visible translate-y-0"
-                  : "top-[var(--header-current-height,110px)] h-[calc(100vh-var(--header-current-height,110px))] opacity-0 invisible -translate-y-3"
+                  ? "top-[var(--header-current-height,88px)] h-[calc(100vh-var(--header-current-height,88px))] opacity-100 visible translate-y-0"
+                  : "top-[var(--header-current-height,88px)] h-[calc(100vh-var(--header-current-height,88px))] opacity-0 invisible -translate-y-3"
               }`}
               id="mobile-menu"
               role="dialog"

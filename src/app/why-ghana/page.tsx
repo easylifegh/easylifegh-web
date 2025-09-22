@@ -6,6 +6,7 @@ import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
 import { downloadGuide } from "@/utils/downloadGuide"
+import { Hero } from "@/components/shared"
 
 // Simple helper icon component (outline style)
 const Icon: React.FC<{ path: string; className?: string }> = ({
@@ -119,61 +120,26 @@ export default function WhyGhanaPage() {
         <div className="absolute top-1/3 -right-40 w-[540px] h-[540px] rounded-full bg-emerald-50 blur-3xl" />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-px bg-gradient-to-r from-transparent via-emerald-200/50 to-transparent" />
       </div>
-      {/* Hero */}
-      <header className="relative">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-36 md:pt-28 md:pb-48">
-          <div className="text-center max-w-4xl mx-auto">
-            <ClientOnly fallback={<div className="h-20" />}>
-              <h1 className="relative text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0D1623] after:content-[''] after:block after:h-1 after:w-24 after:mx-auto after:mt-6 after:rounded-full after:bg-gradient-to-r after:from-emerald-500 after:to-emerald-300">
-                {t("pages.whyGhana.title")}
-              </h1>
-              <p className="mt-8 text-xl md:text-2xl text-[#5F6B7A] leading-relaxed">
-                {t("pages.whyGhana.subtitle")}
-              </p>
-            </ClientOnly>
+      <Hero
+        title={t("pages.whyGhana.title")}
+        subtitle={t("pages.whyGhana.subtitle")}
+      />
 
-            {/* Stats row */}
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              {(
-                ["language", "safety", "affordability", "universities"] as const
-              ).map(k => (
-                <div
-                  key={k}
-                  className="px-4 py-2 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-md border border-emerald-100"
-                >
-                  {t(`pages.whyGhana.stats.${k}`)}
-                </div>
-              ))}
+      {/* Stats row */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 mb-20">
+        <div className="flex flex-wrap justify-center gap-4">
+          {(
+            ["language", "safety", "affordability", "universities"] as const
+          ).map(k => (
+            <div
+              key={k}
+              className="px-4 py-2 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-md border border-emerald-100"
+            >
+              {t(`pages.whyGhana.stats.${k}`)}
             </div>
-          </div>
+          ))}
         </div>
-        {/* Waves */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute bottom-0 left-0 w-full translate-y-[1px]"
-        >
-          <svg
-            className="w-full h-20 md:h-24 text-emerald-50"
-            viewBox="0 0 1440 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="currentColor"
-              d="M0 80c120 20 240-40 360-40s240 60 360 60 240-60 360-60 240 60 360 40v40H0z"
-            />
-          </svg>
-          <svg
-            className="w-full h-16 -mt-8 text-white mix-blend-multiply opacity-70"
-            viewBox="0 0 1440 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="currentColor"
-              d="M0 90c160 10 240-50 400-50s240 70 360 70 240-70 360-70 240 70 320 50v30H0z"
-            />
-          </svg>
-        </div>
-      </header>
+      </div>
 
       <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-28">
         {/* Culture & Lifestyle - Alternating Layout Style */}
