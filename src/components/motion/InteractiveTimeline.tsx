@@ -64,24 +64,6 @@ export default function InteractiveTimeline({
                 animate={activeStep === step.id ? { scale: 1.1 } : { scale: 1 }}
                 transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
               >
-                {/* Ripple effect */}
-                <motion.div
-                  className="absolute inset-0 rounded-full"
-                  style={{ backgroundColor: step.color }}
-                  animate={
-                    activeStep === step.id
-                      ? {
-                          scale: [1, 1.5, 2],
-                          opacity: [0.5, 0.2, 0],
-                        }
-                      : {}
-                  }
-                  transition={{
-                    duration: 1.5,
-                    repeat: activeStep === step.id ? Infinity : 0,
-                  }}
-                />
-
                 <div className="text-white z-10 relative">{step.icon}</div>
               </motion.div>
 
@@ -140,24 +122,6 @@ export default function InteractiveTimeline({
                 animate={activeStep === step.id ? { scale: 1.1 } : { scale: 1 }}
                 transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
               >
-                {/* Pulse rings */}
-                <motion.div
-                  className="absolute inset-0 rounded-full border-2"
-                  style={{ borderColor: step.color }}
-                  animate={
-                    activeStep === step.id
-                      ? {
-                          scale: [1, 1.8, 2.5],
-                          opacity: [0.8, 0.3, 0],
-                        }
-                      : {}
-                  }
-                  transition={{
-                    duration: 2,
-                    repeat: activeStep === step.id ? Infinity : 0,
-                  }}
-                />
-
                 <div className="text-white relative z-10">{step.icon}</div>
               </motion.div>
 

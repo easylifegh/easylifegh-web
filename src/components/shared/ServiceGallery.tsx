@@ -1932,18 +1932,14 @@ export default function ServiceGallery({
                     d="M7 16l-4-4m0 0l4-4m-4 4h18"
                   />
                 </svg>
-                <span>
-                  Previous {title.includes("Program") ? "Program" : "Item"}
-                </span>
+                <span>Previous</span>
               </button>
               <button
                 onClick={next}
                 className={`group flex items-center gap-3 px-6 py-3 ${classes.button} transition-all duration-300 text-white font-medium`}
                 aria-label="Next item"
               >
-                <span>
-                  Next {title.includes("Program") ? "Program" : "Item"}
-                </span>
+                <span>Next</span>
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                   fill="none"

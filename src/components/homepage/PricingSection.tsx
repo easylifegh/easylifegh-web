@@ -5,8 +5,6 @@ import { useTranslation } from "react-i18next"
 import ClientOnly from "@/components/ClientOnly"
 import RevealOnScroll from "@/components/motion/RevealOnScroll"
 import StaggerContainer from "@/components/motion/StaggerContainer"
-import { motion } from "framer-motion"
-import { hoverEffects } from "@/lib/motion"
 
 export default function PricingSection() {
   const { t } = useTranslation()

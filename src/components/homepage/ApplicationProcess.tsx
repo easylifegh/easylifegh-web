@@ -3,23 +3,13 @@
 import { useTranslation } from "react-i18next"
 import RevealOnScroll from "@/components/motion/RevealOnScroll"
 import InteractiveTimeline from "@/components/motion/InteractiveTimeline"
-import ImageReveal from "@/components/motion/ImageReveal"
-import { motion, useScroll, useTransform, useInView } from "framer-motion"
+import Image from "next/image"
+import { motion } from "framer-motion"
 import { useRef } from "react"
 
 export default function ApplicationProcess() {
   const { t } = useTranslation()
   const sectionRef = useRef(null)
-  const progressRef = useRef(null)
-  const progressInView = useInView(progressRef, { once: true })
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  })
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100])
-
   const timelineSteps = [
     {
       id: "consultation",
@@ -142,127 +132,66 @@ export default function ApplicationProcess() {
     <section
       id="how-to-apply"
       ref={sectionRef}
-      className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden"
+      className="py-20 lg:py-32 bg-white relative"
     >
-      {/* Animated background elements */}
-      <motion.div
-        className="absolute top-20 right-10 w-40 h-40 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"
-        style={{ y: backgroundY }}
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative">
-        {/* Enhanced Title */}
-        <RevealOnScroll>
-          <div className="text-center mb-20">
-            <motion.h2
-              className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6"
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              {t("applicationProcess.title")}
-            </motion.h2>
-
-            <motion.p
-              className="text-lg text-gray-600 max-w-2xl mx-auto mb-8"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              Follow our streamlined process to make your dream of studying in
-              Ghana a reality
-            </motion.p>
-
-            <motion.div
-              className="w-32 h-1.5 bg-gradient-to-r from-green-400 via-green-500 to-green-600 mx-auto rounded-full"
-              initial={{ width: 0, opacity: 0 }}
-              whileInView={{ width: 128, opacity: 1 }}
-              transition={{ duration: 1.2, delay: 0.7 }}
-              viewport={{ once: true }}
+        <div className="grid lg:grid-cols-2 gap-14 xl:gap-24 items-start">
+          {/* Left Image Panel */}
+          <div className="w-full order-2 lg:order-1">
+            <Image
+              src="/easylife.png"
+              alt={t("applicationProcess.imageAlt", {
+                defaultValue: "Travel inspiration",
+              })}
+              width={900}
+              height={1200}
+              className="w-full h-auto object-cover"
+              priority={false}
             />
           </div>
-        </RevealOnScroll>
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left Side - Enhanced Image with Reveals */}
-          <motion.div
-            className="order-2 lg:order-1 relative"
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            {/* Background decoration */}
-            <motion.div
-              className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-blue-100/50 to-purple-100/50 rounded-3xl -z-10"
-              initial={{ scale: 0, rotate: -10 }}
-              whileInView={{ scale: 1, rotate: -5 }}
-              transition={{ duration: 1.2, delay: 0.5 }}
-              viewport={{ once: true }}
-            />
-
-            <ImageReveal
-              src="/person.png"
-              alt="Application process illustration"
-              width={600}
-              height={400}
-              className="relative z-10 max-w-lg mx-auto"
-              revealDirection="up"
-              maskShape="wave"
-            />
-
-            {/* Progress indicator */}
-            <motion.div
-              ref={progressRef}
-              className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-lg rounded-2xl p-4 shadow-xl border border-white/20 min-w-64"
-              initial={{ y: 50, opacity: 0 }}
-              animate={
-                progressInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }
-              }
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-semibold text-gray-700">
-                  Application Progress
-                </span>
-                <span className="text-sm font-bold text-green-600">
-                  Step 3/5
-                </span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+          {/* Content + Timeline */}
+          <div className="order-1 lg:order-2">
+            <RevealOnScroll>
+              <div className="mb-16 lg:mb-20">
+                <motion.h2
+                  className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6"
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  {t("applicationProcess.title")}
+                </motion.h2>
+                <motion.p
+                  className="text-lg text-gray-600 max-w-xl mb-8"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.35 }}
+                  viewport={{ once: true }}
+                >
+                  {t("applicationProcess.subtitle")}
+                </motion.p>
                 <motion.div
-                  className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={progressInView ? { width: "60%" } : { width: 0 }}
-                  transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
+                  className="w-32 h-1.5 bg-gradient-to-r from-green-400 via-green-500 to-green-600 rounded-full"
+                  initial={{ width: 0, opacity: 0 }}
+                  whileInView={{ width: 128, opacity: 1 }}
+                  transition={{ duration: 1.1, delay: 0.5 }}
+                  viewport={{ once: true }}
                 />
               </div>
-            </motion.div>
-          </motion.div>
+            </RevealOnScroll>
 
-          {/* Right Side - Interactive Timeline */}
-          <div className="order-1 lg:order-2">
             <motion.div
-              initial={{ x: 100, opacity: 0 }}
+              initial={{ x: 80, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.3 }}
               viewport={{ once: true }}
             >
               <InteractiveTimeline
                 steps={timelineSteps}
                 orientation="vertical"
-                className="lg:pl-8"
+                className="lg:pl-2"
               />
             </motion.div>
           </div>

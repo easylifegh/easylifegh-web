@@ -314,7 +314,7 @@
       "title": "Servicios académicos",
       "subtitle": "Programas de idioma inglés, admisión universitaria y educación técnica para ayudarte a alcanzar tus objetivos académicos en Ghana.",
       "process": {
-        "title": "Nuestro proceso de apoyo académico",
+        "title": "Apoyo Académico",
         "steps": {
           "assessment": {
             "step": "1",
@@ -1417,6 +1417,7 @@
   },
   "applicationProcess": {
     "title": "Cómo aplicar",
+    "subtitle": "Sigue nuestro proceso simplificado para hacer realidad tu sueño de vivir en Ghana",
     "steps": {
       "consultation": {
         "title": "Consulta gratuita",

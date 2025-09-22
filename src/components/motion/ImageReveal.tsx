@@ -85,65 +85,7 @@ export default function ImageReveal({
           className="w-full h-full object-cover"
           quality={90}
         />
-
-        {/* Overlay effects */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-transparent to-green-400/20"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        />
       </motion.div>
-
-      {/* Floating elements */}
-      <motion.div
-        className="absolute top-4 right-4 w-16 h-16 bg-yellow-400/30 rounded-full blur-sm"
-        animate={
-          isInView
-            ? {
-                x: [0, 20, 0],
-                y: [0, -10, 0],
-                scale: [1, 1.2, 1],
-              }
-            : {}
-        }
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      <motion.div
-        className="absolute bottom-8 left-8 w-12 h-12 bg-green-400/20 rounded-full blur-sm"
-        animate={
-          isInView
-            ? {
-                x: [0, -15, 0],
-                y: [0, 10, 0],
-                scale: [1, 0.8, 1],
-              }
-            : {}
-        }
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      />
-
-      {/* Shimmer effect */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-        initial={{ x: "-100%" }}
-        animate={isInView ? { x: "200%" } : { x: "-100%" }}
-        transition={{
-          duration: 1.5,
-          delay: 0.8,
-          ease: "easeInOut",
-        }}
-      />
     </motion.div>
   )
 }
