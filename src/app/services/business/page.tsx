@@ -38,7 +38,7 @@ export default function BusinessServicePage() {
             <p className="text-[#5F6B7A] mb-8 max-w-2xl mx-auto">
               We are developing comprehensive business services including
               company registration, investment advisory, and business
-              development support.
+              development support. Check back soon!
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
