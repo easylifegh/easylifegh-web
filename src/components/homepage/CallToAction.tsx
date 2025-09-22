@@ -35,7 +35,7 @@ export default function CallToAction() {
           {/* CTA Button */}
           <div>
             <Link
-              href="/login"
+              href="/contact"
               className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 text-lg w-full block text-center"
             >
               {t("callToAction.button")}
